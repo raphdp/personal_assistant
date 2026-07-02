@@ -1,0 +1,7 @@
+# Obsidian local-state cruft (keep the vault portable across devices)
+.obsidian/workspace*
+.obsidian/cache
+.trash/
+# OS noise
+.DS_Store
+Thumbs.db
