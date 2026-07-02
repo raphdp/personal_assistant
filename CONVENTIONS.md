@@ -8,7 +8,7 @@ This repo is the **git-backed second brain** (Obsidian-compatible). The Libraria
 - `Daily/` — (optional) daily logs / weekly summaries from other agents, routed via the Librarian.
 
 ## Reference notes
-- Format: **`.qmd`** (Quarto markdown) per the authoritative design spec.
+- Format: **`.qmd`** (Quarto markdown) — per the authoritative design spec; **user-confirmed 2026-07-02**. (Obsidian won't index `.qmd` natively; the tasks file stays `.md`. Switch is a one-line change if ever desired.)
 - Filename: `Notes/YYYY-MM-DD-<slug>.qmd` (date = capture date).
 - YAML frontmatter: `title`, `source` (URL), `captured` (date), `tags: [...]`, `kind: reference | actionable | both`.
 
