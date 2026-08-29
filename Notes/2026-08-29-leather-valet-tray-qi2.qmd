@@ -1,0 +1,20 @@
+---
+title: "Leather valet tray with Qi2 wireless charging + interchangeable frame (YouTube Short)"
+source: https://youtube.com/shorts/iZDp-aQBLUw
+captured: 2026-08-29
+tags: [youtube, design, leathercraft, qi2-charging, edc, desk-setup, twelvesouth]
+kind: reference
+---
+
+**Creator:** Ben Taylor (@BenTaylorNYC) · YouTube Short · published 2026-08-18 · 30 s · 129 K views
+
+## Summary
+Part 3 of a maker series: a **leather valet tray** — the desk/nightstand drop-zone for pocket contents — built with an integrated **Qi2 wireless charger** and an **interchangeable frame**. The description credits/references **Twelve South** (the Apple-accessories brand), suggesting the Qi2 module or the design inspiration comes from their lineup. It is a 30-second Short: a quick visual walkthrough rather than a full build log; parts 1–2 on the channel carry the earlier stages.
+
+## Why it matters
+- Pattern worth remembering: **charging built into furniture** — a Qi2 puck under leather turns a passive catch-all tray into a "drop phone here and it charges" station. Qi2's magnetic alignment matters here since the phone isn't seen when placed.
+- **Interchangeable frame** = modularity: swap aesthetics/size without rebuilding the charging base. Good design precedent for any desk/EDC project.
+- First design/maker capture in the vault (prior captures are trading/tech) — starts a `design` thread to link future captures against.
+
+## Capture notes
+- Transcript (en auto-captions) exists but YouTube's no-auth timedtext endpoint returned empty; innertube fallback was login-walled. Summary is based on title, description and page metadata — all captured 2026-08-29.
