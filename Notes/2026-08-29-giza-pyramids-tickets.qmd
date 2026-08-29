@@ -1,0 +1,53 @@
+---
+title: Giza Plateau tickets — official pricing + booking rules
+date: 2026-08-29
+source: egymonuments.com (Ministry of Tourism and Antiquities official booking platform), fetched live 2026-08-29
+tags: [travel, egypt, giza, tickets, concierge]
+issue: RDP-47 / RDP-46
+---
+
+# Giza Plateau tickets — official pricing + booking rules
+
+## Foreign-visitor prices (EGP, per person)
+
+| Ticket | Adult | Student |
+|---|---|---|
+| Plateau entry (main site) | 700 | 350 |
+| + Great Pyramid (Khufu) interior | 1,500 | 750 |
+| + Menkaure Pyramid interior | 280 | 140 |
+| + Queen Mars Ankh Tomb (Hetepheres) | 200 | 100 |
+| + Labor Tombs (Workers') | 700 | 350 |
+
+Egyptian rates for reference: plateau 60/30, Khufu 150/75, Menkaure 30/10, Queen 20/5, Labor 700/350.
+
+## Totals for 3 adults
+
+- Plateau only: 2,100 EGP (~USD 42 / EUR 36 / AED 153)
+- Plateau + Khufu interior: 6,600 EGP (~USD 131 / EUR 113 / AED 482)
+- FX 2026-08-29: 1 EGP = 0.0199 USD / 0.0171 EUR / 0.0731 AED (open.er-api.com)
+
+## Hours + rules
+
+- Open daily 07:00, last entry 16:00 (summer + winter); Ramadan 08:00-15:30.
+- Ticket requires account information (submitted during checkout).
+- Egyptians must show valid ID; students must show valid student ID.
+- Tickets are non-refundable, cannot be canceled or replaced if lost/stolen — date must be right at purchase.
+- Fraud warning: 5x ticket price.
+
+## Payment + support
+
+- Visa and Mastercard (all channels: web, Experience Egypt app, on-site counters, kiosks).
+- Support: tourism_info@efinance.com.eg.
+
+## Booking path
+
+egymonuments.com/details/Pyramids → Book Now → /book-date/2 (pick date, ticket types, cart) → checkout (account info) → pay. Max 50 per ticket type per order; multi-site cart supported.
+
+## Availability
+
+- No timed-entry slots for plateau entry; Giza is not a sellout risk on normal days.
+- Khufu interior is capacity-capped daily — e-ticket in advance is the safe route if interior access is wanted.
+
+## Next step (open as of filing)
+
+Need visit date + interior preference (asked via RDP-30 on 2026-08-29; answer pending). Then cart goes to the payment step and the user approves and pays (draft-only hard boundary: no purchase by the team).
