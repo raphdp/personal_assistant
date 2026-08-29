@@ -1,0 +1,25 @@
+---
+title: "Independent replication: two changes lift PF to 2.73 and Ret/DD to 16.1x"
+source: https://x.com/MrMilkTrading/status/2093066721389076523
+captured: 2026-08-29
+tags: [trading, twitter, strategy, backtesting, replication, nq]
+kind: reference
+---
+
+**Author:** The Milk Man (@MrMilkTrading) · 2026-08-27 · 149 likes
+
+## Summary
+Replicates @etbent1's strategy and confirms it works — then reports the effect of etbent1's **two changes**, before → after:
+
+- Profit factor: 1.86 → **2.73**
+- Win rate: 59% → **64%**
+- Return / max drawdown: 8.7x → **16.1x**
+- 2026 YTD on 1 NQ contract: $55K → $53K (slightly *lower* dollars, dramatically better risk-adjusted)
+
+## Why it matters
+- Textbook risk-adjusted-vs-raw improvement: headline P&L dipped ~$2K, but every quality metric jumped — the two changes are about *how* the money is made, not how much.
+- **Independent replication** by a different trader is much stronger evidence than the originator's own backtest.
+- Worth chasing later: what exactly the two changes are (presumably detailed in the thread / etbent1's original post).
+
+## Links
+- [[2026-08-29-milk-spx-strategy-v1-1]] — same "Milk" options-strategy lineage (@MarginCall4's SPX variant, just went live).

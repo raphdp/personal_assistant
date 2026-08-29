@@ -1,0 +1,26 @@
+---
+title: "Milk SPX options strategy — v1.1 hardening checklist before going live"
+source: https://x.com/MarginCall4/status/2093034022280827172
+captured: 2026-08-29
+tags: [trading, twitter, spx, options, strategy, backtesting, risk]
+kind: reference
+---
+
+**Author:** HedgeAlgo 🇺🇸 (@MarginCall4) · 2026-08-27
+
+## Summary
+One week of iteration took the "Milk" SPX option strategy from v1.0 to v1.1, and it is now **live** (real money), with v2.0 planned. The changelog doubles as a pre-live hardening checklist:
+
+- added / corrected data
+- replaced assumed margins with **actual broker margins**
+- stress-tested scenarios **not found in historical data**
+- actively tried to **break** the strategy (adversarial search)
+- made it runnable in **IRAs** (tax-advantaged accounts)
+- ironed out **execution frictions**
+
+## Why it matters
+- This is a reusable go-live checklist for any backtested system: data integrity → real-world margins → synthetic stress → try-to-break-it → account-type fit → friction cleanup.
+- "Find scenarios to break it" and "stress cases not in historical data" are the two steps most retail backtests skip.
+
+## Links
+- [[2026-08-29-milk-man-replication-metrics]] — independent replication with improved metrics in the same "Milk" strategy ecosystem.

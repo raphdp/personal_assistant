@@ -1,0 +1,20 @@
+---
+title: "Copying Nancy Pelosi's Nvidia call trade — 32-month experiment log"
+source: https://x.com/legen_eth/status/2093018120403272116
+captured: 2026-08-29
+tags: [trading, twitter, politician-trades, case-study, options]
+kind: reference
+---
+
+**Author:** legen (@legen_eth) · 2026-08-27 · 15.9K likes
+
+## Summary
+A 2-year-8-month live experiment in copy-trading US politician disclosures. When Nancy Pelosi disclosed a >$1.5M Nvidia call-options position (50 calls at ≈$38K each), the author bought exactly **one** of the same calls with $38,000. Within ~3 months both positions nearly tripled. The tweet is truncated mid-story ("My $38k …") — the full thread on X carries the rest of the log.
+
+## Why it matters
+- The claimed edge is **informational** (timely disclosure scraping of a famous politician), not analytical — a different risk profile from strategy-driven trading.
+- Position-sizing trick worth remembering: match the *unit* (1 call), not the portfolio weight — lets a small account track a whale with defined risk.
+- Survivorship caveat: one winning copy is an anecdote; the 32-month frame implies a longer log in the thread worth a skim if this angle gets interesting.
+
+## Links
+- Same 2026-08-29 capture burst (systematic-trading counterpoints): [[2026-08-29-milk-spx-strategy-v1-1]], [[2026-08-29-milk-man-replication-metrics]], [[2026-08-29-three-simple-ma-atr-systems]]

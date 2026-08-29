@@ -1,0 +1,23 @@
+---
+title: "Clickbait openers for dating apps — claimed 70–80% response rate"
+source: https://x.com/swipehound/status/2093092039206264964
+captured: 2026-08-29
+tags: [dating, twitter, communication, tactics, copywriting]
+kind: reference
+---
+
+**Author:** Swipehound | Raw Dating App Game (@swipehound) · 2026-08-27 · 462 likes
+
+## Summary
+Favorite opener style: the **clickbait opener** — a first message engineered purely to open a curiosity gap and force a reply. Examples (list truncated in the tweet preview; full set in the thread): "Can I be blunt?" / "You want honesty or—"
+
+- Claimed **70–80% response rate** — *if your profile is already good*
+- Easy to mass-send, zero overthinking
+- Mechanism: curiosity → she replies → she has **invested** in the conversation
+
+## Why it matters
+- The mechanism (open loop → reply → sunk-cost investment) generalizes far beyond dating apps: cold outreach, DMs, email subject lines.
+- Note the built-in caveat: the opener is capped by profile quality — fix the top of the funnel first; no opener rescues a bad profile.
+
+## Links
+- Same 2026-08-29 capture burst: [[2026-08-29-pelosi-nvda-copy-trade]], [[2026-08-29-theo-claude-code-tip]]

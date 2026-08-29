@@ -1,0 +1,21 @@
+---
+title: "Theo endorses a Claude Code improvement he's run for months"
+source: https://x.com/theo/status/2093199769246273664
+captured: 2026-08-29
+tags: [ai, claude-code, twitter, tooling, productivity]
+kind: both
+---
+
+**Author:** Theo - t3.gg (@theo) · 2026-08-28 · 1.3K likes
+
+## Summary
+"Can confirm this makes Claude Code significantly better to use. Had it on for months and never looked back."
+
+**Caveat:** this is an endorsement of something *else* — the tweet does not say what "this" is. The parent/quoted tweet must be opened to act on it.
+
+## Why it matters
+- High-signal endorsement: months of daily use ("never looked back"), not launch-day hype, from a well-known heavy Claude Code user.
+- Actionable follow-up created (below) because the payoff depends on identifying the referenced tweak.
+
+## Links
+- Task in `Tasks/Inbox.md`: identify what "this" refers to (parent of status 2093199769246273664) and evaluate enabling it.
