@@ -1,0 +1,28 @@
+---
+title: "Ignis: S&P 100 breakout trend-following — from the RealTest examples file"
+source: https://x.com/ignis55/status/2093754279710363733
+captured: 2026-08-30
+tags: [trading, twitter, trend-following, breakout, realtest, risk, strategy]
+kind: both
+---
+
+**Author:** Ignis (@ignis55) · posted 2026-08-29 · received 2026-08-30T07:07:45Z
+
+## Summary
+Complete trend-following spec, disclosed as being straight from the **RealTest examples file** (attached image not accessible via oembed):
+
+- **Universe:** S&P 100
+- **Entry:** 100-day breakout, **fresh breakouts only**
+- **Ranking:** 100-day ROC
+- **Exit:** Chande-Kroll trailing stop
+- **Risk:** 0.5% of equity per trade, volatility-adjusted
+
+## Why it matters
+- Textbook robust construction: hard universe filter → fresh-breakout entry (avoids re-entering extended moves) → ROC rank when signals compete for capital → volatility-scaled position sizing with a wide trailing stop. Every element attacks a known trend-following failure mode.
+- "It's from the RealTest examples file" is the interesting admission: the edge claim isn't secrecy, it's discipline — a published, reproducible baseline (RealTest ships these examples) still isn't widely traded well.
+- Pairs with the 2026-08-29 systematic burst: simple, fully-specified systems (MA+ATR ensemble, Milk Man rules) keep outperforming expectations.
+
+## Links
+- [[2026-08-29-three-simple-ma-atr-systems]] — same theme: simple trend systems, diversification by behavior.
+- [[2026-08-30-milk-man-dip-buy-rules]] — same burst, opposite family (mean-reversion vs. trend).
+- [[2026-08-29-milk-man-replication-metrics]], [[2026-08-29-milk-spx-strategy-v1-1]] — rest of the 2026-08-29/30 systematic-trading cluster.

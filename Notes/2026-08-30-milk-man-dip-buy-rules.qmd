@@ -1,0 +1,30 @@
+---
+title: "Milk Man Dip Buy rules — RSI(2) mean-reversion, exactly as tested"
+source: https://x.com/mrmilktrading/status/2093923934823403813
+captured: 2026-08-30
+tags: [trading, twitter, mean-reversion, rsi, es, nq, strategy, backtesting]
+kind: both
+---
+
+**Author:** The Milk Man (@MrMilkTrading) · posted 2026-08-30 · received 2026-08-30T07:07:34Z
+
+## Summary
+Full spec of the dip-buy system, stated as "exactly as tested" (backtest stats in attached media, not accessible via oembed):
+
+1. **Signal:** RSI(2) on daily closes
+2. **Entry:** buy the close when RSI(2) < 10 **and** price > 200-day SMA
+3. **Exit:** sell the close when RSI(2) > 70, **or after 10 sessions**, whichever comes first
+4. **Long only.** ES and NQ, 1 contract each. **No stop.**
+
+## Why it matters
+- Classic Connors-style short-term mean-reversion: extreme oversold *inside* a long-term uptrend (200-SMA filter), time-boxed exit — the 10-session cap and RSI>70 are the whole risk management; there is deliberately no stop.
+- Completes a third leg in the Milk Man ecosystem alongside the options variant and the NQ replication — same author, different strategy family (mean-reversion vs. the trend/replication notes below).
+- Fully specified → directly replicable; the missing piece is the attached backtest stats (task created to view them).
+
+## Context
+Same burst included a praise/quote tweet by The Milk Man highlighting @MarginCall4's work (https://x.com/mrmilktrading/status/2093761091436179677, posted 2026-08-29) — low standalone substance, folded here as lineage context: the two accounts are actively cross-pollinating.
+
+## Links
+- [[2026-08-29-milk-man-replication-metrics]] — same author's NQ replication (trend side of the house).
+- [[2026-08-29-milk-spx-strategy-v1-1]] — @MarginCall4's SPX options variant praised in the quote tweet.
+- [[2026-08-29-three-simple-ma-atr-systems]] — contrast: simple trend systems vs. this simple mean-reversion system.

@@ -24,3 +24,4 @@ One week of iteration took the "Milk" SPX option strategy from v1.0 to v1.1, and
 
 ## Links
 - [[2026-08-29-milk-man-replication-metrics]] — independent replication with improved metrics in the same "Milk" strategy ecosystem.
+- [[2026-08-30-milk-man-dip-buy-rules]] — The Milk Man's mean-reversion spec (2026-08-30), praise-tweeted this v1.1 work.
