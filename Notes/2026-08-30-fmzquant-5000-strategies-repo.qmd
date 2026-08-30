@@ -1,0 +1,25 @@
+---
+title: "fmzquant/strategies — 5,000+ open trading strategies, indicators & code snippets"
+source: https://x.com/flatmoonsoc/status/2094123560969122089
+captured: 2026-08-30
+tags: [trading, twitter, open-source, china, strategies-repo, fmzquant, quant]
+kind: both
+---
+
+**Author:** flat_moon_society (@flatmoonsoc, 973 followers, "Software Engineer") · posted 2026-08-30 · received 2026-08-30T19:58:08Z
+
+## Summary
+Appreciation post for the Chinese open-source community's research sharing; the author found a repository with **over 5,000 trading strategies, indicators, and code snippets**, all shared openly. Repo: **https://github.com/fmzquant/strategies** (FMZ Quant — Chinese algo-trading platform's community strategy library). "The amount of alpha collected there and then made freely available to everyone is crazy."
+
+- oembed in the issue truncated at "containing…"; full text + repo URL resolved via fxtwitter on 2026-08-30.
+
+## Why it matters
+- Huge free corpus of *implemented* strategies — a natural mine for the 2026-08-29/30 systematic-trading cluster: search for RSI(2)-style dip buys, MA+ATR breakouts, and IBS variants; CN-community libraries also carry grid/Martingale and native-CN patterns worth skimming.
+- FMZ platform heritage means many entries are JS/Python aimed at crypto exchanges — check instrument/market assumptions before trusting any rule.
+- Third node of the 08-30 systematic-trading cluster and the evening burst's "open knowledge" outlier alongside the agent-skills theme.
+
+## Links
+- [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — same-day systematic cluster (RSI+ADX+IBS conditioning).
+- [[2026-08-30-milk-man-dip-buy-rules]] — RSI(2) dip-buy family; repo is a candidate source of replications.
+- [[2026-08-30-ignis-trend-following-realtest]] — breakout trend-following family from the same burst.
+- [[2026-08-29-three-simple-ma-atr-systems]] — cluster root: simple, fully-specified systems.

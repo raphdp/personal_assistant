@@ -27,3 +27,4 @@ Complete trend-following spec, disclosed as being straight from the **RealTest e
 - [[2026-08-30-milk-man-dip-buy-rules]] — same burst, opposite family (mean-reversion vs. trend).
 - [[2026-08-29-milk-man-replication-metrics]], [[2026-08-29-milk-spx-strategy-v1-1]] — rest of the 2026-08-29/30 systematic-trading cluster.
 - [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — same day, indicator-combo family (RSI+ADX+IBS conditioned entry).
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — 5k+ open strategies repo (FMZ); mine for trend-following variants.

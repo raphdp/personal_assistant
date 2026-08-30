@@ -1,0 +1,22 @@
+---
+title: "Cyclomatic-complexity skill — daily guard against code slop"
+source: https://x.com/drummatick/status/2093949728530853966
+captured: 2026-08-30
+tags: [ai-agents, twitter, code-quality, cyclomatic-complexity, agent-skills, refactoring]
+kind: both
+---
+
+**Author:** Saurabh Kumar (@drummatick, 21k followers, Tokyo; local-LLM/Qwen-harness builder) · posted 2026-08-30 06:31Z (806 likes, 1.4k bookmarks) · received 2026-08-30T20:11:31Z
+
+## Summary
+"Daily reminder to use this skill to make sure your code doesn't look like slop" → skill repo: **https://github.com/saurabhkumar8112/cyclomatic-complexity-skill** (+ screenshot showing it in action). An agent skill that checks/flags cyclomatic complexity so generated code stays simple and readable.
+
+## Why it matters
+- Mechanical complement to the evening's anti-overengineering cluster: the skills/stop-rules approach stops *process* bloat at plan time; a complexity gate catches *code* bloat at review time.
+- Fits the same "small guardrail beats big framework" philosophy — the guardrail itself is a skill, not a pipeline.
+- Same-evening cluster: [[2026-08-30-forward-implementation-first-skill]], [[2026-08-30-codex-sol-scope-guard-rules]], [[2026-08-30-ponytail-skill-sol]].
+
+## Links
+- [[2026-08-30-forward-implementation-first-skill]] — same evening; process-side anti-overengineering.
+- [[2026-08-30-codex-sol-scope-guard-rules]] — same evening; AGENTS.md rules.
+- [[2026-08-30-ponytail-skill-sol]] — same evening; pre-commit review hook.

@@ -1,0 +1,28 @@
+---
+title: "forward-implementation-first — the anti-overengineering skill for GPT/Sol agents"
+source: https://x.com/v4rvl/status/2094061178376855820
+captured: 2026-08-30
+tags: [ai-agents, twitter, gpt, sol, codex, over-engineering, agent-skills, workflow]
+kind: both
+---
+
+**Author:** Vuk.Digital (@v4rvl) · posted 2026-08-30 · received 2026-08-30T20:08:36Z
+
+## Summary
+Intro tweet for **the skill**: https://github.com/Vuk97/forward-implementation-first
+
+- **Problem:** GPT models (Sol especially) overengineer *process* — hashes, locks, receipts, status files. The agent redoes finished work because a marker went stale, refuses to act because its paperwork is missing, and reports that as progress. Tokens burned, nothing accomplished.
+- **Fix:** the skill makes the agent classify every action as **implementation, validation, or bookkeeping — and skip the third**. Redoing work needs a real reason; stale metadata is not one. Tests and benchmarks stay mandatory.
+- **Result:** "took the experience of using GPT models from 3 to 8" — ships instead of managing its own paperwork, saves tokens. Generic across workflows; tune with a few quick edits.
+
+## Why it matters
+- Names the exact failure mode seen in agent fleets (ours included): re-verifying markers/receipts, treating bookkeeping as progress, stalling on stale state instead of shipping.
+- Root of the 2026-08-30 evening anti-overengineering cluster — same diagnosis from three independent voices within 14 minutes, plus a code-quality sibling:
+  - [[2026-08-30-codex-sol-scope-guard-rules]] — the habit itself + AGENTS.md rule list.
+  - [[2026-08-30-ponytail-skill-sol]] — the turnkey Codex fix (skill + hook prompt).
+  - [[2026-08-30-cyclomatic-complexity-skill]] — mechanical guard against code bloat.
+
+## Links
+- [[2026-08-30-codex-sol-scope-guard-rules]] — same cluster; rules complement the classification approach.
+- [[2026-08-30-ponytail-skill-sol]] — same cluster; enforcement via pre-commit hook.
+- [[2026-08-30-cyclomatic-complexity-skill]] — same evening; catches code-side bloat.

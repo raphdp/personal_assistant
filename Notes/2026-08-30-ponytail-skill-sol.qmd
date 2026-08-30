@@ -1,0 +1,28 @@
+---
+title: "Ponytail skill — fixing GPT 5.6 Sol's over-engineering"
+source: https://x.com/bil0090/status/2094138519836885444
+captured: 2026-08-30
+tags: [ai-agents, twitter, sol, gpt-5-6, codex, over-engineering, agent-skills, code-review, hooks]
+kind: both
+---
+
+**Author:** Bilal Bakr (@bil0090, 11.5k followers; 16 y/o SWE, t3dotcodes contributor, Calendaty co-founder) · posted 2026-08-30 · received 2026-08-30T20:22:11Z
+
+## Summary
+Full text (resolved via fxtwitter; oembed had truncated at the prompt):
+
+"I fixed GPT 5.6 Sol — Sol is a GREAT model, my daily driver. It has an issue tho: it LOVES to over-engineer stuff & write too much code. Here's how to fix it:
+1. install the **ponytail skill** from the **DietrichGebert/ponytail** repo (https://github.com/DietrichGebert/ponytail)
+2. set it up for Codex
+3. give Sol this prompt: **'Add a rule & a hook that always runs `/ponytail-review` before committing/pushing anything.'**
+Enjoy — Sol with 100x better code quality without over-engineering anything."
+
+## Why it matters
+- The turnkey member of the cluster: named repo + setup steps + the exact prompt. Key idea = **enforcement**, not exhortation — a rule + hook that always runs a review pass before commit/push.
+- Completes the 2026-08-30 evening anti-overengineering cluster: [[2026-08-30-forward-implementation-first-skill]] (diagnosis + skip-bookkeeping skill), [[2026-08-30-codex-sol-scope-guard-rules]] (AGENTS.md rules); [[2026-08-30-cyclomatic-complexity-skill]] adds the complexity gate.
+- Pattern generalizes to any agent harness: gate risky actions (commit/push) behind a lightweight review skill.
+
+## Links
+- [[2026-08-30-forward-implementation-first-skill]] — same cluster; the "why".
+- [[2026-08-30-codex-sol-scope-guard-rules]] — same cluster; the rule text.
+- [[2026-08-30-cyclomatic-complexity-skill]] — same evening; mechanical guard.

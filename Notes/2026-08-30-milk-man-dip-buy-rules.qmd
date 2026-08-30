@@ -29,3 +29,4 @@ Same burst included a praise/quote tweet by The Milk Man highlighting @MarginCal
 - [[2026-08-29-milk-spx-strategy-v1-1]] — @MarginCall4's SPX options variant praised in the quote tweet.
 - [[2026-08-29-three-simple-ma-atr-systems]] — contrast: simple trend systems vs. this simple mean-reversion system.
 - [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — same-day RSI capture: oversold core conditioned by ADX + IBS instead of a 200-SMA filter.
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — 5k+ open strategies (FMZ); candidate source of RSI(2) dip-buy replications.

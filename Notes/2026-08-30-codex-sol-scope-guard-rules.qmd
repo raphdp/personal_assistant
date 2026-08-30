@@ -1,0 +1,65 @@
+---
+title: "Codex Sol 'Scope Guard' — anti-overengineering rules for AGENTS.md"
+source: https://x.com/Voxyz_ai/status/2094039936475484393
+captured: 2026-08-30
+tags: [ai-agents, twitter, codex, sol, over-engineering, agents-md, rules, best-practices]
+kind: both
+---
+
+**Author:** Vox (@Voxyz_ai, 18.5k followers, London, "Building Voxyz. The only human inside.") · posted 2026-08-30 12:30Z (687 likes, 1.2k bookmarks) · received 2026-08-30T20:09:39Z
+
+## Summary
+Tweet: "Codex Sol has one bad habit: it turns small tasks into big systems. Ask it to make a config change, and it builds a framework. Ask it to fix a bug, and it adds a new adapter layer." — rule list attached as image ("Add these rules to your AGENTS.md").
+
+Full rule list (OCR'd from the tweet image; the "first reply" turned out to be the attached screenshot):
+
+**# Scope Guard** — Complete the current task with the minimum sufficient change.
+
+**Before editing**
+- Read the relevant code, tests, and configuration directly. Do not work from search snippets or guesses.
+- If the requirement is ambiguous or the premise unverified, resolve that before building on it.
+- State a minimal plan: "Outcome" = exact behavior requested + what this task will *not* do; "Files" = smallest set expected to change; the check that will prove the change works.
+- Start with one implementation path. Split work only when the task has genuinely independent parts.
+
+**While editing**
+- Reuse existing code, helpers, patterns, and test setup before adding anything new.
+- Fix bugs at the root cause. Do not stack patches around a wrong premise.
+- Add an abstraction, adapter, or config layer only for a second real case in this task or a stated requirement.
+- Preserve behavior outside the requested change.
+- Do not design for rare or future cases nobody asked about.
+- Remove code you replace. Keep an old path only when compatibility is an explicit requirement.
+
+**Pause and confirm** (read-only discovery always allowed; else get approval before:)
+- Materially expanding scope or touching unrelated files.
+- Adding a dependency, framework, service, or new test infrastructure.
+- Changing a public API, schema, storage format, or wire format.
+- Deleting/overwriting user data, discarding uncommitted work, rewriting history, dropping data.
+- Keeping two implementations of the same behavior alive.
+
+**Testing**
+- Run the narrowest existing tests that exercise the changed behavior.
+- Extend the most relevant existing test before creating a new test file.
+- Add a test only when changed user-observable behavior is not covered, or when the user asks.
+- Each new test must protect a clear acceptance criterion or regression risk.
+- No backfilling unrelated coverage or introducing test infrastructure for this task alone.
+- Do not use passing tests as justification for extra abstractions or scope.
+
+**If the plan grows**
+- Stop when work starts adding future-use layers, workaround stacks, unrelated cleanup, or tests for unstated behavior. Rewrite a smaller plan and confirm the new scope.
+
+**Done means**
+- Requested behavior works and acceptance criteria are met.
+- Relevant checks pass, with exact commands and results reported.
+- Every touched file is necessary; the diff contains nothing unrelated.
+- No debug code, backup copies, dead paths, or scratch files remain.
+- Assumptions, limitations, and unverified runtime behavior stated plainly.
+
+## Why it matters
+- A field-tested, paste-ready AGENTS.md block targeting the exact Sol/GPT failure mode (small task → big system) — the *planning/edit/testing* half of the fix.
+- Convergence marker: three independent accounts posted the same diagnosis within ~14 minutes on 2026-08-30 evening — see cluster root [[2026-08-30-forward-implementation-first-skill]] (process/bookkeeping angle) and [[2026-08-30-ponytail-skill-sol]] (enforcement hook).
+- [[2026-08-30-cyclomatic-complexity-skill]] covers the code-quality side of the same concern.
+
+## Links
+- [[2026-08-30-forward-implementation-first-skill]] — same cluster; why agents do this + skip-bookkeeping skill.
+- [[2026-08-30-ponytail-skill-sol]] — same cluster; concrete Codex setup.
+- [[2026-08-30-cyclomatic-complexity-skill]] — same evening; mechanical complexity guard.
