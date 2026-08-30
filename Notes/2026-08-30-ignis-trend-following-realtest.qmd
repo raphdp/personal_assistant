@@ -26,3 +26,4 @@ Complete trend-following spec, disclosed as being straight from the **RealTest e
 - [[2026-08-29-three-simple-ma-atr-systems]] — same theme: simple trend systems, diversification by behavior.
 - [[2026-08-30-milk-man-dip-buy-rules]] — same burst, opposite family (mean-reversion vs. trend).
 - [[2026-08-29-milk-man-replication-metrics]], [[2026-08-29-milk-spx-strategy-v1-1]] — rest of the 2026-08-29/30 systematic-trading cluster.
+- [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — same day, indicator-combo family (RSI+ADX+IBS conditioned entry).

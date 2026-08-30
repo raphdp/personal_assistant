@@ -1,0 +1,25 @@
+---
+title: "QuantifiedStrategies: combining RSI, ADX & IBS — three indicators, one strategy"
+source: https://x.com/quantifiedstrat/status/2094047489649168844
+captured: 2026-08-30
+tags: [trading, twitter, strategy, mean-reversion, rsi, adx, ibs, quantifiedstrategies]
+kind: both
+---
+
+**Author:** QuantifiedStrategies.com (@QuantifiedStrat) · posted 2026-08-30 · received 2026-08-30T14:15:33Z
+
+## Summary
+Tweet: "We combine 3 #TradingIndicators (RSI, ADX & IBS) to make a very good #tradingstrategy" + attached image (presumed backtest stats; not accessible via oembed).
+
+- **Resolved article link:** https://www.quantifiedstrategies.com/rsi-adx-trading-strategy/ — **bot-walled** (Cloudflare-style "Bot Verification" page, HTTP 200/~2KB) from both the CoS shell and the Librarian shell as of 2026-08-30. Full rules are NOT captured; read-later task created.
+- What the tweet commits to: one strategy combining **RSI** (short-horizon oversold/momentum), **ADX** (trend-strength filter), and **IBS** — Internal Bar Strength, `(Close−Low)/(High−Low)`, i.e. where the close sits inside the bar's range.
+
+## Why it matters
+- The stack maps to the classic three questions of a conditioned mean-reversion entry: RSI = is it oversold? ADX = is trend strength absent (or present)? IBS = did the bar close near its low? (Indicator roles are domain background, not the article's exact rules — those are behind the wall.)
+- Second RSI-based capture of the 2026-08-29/30 systematic-trading cluster: pairs directly with the Milk Man RSI(2) dip-buy — same short-horizon oversold core, but conditioned on ADX/IBS instead of a 200-SMA trend filter.
+- **First capture from the QuantifiedStrategies account** — the site's format is fully-specified backtest rules, so the wall is worth climbing (task created).
+
+## Links
+- [[2026-08-30-milk-man-dip-buy-rules]] — same cluster, same RSI family: RSI(2) oversold + 200-SMA trend filter (vs. ADX here).
+- [[2026-08-29-three-simple-ma-atr-systems]] — cluster root: simple, fully-specified systems traded together.
+- [[2026-08-30-ignis-trend-following-realtest]] — opposite family (breakout trend-following) from the same day's burst.
