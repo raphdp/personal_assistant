@@ -20,3 +20,4 @@ kind: both
 - [[2026-08-30-forward-implementation-first-skill]] — same evening; process-side anti-overengineering.
 - [[2026-08-30-codex-sol-scope-guard-rules]] — same evening; AGENTS.md rules.
 - [[2026-08-30-ponytail-skill-sol]] — same evening; pre-commit review hook.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — the 10-gate rubric this skill automates one gate of (2026-09-01).

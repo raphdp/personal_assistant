@@ -33,3 +33,4 @@ Announcement of a free, donation-funded **Polymarket orderbook capture**: "milit
 - Starts the prediction-markets / market-data cluster — no existing Polymarket or prediction-market notes to weave into yet.
 - [[2026-08-30-fmzquant-5000-strategies-repo]] — adjacent free-open-resource sibling from the 08-30 burst; same discipline: verify assumptions (here: era/grade) before use.
 - [[2026-08-29-three-simple-ma-atr-systems]] — trading cluster root; different domain (equities strategy rules) but same rule: fully-specified inputs before any replication.
+- [[2026-09-01-polymarket-copytrading-filter-thesis]] — joined 2026-09-01: the strategy/application side of this cluster (copytrade filtering vs data layer).

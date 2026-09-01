@@ -1,0 +1,28 @@
+---
+title: "Polymarket copytrading — filter thesis (niche + small size + verified edge, not whales)"
+source: https://x.com/KyleDeWriter/status/2094443238232875416
+captured: 2026-09-01
+tags: [prediction-markets, polymarket, copytrading, twitter, trading, wallet-tracking]
+kind: reference
+---
+
+**Author:** Kyle the Writer (@KyleDeWriter, verified; bio: "all content here is sponsored or commissioned" — **treat as promotional**) · posted 2026-08-31 15:12Z · received 2026-09-01T07:14:50Z (WhatsApp via RDP-30, routed by CoS). Quote-tweets an @rb_tweets wallet breakdown — that quoted breakdown is the substance.
+
+## Summary
+Counter-take to "'copytrading doesn't work' — the most common take on Polymarket":
+
+- It doesn't work when copying **famous whales**.
+- It works when copying wallets with: **one category**, **small size**, **real edge**, **profitable 4 months straight** — especially at 0% fees.
+- Quoted breakdown (@rb_tweets): "Trader 1 — sports quant with $80k pnl, consistently profitable 4 months, ~20k/mo avg, trades **only soccer markets**, made most money in the 0–10c price range." One attached settings image (920×701).
+
+Stats at capture: 9.3k views, 80 likes, 104 bookmarks (bookmarks > likes again — saved-as-reference signal).
+
+## Why it matters
+- The capture-worthy idea is the **filter thesis**, not the wallet: copy narrow-category specialists with small size and a verified multi-month record — not follower-count-famous whales. Mirrors the equities finding that copied gurus underperform while quiet specialists persist.
+- The **0–10c price range** detail is a concrete micro-edge: a specialist dominating the longshot-mispricing band in one sport.
+- **Skepticism gates:** author is a sponsored-content account (the "wallet link below" is the ad); 4 months is a short record; survivorship bias unaddressed. If ever acted on, test the *filter criteria* — not the promoted wallet.
+- Second note in the prediction-markets cluster started by the Pendulum Flow archive.
+
+## Links
+- [[2026-09-01-pendulum-flow-polymarket-orderbook-archive]] — same cluster, the data layer: replay-grade orderbook data is what would make independent verification of wallet PnL / market microstructure possible.
+- [[2026-08-29-pelosi-nvda-copy-trade]] — the vault's other copy-trading capture: single informed wallet vs category-specialist wallets; both reject whale-chasing.

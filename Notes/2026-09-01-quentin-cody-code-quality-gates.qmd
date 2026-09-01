@@ -1,0 +1,36 @@
+---
+title: "Quentin Cody — 10-gate rubric for cleaning AI slop from a codebase"
+source: https://x.com/QuentinCody/status/2094127829419995613
+captured: 2026-09-01
+tags: [ai-engineering, code-quality, twitter, metrics, code-review, testing, rubric]
+kind: reference
+---
+
+**Author:** Quentin Cody (@QuentinCody, verified; MCP servers / bioinformatics / payments; github.com/QuentinCody) · posted 2026-08-30 18:19Z · received 2026-09-01T07:13:15Z (WhatsApp via RDP-30, routed by CoS)
+
+## Summary
+A numeric gates rubric — "How to clean up AI slop in your codebase":
+
+- Cyclomatic Complexity < 22
+- Cognitive Complexity < 22
+- Halstead Difficulty < 80
+- Lines of Code per File < 500
+- Test Coverage: 100%
+- CRAP < 25
+- Surviving mutants: 0
+- Dead code: 0
+- Redundant code: 0
+- `any` / `unknown` types: 0
+
+Stats at capture: 246.7k views, 2.7k likes, **5.5k bookmarks** (bookmarks ≈ 2× likes — a saved-as-working-rubric signal), 95 RTs, 68 replies.
+
+## Why it matters
+- Turns "is this code slop?" from a vibe into a checklist: complexity (cyclomatic / cognitive / Halstead), file size, coverage, change-risk (CRAP), mutation testing, and dead / redundant / loose-typing hygiene — each with a number.
+- The strict end (100% coverage, 0 surviving mutants) is aspirational for AI-generated code; the value is having explicit thresholds to ratchet toward, not hitting all ten on day one.
+- Pairs with tooling that automates the gates — the cyclomatic-complexity skill already covers gate #1.
+
+## Links
+- [[2026-08-30-cyclomatic-complexity-skill]] — automates one of these exact gates (cyclomatic threshold) as an agent skill; this rubric is the full list it belongs to.
+- [[2026-08-30-ponytail-skill-sol]] — review-hook sibling: catches bloat at commit time; this rubric defines the numeric targets.
+- [[2026-08-30-codex-sol-scope-guard-rules]] — process-side guard (AGENTS.md rules) vs this code-side gate list; two halves of the anti-slop cluster.
+- [[2026-08-30-forward-implementation-first-skill]] — same 2026-08-30 anti-overengineering cluster.

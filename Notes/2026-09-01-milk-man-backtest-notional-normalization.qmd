@@ -1,0 +1,29 @@
+---
+title: "The Milk Man — normalize backtest edge as % of notional (constant exposure)"
+source: https://x.com/MrMilkTrading/status/2094401937986728202
+captured: 2026-09-01
+tags: [trading, twitter, backtesting, methodology, futures, nasdaq, market-regimes]
+kind: both
+---
+
+**Author:** The Milk Man (@MrMilkTrading, verified; options/futures trader, Texas; milkmantrades.com) · posted 2026-08-31 12:28Z · received 2026-09-01T07:15:54Z (WhatsApp via RDP-30, routed by CoS). Credits @semoi69 for the original point.
+
+## Summary
+A methodological exchange on backtest validity:
+
+- @semoi69's critique: **fixed 1-contract sizing distorts backtests across eras** — since 2022 a 200-pt Nasdaq move is normal (it was not in 2008); "would you still take a 1-contract bet at Nasdaq 70k with moves 3× bigger?"
+- Milk Man's response: re-ran the backtest measuring **"points captured as % of notional"** — keeps exposure constant across trades. **Edge per unit of exposure still improved out of sample**, so the strategy holds up; he's adopting this as a standard step in future backtests.
+- Attached: backtest chart (1639×2160).
+
+Stats at capture: 4k views, 28 likes, 40 bookmarks.
+
+## Why it matters
+- Checklist-grade rule: **before accepting any backtest, normalize edge as % of notional (constant exposure).** Fixed-contract PnL conflates edge with regime drift — index level and volatility inflation since 2022 flatter recent samples and hide whether per-unit risk is actually paid.
+- A regime-adjustment cousin of the v1.1 hardening checklist: joins "actual broker margins" and "stress cases not in historical data" as a pre-acceptance gate.
+- Third Milk-ecosystem capture — the author iterates on *methodology* in public, not just setups.
+
+## Links
+- [[2026-08-29-milk-spx-strategy-v1-1]] — the go-live hardening checklist; notional-normalization slots in as another gate before trusting a backtest.
+- [[2026-08-30-milk-man-dip-buy-rules]] — same author's mean-reversion spec; this discipline governs how such specs should be validated.
+- [[2026-08-29-milk-man-replication-metrics]] — independent replication in the same ecosystem.
+- [[2026-08-30-ignis-trend-following-realtest]] — trend-following backtests are equally exposed to fixed-sizing distortion across eras.
