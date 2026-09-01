@@ -14,3 +14,4 @@
 - [ ] Adapt Codex Sol 'Scope Guard' rules for own AGENTS.md — full text OCR'd into note 2026-08-30-codex-sol-scope-guard-rules (https://x.com/Voxyz_ai/status/2094039936475484393 2026-08-30)
 - [ ] Evaluate cyclomatic-complexity skill (saurabhkumar8112) as a code-quality gate for agent-generated code (https://github.com/saurabhkumar8112/cyclomatic-complexity-skill 2026-08-30)
 - [ ] Evaluate ponytail skill + always-run /ponytail-review pre-commit hook to curb Sol over-engineering (https://github.com/DietrichGebert/ponytail 2026-08-30)
+- [ ] Explore archive.pendulumflow.com docs (llms.txt, "Working with the data", file formats, coverage audits) and assess V3 Replay-Grade orderbook data for personal projects (https://x.com/pendulumflow/status/2094209959894618184 2026-09-01)

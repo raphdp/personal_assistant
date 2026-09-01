@@ -1,0 +1,35 @@
+---
+title: "Pendulum Flow — free military-grade Polymarket orderbook archive (2.3B rows/day)"
+source: https://x.com/pendulumflow/status/2094209959894618184
+captured: 2026-09-01
+tags: [prediction-markets, polymarket, market-data, data-engineering, open-data, dataset, twitter]
+kind: both
+---
+
+**Author:** Pendulum Flow (@PendulumFlow, verified; wealth management, in markets since 2003) · posted 2026-08-30 23:45Z · received 2026-09-01T07:13:15Z (WhatsApp via RDP-30, routed by CoS)
+
+## Summary
+Announcement of a free, donation-funded **Polymarket orderbook capture**: "military grade orderbook capture and provided it for free. Growing at 2.3 Billion rows per day." Site: **archive.pendulumflow.com**. The author's bio references this exact database, lending credibility to continuity.
+
+- Tweet stats at capture: 30.5k views, 312 likes, **450 bookmarks** (bookmark/like ratio > 1 = saved-as-reference signal), 24 RTs, 29 replies.
+- One attached image (1200×630 site screenshot).
+
+## What's in the archive (homepage, pre-fetched 2026-09-01)
+- Free **hourly Parquet** dumps; **274B+ recorded events** (file-by-file count on 2026-08-31), growing ~2.3B rows/day; publishing runs ~11h behind recording.
+- **Four eras of coverage:**
+  - **V3 "Replay Grade"** (2026-08-18T06 → 2026-08-31T19): Pendulum Flow's own multi-machine capture; every *individual price change*, not just periodic depth snapshots → exact book reconstruction possible.
+  - **V2 anon "ag6"** (Aug 1–15): snapshot grade.
+  - **V2 + V1 PMXT mirrors**: back to 2026-02-21.
+- Known gap: **68h missing** (2026-08-15T10 → 2026-08-18T05), community-sought.
+- Ships `llms.txt` + docs: "Working with the data", file formats, coverage audits. Donation-funded (crypto addresses on site).
+
+## Why it matters
+- **First prediction-markets / market-data-infrastructure note in the vault** — starts a new cluster alongside (not inside) the systematic-trading cluster.
+- Replay-grade (tick-level book updates) Polymarket data is rare and normally paid; free hourly Parquet makes personal experimentation with event-market microstructure and book dynamics cheap to start.
+- Data grade varies by era — always check which era (V1/V2/V3) a query spans before comparing results across boundaries; the 68h Aug gap breaks continuity.
+- Classic open-resource caveat: donation-funded single-operator infrastructure — snapshot what you need locally rather than assuming permanence.
+
+## Links
+- Starts the prediction-markets / market-data cluster — no existing Polymarket or prediction-market notes to weave into yet.
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — adjacent free-open-resource sibling from the 08-30 burst; same discipline: verify assumptions (here: era/grade) before use.
+- [[2026-08-29-three-simple-ma-atr-systems]] — trading cluster root; different domain (equities strategy rules) but same rule: fully-specified inputs before any replication.
