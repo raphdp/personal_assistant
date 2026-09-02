@@ -22,3 +22,4 @@ kind: both
 ## Links
 - Same 2026-08-29 systematic-trading burst: [[2026-08-29-milk-spx-strategy-v1-1]], [[2026-08-29-milk-man-replication-metrics]], [[2026-08-29-pelosi-nvda-copy-trade]]
 - Next-day continuation (2026-08-30 burst): [[2026-08-30-milk-man-dip-buy-rules]] (mean-reversion spec), [[2026-08-30-ignis-trend-following-realtest]] (breakout spec)
+- Top-down counterpoint (2026-09-02): [[2026-09-02-pristinecap-techno-fundamental-suite]] — macro flows → Market Profile → fundamentals → screening before any signal selection.

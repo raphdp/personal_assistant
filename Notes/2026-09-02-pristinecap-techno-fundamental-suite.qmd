@@ -1,0 +1,36 @@
+---
+title: "Andrew O'Connell (Pristine Capital) — top-down techno-fundamental workflow + TradingView indicator suite"
+source: https://x.com/realpristinecap/status/2094785518881951930
+captured: 2026-09-02
+tags: [trading, twitter, tooling, tradingview, market-profile, workflow, technofundamental, indicators]
+kind: reference
+---
+
+**Author:** Andrew O'Connell, CFA, FRM (@realpristinecap, verified; position trader; 3× US Investing Championship top-10 2023–2025; Substack pristinecapital.net; 33.4k followers) · posted 2026-09-01 13:52Z · received 2026-09-02T08:43:22Z (WhatsApp via RDP-30, routed by CoS).
+
+## Summary
+Thread-starter tweet promoting his 7-indicator "Techno-Fundamental Suite" now live on TradingView via the Creator Program (3 indicators free, 4 premium, $25/mo subscribable space — no separate checkout). Quote-tweets his own acceptance announcement into the Creator Program.
+
+The capture-worthy core is the **top-down workflow taxonomy** the suite encodes:
+
+1. **Follow global money flows** (macro liquidity/positioning first)
+2. **Trade Market Profile levels** (structure: value areas, POC, excess)
+3. **Confirm fundamentals** (techno-*fundamental*: validate the setup)
+4. **Screen every signal** through the suite before acting
+
+Credibility framing: audited USIC returns of +103.5%, +254.0%, +39.1% (2023–2025), CFA charterholder + FRM.
+
+Stats at capture: 53.7k views, 332 likes, **806 bookmarks** (save-rate 2.4× likes — unusually high reference intent), 45 RTs, 7 replies.
+
+**Thread caveat:** the per-indicator breakdown lives in the thread replies, which fxtwitter does not expose; only the quoted announcement was embedded. The 7 indicators themselves are NOT captured here — only the workflow skeleton and context.
+
+## Why it matters
+- A compact statement of the **top-down** school: macro flows → Market Profile structure → fundamental confirmation → systematic screening. Direct counterpoint to the vault's bottom-up cluster of simple, fully-specified systems — the two meet at the screening/validation stage.
+- **First Market Profile note in the vault** — starts a structure/market-profile thread (value-area trading, TPO) previously absent.
+- The 806-bookmark/332-like ratio marks this as save-for-later reference material for its audience, not engagement bait — but note the framing is a **product launch**: returns are cited by the promoter himself, attached to a paid suite. Standard skepticism gates apply (self-reported even if "audited", survivorship in contest formats, incentive to flatter the workflow his product sells).
+- Distribution-model signal: TradingView Creator Program ($25/mo in-platform indicator spaces) is consolidating indie indicator distribution — context for any future tooling choice.
+
+## Links
+- [[2026-08-29-three-simple-ma-atr-systems]] — cluster root of the bottom-up simple-systems approach; this note is its top-down mirror.
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — the raw-open-source end of signal sourcing; this is the curated-workflow end of the same spectrum.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — any signal lifted from such suites still must pass per-notional edge validation before being trusted.

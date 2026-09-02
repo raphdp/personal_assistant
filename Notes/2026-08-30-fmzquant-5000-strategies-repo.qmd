@@ -23,3 +23,4 @@ Appreciation post for the Chinese open-source community's research sharing; the 
 - [[2026-08-30-milk-man-dip-buy-rules]] — RSI(2) dip-buy family; repo is a candidate source of replications.
 - [[2026-08-30-ignis-trend-following-realtest]] — breakout trend-following family from the same burst.
 - [[2026-08-29-three-simple-ma-atr-systems]] — cluster root: simple, fully-specified systems.
+- Curated-suite counterpoint (2026-09-02): [[2026-09-02-pristinecap-techno-fundamental-suite]] — 7-indicator suite with an explicit top-down workflow vs this repo's raw 5k entries.
