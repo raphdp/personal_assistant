@@ -24,3 +24,4 @@ Replicates @etbent1's strategy and confirms it works — then reports the effect
 ## Links
 - [[2026-08-29-milk-spx-strategy-v1-1]] — same "Milk" options-strategy lineage (@MarginCall4's SPX variant, just went live).
 - [[2026-08-30-milk-man-dip-buy-rules]] — same author, next day: RSI(2) mean-reversion spec.
+- [[2026-09-04-systematicpeter-why-publish-research]] — joined 2026-09-04: originator-side view of this same loop — why authors publish full rules+code, evidenced by a reader running the QQQ Z-Score strategy live for a year.

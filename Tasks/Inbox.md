@@ -16,3 +16,4 @@
 - [ ] Evaluate ponytail skill + always-run /ponytail-review pre-commit hook to curb Sol over-engineering (https://github.com/DietrichGebert/ponytail 2026-08-30)
 - [ ] Explore archive.pendulumflow.com docs (llms.txt, "Working with the data", file formats, coverage audits) and assess V3 Replay-Grade orderbook data for personal projects (https://x.com/pendulumflow/status/2094209959894618184 2026-09-01)
 - [ ] Adopt notional-normalization step in own backtests: re-express edge as points-captured-%-of-notional (constant exposure) before accepting any fixed-contract backtest (https://x.com/MrMilkTrading/status/2094401937986728202 2026-09-01)
+- [ ] Read @SystematicPeter original QQQ Z-Score post (full rules + code, ~2025) that this reader ran live for a year — evaluate as a candidate strategy to study/replicate (https://x.com/SystematicPeter/status/2095882832371749071 2026-09-04)

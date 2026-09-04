@@ -1,0 +1,30 @@
+---
+title: "Peter (@SystematicPeter) — why he publishes strategy research (the one-year-later live-success email)"
+source: https://x.com/SystematicPeter/status/2095882832371749071
+captured: 2026-09-04
+tags: [trading, twitter, open-research, publishing, qqq-z-score, backtesting, strategy-research, replication]
+kind: both
+---
+
+**Author:** Peter - Cracking Markets (@SystematicPeter) · posted 2026-09-04 14:33Z · received 2026-09-04T16:32:46Z (WhatsApp via RDP-30, routed by CoS). 1 attached media item (chart photo: the strategy's continuously updated backtest — https://pbs.twimg.com/media/HRYSVEoaoAAa53Z.png?name=orig).
+
+## Summary
+The author's rationale for publishing strategy research with full rules and code, argued through one piece of evidence: a reader email received a year after he shared the QQQ Z-Score strategy on X.
+
+- **The email:** "Hi Peter, Just wanted to send my thanks to you for the QQQ Z-Score strategy that you shared on X about a year ago. I have actually been using it live since then and it has performed extremely well!"
+- Full rules **and code** were shared at the time; the chart shows the strategy's **continuously updated backtest** since.
+- The point he draws: the valuable signal is not likes/reposts but that **a trader could understand the logic, test it independently, and put it into live practice** — and sometimes one useful idea improves how someone researches, tests, or trades for years.
+- He keeps publishing because he has **benefited from other traders' ideas the same way** — reciprocity, not altruism.
+
+## Why it matters
+- This is the **author-side rationale for open research publishing**, the mirror image of the reader-side notes already in the vault: the [[2026-08-29-milk-man-replication-metrics]] node documents *independent replication* as stronger evidence than the originator's own backtest — this tweet is what that replication looks like from the originator's side, and why originators bother.
+- The email is a **fourth kind of evidence** in the strategy-evidence hierarchy the vault is accumulating: likes/reposts (weak) → self-backtest → independent replication → **live trading by an independent reader, self-reported one year later**. Self-reported and n=1, but the longest-horizon signal we've captured.
+- The QQQ Z-Score strategy itself is new to the vault — first mention. Only surface features known: QQQ instrument, z-score-style statistical/mean-reversion logic, has code, backtest chart attached.
+- **Skepticism gates:** the email is quoted, not shown; "performed extremely well" is unquantified; the continuously-updated backtest is author-run (self-backtest tier). No position-sizing, regime, or fee detail. Anon reader, cannot verify.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-08-29-three-simple-ma-atr-systems]] — same author captured 2026-08-29; the MA+ATR ensemble post. Open task in Inbox to read its full system definitions.
+- [[2026-08-29-milk-man-replication-metrics]] — reader-side counterpart: independent replication of someone else's strategy, with before/after metrics. That is the process this tweet argues is worth enabling.
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — the ecosystem-scale version of the same idea: 5,000+ openly shared strategies; Peter's "I benefited from others' ideas the same way" is the individual-scale version.
+- [[2026-09-02-pristinecap-techno-fundamental-suite]] — counterpoint on evidence style: curated top-down workflow, no code shared.
