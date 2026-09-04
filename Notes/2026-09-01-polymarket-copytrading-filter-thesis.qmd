@@ -26,3 +26,4 @@ Stats at capture: 9.3k views, 80 likes, 104 bookmarks (bookmarks > likes again �
 ## Links
 - [[2026-09-01-pendulum-flow-polymarket-orderbook-archive]] — same cluster, the data layer: replay-grade orderbook data is what would make independent verification of wallet PnL / market microstructure possible.
 - [[2026-08-29-pelosi-nvda-copy-trade]] — the vault's other copy-trading capture: single informed wallet vs category-specialist wallets; both reject whale-chasing.
+- [[2026-09-04-xmayeth-soccer-exact-score-bundle]] — joined 2026-09-04: a direct (rules-based, non-copy) way into the same soccer niche the quoted specialist dominates; complements the filter thesis.

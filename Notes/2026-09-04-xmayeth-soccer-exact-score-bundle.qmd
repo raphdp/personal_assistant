@@ -1,0 +1,30 @@
+---
+title: "may.crypto — soccer exact-score 3-way bundle on Polymarket (the 88th-minute window)"
+source: https://x.com/xmayeth/status/2095903901338009907
+captured: 2026-09-04
+tags: [prediction-markets, polymarket, soccer, sports-markets, exact-score, market-microstructure, strategy-research, twitter]
+kind: reference
+---
+
+**Author:** may.crypto (@xmayeth; soccer/Polymarket strategy poster, small account) · posted 2026-09-04 15:56Z · received 2026-09-04T16:33:39Z (WhatsApp via RDP-30, routed by CoS). 14 likes, 0 RTs at fetch. 1 attached media item (image/graphic, not transcribed).
+
+## Summary
+A fully-specified soccer **exact final score** strategy on Polymarket, built around one edge claim: at 1–0 late in the game, the three live final-score outcomes (1–0, 2–0, 1–1) are systematically underpriced as a bundle, but only inside a narrow minute-window.
+
+- **Setup:** a game sits at 1–0 late. Three simultaneous buys — 1–0, 2–0, 1–1. Whichever lands pays $1/contract; the other two burn. Total cost must fit under a per-minute ceiling.
+- **The data:** 11,797 matches reaching the 85th minute at 1–0. In **3.48%** the leader scores twice more before the whistle → **all three positions burn at once**. That 3.5% is the hard floor on bundle cost.
+- **The window:** by the **88th minute** the double-goal risk halves to **2%** and the ceiling rises to **98c**. Key subtlety: the 88th is ~8 real minutes from the end, not 2 — second-half stoppage averages **5.8 min**.
+- **The rule:** sum the three prices, compare to the minute's ceiling (96.5c at 85', up to 98c at 88'); under → take all three, over → pass. Roughly 30 seconds of work per window.
+- Sign-off: "sports is the most underpriced market on Polymarket in terms of edge… I am going to get into it properly soon."
+
+## Why it matters
+- Third note in the prediction-markets cluster; first capture of a **complete, rules-based soccer microstructure strategy** (prior two were infrastructure and copytrade filtering). The template — condition → joint-probability floor → per-minute price ceiling → pass/act — is reusable as a strategy-spec pattern.
+- The load-bearing insight is **denominator discipline**: stoppage time means clock-minute ≠ real-time-left. The 88' "safe" window is really ~8 minutes of risk, and the same inflation applies to the odds on late goals. Any late-game soccer model must price in added time explicitly.
+- The 3.48% burn rate is exactly the kind of base-rate stat that converts a narrative into a testable claim: edge exists iff the three-way bundle trades persistently below (1 − burn-rate) minus fees.
+- **Skepticism gates:** author promises a deeper write-up "soon" (unverified teaser); 14 likes = no community validation yet; match-sample selection criteria (leagues, era, odds-environment) unstated; 3.48% is an average, not split by minute or league; fees/slippage on three simultaneous fills ignored in the quoted numbers.
+- **Isolation note (CoS):** captured as second-brain knowledge only. The user's Polymarket trading activity lives in a separate, isolated company — this is not a trading signal and nothing was routed or acted on.
+
+## Links
+- [[2026-09-01-pendulum-flow-polymarket-orderbook-archive]] — the cluster's data layer: replay-grade orderbook history is exactly what an independent backtest of "do 1–0/2–0/1–1 bundles trade under the minute-ceiling?" would run on.
+- [[2026-09-01-polymarket-copytrading-filter-thesis]] — the quoted sports quant there ("trades only soccer markets, most money in the 0–10c range") is the same niche the author claims is underpriced; copy the specialist's *category*, not this author's specific rule.
+- [[2026-08-29-three-simple-ma-atr-systems]] — trading cluster root; same pattern — a fully-specified rule-set is what makes a claim independently testable vs. narrative.
