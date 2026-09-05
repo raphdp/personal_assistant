@@ -26,4 +26,5 @@ A one-tweet distillation of a 2026 SSRN paper, plus the author's own adaptation 
 - [[2026-09-04-systematicpeter-why-publish-research]] — same public-sharing-of-models ethos; also the evidence-hierarchy node this note's "no metrics quoted" assessment leans on.
 - [[2026-08-29-milk-man-replication-metrics]] — the replication standard a public model should eventually be held to.
 - [[2026-09-02-pristinecap-techno-fundamental-suite]] — spectrum neighbors: this tweet is the pure-fundamental end (single accounting-surprise factor), PristineCap the techno-fundamental blend.
+- [[2026-09-05-michael-ashton-e-piphany-blog]] — same-day macro mirror: both are "how the numbers are built" notes (accounting surprise vs inflation measurement).
 - [[2026-08-30-fmzquant-5000-strategies-repo]] — the ecosystem-scale version of "link to public model below ⬇️".
