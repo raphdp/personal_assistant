@@ -24,3 +24,4 @@ kind: both
 - Next-day continuation (2026-08-30 burst): [[2026-08-30-milk-man-dip-buy-rules]] (mean-reversion spec), [[2026-08-30-ignis-trend-following-realtest]] (breakout spec)
 - Top-down counterpoint (2026-09-02): [[2026-09-02-pristinecap-techno-fundamental-suite]] — macro flows → Market Profile → fundamentals → screening before any signal selection.
 - [[2026-09-04-systematicpeter-why-publish-research]] — same author, one week later: why he publishes full rules + code (a reader has run his QQQ Z-Score strategy live for a year).
+- [[2026-09-05-michael-ashton-e-piphany-blog]] — the macro-regime layer above all of this: inflation/CPI-measurement source feeding the top-down context these systems drift with.

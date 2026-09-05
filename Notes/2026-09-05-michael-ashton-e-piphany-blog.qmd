@@ -1,0 +1,41 @@
+---
+title: "Michael Ashton — E-piphany (inflationguy.blog) — author/source profile"
+source: https://inflationguy.blog/author/mikeashton/
+captured: 2026-09-05
+tags: [macro, inflation, cpi-measurement, fed-policy, tips, blog, source-profile, author-note]
+kind: both
+---
+
+**Author:** Michael Ashton ("the Inflation Guy") · author page on *E-piphany* (inflationguy.blog) · received 2026-09-05T18:15:28Z (WhatsApp via RDP-30, routed by CoS). Page pre-fetched by CoS (HTTP 200 verified); content below is from that fetch.
+
+## Summary
+This capture is a **source/author page**, not a single article — the goal is to register *who to read* on inflation, not one argument.
+
+- **Who:** Michael Ashton, long-standing inflation-markets specialist writing as the "Inflation Guy"; *E-piphany* is his blog. Focus visible from the page itself: **inflation measurement and CPI methodology**, **Fed policy commentary**, and **TIPS-adjacent macro** — the intersection this vault had no node for until now.
+- **Recurring artifact:** the monthly **"Inflation Guy's CPI Summary"** series — May, June, and July 2026 editions visible on the author page, published ~week after month-end CPI release. This is the cadence worth knowing: a monthly, methodology-aware digest of each CPI print.
+- **Themes across recent posts:** skepticism of official inflation measurement ("Socialism and Inflation Measurement"); Fed-watch under a Warsh Fed ("This Warsh Guy Might Be a Keeper" → "Multiple Poppycock: Warning on Warsh Fed Meeting #1" — enthusiasm then warning); framework critique ("The Fate of FAIT Was Fated", 2025); regime analysis ("A New Era of Positive Stock-Bond Correlations", 2026-06; "The Dollar: Best House on a Bad Block", 2026-01); the occasional non-macro take ("AI: Even a Big Deal Is Smaller Than You Think", 2024).
+
+**Recent posts index (dates = publish):**
+- 2026-08-12 Inflation Guy's CPI Summary — July 2026 — https://inflationguy.blog/2026/08/12/inflation-guys-cpi-summary-july-2026/
+- 2026-08-05 Socialism and Inflation Measurement — https://inflationguy.blog/2026/08/05/socialism-and-inflation-measurement/
+- 2026-07-29 Multiple Poppycock: Warning on Warsh Fed Meeting #1 — https://inflationguy.blog/2026/07/29/multiple-poppycock-warning-on-warsh-fed-meeting-1/
+- 2026-07-14 Inflation Guy's CPI Summary — June 2026 — https://inflationguy.blog/2026/07/14/inflation-guys-cpi-summary-june-2026/
+- 2026-07-08 This Warsh Guy Might Be a Keeper — https://inflationguy.blog/2026/07/08/this-warsh-guy-might-be-a-keeper/
+- 2026-06-16 Your Revenue Is My Expense — https://inflationguy.blog/2026/06/16/your-revenue-is-my-expense/
+- 2026-06-10 Inflation Guy's CPI Summary — May 2026 — https://inflationguy.blog/2026/06/10/inflation-guys-cpi-summary-may-2026/
+- 2026-06-04 A New Era of Positive Stock-Bond Correlations and What That Means — https://inflationguy.blog/2026/06/04/a-new-era-of-positive-stock-bond-correlations-and-what-that-means/
+- 2026-05-27 What Is the Season for an Inflation-Proof Currency? — https://inflationguy.blog/2026/05/27/what-is-the-season-for-an-inflation-proof-currency/
+- 2026-01-28 The Dollar: Best House on a Bad Block — https://inflationguy.blog/2026/01/28/the-dollar-best-house-on-a-bad-block/
+- Older: 2025-11-05 Mamdani's Effect on the CPI · 2025-09-02 The Fate of FAIT Was Fated · 2024-02-28 AI: Even a Big Deal Is Smaller Than You Think · 2022-12-22 2022 Year-End Thoughts
+
+## Why it matters
+- **First macro/inflation node in the vault** — starts the cluster the routing hint asked for (macro / inflation / CPI-measurement / fed-policy / TIPS). Until now the vault was bottom-up systems + prediction markets; this adds the macro-regime layer those systems drift with.
+- **The monthly CPI Summary is the actionable artifact**: a methodology-aware digest per CPI print. One read of the July 2026 edition will show whether the series earns a standing follow → task created.
+- **Measurement skepticism is the signature angle** — how the CPI is constructed (and contested) matters for anything denominated in nominal terms, including backtest edge across eras (see the notional-normalization rule: index-level and volatility *inflation* since 2022 is exactly the regime drift at stake).
+- **Positive stock-bond correlation post (2026-06-04)** is portfolio-construction-relevant context if that regime persists — flagged in the index for future retrieval.
+- **Skepticism gates:** author page only — no individual post read in this capture; the Warsh arc (keeper → poppycock within 3 weeks) is a reminder that the commentary is opinionated Fed-watch, not data. Isolation note (CoS convention): personal second-brain capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-02-pristinecap-techno-fundamental-suite]] — the top-down school's step 1 is "follow global money flows"; this source is the inflation/regime lens for that step.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — regime drift (index level, volatility inflation) is the mechanism that rule corrects for; Ashton's measurement angle is the macro side of the same problem.
+- [[2026-09-05-quant-kurtis-unexpected-gross-profit]] — the other new fundamental-surface capture: accounting-surprise factor vs inflation-measurement critique — both are "how the numbers are built" notes.

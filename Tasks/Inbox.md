@@ -18,3 +18,4 @@
 - [ ] Adopt notional-normalization step in own backtests: re-express edge as points-captured-%-of-notional (constant exposure) before accepting any fixed-contract backtest (https://x.com/MrMilkTrading/status/2094401937986728202 2026-09-01)
 - [ ] Read @SystematicPeter original QQQ Z-Score post (full rules + code, ~2025) that this reader ran live for a year — evaluate as a candidate strategy to study/replicate (https://x.com/SystematicPeter/status/2095882832371749071 2026-09-04)
 - [ ] Open Kurtis The Quant tweet image to get the public model link, then review the microcap unexpected-gross-profit model (SSRN 7268289 concept) (https://x.com/Quant_Kurtis/status/2095959188493214146 2026-09-05)
+- [ ] Read Ashton's "Inflation Guy's CPI Summary — July 2026" and decide if the monthly E-piphany CPI series earns standing follow (https://inflationguy.blog/2026/08/12/inflation-guys-cpi-summary-july-2026/ 2026-09-05)

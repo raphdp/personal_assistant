@@ -34,3 +34,4 @@ Stats at capture: 53.7k views, 332 likes, **806 bookmarks** (save-rate 2.4× lik
 - [[2026-08-29-three-simple-ma-atr-systems]] — cluster root of the bottom-up simple-systems approach; this note is its top-down mirror.
 - [[2026-08-30-fmzquant-5000-strategies-repo]] — the raw-open-source end of signal sourcing; this is the curated-workflow end of the same spectrum.
 - [[2026-09-01-milk-man-backtest-notional-normalization]] — any signal lifted from such suites still must pass per-notional edge validation before being trusted.
+- [[2026-09-05-michael-ashton-e-piphany-blog]] — inflation/CPI-measurement source for the macro lens step 1 ("follow global money flows") actually runs on.

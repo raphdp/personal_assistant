@@ -27,3 +27,4 @@ Stats at capture: 4k views, 28 likes, 40 bookmarks.
 - [[2026-08-30-milk-man-dip-buy-rules]] — same author's mean-reversion spec; this discipline governs how such specs should be validated.
 - [[2026-08-29-milk-man-replication-metrics]] — independent replication in the same ecosystem.
 - [[2026-08-30-ignis-trend-following-realtest]] — trend-following backtests are equally exposed to fixed-sizing distortion across eras.
+- [[2026-09-05-michael-ashton-e-piphany-blog]] — the macro side of the same problem: measurement-aware inflation/regime context for the drift this rule corrects.
