@@ -36,6 +36,7 @@ This capture is a **source/author page**, not a single article — the goal is t
 - **Skepticism gates:** author page only — no individual post read in this capture; the Warsh arc (keeper → poppycock within 3 weeks) is a reminder that the commentary is opinionated Fed-watch, not data. Isolation note (CoS convention): personal second-brain capture only; nothing routed to the trading company.
 
 ## Links
+- [[2026-08-29-three-simple-ma-atr-systems]] — cluster root of the vault's bottom-up systems; this source is the macro-regime layer above them (the drift they are exposed to).
 - [[2026-09-02-pristinecap-techno-fundamental-suite]] — the top-down school's step 1 is "follow global money flows"; this source is the inflation/regime lens for that step.
 - [[2026-09-01-milk-man-backtest-notional-normalization]] — regime drift (index level, volatility inflation) is the mechanism that rule corrects for; Ashton's measurement angle is the macro side of the same problem.
 - [[2026-09-05-quant-kurtis-unexpected-gross-profit]] — the other new fundamental-surface capture: accounting-surprise factor vs inflation-measurement critique — both are "how the numbers are built" notes.
