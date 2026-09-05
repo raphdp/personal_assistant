@@ -1,0 +1,29 @@
+---
+title: "Kurtis The Quant (@Quant_Kurtis) — unexpected gross profit as a cross-sectional return factor (SSRN 7268289) + microcap adaptation"
+source: https://x.com/Quant_Kurtis/status/2095959188493214146
+captured: 2026-09-05
+tags: [trading, twitter, factor-investing, gross-profit-surprise, microcap, ssrn, strategy-research, evidence-hierarchy]
+kind: both
+---
+
+**Author:** Kurtis The Quant (@Quant_Kurtis) · posted 2026-09-04 19:36Z · received 2026-09-05T16:10:30Z (WhatsApp via RDP-30, routed by CoS). 1 attached media item (photo carrying the public model's details/link — https://pbs.twimg.com/media/HRZXeaTagAAS0UU.png?name=orig).
+
+## Summary
+A one-tweet distillation of a 2026 SSRN paper, plus the author's own adaptation of its idea.
+
+- **Paper:** SSRN 7268289, *Unexpected Gross Profit and Cross-Sectional Stock Returns* (2026). Core claim: firms reporting **higher-than-expected gross profit** — measured against their own **trailing 8 quarters** — tend to **outperform** cross-sectionally.
+- **Author's assessment of the paper:** the in-paper results were **"tepid."**
+- **His move:** took the concept (gross-profit surprise vs own trailing baseline) and **applied it to a microcap model**. The link to the public model is in the attached image, not the tweet body.
+
+## Why it matters
+- **New concept for the vault: fundamental surprise as a factor.** Not the classic earnings surprise (PEAD-adjacent) but **gross-profit surprise vs the firm's own trailing-8Q baseline** — a margins-focused, accrual-resistant measure of operational improvement. First fundamental-surface factor captured here; everything so far is technical/rules-based or prediction-market.
+- **The microcap adaptation is the interesting part.** "Paper result tepid → sharpen it in microcaps" is a standard anomaly-hunting template: less analyst coverage, slower price discovery, wider dispersion — but also the regime where backtests lie hardest (see skepticism gates).
+- **Evidence tier:** author-adapted model with **zero performance metrics quoted** in the tweet. At best self-backtest tier on the vault's evidence hierarchy; a public model + code (if the image delivers) is what makes independent replication possible — the standard set by [[2026-08-29-milk-man-replication-metrics]].
+- **Skepticism gates:** paper results self-described as tepid; microcap backtests are structurally exposed to **liquidity/transaction costs, survivorship and delisting bias**; no Sharpe/drawdown/sample window given; the model link is unverified (locked in the attached image — unreadable in this capture pipeline); SSRN working paper ≠ peer-reviewed.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-04-systematicpeter-why-publish-research]] — same public-sharing-of-models ethos; also the evidence-hierarchy node this note's "no metrics quoted" assessment leans on.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication standard a public model should eventually be held to.
+- [[2026-09-02-pristinecap-techno-fundamental-suite]] — spectrum neighbors: this tweet is the pure-fundamental end (single accounting-surprise factor), PristineCap the techno-fundamental blend.
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — the ecosystem-scale version of "link to public model below ⬇️".
