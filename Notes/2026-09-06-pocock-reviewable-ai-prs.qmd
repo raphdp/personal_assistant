@@ -6,24 +6,23 @@ tags: [ai-agents, twitter, code-review, agent-skills, pr-review, tdd, workflow]
 kind: both
 ---
 
-**Author:** Matt Pocock (@mattpocockuk — TypeScript educator, Total TypeScript; author of the /grill-me command cited in the Phelps planning loop) · posted 2026-09-06 · received 2026-09-06 18:57Z (WhatsApp via RDP-30, routed by CoS; RDP-231). Content verified via oembed at capture.
+**Author:** Matt Pocock (@mattpocockuk — TypeScript educator, Total TypeScript; author of the /grill-me command cited in the Phelps planning loop) · posted 2026-09-06 18:26Z · received 2026-09-06 18:57Z (WhatsApp via RDP-30, routed by CoS; RDP-231, completed by RDP-232). Engagement ~30 min after posting: 340 likes / 10 RT / 28 replies. Full text captured via RDP-232 — the initial RDP-231 oembed fetch had truncated the final (@dctanner) paragraph.
 
 ## Summary
-A question tweet seeding four techniques for making AI-authored PRs easier to review:
+A question tweet seeding four techniques for making AI-authored PRs easier to review, plus one "wildest" outlier:
 
 1. **/show-me** (by @dexhorthy, Dex Horthy) — a command/skill for easy-to-read diffs.
 2. **Describe the changes in pseudocode** — the PR narrates intent, not just the diff.
 3. **Mermaid diagrams** — visualize control/data-flow changes.
 4. **Evidence of TDD** — show tests failing first, then passing.
-
-Teaser cut off mid-sentence: "The wildest version of this I've heard is @dctanner's agent, who uses…" — the full technique lives in the thread replies, which are not captured here (login-walled).
+5. **The wildest version** (@dctanner's agent): uses Playwright to record a video of the frontend feature working, with text-to-speech narration over the top — "the agent literally talks you through its change." Review becomes watching a narrated demo instead of reading a diff.
 
 ## Why it matters
 - **Third leg of the vault's agent-workflow cluster:** existing nodes police *planning* (Phelps loop: converge the PRD before code) and *execution* (Scope Guard rules, complexity gates, ponytail review hook). This is the *review* leg — making agent output legible to the human at PR time.
-- **One principle under all four techniques:** shift the reviewer from reading raw diffs to reading intent-first artifacts — what changed (pseudocode, Mermaid, readable diffs) and why it's correct (TDD evidence). Same "review must be structural, not vibes" instinct as the Quentin code-quality gates.
-- **Directly applicable to the agent-harness work** (deepseek/prime harness items on the Mon nudge): every harness PR can ship a pseudocode description + test evidence as a standing rule — cheap to adopt, no new tooling required.
+- **One principle under all the techniques:** shift the reviewer from reading raw diffs to reading intent-first artifacts — what changed (pseudocode, Mermaid, readable diffs), why it's correct (TDD evidence), or proof it works (Playwright-narrated demo). Same "review must be structural, not vibes" instinct as the Quentin code-quality gates.
+- **Directly applicable to the agent-harness work** (deepseek/prime harness items on the Mon nudge): every harness PR can ship a pseudocode description + test evidence as a standing rule — cheap to adopt, no new tooling required. For frontend-facing changes, @dctanner's Playwright-video + TTS narration is the heavyweight version of the same idea (the PR as demonstrable evidence).
 - **Author overlap:** Pocock's /grill-me is step 1 of the Phelps planning loop captured the same day — plan-side and review-side bookends from the same community.
-- **Skepticism gates:** it's a question tweet — the real value is the replies (not captured, login-walled). /show-me carries no URL in the tweet body and is unverified; @dctanner's agent technique is cut off mid-sentence. Read the thread before adopting anything.
+- **Skepticism gates:** it's a question tweet — the replies (28 at capture, not captured, login-walled) likely hold more techniques. /show-me carries no URL in the tweet body and remains unverified; @dctanner's technique is now fully captured (RDP-232) but unevaluated. Read the thread before adopting anything.
 
 ## Links
 - [[2026-09-06-phelps-agentic-planning-loop]] — same-day bookend: the Phelps loop converges the *plan* before code exists; these techniques make the resulting *PR* reviewable after. Pocock authors /grill-me (loop step 1) and poses this review question — one workflow, two phases.
