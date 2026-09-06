@@ -1,0 +1,38 @@
+---
+title: "Mike Julian — dropping most human code review at an AI-native company (risk-based triggers + hardened guardrails + agent-skill hygiene)"
+source: https://x.com/mikejulian/status/2096450476170694785
+captured: 2026-09-06
+tags: [ai-agents, twitter, code-review, engineering, agent-skills, metrics, team-practices]
+kind: both
+---
+
+**Author:** Mike Julian (@mikejulian — CEO/cofounder @DuckbillHQ, cloud cost management, SF; verified, ~7.7k followers) · posted 2026-09-06 04:08Z (thread, 11 tweets) · received 2026-09-06T21:00:52Z (WhatsApp via RDP-30, routed by CoS; RDP-240). Stats at capture: 703 likes, 29 RT, **1,110 bookmarks** (~1.6× likes — the saved-as-recipe signal), 207k views, 54 replies.
+
+## Summary
+First-party account of an AI-native company asking "what if we just...didn't review the PRs?" — and replacing blanket human review with two things:
+
+1. **Risk-based review triggers.** Human review required only when a change touches: public API/MCP, auth, design system, non-additive database schema changes, or **agent skills**. Enforced with a shell script that applies a GitHub label.
+2. **Hardened guardrails.** Nearly every rule in ruff/prettier/eslint/ty; unit coverage floor 85%; high-level post-deploy o11y on customer-facing "bad time incoming" signals (ingestion, data processing, response times, auth).
+
+Plus an **agent-skill hygiene** pass (the part most relevant to us):
+- Rewrote agent skills to strip "cruft from 2025-era AI."
+- Wrote **evals for skills**, tested which had been "consumed by modern LLM knowledge," deleted a lot, improved the rest.
+- Found doc-happy agents accumulating markdown and **poisoning context** → centralized docs into one folder, **human-written only**, location enforced by another shell script.
+- "Why use an AI for something that can be deterministic?" — CI shell scripts enforce docs location and other invariants; **agent-skills/AGENTS.md changes must go in their own PR.**
+
+**Results:** PRs merged 353 → 684 (+94%, 80/wk → 154/wk) · merged <1h: 28% → 45% · <24h: 76% → 80% · median merge time: 26h (human-reviewed) vs **1h** (no human review).
+
+## Why it matters
+- **The only node in the agent-workflow cluster with measured outcomes.** Phelps (plan), Scope Guard/Quentin gates (execution), Pocock (review presentation) are techniques; this is the same philosophy run end-to-end for real, with before/after numbers.
+- **Completes the cluster's argument.** If PRs carry intent-first review artifacts (Pocock) and the pipeline enforces mechanical gates (Quentin), blanket human review becomes the bottleneck — this thread is what replacing it *selectively* looks like: risk triggers decide *where* the human looks.
+- **The review-trigger list is directly reusable:** public API/MCP, auth, schema, design system, agent skills. Note *agent skills* treated as review-critical surface — same judgment we make: skills/AGENTS.md changes get their own PR.
+- **Agent-skill hygiene mirrors our own operation:** skills accumulate stale cruft as models internalize old practices; evals decide what gets deleted; docs written by humans only, because doc-happy agents poison context. Our memory/skills carry the same rot risk.
+- **"Deterministic > AI for enforcement":** shell scripts in CI beat prompt rules for invariants — cheap, testable, no drift.
+- **Skepticism gates:** n=1 company, ~small team, no baseline on change-failure rate (velocity up is not quality up — the guardrails and o11y are the quality claim, not measured here). 1h median merge implies heavy automation trust; the 26h→1h delta is the whole story of removing the human queue.
+
+## Links
+- [[2026-09-06-pocock-reviewable-ai-prs]] — same-day review-leg sibling: Pocock makes individual AI PRs legible to humans; Julian decides *which* PRs need a human at all — trigger-list + guardrails replace blanket review.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — the mechanical guardrails half of Julian's system: numeric gates (coverage floor, complexity thresholds) are what let risk-based review drop the human default. Julian's 85% coverage floor is a Quentin-style gate in production.
+- [[2026-08-30-codex-sol-scope-guard-rules]] — process discipline for what agents build; Julian's shell-script-enforced invariants are the deterministic version of prompt-rule enforcement, and his "skills/AGENTS.md get their own PR" mirrors the pause-and-confirm rule for high-risk surfaces.
+- [[2026-09-06-phelps-agentic-planning-loop]] — the plan leg of the same pipeline: converge the PRD upstream so fewer PRs carry risk downstream, shrinking the human-review set further.
+- [[2026-08-30-forward-implementation-first-skill]] — cluster root (anti-overengineering / execution hygiene); Julian's guardrails (stricter linting, deterministic CI scripts) are the same enforcement instinct with team-level scale.

@@ -36,3 +36,4 @@ Stats at capture: 246.7k views, 2.7k likes, **5.5k bookmarks** (bookmarks ≈ 2�
 - [[2026-08-30-forward-implementation-first-skill]] — same 2026-08-30 anti-overengineering cluster.
 - [[2026-09-06-phelps-agentic-planning-loop]] — the plan-phase counterpart (2026-09-06): adversarial multi-model PRD loop before code exists; these gates take over after.
 - [[2026-09-06-pocock-reviewable-ai-prs]] — the PR-phase counterpart (2026-09-06): make the diff itself human-readable (pseudocode, Mermaid, TDD evidence) before the gates run on it.
+- [[2026-09-06-julian-risk-based-code-review]] — these gates in production (2026-09-06): Julian's team dropped blanket human review behind an 85% coverage floor + maxed-out linting; the measured outcome of leaning on mechanical guardrails instead of review queues.
