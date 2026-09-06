@@ -63,3 +63,4 @@ Full rule list (OCR'd from the tweet image; the "first reply" turned out to be t
 - [[2026-08-30-forward-implementation-first-skill]] — same cluster; why agents do this + skip-bookkeeping skill.
 - [[2026-08-30-ponytail-skill-sol]] — same cluster; concrete Codex setup.
 - [[2026-08-30-cyclomatic-complexity-skill]] — same evening; mechanical complexity guard.
+- [[2026-09-06-phelps-agentic-planning-loop]] — multi-model version of the "Before editing" plan discipline (2026-09-06): refine the PRD adversarially before these rules govern execution.

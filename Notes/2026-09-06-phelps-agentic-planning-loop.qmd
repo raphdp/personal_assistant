@@ -1,0 +1,30 @@
+---
+title: "Mark Phelps — adversarial multi-model planning loop for PRDs (/grill-me → /council → plannotator)"
+source: https://x.com/mark_a_phelps/status/2096319560974479428
+captured: 2026-09-06
+tags: [ai-agents, twitter, agent-skills, planning, prd, multi-model-review, workflow]
+kind: both
+---
+
+**Author:** Mark Phelps (@mark_a_phelps — built flipt.io, now AI engineering at Cloudflare; NC, USA) · posted 2026-09-05 19:28Z · received 2026-09-06T17:55:57Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture: 443 likes, 28 RTs, **879 bookmarks** (~2× likes — the saved-as-recipe signal), ~26.3k views.
+
+## Summary
+"I think I may have found the perfect agentic planning process." — a four-step loop that treats a PRD as something to be *adversarially refined*, not written once:
+
+1. **/grill-me** (Matt Pocock, @mattpocockuk) — stress-test and flesh out the initial PRD.
+2. **/council** (Kitze, @thekitze) — cross-check the PRD with multiple models/agents (e.g. Claude sends to Codex). Link lives in a thread follow-up, not the tweet body.
+3. **plannotator** — annotate the returned plan with your feedback and send it back.
+4. **Loop 2→3 until converged** — "Loop until you are happy with it."
+
+Core idea: draft → cross-model critique → human annotation → repeat, converging the spec *before* any code is written.
+
+## Why it matters
+- **First planning/PRD-phase node in the vault's agent-workflow cluster.** The 2026-08-30 anti-overengineering cluster polices *execution* (scope rules, complexity gates, skip-bookkeeping); this loop polices the *plan* upstream — the cheapest place to catch a wrong premise (Scope Guard's own rule: resolve ambiguity before building on it).
+- **Cross-model critique is the load-bearing step:** routing the PRD to a *different* model family (Claude → Codex) breaks self-agreement bias — one model's blind spots aren't shared by the other. The human only annotates the deltas instead of writing critiques from scratch.
+- **Bookmark ratio** (879 saves vs 443 likes) marks it as save-and-use material, the same signal as the Quentin rubric (5.5k saves vs 2.7k likes).
+- **Skepticism gates:** "perfect" is marketing; none of the three tools verified in this capture — /grill-me and plannotator carry no URLs in the tweet, and /council's link sits in a thread reply not yet opened. Read the thread before adopting.
+
+## Links
+- [[2026-08-30-codex-sol-scope-guard-rules]] — its "Before editing / state a minimal plan" rules are the single-writer version of plan discipline; this loop is the multi-model refinement of the same phase.
+- [[2026-08-30-forward-implementation-first-skill]] — cluster root: execution-side hygiene (skip bookkeeping, ship) vs this plan-side quality loop — converge the plan so execution has less to unwind.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — numeric gates make *code* review mechanical; this loop makes *plan* review adversarial — the same "review must be structural, not vibes" instinct at opposite ends of the pipeline.

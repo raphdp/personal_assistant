@@ -26,3 +26,4 @@ Intro tweet for **the skill**: https://github.com/Vuk97/forward-implementation-f
 - [[2026-08-30-codex-sol-scope-guard-rules]] — same cluster; rules complement the classification approach.
 - [[2026-08-30-ponytail-skill-sol]] — same cluster; enforcement via pre-commit hook.
 - [[2026-08-30-cyclomatic-complexity-skill]] — same evening; catches code-side bloat.
+- [[2026-09-06-phelps-agentic-planning-loop]] — plan-side complement (2026-09-06): adversarial multi-model PRD loop converging the spec before execution starts.

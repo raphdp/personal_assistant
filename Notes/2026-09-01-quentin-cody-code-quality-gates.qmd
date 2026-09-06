@@ -34,3 +34,4 @@ Stats at capture: 246.7k views, 2.7k likes, **5.5k bookmarks** (bookmarks ≈ 2�
 - [[2026-08-30-ponytail-skill-sol]] — review-hook sibling: catches bloat at commit time; this rubric defines the numeric targets.
 - [[2026-08-30-codex-sol-scope-guard-rules]] — process-side guard (AGENTS.md rules) vs this code-side gate list; two halves of the anti-slop cluster.
 - [[2026-08-30-forward-implementation-first-skill]] — same 2026-08-30 anti-overengineering cluster.
+- [[2026-09-06-phelps-agentic-planning-loop]] — the plan-phase counterpart (2026-09-06): adversarial multi-model PRD loop before code exists; these gates take over after.
