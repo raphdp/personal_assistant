@@ -1,0 +1,31 @@
+---
+title: "Matt Pocock — techniques for reviewable AI-authored PRs (/show-me diffs, pseudocode, Mermaid, TDD evidence)"
+source: https://x.com/mattpocockuk/status/2096666329495257563
+captured: 2026-09-06
+tags: [ai-agents, twitter, code-review, agent-skills, pr-review, tdd, workflow]
+kind: both
+---
+
+**Author:** Matt Pocock (@mattpocockuk — TypeScript educator, Total TypeScript; author of the /grill-me command cited in the Phelps planning loop) · posted 2026-09-06 · received 2026-09-06 18:57Z (WhatsApp via RDP-30, routed by CoS; RDP-231). Content verified via oembed at capture.
+
+## Summary
+A question tweet seeding four techniques for making AI-authored PRs easier to review:
+
+1. **/show-me** (by @dexhorthy, Dex Horthy) — a command/skill for easy-to-read diffs.
+2. **Describe the changes in pseudocode** — the PR narrates intent, not just the diff.
+3. **Mermaid diagrams** — visualize control/data-flow changes.
+4. **Evidence of TDD** — show tests failing first, then passing.
+
+Teaser cut off mid-sentence: "The wildest version of this I've heard is @dctanner's agent, who uses…" — the full technique lives in the thread replies, which are not captured here (login-walled).
+
+## Why it matters
+- **Third leg of the vault's agent-workflow cluster:** existing nodes police *planning* (Phelps loop: converge the PRD before code) and *execution* (Scope Guard rules, complexity gates, ponytail review hook). This is the *review* leg — making agent output legible to the human at PR time.
+- **One principle under all four techniques:** shift the reviewer from reading raw diffs to reading intent-first artifacts — what changed (pseudocode, Mermaid, readable diffs) and why it's correct (TDD evidence). Same "review must be structural, not vibes" instinct as the Quentin code-quality gates.
+- **Directly applicable to the agent-harness work** (deepseek/prime harness items on the Mon nudge): every harness PR can ship a pseudocode description + test evidence as a standing rule — cheap to adopt, no new tooling required.
+- **Author overlap:** Pocock's /grill-me is step 1 of the Phelps planning loop captured the same day — plan-side and review-side bookends from the same community.
+- **Skepticism gates:** it's a question tweet — the real value is the replies (not captured, login-walled). /show-me carries no URL in the tweet body and is unverified; @dctanner's agent technique is cut off mid-sentence. Read the thread before adopting anything.
+
+## Links
+- [[2026-09-06-phelps-agentic-planning-loop]] — same-day bookend: the Phelps loop converges the *plan* before code exists; these techniques make the resulting *PR* reviewable after. Pocock authors /grill-me (loop step 1) and poses this review question — one workflow, two phases.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — numeric gates make the merged code mechanically checkable; these techniques make the open PR human-readable. Same structural-review instinct, different pipeline stage.
+- [[2026-08-30-codex-sol-scope-guard-rules]] — Scope Guard disciplines what gets built (minimal plan, no scope creep); this disciplines how the diff is presented for review.
