@@ -31,6 +31,7 @@ Claims on the card:
 - **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
 
 ## Links
+- [[2026-09-09-p123-five-etf-rotation]] — same-day twin from the opposite pole of the evidence spectrum: named vendor (Portfolio123) with a public screen and disclosed rules vs. this anonymous AI-summary card. Calibration pair for source quality.
 - [[2026-09-05-quant-kurtis-unexpected-gross-profit]] — nearest neighbor: tweet summarizing an SSRN paper (that one real, with ID); also the capture whose image was unreadable pre-OCR.
 - [[2026-09-04-systematicpeter-why-publish-research]] — the verifiability ethos this card fails; why "show the model" matters.
 - [[2026-08-29-milk-man-replication-metrics]] — the replication standard any claimed 1.87-Sharpe strategy must eventually meet.

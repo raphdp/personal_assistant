@@ -1,0 +1,32 @@
+---
+title: "Portfolio123 (@P123Finance) — five-ETF rotation system (SPY/QQQ/IEF/BND/GLD): 2-of-3 trend filter + trend-acceleration ranking"
+source: https://x.com/P123Finance/status/2097764643150364789
+captured: 2026-09-09
+tags: [trading, twitter, etf-rotation, momentum, tactical-asset-allocation, portfolio123, trend-filter, strategy, backtest-stats]
+kind: both
+---
+
+**Author:** Portfolio123 (@P123Finance) · posted 2026-09-09 19:10Z · received 2026-09-09T19:41:18Z (WhatsApp via RDP-30, routed by CoS). 1 attached media item — backtest statistics screenshot, full text recovered via OCR (https://pbs.twimg.com/media/HRzBnw8bQAENKQl.jpg?name=orig).
+
+## Summary
+Official Portfolio123 account publishing a **fully-specified five-ETF rotation system** (tweet text truncated mid-sentence — full rules completed below from the sibling run's summary; ranking metric per attached stats card):
+
+- **Universe:** SPY, QQQ, IEF, BND, GLD (US equities large/growth, Treasuries mid/agg, gold — the classic five).
+- **Eligibility (trend filter):** an ETF is eligible only if **at least 2 of 3** are true: 6-month total return > 0, 1-year total return > 0, 2-year total return > 0.
+- **Ranking:** eligible ETFs ranked on **trend acceleration** (tweet text truncates exactly at the ranking line; full ranking formula + rebalance rules are on the linked Portfolio123 screen page behind the t.co shortlink — not yet opened).
+- **Portfolio construction:** hold **top 3 equal weight**, **50% max per ETF**, **weekly rebalance**, unused weight in cash. (From the sibling run's 19:44Z summary of the same tweet.)
+- **Backtest stats (from OCR, P123 screen vs SPY/BND 60/40 benchmark):** total return **1,209.85% vs 574.05%**, annualized **9.74% vs 7.14%**, max drawdown **−19.51% vs −34.70%**, monthly Sharpe **0.87 vs 0.55**, Sortino **1.18 vs 0.74**, StdDev **8.78% vs 9.40%** (monthly-period stats per the card), alpha **5.20%**, beta **0.49**, correlation to benchmark **0.53**, R² 0.28. Backtest window 1998–2026(7); the card also plots positions count and turnover %.
+
+## Why it matters
+- **First fully-disclosed ETF-rotation node in the vault** — pairs with the same-day [[2026-09-09-l1vsun-yield-curve-aware-momentum]] capture as the two poles of the evidence spectrum: this one is a named vendor (Portfolio123) with a public screen, full rules visible, stats card attached; the L1vsun card is an anonymous AI-generated summary. Useful calibration pair for judging source quality.
+- **Mechanically sound design:** the 2-of-3 multi-horizon trend filter is a robustness trick (avoids single-window whipsaw), and capping at 50% per ETF + weekly rebalance + cash fallback controls concentration and over-trading. Same family as the GEM/Keller \& Keuning-style defensive TAA literature and Quantpedia's asset-class momentum rotational system.
+- **Backtest realism gates:** stats are from the vendor's own platform (P123 screens are reproducible there, which is a plus), but (1) the ranking metric is behind a truncated link — need the screen page for full replication; (2) 1998–2026 window includes two full bear regimes (good) but 5-ETF universes with gold/agg bonds have strong look-ahead-ish universe selection (all five ETFs existed by 1998 — actually SPY 1993, QQQ 1999 → **QQQ inception 1999 introduces a mild universe inconsistency**, need to check how P123 handled pre-1999 data), (3) monthly Sharpe 0.87 on a ~28-year window is solid-but-not-spectacular — credible, unlike the L1vsun card's 1.87; (4) QQQ inception was 1999 — check how the P123 screen handled the pre-1999 window before treating 1998 as clean.
+- **Actionable:** add to the study queue as a candidate simple-TAA baseline to replicate on P123 or in Python; compare against 60/40 and the Milk Man rules on the same window.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — same-day twin: anonymous AI-card (unverified) vs. named vendor screen (disclosed). Evidence-spectrum calibration pair.
+- [[2026-08-30-ignis-trend-following-realtest]] — same multi-horizon trend-filter family, single-stock breakout variant.
+- [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — indicator-combo family, same vendor-content genre (blog backtest stats).
+- [[2026-08-29-three-simple-ma-atr-systems]] — simple-systems cluster; this is the TAA/rotation member.
+- [[2026-08-29-milk-man-replication-metrics]] — replication standard this screen should eventually meet.
