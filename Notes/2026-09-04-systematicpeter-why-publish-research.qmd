@@ -28,3 +28,4 @@ The author's rationale for publishing strategy research with full rules and code
 - [[2026-08-29-milk-man-replication-metrics]] — reader-side counterpart: independent replication of someone else's strategy, with before/after metrics. That is the process this tweet argues is worth enabling.
 - [[2026-08-30-fmzquant-5000-strategies-repo]] — the ecosystem-scale version of the same idea: 5,000+ openly shared strategies; Peter's "I benefited from others' ideas the same way" is the individual-scale version.
 - [[2026-09-02-pristinecap-techno-fundamental-suite]] — counterpoint on evidence style: curated top-down workflow, no code shared.
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — the negative case that proves the rule: an anonymous 'SSRN paper' summary card with no ID, no authors, unverifiable claims. Why disclosure standards exist.

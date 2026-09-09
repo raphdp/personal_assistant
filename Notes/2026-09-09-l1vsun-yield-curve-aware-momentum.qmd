@@ -1,0 +1,38 @@
+---
+title: "Livsun (@L1vsun) — yield-curve-aware momentum rotation (equities/bonds/cash): SSRN 'paper' summary card — UNVERIFIED, likely AI-generated"
+source: https://x.com/l1vsun/status/2097390106428706987
+captured: 2026-09-09
+tags: [trading, twitter, momentum, yield-curve, asset-rotation, tactical-asset-allocation, ssrn, strategy-research, evidence-hierarchy, ai-generated-media, verification-failed]
+kind: both
+---
+
+**Author:** Livsun (@L1vsun) · posted 2026-09-08 18:22Z · received 2026-09-09T19:41:33Z (WhatsApp via RDP-30, routed by CoS). 1 attached media item — a "RESEARCH NOTE" summary card whose **full text was recovered via OCR in this capture** (https://pbs.twimg.com/media/HRttLmia0AA-VPt.jpg?name=orig).
+
+## Summary
+Engagement-bait framing — "found a paper sitting on SSRN for two years with under 400 downloads" — summarizing a claimed SSRN working paper (2022): a **yield-curve-aware momentum model** that rotates between equities, bonds and cash using (1) the shape of the term structure and (2) cross-asset momentum signals.
+
+Claims on the card:
+- **Inputs (all public):** treasury yields (term structure), equity indices (S&P 500, MSCI), implied volatility (VIX).
+- **Mechanics:** read curve shape → confirm with cross-asset momentum → rotate exposure. "Doesn't predict — reads what the yield curve is already pricing in."
+- **Backtest:** 6 global markets, out-of-sample, two full rate cycles.
+- **Key results:** Sharpe **1.87**, CAGR **18.4%**, max drawdown **−9.2%**; 2022 case study **+11.3%** (vs 60/40 at −16%) by going cash-heavy in Q1 2022.
+
+## Verification status (this capture's main finding)
+**The paper could not be located — treat this as unverified AI-summary content, not research.**
+- Card lists author as "Quantitative Research Team", gives **no SSRN ID, no title page, no named authors**.
+- Six search attempts (Brave, exact stats "1.87 Sharpe"/"18.4% CAGR", exact phrase "yield curve-aware momentum", SSRN site search — SSRN itself is Cloudflare-gated) found **no matching paper**. The real academic anchor nearby is Sihvonen's *Yield Curve Momentum* (SSRN 2956411 / Rev. of Finance 2024) — related concept, not this paper.
+- Card layout/wording pattern-matches AI-generated summary cards. Classic numbers-too-good pattern (1.87 Sharpe with −9.2% MaxDD on public inputs would be top-decile TAA).
+
+## Why it matters
+- **Concept is sound even if the source is fake:** yield-curve-conditioned regime switching + cross-asset momentum is a legitimate TAA family (Sihvonen above; Quantpedia's asset-class momentum rotational system). If a real paper exists, it's worth capturing properly — hence the Inbox task.
+- **Evidence tier: bottom of the hierarchy** — anonymous summary card, no citation, zero replication path. Fails the [[2026-09-04-systematicpeter-why-publish-research]] verifiability bar by a mile.
+- **Skepticism gates:** no SSRN ID/authors; not independently locatable; AI-generated-media tell; metrics unsubstantiated; survivorship of the 2022 case study (one cherry-picked year); "under 400 downloads" is unfalsifiable engagement framing.
+- **Pipeline note:** the attached-image problem is now solved — full card text OCR'd into this note (api.ocr.space worked where the [[2026-09-05-quant-kurtis-unexpected-gross-profit]] capture called its image "unreadable"). Prior captures can be backfilled if ever needed.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-05-quant-kurtis-unexpected-gross-profit]] — nearest neighbor: tweet summarizing an SSRN paper (that one real, with ID); also the capture whose image was unreadable pre-OCR.
+- [[2026-09-04-systematicpeter-why-publish-research]] — the verifiability ethos this card fails; why "show the model" matters.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication standard any claimed 1.87-Sharpe strategy must eventually meet.
+- [[2026-08-30-ignis-trend-following-realtest]] — same rotation/regime family done right: fully specified, reproducible.
+- [[2026-09-02-pristinecap-techno-fundamental-suite]] — spectrum neighbor: macro-conditioned systematic suite (real, disclosed).
