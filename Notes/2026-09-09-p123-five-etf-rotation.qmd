@@ -30,3 +30,4 @@ Official Portfolio123 account publishing a **fully-specified five-ETF rotation s
 - [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — indicator-combo family, same vendor-content genre (blog backtest stats).
 - [[2026-08-29-three-simple-ma-atr-systems]] — simple-systems cluster; this is the TAA/rotation member.
 - [[2026-08-29-milk-man-replication-metrics]] — replication standard this screen should eventually meet.
+- [[2026-09-11-nayak-pocketfm-growth-playbook]] — same “quantified playbook” genre (2026-09-11), opposite domain: consumer content business growth tactics vs TAA system design.

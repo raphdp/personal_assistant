@@ -1,0 +1,33 @@
+---
+title: "Rohan Nayak (@RohanNayak2, Pocket FM) — 0→$500M ARR growth playbook: AI ad manufacturing, audio-drama format design, localization, $1M internal experiments, all-AI content pivot"
+source: https://x.com/RohanNayak2/status/2098104784264065525
+via: https://x.com/AlexMonahaqyrt/status/2098265042504335653
+captured: 2026-09-11
+tags: [business, twitter, growth, startup, content-production, ai-content, monetization, user-acquisition, localization, flywheel, playbook]
+kind: reference
+---
+
+**Author:** Rohan Nayak (@RohanNayak2), Pocket FM co-founder — posted 2026-09-10 17:42Z; received 2026-09-11T10:37:09Z via Alex Monahan (@AlexMonahaqyrt) quote-tweet "You should bookmark this if you want to start a company" (WhatsApp via RDP-30, routed by CoS). 2.3M views, 3,695 likes, 156 bookmarks on the QT.
+
+## Summary
+
+Founder post on scaling **Pocket FM** ("Netflix for audio-only dramas") from ~0 to **$500M ARR** (adding $250M last year alone) while EBITDA-profitable, organized as five numbered tactics:
+
+1. **Acquisition — AI ad-manufacturing machine:** core measured insight after >$100M spend: CTR 2%→2.25% cuts CAC ~30%. They built the system around hitting 2.25%+ CTR: hit shows → LLMs extract most-intriguing moments → 5-min script, first 60s with a hook every 5s, ending on cliffhanger to force mid-scroll download. Benchmarks: 2.5% CTR + 55% 3-sec through-play; failing creatives get a creative-director intervention. AI enables ~1,000 ads per show, ~17.5k ads/month — 7-8x'd UA budget without material CAC increase. Launch timeline per country (US $25M in 19 mo; Germany $21M in 11 mo; France $10M in 3 mo).
+2. **Retention & monetization via format design:** 2-3 years testing 10 formats before landing audio drama (8-12 min chapters, written for mobile fiction, serialized, hooks + cliffhangers) — daily streaming time went ~25min → 150+min. Free daily minutes then pay-per-episode; ad-unlock option scaled 0 → ~$90M run rate in 12 mo; next episode free daily to build habit; "playlists" stitching free minutes across shows create natural discovery.
+3. **Localization > translation:** AI adapts the story spine's whole cultural layer per region (jokes, folklore) rather than translating; US show localized for Germany had **50% higher retention** than the translated version. Drove $10M ARR France in 3 mo, $21M Germany in 11 mo.
+4. **$1M internal experiment checks:** teams get 12-18 months to prove a thesis; winners double down. Spawned **Pocket Saga** (AI video microdrama app, vertical 2-min episodes) — ~$15M ARR two months post-launch.
+4. [sic] **All-AI content pivot (mid-2024):** growth flatlined for a semester at $200M ARR/50% YoY, then exploded: 25k hours/yr → 2.5M+ hours/yr, 90+ titles with $1M+ lifetime earnings, 13 over $10M; LLM-as-judge QC; 12-month revenue retention 44% → 76%.
+5. Flywheel close: more shows → more blockbusters; localization → more reach; audio→video → larger TAM. "Every aspect of our business is designed to front-run another" — every part improves another, aligned so blockbuster count keeps rising.
+
+## Why it matters
+- **First startup-growth playbook in the vault** — seeds a business/growth cluster. The five tactics are unusually quantitative for a founder post (CTR→CAC elasticity, retention lift, hours produced, retention cohort metric), which is what separates it from generic growth content.
+- **Ad-manufacturing insight is the transferable core:** the 2%→2.25% CTR ≈ −30% CAC elasticity reframes creative volume as a *cost* lever, not just a brand one. The hook-every-5-seconds/cliffhanger script formula plus benchmark gates (2.5% CTR / 55% through-play) with human creative-director escalation is a concrete, copyable QC loop for AI content pipelines.
+- **Flywheel framing** (compounding loop where each function feeds another) is a classic Bezos-style narrative; here backed by per-country revenue timelines. Good calibration piece against Monahan's QT framing ("bookmark this if you want to start a company") — worth reading as an operating pattern, not a guarantee.
+- **Counterpoint to the AI-will-kill-content narrative:** an all-AI content pivot that *raised* 12-mo retention 44%→76% with LLM-as-judge QC is a strong data point in the "AI content quality is a systems problem, not a ceiling" argument. Pairs with the AI-generated-media skepticism in [[2026-09-09-l1vsun-yield-curve-aware-momentum]] from the other side.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — inverse case: AI-generated content presented as research evidence (verification failed) vs Pocket FM's LLM-as-judge QC producing measurable retention gains. Two poles of "AI content quality" evidence.
+- [[2026-09-06-phelps-agentic-planning-loop]] — applied-AI workflow note; Pocket FM's $1M internal experiments are the org-design analogue of Phelps's iterate-to-convergence loops.
+- [[2026-09-09-p123-five-etf-rotation]] — same "quantified playbook" genre, opposite domain (TAA system vs consumer content business).
