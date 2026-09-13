@@ -54,5 +54,5 @@ The **free Regime Rotation** is described on the Substack as "a 100% free macro 
 - [[2026-09-09-p123-five-etf-rotation]] — the vendor pole; same TAA family. Replicate both free strategies on the same window and compare vol/DD/capture profiles.
 - [[2026-09-04-systematicpeter-why-publish-research]] — the verifiability ethos this source passes: free rules, named author, live publication.
 - [[2026-08-30-ignis-trend-following-realtest]] — same regime/rotation family done reproducibly; the replication standard for anything on the study queue.
-- [[2026-08-29-milk-man-backtest-notional-normalization]] — normalization discipline to apply when replicating (express edge as %-of-notional).
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — normalization discipline to apply when replicating (express edge as %-of-notional).
 - [[2026-09-02-pristinecap-techno-fundamental-suite]] — spectrum neighbor: macro-conditioned systematic suite, real and disclosed.
