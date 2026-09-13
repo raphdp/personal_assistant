@@ -26,6 +26,7 @@ Official Portfolio123 account publishing a **fully-specified five-ETF rotation s
 
 ## Links
 - [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — same-day twin: anonymous AI-card (unverified) vs. named vendor screen (disclosed). Evidence-spectrum calibration pair.
+- [[2026-09-13-cointradernik-regime-rotation-rr-pro]] — completes the evidence triad: named independent practitioner, same TAA family, free full rules + IS→OOS Sharpe decay disclosed. Replicate both free systems on the same window vs 60/40.
 - [[2026-08-30-ignis-trend-following-realtest]] — same multi-horizon trend-filter family, single-stock breakout variant.
 - [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — indicator-combo family, same vendor-content genre (blog backtest stats).
 - [[2026-08-29-three-simple-ma-atr-systems]] — simple-systems cluster; this is the TAA/rotation member.

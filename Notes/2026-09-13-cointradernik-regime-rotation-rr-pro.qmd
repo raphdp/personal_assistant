@@ -1,0 +1,58 @@
+---
+title: "Nik (@cointradernik) — Regime Rotation (free macro TAA) vs RR Pro (personal L/S) vs SPY: full backtest stats; Substack verified live"
+source: https://x.com/cointradernik/status/2099063482222039493
+captured: 2026-09-13
+tags: [trading, twitter, regime, rotation, tactical-asset-allocation, macro, etf, strategy, backtest-stats, substack, long-short, evidence-hierarchy]
+kind: both
+---
+
+**Author:** Nik (@cointradernik, 112.2k followers, blue-checked, Ostium business badge; bio: "REGIME ROTATION PRO" + macromarketmodel.com) · posted 2026-09-13 09:11Z · received 2026-09-13T18:02Z (WhatsApp via RDP-30, routed by CoS). 1 attached media — full three-column stats table recovered via OCR (https://pbs.twimg.com/media/HSFcVD7WcAEZ0DR.png?name=orig).
+
+## Summary
+
+Launch tweet for **RR Pro going public**: Nik's personal L/S strategy, sold as the paid tier on his Substack (https://cointradernik1.substack.com/, verified live at capture — "hundreds of subscribers"). Tweet text: "My personal L/S vs the 100% free Regime Rotation strategy vs buy-and-hold SPY — RR Pro is now available publicly (but just utilise the free strategy if you want simplicity and are looking for a way to beat the benchmark with less vol - and donate to cat and dog shelters when you're in the green pls)."
+
+The **free Regime Rotation** is described on the Substack as "a 100% free macro regime-conditioned ETF strategy" — full rules published free; the stats table (OCR'd, complete):
+
+| Metric | RR Pro (paid L/S) | Regime Rotation (free) | SPY |
+|---|---|---|---|
+| CAGR | 48.48% | 24.07% | 12.24% |
+| Final equity | 36.14x | 7.08x | 2.85x |
+| Volatility | 20.65% | 12.14% | 18.59% |
+| Sharpe | 2.019 | 1.839 | 0.715 |
+| Sortino | 3.128 | 2.728 | 1.001 |
+| Max DD close | −17.31% | −12.77% | −34.11% |
+| Max DD wick | −18.46% | −13.54% | −35.49% |
+| Calmar | 2.80 | 1.88 | 0.36 |
+| Ulcer / Martin | 3.71 / 13.09 | 2.87 / 8.40 | 7.97 / 1.54 |
+| VaR / CVaR 95 | −1.87% / −2.92% | −1.08% / −1.82% | −1.74% / −2.85% |
+| Skew / Ex-kurtosis | +0.21 / 7.37 | −0.21 / 6.36 | −0.30 / 14.08 |
+| DD recovery | 24 d | 15 d | 103 d |
+| IS → OOS Sharpe | 2.13 → 1.92 (89.8%) | 2.07 → 1.65 (79.7%) | 0.77 → 0.66 |
+| SPY corr / beta | 0.442 / 0.491 | 0.654 / 0.427 | 1.0 / 1.0 (cell reconstructed — OCR garble) |
+| Alpha vs SPY | +35.17% | +16.64% | — |
+| Up / down capture | 94.3% / 61.5% | 64.5% / 49.0% | 100 / 100 |
+
+**Internal consistency check (this capture):** final equity ÷ CAGR converges on the same **~9.1-year window** across all three columns (36.14x @ 48.48%, 7.08x @ 24.07%, 2.85x @ 12.24%) → backtest ≈ mid-2017 → Sep 2026. The OCR'd numbers cohere.
+
+## Verification status
+**Top tier for a tweet-sourced strategy — verified at capture:**
+- **Named author** with track-record surface (112k followers, macromarketmodel.com dashboards), not an anonymous card.
+- **Publication verified live:** cointradernik1.substack.com returns 200, titled "Regime Rotation", tagline "a 100% free macro regime-conditioned ETF strategy", with the free tier exactly as the tweet positions it.
+- **Overfitting honesty signals:** IS→OOS Sharpe retention disclosed for both strategies (89.8% / 79.7%) — most tweet backtests never show the out-of-sample decay. Full risk spectrums (Ulcer/Martin, VaR/CVaR, skew/kurtosis, DD recovery) published, including the unflattering bits.
+- **Caveats:** self-reported backtest (not third-party audited); RR Pro's 48.5% CAGR / 2.02 Sharpe is exceptional-for-public and is the *marketing* tier — rules are behind the paywall, so treat RR Pro stats as unreplicable until read. Free-tier rules are the verifiable surface.
+
+## Why it matters
+- **Completes the TAA evidence triad** in the vault: anonymous AI card (verification failed, [[2026-09-09-l1vsun-yield-curve-aware-momentum]]) ↔ named vendor screen ([[2026-09-09-p123-five-etf-rotation]]) ↔ named independent practitioner with free full rules (this note). Three calibration points for the same strategy family.
+- **The calibration lesson:** the free RR's *real* stats (1.84 Sharpe / 24.1% CAGR / −12.8% MaxDD) are almost identical to what the fake l1vsun card *claimed* (1.87 / 18.4% / −9.2%). Headline magnitude does not separate real from fake — disclosure does (named author, live publication, IS→OOS split, free replication path).
+- **Actionable:** free tier is the candidate to actually replicate — regime-conditioned ETF rotation with 12.1% vol and −12.8% MaxDD would be a strong simple-TAA baseline; compare on the same window against the P123 five-ETF rotation and 60/40. Inbox task filed.
+- **Free-vs-paid framing is itself the lesson:** Nik explicitly tells followers the free strategy is enough ("utilise the free strategy if you want simplicity") — a credible-monetary-incentive tell that rarely accompanies engagement-bait strategy posts.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — the fake pole: nearly identical claimed stats, zero disclosure. This note is the proof that stats alone can't arbitrate — disclosure architecture can.
+- [[2026-09-09-p123-five-etf-rotation]] — the vendor pole; same TAA family. Replicate both free strategies on the same window and compare vol/DD/capture profiles.
+- [[2026-09-04-systematicpeter-why-publish-research]] — the verifiability ethos this source passes: free rules, named author, live publication.
+- [[2026-08-30-ignis-trend-following-realtest]] — same regime/rotation family done reproducibly; the replication standard for anything on the study queue.
+- [[2026-08-29-milk-man-backtest-notional-normalization]] — normalization discipline to apply when replicating (express edge as %-of-notional).
+- [[2026-09-02-pristinecap-techno-fundamental-suite]] — spectrum neighbor: macro-conditioned systematic suite, real and disclosed.
