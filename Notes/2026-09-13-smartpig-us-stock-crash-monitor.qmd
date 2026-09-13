@@ -1,0 +1,44 @@
+---
+title: "Smartpig (@Smartpigai) — US_Stock_Crash_Monitor (GitHub): 5-factor Crash Risk Score dashboard for VOO/QQQ — Buffett indicator, Shiller CAPE, 10Y-2Y spread, 200-MA deviation, Fear & Greed"
+source: https://x.com/smartpigai/status/2098970313157710239
+repo: https://github.com/middletoo/US_Stock_Crash_Monitor
+captured: 2026-09-13
+tags: [trading, twitter, risk-monitoring, valuation, buffett-indicator, cape, yield-curve, 200ma-deviation, fear-greed, macro, streamlit, dashboard, github, open-source, tooling, voo, qqq]
+kind: reference
+---
+
+**Author:** Smartpig (@Smartpigai), Chinese-language finance commentator — posted 2026-09-13 03:01Z · received 2026-09-13T19:46Z (WhatsApp via RDP-30, routed by CoS). 467 likes, 32 replies, 1 attached video (dashboard screen recording — not pulled; the repo README screenshot covers the same surface). Tweet (translated): "Someone actually built a US-stock crash-risk monitor on GitHub! It stuffs the Buffett indicator, Shiller PE (CAPE), US Treasury yield curve, 200-MA deviation, and Fear & Greed index into one model that outputs a Crash Risk Score. Currently supports VOO and QQQ. Of course it can't precisely predict which day a crash happens, but as a US-equity risk dashboard it's genuinely interesting. Recommended bookmark for anyone trading US stocks."
+
+## Summary
+
+**US_Stock_Crash_Monitor** (middletoo/US_Stock_Crash_Monitor, Python, 155★) — a single-file Streamlit app (`app.py`) that computes a composite **Crash Risk Score** for **VOO** (best fit per README) and **QQQ** from five weighted factors:
+
+1. **Buffett Indicator** — total US market cap ÷ GDP (overall bubble gauge)
+2. **Shiller PE (CAPE)** — inflation-adjusted cyclically-smoothed valuation
+3. **10Y-2Y Treasury spread** — recession warning, with explicit attention to the **post-inversion unhang** (dis-inversion) high-risk window
+4. **200-MA deviation** — short-term overextension vs long-term trend
+5. **Fear & Greed Index** — contrarian sentiment; extreme greed ≈ short-term top signal
+
+Design points from the README (fetched at capture): factor **weights are user-adjustable** in the UI; **thresholds calibrated to the pre-crash levels of 2000, 2008, and 2021**; sidebar **manual input** for non-realtime data (GDP, PE) with authoritative-source links; **demo-mode fallback** when yfinance fails (smooth switch to simulated data so demos don't crash); Plotly candlestick dashboards.
+
+Repo profile: created 2025-12-21 08:27Z, last push 2025-12-21 13:18Z — a **single-day, single-commit project**; 5 files total (LICENSE, README.md, README_EN.md, app.py, main2.png). Author's own disclaimer: "tool was written by Gemini 3" — i.e., AI-generated code, published as-is.
+
+## Verification status
+**Repo verified live at capture** (README + file tree via GitHub API; structure matches the tweet's claims exactly — 5 factors, VOO/QQQ, weighted score).
+- **What's disclosed (good tells):** an explicit limitations section — macro data lags (GDP quarterly → Buffett indicator is long-horizon, not timing), the score is a **linear weighted sum** while real crashes are nonlinear cascades, yfinance rate-limits, and inputs/weights embed subjective judgment. "For learning/quant research only, not investment advice."
+- **What it is NOT:** a strategy with backtest claims — no CAGR/Sharpe/DD numbers anywhere, so nothing to falsify. It's a *conditions gauge*, not an edge.
+- **Caveats:** manual GDP/PE entry means the score is only as fresh as the human typing it; demo-mode fallback can silently substitute simulated data; single-day AI-written codebase with no maintenance since Dec 2025; author is an aggregator (Smartpig) spotlighting someone else's tool, not the tool's author.
+
+## Why it matters
+- **Completes a layer the TAA cluster lacked:** the vault now has three strategy poles (the [[2026-09-09-l1vsun-yield-curve-aware-momentum|fake card]] ↔ [[2026-09-09-p123-five-etf-rotation|vendor screen]] ↔ [[2026-09-13-cointradernik-regime-rotation-rr-pro|named practitioner]]) — this is the complementary **environment gauge**: a single reading of "how crash-prone are conditions right now."
+- **The interesting exercise is the calibration, not the code:** pin the 2000/2008/2021 threshold values and default weights from `app.py`, then ask what score that fixed lens prints *today*. That's a cheap, reproducible macro-regime input.
+- **Candidate regime gate:** a crash-risk score built partly on the 10Y-2Y curve and 200-MA deviation is exactly the kind of conditioning variable the Regime Rotation family needs — usable as a de-risking overlay for any of the TAA baselines on the replication queue.
+- **Linear-weight caveat is the real lesson:** five slow/sentiment factors averaged linearly will smell a bubble a year early and miss the trigger — the README says so itself. Use as a dashboard, not a signal.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-13-cointradernik-regime-rotation-rr-pro]] — named-practitioner TAA pole; this score is a candidate regime-state input for that strategy family.
+- [[2026-09-09-p123-five-etf-rotation]] — vendor TAA pole; crash-score as de-risking overlay on the five-ETF rotation.
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — the fake pole; shares the yield-curve factor. Contrast: a dashboard with honest limitations vs a card with fabricated stats — disclosure architecture is the discriminator.
+- [[2026-09-04-systematicpeter-why-publish-research]] — the disclosure ethos this repo partially passes (limitations section, no performance claims).
+- [[2026-08-30-ignis-trend-following-realtest]] — the reproducibility bar to hold it to if the score ever gets used as a gate (pull data independently, don't trust the demo mode).
