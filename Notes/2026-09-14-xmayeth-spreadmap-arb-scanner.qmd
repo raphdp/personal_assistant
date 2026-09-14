@@ -1,0 +1,30 @@
+---
+title: "may.crypto — spreadmap.io: arbitrage scanner for Polymarket + sportsbooks (claim: $200-500/day)"
+source: https://x.com/xmayeth/status/2098805806653472880
+captured: 2026-09-14
+tags: [twitter, prediction-markets, polymarket, kalshi, sportsbooks, arbitrage, scanner, tooling, saas, xmayeth, catalog]
+kind: reference
+---
+
+**Author:** may.crypto (@xmayeth; "trading addict | prediction markets | founder @xspreadmap"; ~39k followers) · posted 2026-09-12 16:07Z · received 2026-09-14T12:11:15Z (WhatsApp via RDP-30, routed by CoS). 12k views, 124 likes, 207 bookmarks. 1 attached video (not transcribed). **Second capture from this author** — see Links.
+
+**Product:** [spreadmap.io](https://spreadmap.io) — live at capture (HTTP 200, title verified: "Spreadmap — arbitrage scanner for sportsbooks and prediction markets"). Site text confirms coverage: **Polymarket, Kalshi, Predict.fun, Stake + 16 sportsbooks in real time**; finds the gap, sizes positions, nets fees, shows ROI/PnL. The site's worked example matches the tweet: "Polymarket Sinner $535.05 / Stake Alcaraz $464.00."
+
+## Summary
+A launch-promotion tweet for the author's own arb scanner, with claimed economics and recommended settings:
+
+- **Claimed economics:** "every 3 minutes a new arbitrage trade at +5% pops up"; "I make $200-500 a day off it since Polymarket blew up" — dependent on hours worked and live vs pre-match.
+- **Recommended first-run filters (his words):** total stake $250 · executable size 100 · markets: pre-match · hide 50-51¢. (Executable size 100 hides thin quotes; "hide 50-51¢" filters ~zero-edge coin flips.)
+- **The pitch:** 3-day free trial, no card. Plus a challenge-teaser: "$1,000 → $5,000 with sports arbitrage — should I post progress updates?"
+
+## Why it matters
+- **Fourth data point on this author** — and the first that is a **product, not a strategy**. The progression: exact-score bundle strategy (Sep 4) → now selling the scanner that finds such edges. Capturing the author arc matters: he's a practitioner-turned-vendor, so future posts should be read with promoter's bias.
+- **"Hide 50-51¢" is the load-bearing detail:** it implies most detected "arbs" on tight-money markets are noise/fee-illusion — the real edges live away from 50c, consistent with the [[2026-09-01-polymarket-copytrading-filter-thesis]] finding that "most money in the 0–10c range."
+- **Skepticism gates:** "every 3 minutes" and "$200-500/day" are founder claims, zero third-party verification; the "challenge" ($1k→$5k) is a marketing retention loop; arb windows decay fast — a public scanner with a free trial hastens the decay of whatever edge it detects; no PnL screenshots or audited results on the site.
+- **Isolation note (CoS):** captured as second-brain knowledge only. The user's Polymarket trading lives in a separate, isolated company — this is not a trading signal, no cross-routing, nothing acted on.
+
+## Links
+- [[2026-09-04-xmayeth-soccer-exact-score-bundle]] — same author, the strategy that plausibly motivated the scanner; the 88th-minute bundle window is exactly the kind of trade a scanner would surface.
+- [[2026-09-01-polymarket-copytrading-filter-thesis]] — niche specialists + small size + verified edge; spreadmap operationalizes "find the niche edge" as software.
+- [[2026-09-01-pendulum-flow-polymarket-orderbook-archive]] — replay-grade orderbook data would be the independent way to verify "an arb at +5% every 3 minutes": count historical cross-venue gaps net of fees.
+- [[2026-09-14-ajsignal-toyota-convoy-war-precursor]] — same-day capture; both are "signal vendor" posts (Substack OSINT / arb-scanner SaaS) — the vault is building a taxonomy of how signal-sellers sell.

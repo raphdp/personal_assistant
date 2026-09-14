@@ -1,0 +1,30 @@
+---
+title: "AJ Signal — Toyota Land Cruiser convoys as war precursor (the $65M Yemen video)"
+source: https://x.com/aj_geo_analysis/status/2099087811857240344
+captured: 2026-09-14
+tags: [twitter, geopolitics, osint, yemen, houthi, supply-chain, conflict-signals, land-cruiser, trade-flow-monitoring, chinese-twitter, catalog]
+kind: reference
+---
+
+**Author:** AJ Signal (@aj_geo_analysis; "former military, geopolitical security strategist & advisor to multinationals"; ~12.8k followers, Substack ranked in World Politics) · posted 2026-09-13 10:48Z · received 2026-09-14T12:10:49Z (WhatsApp via RDP-30, routed by CoS). Viral for the account: 1.24M views, 9.8k likes, 1.8k RTs, 3.1k bookmarks in ~25 hours. 1 attached video (not transcribed — see Verification).
+
+## Summary
+A single-method OSINT thesis: **track Toyota Land Cruiser shipments as a leading indicator of where the next war starts.**
+
+- **The method:** monitor movement of Toyota vehicles (Land Cruisers esp.) into a region; their arrival and distribution pattern foreshadows conflict escalation.
+- **The exhibit:** a video the author claims shows tracked vehicles "sent to the Middle East" which "showed up in Yemen," given to "the Houthi Resistance or armed tribes and groups." He values the shown fleet at "approximately $65M USD worth of Toyota Land Cruisers, in one video."
+- **The questions raised (unanswered):** who finances these purchases, why Toyota's supply chain doesn't prevent it, why Saudi Arabia "and others in the group" allow it.
+- Sign-off: "This is the type of Signal you do not get anywhere else."
+
+## Verification status
+**Claim not independently verified — treat as a single-source OSINT narrative.** The video is the sole evidence and was not transcribed/analyzed here; the $65M valuation has no stated methodology (unit count × price? which model years? new vs used?). Location/attribution ("Yemen, Houthis") is author-asserted. Context that makes the genre plausible (not confirmation of this specific claim): Land Cruiser/Hilux fleets are a documented fixture of Libya, Sahel, and Yemen conflicts; Toyota fleets have long been discussed as a de-facto conflict-supply signal (the classic "Toyota War" of 1987, Libya–Chad). No third-party geolocation or chain-of-custody on the video was attempted — fine for a "signal worth watching," not fine as a fact.
+
+## Why it matters
+- Adds a **physical-trade-flow signal** to the second brain: not another price chart or sentiment indicator, but a goods-movement observable (vehicle shipments → conflict zones). Pairs with the trade/tracking infrastructure already in the vault (kuaidi100/parcel-flow work) as a reminder that shipment data is a general sensing layer, not just personal packages.
+- **Method template (transferable):** pick a dual-use good with concentrated supply (Land Cruisers, Starlink kits, drones, thermal optics) → track flows to a region → watch distribution among armed actors. The author's claimed edge is simply doing this consistently.
+- **Skepticism gates:** promoter incentive (Substack paid tier — "Signal you do not get anywhere else" is a sales line); $65M is a round unverifiable number; "given to Houthis" vs "armed tribes" is already hedged by the author himself; no dates/locations in the tweet body. If this ever graduates to decision-relevant, verification = geolocate the video, count vehicles, source the shipment origin.
+
+## Links
+- [[2026-09-04-xmayeth-soccer-exact-score-bundle]] — different domain, same pattern: a fully-specified claim with an embedded base-rate ($65M fleet ≈ 3.5% burn rate) is what separates testable signal from narrative. Both are single-source until independently checked.
+- [[2026-09-13-smartpig-us-stock-crash-monitor]] — the other "signal" archetype in the vault: quantitative dashboard (crash-risk score) vs this physical-flow OSINT. Between the two, the vault now covers price-based and goods-based leading indicators.
+- [[2026-09-13-cointradernik-regime-rotation-rr-pro]] — shared "verify before trusting a promoted signal" discipline: paid-tier launch stats there, Substack upsell here.
