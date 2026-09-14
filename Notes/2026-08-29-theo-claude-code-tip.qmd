@@ -19,3 +19,4 @@ kind: both
 
 ## Links
 - Task in `Tasks/Inbox.md`: identify what "this" refers to (parent of status 2093199769246273664) and evaluate enabling it.
+- [[2026-09-14-shanyanggm-10-free-github-projects]] — agent-tooling cluster: addyosmani/agent-skills (verified live, 94.2k★) is the systematic library version of this class of individual agent tip.

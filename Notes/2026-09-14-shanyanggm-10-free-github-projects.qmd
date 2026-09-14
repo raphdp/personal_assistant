@@ -1,0 +1,49 @@
+---
+title: "山羊赚钱笔记 (@shanyanggm) — 10 free GitHub projects that can kill your monthly subscriptions (all 10 repos verified live)"
+source: https://x.com/shanyanggm/status/2098941338297458746
+captured: 2026-09-14
+tags: [twitter, github, open-source, tooling, ai-tools, cost-cutting, librechat, nango, agent-skills, tradingagents, hyperframes, fincept, moneyprinterturbo, agentic-inbox, voxcpm, flowsint, self-hosting, agents, chinese-twitter, catalog]
+kind: reference
+---
+
+**Author:** 山羊赚钱笔记 (@shanyanggm), Chinese-language AI-tools/side-hustle commentator (ex-OPPO overseas product manager, prep prop-firm trader; ~7.0k followers) — posted 2026-09-13 01:06Z · received 2026-09-14T10:09Z (WhatsApp via RDP-30, routed by CoS). Viral: 839k views, 10.8k likes, 2.0k RTs, **23.9k bookmarks** (bookmark:like ≈ 2.2:1 — the audience is filing this as reference material, not reacting). Tweet thesis (translated): "GitHub has absurdly free projects — many can directly kill the software you're paying monthly for. These aren't toy projects. Stop bookmarking AI-tool websites; the really good stuff hides on GitHub."
+
+## Summary
+
+A 10-item catalog of open-source replacements for paid SaaS. All 10 URLs resolved from the note-tweet (via fxtwitter) and **verified live via GitHub API at capture** — stars/activity below are fetched, not quoted:
+
+| # | Repo | What it is / replaces | Stars | Last push | License |
+|---|------|----------------------|-------|-----------|---------|
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | Multi-agent LLM trading framework (Python) | 105.6k | 2026-09-07 | Apache-2.0 |
+| 2 | [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) | One UI for ChatGPT/Claude/Gemini + agents, MCP | 43.4k | 2026-09-14 (today) | MIT |
+| 3 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | "Write HTML. Render video. Built for agents." — programmatic video engine (HeyGen's own OSS) | 49.8k | 2026-09-14 (today) | Apache-2.0 |
+| 4 | [Fincept-Corporation/FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) | "开源版彭博终端" — open-source Bloomberg-terminal-style market analytics/investment research (C++/Python) | 31.6k | 2026-09-08 | ⚠ custom |
+| 5 | [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | One-click AI short-video generation from a topic/keyword (the biggest repo on the list) | 123.5k | 2026-09-14 (today) | MIT |
+| 6 | [cloudflare/agentic-inbox](https://github.com/cloudflare/agentic-inbox) | Self-hosted AI email client on Cloudflare Workers | 7.5k | ⚠ 2026-04-23 (dormant) | Apache-2.0 |
+| 7 | [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM) | Tokenizer-free multilingual TTS — voice cloning/design (OpenBMB) | 37.2k | 2026-09-02 | Apache-2.0 |
+| 8 | [reconurge/flowsint](https://github.com/reconurge/flowsint) | Graph-based OSINT investigation platform for security analysts | 8.1k | 2026-09-06 | Apache-2.0 |
+| 9 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | Production-grade engineering skills for AI coding agents (Addy Osmani) | 94.2k | 2026-09-12 | MIT |
+| 10 | [NangoHQ/nango](https://github.com/NangoHQ/nango) | Open-source API-integration platform — "build product integrations with AI" (200+ APIs) | 12.0k | 2026-09-14 (today) | ⚠ custom |
+
+Combined ≈ 512.8k stars. 8 of 10 actively pushed in the last 2 weeks.
+
+## Verification status
+
+**All 10 repos verified live at capture (GitHub API: existence, stars, created/pushed dates, license).** No hallucinated repos in this list — the aggregator did his homework.
+
+- **Framing caveats:** "免费" (free) needs nuance — HyperFrames (HeyGen), Nango (VC-backed, $12M+ raised), and Fincept are **commercial open-source** (company-owned, cloud upsell), not community toys. Fincept and Nango carry non-OSI custom licenses (NOASSERTION) — check terms before commercial use.
+- **Dormant item:** cloudflare/agentic-inbox was a 2-week hack (created 2026-04-10, last push 2026-04-23) — likely an experiment Cloudflare stopped tending. Treat as inspiration, not infrastructure.
+- **Category noise:** TradingAgents (105.6k★) is a research framework, not a "subscription killer" — nothing on most people's invoice maps to it. The tweet's framing overreaches for 2-3 items; the core claim (self-hostable replacements for chat UI, integrations, TTS, video) is solid.
+
+## Why it matters
+
+- **Direct hits on live company workstreams:** **Nango** is the leading open-source candidate behind the vault's "Hermes connector layer for all emails/accounts with per-connector permissions" research; **agentic-inbox** is a working reference architecture for the Inbox Assistant mandate (self-hosted, per-account, agent-in-the-loop — same shape, needs a maintained fork or rebuild); **agent-skills** feeds directly into the agent/skills practice already running here (Theo tip, scope-guard, cyclomatic-complexity, ponytail).
+- **Catalog value > individual items:** the durable lesson is the *pattern* — before renewing any SaaS subscription, grep GitHub for the open-source pole. The 23.9k bookmarks say others file it the same way.
+- **Media trio for later:** HyperFrames + MoneyPrinterTurbo + VoxCPM together cover programmatic video + voice at $0 — worth a spike only when a concrete content need exists (default: no action).
+- **Isolation note (CoS convention):** TradingAgents is trading-adjacent; captured here as knowledge only — nothing routed to the trading company.
+
+## Links
+
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — same pattern from the trading side: huge open-source repo surfacing via Twitter, verify-before-trust applies equally.
+- [[2026-08-29-theo-claude-code-tip]] — agent-tooling cluster; agent-skills is the systematic library version of individual agent tips.
+- [[2026-08-30-codex-sol-scope-guard-rules]] — engineering discipline for agent output; agent-skills packages exactly this class of rule as reusable skills.

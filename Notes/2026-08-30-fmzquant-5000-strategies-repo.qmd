@@ -25,3 +25,4 @@ Appreciation post for the Chinese open-source community's research sharing; the 
 - [[2026-08-29-three-simple-ma-atr-systems]] — cluster root: simple, fully-specified systems.
 - Curated-suite counterpoint (2026-09-02): [[2026-09-02-pristinecap-techno-fundamental-suite]] — 7-indicator suite with an explicit top-down workflow vs this repo's raw 5k entries.
 - [[2026-09-04-systematicpeter-why-publish-research]] — joined 2026-09-04: the author-side rationale for sharing openly ("I have benefited from other traders' ideas in exactly the same way") — the individual-scale version of what this repo enables at scale.
+- [[2026-09-14-shanyanggm-10-free-github-projects]] — same pattern on the tools side: big open-source catalog surfacing via Twitter; all 10 repos API-verified there the same way this repo was.
