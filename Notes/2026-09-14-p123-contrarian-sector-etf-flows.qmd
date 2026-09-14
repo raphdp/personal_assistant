@@ -1,0 +1,42 @@
+---
+title: "Portfolio123 (@P123Finance) — contrarian sector-ETF rotation: buy the 3 highest-outflow SPDRs over 100 days; outflows-minus-inflows ≈5.5%/yr excess since mid-2001"
+source: https://x.com/p123finance/status/2099487056842108994
+captured: 2026-09-14
+tags: [trading, twitter, etf-rotation, contrarian, fund-flows, sector-etf, tactical-asset-allocation, portfolio123, backtest-stats, sentiment]
+kind: both
+---
+
+**Author:** Portfolio123 (@P123Finance) · posted 2026-09-14 13:14Z · received 2026-09-14T13:52:51Z (WhatsApp via RDP-30, routed by CoS). **Second capture from this author** (after [[2026-09-09-p123-five-etf-rotation]]). 1 attached media item — growth-of-$100 chart + rolling stats table, full table recovered via OCR (https://pbs.twimg.com/media/HSLfCE-a0AEVw3e.jpg?name=orig).
+
+## Summary
+Official Portfolio123 account publishing a **contrarian sector-ETF rotation system**:
+
+- **Universe:** the 9 original SPDR sector ETFs (the 1998-vintage Select Sector SPDRs).
+- **Signal:** track **fund inflows and outflows** per sector ETF.
+- **Rule:** buy the **3 ETFs with the highest outflows over the past 100 market days**.
+- **Headline claim:** top-3-outflows minus bottom-3 (outflows minus inflows) generates **5.5% excess returns since mid-2001**.
+
+**OCR'd stats table (fully recovered):**
+
+| Strategy | Window | Median | Beat SPY |
+|---|---|---|---|
+| Contrarian (outflows) | 5yr | 14.1% | 76.6% |
+| Contrarian (outflows) | 10yr | 96.7% → beat-rate; median **13.3%** | 96.7% |
+| Positive Flows (inflows) | 5yr | 9.6% | 15.6% |
+| Positive Flows (inflows) | 10yr | 7.5% | 2.2% |
+
+**OCR'd chart legend (2003–2025 growth of $100, one ambiguity):** contrarian series **$977 (9.8x)**; **SPY $950 (9.5x)**; inflow-chasing series **$558 (5.6x)**. The 9.8x-vs-5.6x gap compounds to roughly the claimed ~5.5%/yr spread — so "excess returns" = **contrarian vs inflow-chasing portfolio**, not vs SPY (contrarian only narrowly beats SPY on the chart). Top legend label was above the clean OCR crop; mapping inferred from series values.
+
+## Why it matters
+- **The contrarian pole of the vault's TAA cluster.** Same author, same platform, opposite instinct from the trend-following systems already captured ([[2026-09-09-l1vsun-yield-curve-aware-momentum]], [[2026-08-29-three-simple-ma-atr-systems]]): those buy strength, this buys weakness via **flows** (positioning) rather than price. The two can coexist — price-trend at asset-class level, flow-contrarian within sectors — and testing that interaction is a genuine research question.
+- **Flow-sentiment as signal is the same family as the prediction-markets filter thesis** ([[2026-09-01-polymarket-copytrading-filter-thesis]]): what the crowd is rushing into tends to underdeliver; measured positioning beats chasing. Cross-domain echo, worth one line in any write-up.
+- **Skepticism gates:** (1) vendor self-reported backtest on its own platform — reproducible there (a plus) but not independently verified; (2) "5.5% excess" framing is vs the *inflow* portfolio, not SPY — the chart shows contrarian ≈ SPY (9.8x vs 9.5x); the eye-catching number is the long-short spread; (3) mid-2001 start ≈ flows-data availability, not an unlucky-or-lucky window choice, but the 2003–2025 chart omits 2001–02; (4) bucket definition ("highest outflows"), rebalance cadence, and costs are unstated — the tweet's "Public link in t.co/…" resolves to the tweet's own photo, so the exact screen rules sit in the thread/replies or the P123 site, **same truncation gap as the five-ETF note**; (5) rolling beat-SPY rates (76.6% @5yr, 96.7% @10yr) look strong but are long-horizon medians — path/timing risk invisible in that table.
+- **Actionable:** follow-up mirrors the five-ETF task — open the thread/replies for the public screen link, pull exact rules, then assess on one shared evaluation window against the five-ETF rotation, Regime Rotation, and 60/40.
+
+## Links
+- [[2026-09-09-p123-five-etf-rotation]] — same author/platform, 5 days earlier: price-trend eligibility + acceleration ranking vs this flows-contrarian ranking. Natural pair for one combined replication.
+- [[2026-09-13-cointradernik-regime-rotation-rr-pro]] — third member of the simple-TAA replication queue; assess all three on the same window vs 60/40.
+- [[2026-09-13-smartpig-us-stock-crash-monitor]] — candidate regime gate to overlay on the whole TAA queue.
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — momentum pole; this note is the contrarian pole of the same evidence spectrum.
+- [[2026-09-01-polymarket-copytrading-filter-thesis]] — same "crowd flows as fade signal" instinct in the prediction-markets domain.
+- [[2026-08-29-three-simple-ma-atr-systems]] — simple-systems cluster; this is its sector-flows member.

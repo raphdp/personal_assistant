@@ -1,0 +1,33 @@
+---
+title: "Designing AI Agents (Jia Huang, Manning MEAP) — @manningbooks on mapping independently-rediscovered agent patterns into a shared vocabulary"
+source: https://x.com/manningbooks/status/2098536640457372006
+captured: 2026-09-14
+tags: [ai-agents, twitter, book, meap, patterns, shared-vocabulary, agent-design, reference-book]
+kind: both
+---
+
+**Author:** Manning Publications (@manningbooks) · posted 2026-09-11 22:18Z · received 2026-09-14T13:53:04Z (WhatsApp via RDP-30, routed by CoS). First capture from this publisher; **book verified live at capture** (manning.com product page HTTP 200 via reader proxy, 2026-09-14).
+
+## Summary
+Manning's official account on Jia Huang's *Designing AI Agents: Principles, patterns, and best practices* — the tweet is a positioning statement, not book content:
+
+> "At this the point, people independently rediscover the same patterns when they design agents. It's probably time to start mapping some of them, so people can have a shared vocabulary and learn from one another. Jia Huang is doing just that in his book, Designing AI Agents."
+
+**Book facts (verified at capture):**
+- **Status:** Manning Early Access Program (MEAP) — **7 of 11 chapters live, 63% complete**; MEAP began May 2026, last updated June 2026, publication est. **Spring 2027**.
+- **Author:** Jia Huang (github.com/huangjia2019).
+- **ISBN** 9781633433632 · est. 375 pages · eBook $44.99-tier, included with Manning Online subscription ($24.99/mo, first month free).
+- **Source code:** public repo github.com/huangjia2019/designing-ai-agents — **verified via GitHub API at capture: 192★, last push 2026-09-13**, default branch main.
+
+## Why it matters
+- **Third book-node in the vault, first from a major tech publisher.** This is the cluster's first *systematic survey* candidate — prior nodes are practitioner tactics (tweets/threads). If the mapping lands, it's the reference vocabulary the cluster's scattered notes currently lack.
+- **The claim is directly relevant to our own two agent companies.** We run eight roles in the personal company and the trading company's roster in parallel; the same patterns (delegation, escalation, guardrails, memory hygiene, review gates) get rediscovered run after run here too. A shared vocabulary would let vault notes crosslink by *pattern*, not just by author.
+- **Skepticism gates:** (1) it's a **publisher promo tweet** for an in-progress MEAP — marketing by definition; (2) "people independently rediscover the same patterns" is asserted, not evidenced, in the tweet; the book's actual mapping may or may not deliver; (3) 63% complete — a final-structure judgment is premature; (4) author's reach is modest (repo 192★) — promising but not an established voice.
+- **Free probes before any purchase:** chapter briefs at manning.com/preview/designing-ai-agents/chapter-1, the public GitHub repo, and the liveBook excerpt. Enough to judge the vocabulary's fit with our clusters.
+- **Isolation note (CoS convention):** personal second-brain knowledge only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-06-phelps-agentic-planning-loop]] — cluster root for agent-workflow patterns; a shared pattern vocabulary would name what this loop (and its siblings) reinvent.
+- [[2026-09-06-julian-risk-based-code-review]] — the measured capstone (+94% PR throughput): an example of a *named, evidenced* pattern the vocabulary should be able to classify.
+- [[2026-09-06-pocock-reviewable-ai-prs]] — review-leg pattern (pseudocode + TDD evidence); same "make practice legible" instinct as the book's stated mission.
+- [[2026-08-30-forward-implementation-first-skill]] — execution-hygiene pattern root; the anti-overengineering cluster is exactly the kind of local practice a shared vocabulary would connect outward from.
