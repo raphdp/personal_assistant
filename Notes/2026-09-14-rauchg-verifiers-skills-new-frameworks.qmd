@@ -1,0 +1,31 @@
+---
+title: "Guillermo Rauch — verifiers + skills are the new 'frameworks' (shadcn/lint: agent-first linters over libraries)"
+source: https://x.com/rauchg/status/2099540886409695346
+captured: 2026-09-14
+tags: [ai-agents, twitter, rauchg, shadcn, verification, linters, agent-skills, harness-design, guardrails, design-systems, tooling]
+kind: reference
+---
+
+**Author:** Guillermo Rauch (@rauchg — Vercel CEO; creator of Socket.io, Next.js ecosystem steward, hyperlocal AI-apps tinkerer) · posted 2026-09-14 16:48Z (~26 min after the shadcn/lint announcement it quotes) · received 2026-09-14T20:49:10Z (WhatsApp via RDP-30, routed by CoS). 52 replies at capture; likes/views not served by the syndication API. **First capture from this author.**
+
+**Quoted tweet (captured same minute, same method):** @shadcn — "Introducing shadcn/lint. An agent-first linter for Tailwind design systems. You define what's allowed. When an agent breaks a rule, the error explains what's wrong and how to fix it using your components, variants and theme." (posted 16:22Z, 127 replies at capture.)
+
+## Summary
+Rauch's compression of the shadcn/lint launch into a general law, in three beats:
+
+1. **"Agents are only as good as the proof-checkers, compilers, type systems, and linters you give them."** — agent quality is a property of the *verification environment*, not just the model.
+2. **shadcn/lint as the instance:** a linter whose error messages are written for agents — they explain what's wrong *and how to fix it within your design system* (your components, variants, theme). The environment encodes the rules; the agent self-corrects inside them.
+3. **"Meta: verifiers + skills are the new 'frameworks'!"** — the 2010s question "which framework?" becomes "which verifiers and which skills?" You don't program the agent; you assemble the harness of checks and packaged know-how it runs inside.
+
+## Why it matters
+- **Named thesis for the vault's strongest recurring cluster.** The note links below all orbit one idea — constrain agents mechanically, not by exhortation — but none named it as an industry-level replacement for *frameworks*. Rauch does, from the CEO seat of the company shipping the reference implementation.
+- **Second data point on "feedback must be machine-readable and self-correcting."** shadcn/lint errors teach the agent to fix within *your* system (components/variants/theme) rather than dumping generic lint output — the same design instinct as Pocock's TDD-evidence PRs, moved from review-time to write-time.
+- **Directly legible in this very harness:** Hermes skills (procedural memory), the relay's TO_USER-only traffic rule, the RDP-95 prompt-dump guard — all are "verifiers + skills" doing the work a framework spec used to do. A live worked example for the [[2026-09-14-manning-designing-ai-agents-book]] shared-vocabulary project: "verifier-first agent design" is exactly the kind of pattern name that book wants to canonize.
+- **Vercel's strategic read:** "agent-first tooling" is where framework energy is going — build systems whose *error path* is the agent API. shadcn/lint's write-time, design-system-aware errors are the template; expect clones in CI, migrations, and API design.
+- **Skepticism gates:** engagement stats unverified (API-served); shadcn/lint is hours old — no production track record, no docs captured beyond the tweet; "verifiers are the new frameworks" is a CEO's compression, unfalsifiable as stated, and only as good as the verifiers (a weak linter gives weak leverage — the claim silently assumes good checkers). Rauch quotes his own Vercel-ecosystem peer; launch-day amplification bias.
+
+## Links
+- [[2026-09-14-manning-designing-ai-agents-book]] — same-day capture: mapping independently-rediscovered agent patterns into shared vocabulary; "verifiers + skills" is a candidate chapter title in that mapping.
+- [[2026-09-06-pocock-reviewable-ai-prs]] — same instinct at review-time (TDD evidence, readable diffs) that shadcn/lint moves to write-time.
+- [[2026-08-30-ponytail-skill-sol]] — enforcement-not-exhortation: rule + hook running a review pass before commit; shadcn/lint industrializes the same move for design systems.
+- [[2026-08-30-cyclomatic-complexity-skill]] — the mechanical-gate pattern (complexity budget) Rauch's law predicts will become standard harness furniture.
