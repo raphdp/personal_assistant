@@ -1,0 +1,31 @@
+---
+title: "Peter (@SystematicPeter) — long-only Nasdaq mean reversion at 15% average exposure (CAGR 35%, MaxDD −11%, Sharpe 1.79 OOS)"
+source: https://x.com/SystematicPeter/status/2100229978331988280
+captured: 2026-09-16
+tags: [trading, twitter, mean-reversion, nasdaq, position-sizing, capital-exposure, low-exposure-strategies, backtesting, replication, qqq-z-score]
+kind: both
+---
+
+**Author:** Peter - Cracking Markets (@SystematicPeter) · posted 2026-09-16 14:27Z · received 2026-09-16T20:56:31Z (WhatsApp via RDP-30, routed by CoS). 1 attached media item (chart photo — https://pbs.twimg.com/media/HSWECPZaIAAmLWT.png). 8 replies.
+
+## Summary
+Headline claim: **beating Nasdaq 100 buy-and-hold with only 15% average capital exposure** — and the rules are public.
+
+- "My long only Nasdaq mean reversion strategy has added some nice gains in September."
+- Out-of-sample, "over the last few years": **CAGR 35%, max drawdown −11%, Sharpe 1.79**.
+- Chart attached (equity curve / exposure — not yet opened at orig resolution).
+
+## Why it matters
+- This is the **concrete strategy** behind this author's publishing philosophy already in the vault ([[2026-09-04-systematicpeter-why-publish-research]]): he shares full rules and code because independent readers can then test and run them live (the one-year-later reader email).
+- The differentiator is **not the CAGR but the 15% average exposure**: most of the capital sits idle most of the time, so the same notional return comes with far less time in the market — low drawdown (−11%) and high risk-adjusted return (Sharpe 1.79) follow from exposure, not from signal magic. For any replicator, the honest comparison is **return *on deployed capital* vs return *on total portfolio*** — at 15% exposure, 35% CAGR on the whole book means the strategy itself must be compounding spectacularly on the tranche actually at work (or the number is CAGR-on-deployed, not on total — the tweet doesn't say which; first question to resolve).
+- Fits the vault's accumulating cluster on **evidence tiers for public strategies**: here the stats are author-reported OOS (self-backtest tier, but with the mitigations this author usually provides — public rules + code). Not yet at the [[2026-08-29-milk-man-replication-metrics]] independent-replication tier.
+- Natural head-to-head candidate for the **TAA/strategy replication queue** the Inbox is already assembling (Regime Rotation, P123 five-ETF rotation, contrarian sector rotation, 60/40) — same comparison window, plus a new axis: mean-reversion entry family with exposure management, complementing the breakout-decay question ([[2026-09-16-guirao-breakout-decay-2026]]) and the rotation systems.
+- **Skepticism gates:** mean reversion long-only on Nasdaq benefits enormously from the post-2022 AI bull regime — OOS "last few years" is a friendly window; CAGR basis (deployed vs total capital) unstated; no fee/slippage/financing detail on the idle 85%; author-reported, no third-party verification yet; chart unread at time of capture.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+- [[2026-09-04-systematicpeter-why-publish-research]] — same author; his rationale for publishing rules+code. This tweet is a live instance of that policy.
+- [[2026-08-29-milk-man-replication-metrics]] — what independent replication of a public strategy looks like; the evidence tier this claim hasn't reached yet.
+- [[2026-09-13-cointradernik-regime-rotation-rr-pro]] — the passing disclosure bar (free rules, IS→OOS decay shown); apply the same checklist here before treating the 35% CAGR as replicable.
+- [[2026-08-29-three-simple-ma-atr-systems]] — same author's simpler ensemble; his systems share the "simple rules, fully public" house style.
+- [[2026-08-30-fmzquant-5000-strategies-repo]] — ecosystem-scale backdrop for open strategy sharing.
