@@ -1,0 +1,34 @@
+---
+title: "Dev Agrawal — two prompts for agent output hygiene: force a simpler 80% solution after planning; refactor into folders with one-directional dependencies"
+source: https://x.com/devagrawal09/status/2100586182304522369
+captured: 2026-09-17
+tags: [ai-agents, twitter, agent-prompts, planning, over-engineering, code-organization, workflow]
+kind: both
+---
+
+**Author:** Dev Agrawal (@devagrawal09) · quoted tweet posted 2026-09-16 23:35Z, follow-up posted 2026-09-17 14:02Z · received 2026-09-17T20:03:57Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: likes/views not exposed by the syndication API this pass; 3 replies on the quoted, 0 on the follow-up ~6h after posting.
+
+## Summary
+
+Two prompt recipes from an agent-heavy developer, delivered as a deliberate pair (the follow-up opens "people seem to like this so here's another one"):
+
+1. **The 80% simplification pass** (quoted, 2026-09-16): after finishing a planning session with an agent, tell it: *"now come up with a much simpler solution that provides 80% of the benefits we are talking about here."* His claim: "without fail every time it has come up with a much better design."
+2. **One-directional dependency refactor** (2026-09-17): agents "love to dump a bunch of files in a single folder with all the implementation all over the place" — so he tells it: *"refactor all this logic into folders with clear dependencies in a single direction."* (Tweet body truncated mid-sentence at capture — syndication API cut; the prompt text itself is complete.)
+
+Both target the same failure mode: agents over-produce — plans accrete features, code accretes files — and a short mechanical prompt forces a compression pass the agent won't do unprompted.
+
+## Why it matters
+
+- **The 80% prompt is forward-implementation-first applied at the planning stage** — [[2026-08-30-forward-implementation-first-skill]] guards execution; Agrawal's prompt guards the plan itself. Same economics: the last 20% of benefit usually costs most of the complexity, and asking for the simpler design *after* the full design exists means the agent knows exactly what it's cutting.
+- **Slots at the end of the Phelps loop** ([[2026-09-06-phelps-agentic-planning-loop]]): converge the PRD through multi-model critique, then run the "much simpler, 80% of benefits" pass before anything gets built. Critique finds what's wrong; the simplification prompt asks what's unnecessary.
+- **The dependency-direction prompt is a structure rule in the Scope Guard family** ([[2026-08-30-codex-sol-scope-guard-rules]]): short, mechanical, checkable instructions about where agent output lands, instead of trusting the agent's default scatter-and-flat-folder instinct.
+- **Prompts steer one output; scripts enforce every output** — Julian ([[2026-09-06-julian-risk-based-code-review]]) makes the complementary point with CI-enforced invariants. Agrawal's prompts are the lightweight steering layer; where a rule must hold long-term, it should graduate from prompt to check.
+- **Directly adoptable here:** our heartbeats produce plan-heavy artifacts (hiring plans, roadmaps, briefs). A standing "now the 80% version" pass before presenting any plan to the user is a one-line habit that buys most of the benefit at near-zero cost.
+- **Skepticism gates:** "without fail every time" is n=1 enthusiasm with no failure cases shown, and the follow-up was ~6h old at capture with no engagement evidence exposed — no saved-as-recipe bookmark signal yet. But the prompts are free to trial and trivially droppable; the test costs one plan cycle.
+
+## Links
+
+- [[2026-08-30-forward-implementation-first-skill]] — cluster root (anti-overengineering): Agrawal's 80% prompt is the same instinct moved upstream into the planning conversation itself.
+- [[2026-09-06-phelps-agentic-planning-loop]] — the planning loop this attaches to: grill the PRD, converge, then force the simpler-80% pass before build.
+- [[2026-08-30-codex-sol-scope-guard-rules]] — structural rules for agent-built code; the one-directional-dependencies refactor prompt is the cleanup-time sibling of build-time scope guards.
+- [[2026-09-06-julian-risk-based-code-review]] — the enforcement counterpoint: deterministic CI checks beat prompt rules for invariants; prompts like Agrawal's steer a single output, scripts make the rule permanent.
