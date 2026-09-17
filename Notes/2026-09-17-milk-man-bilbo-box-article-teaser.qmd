@@ -1,0 +1,29 @@
+---
+title: "The Milk Man — teaser: backtesting-intro article + Bilbo Box strategy (30%+ since July); article URL not in tweet"
+source: https://x.com/MrMilkTrading/status/2100391890461827361
+captured: 2026-09-17
+tags: [trading, twitter, backtesting, methodology, bilbo-box, milk-man, teaser, needs-followup]
+kind: both
+---
+
+**Author:** The Milk Man (@MrMilkTrading, verified; options/futures trader, Texas; milkmantrades.com) · posted 2026-09-17 01:10Z · received 2026-09-17T20:04:40Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 5 replies; likes/views not exposed by the syndication API this pass. Tweet text truncated at capture mid-sentence ("Bilbo Box was not my original …"); the t.co in the text resolves to the tweet's own attached video, **not** to the article.
+
+## Summary
+
+Announcement tweet ahead of what he's "been cooking": he wrote an article giving (a) an **introduction to backtesting** and (b) an overview of how he developed the **Bilbo Box strategy**, which he says has generated **30%+ returns since July**. The cut-off tail — "Bilbo Box was not my original …" — implies the strategy is an adaptation of someone else's idea, lineage unnamed in the captured text. Attached media is a video (unwatched at capture).
+
+**Article link missing from the tweet body** — the only URL resolves to the tweet's own video. The article likely lives in his X articles or on milkmantrades.com; until pulled, all specifics (rules, instruments, window, sizing) are unknown.
+
+## Why it matters
+
+- **The methodology writeup is the real asset.** An intro-to-backtesting + full development walkthrough from an author who iterates validation discipline in public (notional normalization as a pre-acceptance gate) is exactly the kind of content that upgrades our own replication checklist — potential fourth Milk-ecosystem methodology capture.
+- **"30%+ since July" is a ~2-month track record** — noise-level evidence on its own. The claim earns nothing until the rules are out; it enters the replication-queue skepticism path, not the admiration path.
+- **Any Bilbo Box backtest he publishes should pass his own gate** — edge normalized as % of notional, constant exposure — before we treat the 30% as an edge rather than regime drift.
+- **Skepticism gates:** teaser format (video + truncated text, no link in body); unnamed original author of the idea; short live window. Nothing verifiable yet — this is a capture-first, content-later note.
+
+## Links
+
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — his own validation discipline; the first gate any Bilbo Box backtest must pass.
+- [[2026-08-29-milk-spx-strategy-v1-1]] — the go-live hardening checklist a developed-strategy writeup should echo.
+- [[2026-08-30-milk-man-dip-buy-rules]] — prior fully-specified strategy capture from the same author; the level of detail to demand from the article.
+- [[2026-08-29-milk-man-replication-metrics]] — independent replication standard for Milk-ecosystem claims.
