@@ -1,0 +1,30 @@
+---
+title: "Car (@CarOnPolymarket) endorsing Share — Hyperliquid HIP-4 app routing Polymarket + Hyperliquid ('save up to 100x on Polymarket fees')"
+source: https://x.com/CarOnPolymarket/status/2100699222123094498
+captured: 2026-09-18
+tags: [twitter, prediction-markets, polymarket, hyperliquid, trading-app, fee-routing, promotional, catalog]
+kind: reference
+---
+
+**Author:** Car (@CarOnPolymarket) · posted 2026-09-17 21:31Z · received 2026-09-18T09:01:12Z (WhatsApp via RDP-30, routed by CoS). Quote-tweets the official @sharexyz launch announcement. Stats at capture: 12 replies; likes/views not exposed by the syndication API this pass.
+
+## Summary
+
+A first-person "been testing it out" endorsement of **Share**, a trading app for **Hyperliquid HIP-4**, quoting the product's own launch tweet (@sharexyz):
+
+- **Share's pitch:** trade across @HyperliquidX + @Polymarket from one app, "get the best price", "save up to 100× on Polymarket fees", 0% Share fees, earn points and compete for $1M in @Outcomexyz rewards.
+- **The testimonial's substance (Car):** "the cost savings are pretty insane" — the entire value claim is fee/price savings; no strategy, no information edge. "Finds the best price across Hyperliquid + Polymarket" is cross-venue order routing between the two books.
+
+## Why it matters
+
+- **Read it as marketing, not a review.** "Been testing it out" + repeating the launch tweet's exact "up to 100x on Polymarket fees" figure + "definitely worth checking out" is the standard promo template (same shape as the sponsored-content flag in [[2026-09-01-polymarket-copytrading-filter-thesis]]). The 100× number originates from the vendor; the tweet shows no independent math.
+- **The real claim underneath:** smart-order routing across venues — execute wherever the all-in price (spread + fees) is best. That is a plausible mechanical saving when fee schedules differ across venues, but "up to 100×" is a best-case bound, and 0% app fees + points + $1M rewards signal a subsidy/growth phase — the economics are promotional and will change.
+- **Third entry in the "how prediction-market tooling is sold" catalog:** arb-scanner SaaS (spreadmap), copytrading funnels, now a fee-saving order router. Consistent pattern: sell the *savings*, verify nothing.
+- **Skepticism gates:** no fee/PnL comparison shown; a HIP-4 app adds an app-layer custody/smart-contract risk on top of venue risk; "best price" routing unverified; rewards points are a retention loop.
+- **Isolation note (CoS):** captured as second-brain reference only. The user's Polymarket trading lives in a separate, isolated company — no signal routed, nothing signed up for.
+
+## Links
+
+- [[2026-09-14-xmayeth-spreadmap-arb-scanner]] — same catalog: prediction-market tooling sold on savings claims; spreadmap sells cross-venue gaps, Share sells cross-venue fee/price routing.
+- [[2026-09-01-polymarket-copytrading-filter-thesis]] — the sponsored-content skepticism template this note reuses; same Polymarket cluster.
+- [[2026-09-01-pendulum-flow-polymarket-orderbook-archive]] — replay-grade cross-venue orderbook data would be the way to independently verify "best price across venues" claims.
