@@ -1,0 +1,26 @@
+---
+title: "CUTNPASTE (@CUTNPASTE4) — \"Better to try stupid stuff fast then iterate from there\": a year's biggest lesson, illustrated by a 1h crypto up/down strategy that made money in June 2025"
+source: https://x.com/cutnpaste4/status/2101341939513934064
+captured: 2026-09-20
+tags: [twitter, trading, process, iteration, experimentation, crypto, decision-making, playbook]
+kind: both
+---
+
+**Author:** @CUTNPASTE4 (CUTNPASTE) · posted 2026-09-19 16:05Z · received 2026-09-20T07:19:52Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 4 replies; likes/views not exposed by the syndication API this pass. One attached photo (https://pbs.twimg.com/media/HSl3JUBbAAApD5P.png — presumably the strategy/result screenshot; not OCR'd at capture, no alt text exposed). The t.co link in the tweet resolves to that same photo (`/status/.../photo/1`), not an external article. First capture from this author; no prior track record in the vault.
+
+## Summary
+
+A short process tweet: reflecting on the last year, the author's biggest lesson is that **it's better to try "stupid stuff" fast and iterate from there** — get the crude version into the world (or into a backtest, or into a live market) and let real feedback shape it, rather than refining theory before first contact with reality. The illustration: something ("this" — the unshown screenshot) was able to make money on **1h crypto up/down** in **June 2025**. The evidence lives entirely in the attached image; the tweet text is the lesson, not the trade detail.
+
+## Why it matters
+
+- **The transferable core is iteration speed as an epistemology.** "Stupid stuff fast" is the same operating principle as Pocket FM's $1M fixed-size internal experiments with 12–18-month prove-out windows ([[2026-09-11-nayak-pocketfm-growth-playbook]]) — spend a bounded amount fast, let results arbitrate, double down on winners — and the same loop Phelps prescribes for planning ([[2026-09-06-phelps-agentic-planning-loop]]): converge on feedback, not on upfront design. This note is the one-line personal-scale version of that cluster.
+- **The trading claim itself needs the standard gates before any respect is paid.** "Made money on 1h crypto up/down in June 2025" is one instrument, one month, one regime, reported 15 months after the fact with the evidence locked in an unOCR'd screenshot. That is exactly the class of claim the replication queue routes through the notional-normalization / deployed-vs-total-capital skepticism path ([[2026-09-01-milk-man-backtest-notional-normalization]]) — a single profitable month proves a hypothesis is *testable*, not that an edge exists.
+- **Unknown author, first appearance.** No prior note, no established track record, 4 replies of unknown content. The lesson is generic enough to be true; the trade result is unverifiable enough to be ignored until the image is read.
+- **Practical takeaway for our own queue:** when the image is opened, the interesting question is not "did it make money" but "what did the author try first, discard, and iterate into" — the path is the content; the June 2025 PnL is just the bait.
+
+## Links
+
+- [[2026-09-11-nayak-pocketfm-growth-playbook]] — org-scale version of the same loop: fixed-size experiments, fast prove-out windows, winners double down.
+- [[2026-09-06-phelps-agentic-planning-loop]] — the iterate-to-convergence workflow version; "stupid stuff fast" is step one of that loop.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — the skepticism gates any single-window "it made money" claim must pass before replication.
