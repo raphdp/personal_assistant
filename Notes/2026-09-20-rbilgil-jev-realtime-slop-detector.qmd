@@ -1,0 +1,30 @@
+---
+title: "Robin Bilgil (@RBilgil) — A real-time slop detector built with Jev that scores content as you scroll"
+source: https://x.com/RBilgil/status/2100976648552169805
+captured: 2026-09-20
+tags: [ai-agents, twitter, jev, typesafe, slop, content-filtering, context-engineering, agent-infra, consumer-ai]
+kind: reference
+---
+
+**Author:** Robin Bilgil (@RBilgil) · posted 2026-09-18 15:54Z · received 2026-09-20T07:20:50Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 410 replies; likes/views not exposed by the syndication API this pass. One attached video (the tweet's own `/video/1` — the t.co link resolves to it, not an external article; demo not transcribed at capture). First capture from this author; background not verified at capture, no prior track record in the vault.
+
+## Summary
+
+The tweet, in full: *"Made a real-time slop detector with jev as you scroll"* — plus a video demo (presumably showing a feed overlay that flags AI-slop content item-by-item while scrolling).
+
+Reading between the terse text: **Jev** (the small Typesafe AI model already tracked in this vault) is used as a per-item classifier running inline over feed content — cheap and fast enough to score every post in real time as it enters the viewport, rather than a batch LLM pass after the fact. "Slop" is not defined in the tweet (AI-generated filler? low-effort content?); the demo video would presumably show the detection UI, but it wasn't transcribed at capture.
+
+## Why it matters
+
+- **Third Jev data point, first consumer-facing one.** [[2026-09-17-anthdm-jev-agent-memory]] framed Jev as a memory substrate (recall/store/merge/remove/relevance decided in parallel before context assembly); [[2026-09-19-altryne-jev-instant-compaction]] benchmarked it as compaction (1M → 86K tokens in ~1s). This points the same primitive — a tiny model scoring discrete items at a boundary — at *feed content in a UI*, evidence the pattern generalizes beyond agent plumbing into user-facing products.
+- **"As you scroll" is the load-bearing constraint.** Per-item scoring must be effectively instant and near-free to run during scrolling. Same principle as the compaction case: selective scoring/filtering of discrete items before they consume a scarce resource — there it's context tokens, here it's the user's attention. Attention management at the UI layer is the consumer twin of context management at the harness layer.
+- **Joins the anti-slop cluster on the content side.** [[2026-09-01-quentin-cody-code-quality-gates]] defines slop detection for *code* as numeric gates; this is slop detection for *content* as a model verdict. Both replace "this feels slop" vibes with mechanical checks — [[2026-09-06-julian-risk-based-code-review]]'s keep-noise-out-by-rule principle applied to two different media.
+- **Relevant lens for our own capture pipeline.** Our second brain ingests tweets/articles/reels; a cheap pre-filter scoring items for slop/redundancy *before* they earn a summary+note would keep vault quality high as volume grows. Not actionable now — the existing Jev evaluation task ([[2026-09-19-altryne-jev-instant-compaction]]) covers the first hands-on look at the model on our stack.
+- **Skepticism gates:** no repo, no method, no accuracy numbers, video not inspected — just a demo claim. 410 replies suggests virality/debate, not validation. Known failure mode for any slop classifier: false positives on terse human-written posts (this tweet itself is a one-liner). Treat as a design lens on where tiny-model scoring can sit, not as a working tool.
+
+## Links
+
+- [[2026-09-17-anthdm-jev-agent-memory]] — Jev as memory substrate; establishes the "small model decides relevance pre-context" shape this demo reuses at the UI layer.
+- [[2026-09-19-altryne-jev-instant-compaction]] — the measured 1M→86K/1s data point; this tweet extends the same primitive from context to attention. Existing eval task lives there.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — the code-side anti-slop rubric; this is the content-side counterpart.
+- [[2026-09-06-julian-risk-based-code-review]] — keep noise out by rule, not by asking the model (or user) to ignore it; the shared principle across the slop cluster.
