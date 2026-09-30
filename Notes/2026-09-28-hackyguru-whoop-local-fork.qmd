@@ -1,0 +1,25 @@
+---
+title: "guru (@hackyguru) — Exiting Whoop after 18 months: forked it local (zhoop, a noop fork), kept the strap, ditched the subscription and the cloud"
+source: https://x.com/hackyguru/status/2104611154559742444
+captured: 2026-09-30
+tags: [ai-agents, twitter, whoop, wearables, fitness, self-hosting, local-first, noop, vendor-lock-in, quantified-self]
+kind: reference
+---
+
+**Author:** guru (@hackyguru; hacker/builder, background not verified at capture — no prior notes in vault) · posted 2026-09-28 16:36Z · received 2026-09-29T08:58:57Z (WhatsApp via RDP-30, routed by CoS; captured from backlog 2026-09-30 after the Sep 20–30 relay-wake stall). Stats at capture: 299 replies; likes/views not exposed by the syndication API this pass. Two attached images (presumably the local app running; not transcribed at capture).
+
+## Summary
+
+He's quitting the Whoop subscription after 18 months but keeping the hardware: the strap now runs **fully local on "zhoop" — his fork of "noop"** (an existing open project; relationship between noop and Whoop hardware not established at capture). No "fluff metrics," data stays on his phone. His one-line thesis: **"AI killed vendor lock-in."**
+
+## Why it matters
+
+- **First wearable data point in the vault.** Our fitness stack is still manual (Telegram-forwarded sessions; Strava/Strong import pending the user's go). This sketches a third path — local-first sensor data with AI doing the interpretation — that would sidestep both the subscription and the cloud-export problem when we get to that decision.
+- **"AI killed vendor lock-in" is the load-bearing claim, and it's half true.** What actually killed it here: an open project (noop) that already did the hardware integration, plus a tinkerer willing to maintain a fork. AI lowered the *maintenance cost* of the fork. The lock-in wasn't the subscription — it was the effort wall. Worth tracking as a pattern; our own infra leans the same way (small dumb local processes over managed services).
+- **"No fluff metrics" is a product-design claim, not just taste.** Whoop's recovery/strain scores are proprietary derivations; ditching them means either losing those signals or re-deriving them locally. The honest version of this note's skepticism: we don't know what zhoop actually computes.
+- **Relevant to the Fitness Coach's future mandate** only as a design lens: when the user eventually chooses wearable tooling, "can we get raw data out" should be a first-class criterion, not an afterthought.
+- **Skepticism gates:** screenshots not inspected; noop/zhoop unverified (no repo link in captured text); single-author claim with 299 replies of predictable tribe-war (self-host fans vs "just pay for the thing"); 18 months of his historical data — migrated or abandoned? — unknown. Capture-first, verify-later.
+
+## Links
+
+- [[2026-09-26-voxyz-dashboard-subagent]] — same local-first/own-your-telemetry instinct, applied to agent observability.

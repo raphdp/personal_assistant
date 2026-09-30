@@ -1,0 +1,29 @@
+---
+title: "Matt Pocock (@mattpocockuk) — 'This is really smart': endorsing Jev as a post-edit fuzzy linter (quoting Michael Thiessen)"
+source: https://x.com/mattpocockuk/status/2103904095996088628
+captured: 2026-09-30
+tags: [ai-agents, twitter, jev, linter, code-quality, agent-harness, context-engineering, pocock]
+kind: reference
+---
+
+**Author:** Matt Pocock (@mattpocockuk; TypeScript educator, Total TypeScript) · posted 2026-09-26 17:46Z · received 2026-09-26T20:12:45Z (WhatsApp via RDP-30, routed by CoS; captured from backlog 2026-09-30 after the Sep 20–30 relay-wake stall). Stats at capture: 59 replies; likes/views not exposed by the syndication API this pass. Quotes @MichaelThiessen (posted 12:58Z same day) — the quoted tweet carries the method.
+
+## Summary
+
+Pocock amplifies Thiessen's experiment: **Jev as a fuzzy linter that runs after edits in your agent harness**. Thiessen's recipe (captured text truncated mid-sentence): convert all coding guidelines into "tiny rules that are very easy to judge," then keep only the ones that don't require full-scale intelligence to evaluate. Pocock's endorsement adds the key framing: *some rules are too complex to lint deterministically but feel wasted on a full-scale model* — his examples: using useEffect sensibly; keeping good comments while killing bad ones.
+
+## Why it matters
+
+- **Fourth Jev data point, and the pattern is now unmistakable.** [[2026-09-17-anthdm-jev-agent-memory]] (memory triage), [[2026-09-19-altryne-jev-instant-compaction]] (context compaction), [[2026-09-20-rbilgil-jev-realtime-slop-detector]] (feed scoring) — every one is the same shape: a tiny model making cheap judgments on discrete items *before* they cost something scarce. Thiessen's version points it at *code after an agent edit*, before a human review or a big-model pass.
+- **Pocock's "wasted on full-scale intelligence" is the economic argument stated cleanly.** Deterministic linters can't judge taste; frontier models shouldn't be paid to. The middle tier — rules easy to judge, hard to encode — is exactly what a small classifier is for. Same cost-tiering logic as [[2026-09-17-agrawal-agent-simplification-prompts]] (don't spend model capability where rules suffice).
+- **Complements, not replaces, numeric gates.** [[2026-09-01-quentin-cody-code-quality-gates]] keeps measurable slop out by threshold; this catches the fuzzy residue (bad comments, awkward hooks) that gates can't express. A mature harness plausibly runs both: deterministic gates first, fuzzy-lint second, human third.
+- **Relevant lens for our own pipelines:** our capture flow already uses "easy to judge" rules (wikilink verification, frontmatter checks). A fuzzy-lint pass over agent-written notes before commit is the same move at our scale.
+- **Skepticism gates:** Thiessen's tweet truncates before the eval results ("looks very promising so far in my evals" is all we get — no numbers, no repo from either author). "Promising in my evals" on self-graded guidelines is weak evidence; false-positive rate on judgment calls is exactly where these systems rot. Endorsement by Pocock raises visibility, not validity.
+
+## Links
+
+- [[2026-09-19-altryne-jev-instant-compaction]] — the measured Jev perf data point; the eval task lives there.
+- [[2026-09-17-anthdm-jev-agent-memory]] — Jev as memory substrate; same decide-cheap-before-expensive shape.
+- [[2026-09-20-rbilgil-jev-realtime-slop-detector]] — consumer-facing twin; item scoring at a UI boundary.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — the deterministic layer this fuzzy pass complements.
+- [[2026-09-17-agrawal-agent-simplification-prompts]] — capability-tiering argument: rules where rules suffice.

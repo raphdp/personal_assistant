@@ -1,0 +1,25 @@
+---
+title: "Vox (@Voxyz_ai) — Before a long autonomous task, have the agent build an HTML dashboard first — then give it a dashboard-builder subagent"
+source: https://x.com/Voxyz_ai/status/2103946635831050740
+captured: 2026-09-30
+tags: [ai-agents, twitter, agent-harness, observability, subagents, dashboards, agent-ops, context-engineering]
+kind: reference
+---
+
+**Author:** Vox (@Voxyz_ai; agent-harness practice account) · posted 2026-09-26 20:35Z · received 2026-09-26T21:27:52Z (WhatsApp via RDP-30, routed by CoS; captured from backlog 2026-09-30 after the Sep 20–30 relay-wake stall). Stats at capture: 155 replies; likes/views not exposed by the syndication API this pass. One attached screenshot (an example dashboard; not transcribed at capture). Tweet text truncated at capture mid-sentence ("…set its effort to medium, and https://t.co/…").
+
+## Summary
+
+A harness pattern for long autonomous runs: before letting a capable model (their example: "Opus 5.5") loose on a long task, have it **vibe-code a quick HTML dashboard for the task first** — presumably live status, progress, intermediate results rendered as a local page. Then institutionalize the skill: a **dedicated subagent that only builds dashboards** ("name it dashboard-builder, set its effort to medium"), so every long task gets an observability surface for near-free.
+
+## Why it matters
+
+- **Observability for agent runs is usually an afterthought; this makes it step zero.** Our own stall (Sep 20–30: routines triggered, nothing visibly ran, nobody noticed for ten days) is the exact failure class this pattern attacks — a dashboard of "last enqueue time / last disposition per agent" would have surfaced the stall on day one. The lesson lands close to home this week.
+- **Subagent-as-skill is the reusable move.** Extracting "build me a status page" into a named, medium-effort subagent mirrors [[2026-09-17-agrawal-agent-simplification-prompts]] — spend capability where it pays, package the routine part. It also matches how we run relays: dedicated dumb processes for mechanical jobs.
+- **Cheap renderings beat log-diving.** A static HTML page the lead agent rewrites each pass is simpler than any metrics stack — no server, no dependency, and the user can open it in a browser without touching logs. Same philosophy as our relay `tick ok` logs, but human-readable.
+- **Skepticism gates:** vibe-coded dashboards can silently lie (stale data, wrong join, cheerful green while the job is dead) — the Sep 20–30 stall would have shown a *frozen* dashboard only if something kept re-rendering it; if the renderer itself is inside the stalled run, you're blind anyway. A dashboard generated *by the run that fails* dies with it; external watchdogs still matter. No repo, no example beyond a screenshot, truncated method.
+
+## Links
+
+- [[2026-09-17-agrawal-agent-simplification-prompts]] — capability tiering; the dashboard-builder subagent is a instance of packaging routine skill cheaply.
+- [[2026-09-17-anthdm-jev-agent-memory]] — the other half of run hygiene: what the agent remembers between passes.

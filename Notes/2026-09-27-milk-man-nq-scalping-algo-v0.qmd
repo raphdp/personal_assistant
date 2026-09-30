@@ -1,0 +1,28 @@
+---
+title: "The Milk Man (@MrMilkTrading) — NQ scalping algo v0 published: chart screenshot, NinjaTrader 8, 3-min candles; author flags it himself as unrefined"
+source: https://x.com/MrMilkTrading/status/2104194272207552975
+captured: 2026-09-30
+tags: [trading, twitter, nq, scalping, algo-trading, ninjatrader, milk-man, needs-followup, strategy-capture]
+kind: both
+---
+
+**Author:** The Milk Man (@MrMilkTrading, verified; options/futures trader, Texas; milkmantrades.com) · posted 2026-09-27 12:59Z · received 2026-09-28T13:25:25Z (WhatsApp via RDP-30, routed by CoS; captured from backlog 2026-09-30 after the Sep 20–30 relay-wake stall). Stats at capture: 20 replies; likes/views not exposed by the syndication API this pass. One attached image (the strategy logic, presumably a NinjaTrader 8 screenshot; not transcribed at capture). Self-quotes his Sep-26 candidate-results tweet (67% WR, 1.75 PF, 2 trades/day, $4,650 September from 1 NQ — out-of-sample).
+
+## Summary
+
+By request, he publishes the strategy: an image (screenshot of the algo's rules/inputs in what the text implies is NinjaTrader 8), to be run on **3-minute candles with 1-second data** in NT8. His own framing is unusually hedged: "I am NOT confident in this yet, it needs more refinement and forward testing"; as a short-term index algo it is "likely very sensitive to regime changes"; "if you improve it, please share." This is the v0 of the candidate whose out-of-sample stats he posted a day earlier (quoted tweet).
+
+## Why it matters
+
+- **First fully-published Milk-ecosystem scalping algo.** Prior captures were either fully-specified discretionary rules ([[2026-08-30-milk-man-dip-buy-rules]]) or methodology essays ([[2026-09-01-milk-man-backtest-notional-normalization]]). This is a *mechanical* intraday NQ system with the actual logic attached — the strongest replication candidate yet from this author.
+- **He applies his own skepticism gates before we have to.** "Sensitive to regime changes" on a 2-trade/day short-term index system is the honest read: September's $4,650 is one month, one regime, out-of-sample or not. His replication standard ([[2026-08-29-milk-man-replication-metrics]]) still applies to his own algo: independent re-backtest across regimes before any live consideration.
+- **NT8 + 3-min/1-sec is a stack dependency.** Replication requires NinjaTrader 8 (or reimplementing the logic elsewhere) and careful handling of the 1-second-data condition — intraday backtests are exquisitely sensitive to bar construction, fill assumptions, and session times. Not a copy-paste into our Python stack.
+- **"If you improve it, please share" inverts the usual flow** — he's crowd-sourcing the refinement. Improvements circulated by reply-guys deserve extra skepticism; unfalsifiable "works great" replies are noise.
+- **Skepticism gates:** image not transcribed at capture (the actual rules live in the screenshot); stats from the quoted tweet are self-reported on his own setup; one month of OOS; author himself disclaims confidence. Interesting, not believed.
+
+## Links
+
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — his own validation gate; this algo's backtest must pass it too.
+- [[2026-08-29-milk-man-replication-metrics]] — the independent-replication standard for any Milk-ecosystem claim.
+- [[2026-08-30-milk-man-dip-buy-rules]] — prior fully-specified capture from the same author.
+- [[2026-09-17-milk-man-bilbo-box-article-teaser]] — the other pending Milk item (article still unfetched).
