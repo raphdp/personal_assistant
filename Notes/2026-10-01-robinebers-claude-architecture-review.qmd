@@ -1,0 +1,24 @@
+---
+title: "Robin Ebers (@robinebers) — asked Claude to look at the [codebase] for architecture catch-up while features move fast (text truncated at capture; video holds the full prompt)"
+source: https://x.com/robinebers/status/2105309987983745060
+captured: 2026-10-01
+tags: [ai-agents, twitter, claude, architecture-review, codebase-maintenance, agent-harness]
+kind: both
+---
+
+**Author:** Robin Ebers (@robinebers) · posted 2026-09-30 14:53Z · received 2026-10-01T08:54:41Z (WhatsApp via RDP-30, routed by CoS; arrived in the same batch as the mikeysee capture). Stats at capture: 62 replies; likes/views not exposed by the syndication API this pass. One attached video (not viewable at capture). Tweet text truncated at capture ("…I want you to look at the …"), as the syndication API sometimes does.
+
+## Summary
+
+Ebers has been building "a pretty massive app" for two months and admits he "often play[s] catch-up on architecture, because features move so damn fast." His "crazy idea": ask Claude (opus 5.5, high) to look at the [object cut off — presumably the codebase] — i.e., delegate the architecture catch-up itself to the agent. The tweet cuts mid-sentence at the actual prompt; the attached video and replies hold the rest.
+
+## Why it matters
+
+- **The mirror image of accreted standards.** [[2026-09-26-pocock-coding-standards-accretion]] keeps an agent aligned going forward (log failures → rules); Ebers' ask points the agent *backward* at accumulated drift — "here's everything we shipped fast, tell me what the architecture now actually is." Both attack the same problem: humans losing the structural picture when velocity is high.
+- **Same family as /retro.** [[2026-09-26-pocock-retro-pr-talk]] — a scheduled look back at merged PRs to extract what was learned. An architecture-review prompt is a heavier, on-demand retro at the repo scale. Candidate pattern for our own fastest-moving scaffolding: periodic agent-run architecture summaries that diff *intended* vs *actual* structure.
+- **Skepticism gates:** the tweet truncates exactly at the payload — the prompt itself, what Claude was given (full repo? file list?), and any verdict/output are all in the un-viewed video; "crazy idea" framing suggests experiment, not evaluated practice; 62 replies = interest, not validation. Treat as a pointer to a pattern, not evidence it works.
+
+## Links
+
+- [[2026-09-26-pocock-coding-standards-accretion]] — forward-looking alignment (standards from failures); this is the backward-looking counterpart (review the drift).
+- [[2026-09-26-pocock-retro-pr-talk]] — the lighter, scheduled version of "look back at what we shipped."
