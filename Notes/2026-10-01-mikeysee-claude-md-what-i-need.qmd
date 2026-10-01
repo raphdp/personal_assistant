@@ -1,0 +1,26 @@
+---
+title: "Mikeysee (@mikeysee) — a 'What I need from you' block in CLAUDE.md cuts through the noise and makes context-switching back into a session fast; scroll up only when the block isn't enough"
+source: https://x.com/mikeysee/status/2105463787029713341
+captured: 2026-10-01
+tags: [ai-agents, twitter, claude, claude-md, context-engineering, agent-harness, context-switching, handoff]
+kind: both
+---
+
+**Author:** Mikeysee (@mikeysee) · posted 2026-10-01 01:04Z · received 2026-10-01T08:51:45Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 11 replies; likes/views not exposed by the syndication API this pass. One attached photo (presumed screenshot of the CLAUDE.md block — not OCR'd at capture).
+
+## Summary
+
+The practice: keep a **"What I need from you"** block in the CLAUDE.md file. Mikeysee calls it "an absolute game changer" for two things: cutting through "the Claude noise" much faster, and context-switching back into a session much faster. The block carries just the current ask — he can always scroll up for fuller context, but "usually the 'What I need from you' is all I need to get it going again." Exact wording of the block is in the un-OCR'd photo; the tweet text is complete (no truncation this pass).
+
+## Why it matters
+
+- **A pointer, not a summary.** This is the cheap alternative to compaction: instead of compressing history ([[2026-09-19-altryne-jev-instant-compaction]] shrinks what's there), you maintain a tiny handoff block that says what the session needs *right now* — O(1) to read, written as you go. The scroll-up is the fallback, not the primary interface.
+- **The transient stratum of an instructions file.** [[2026-09-26-pocock-coding-standards-accretion]] covers the permanent stratum (standards that accrete from failures). This is the second stratum: current state, rewritten rather than accreted. Same file, opposite lifecycle — and that's the design insight worth keeping: instructions files want a *slow* layer and a *fast* layer.
+- **We already run this pattern — it's our wake-payload "continuation summary."** Every Paperclip wake on a long issue carries objective + current state so a fresh context resumes without re-reading the thread. This tweet is practitioner evidence the pattern generalizes beyond our harness and is felt as valuable in plain Claude Code use.
+- **Skepticism gates:** n=1, "game changer" is vibe not measurement (no before/after task-latency numbers); the failure mode is a **stale block** — an outdated "What I need from you" confidently misdirects a fresh session worse than no block at all, so the practice only works if rewriting it is near-free; exact block wording unverified (photo not OCR'd); 11 replies and no exposed like/view stats — weak engagement signal at capture.
+
+## Links
+
+- [[2026-09-26-pocock-coding-standards-accretion]] — the permanent stratum of CLAUDE.md; this note is the transient stratum that lives beside it.
+- [[2026-09-19-altryne-jev-instant-compaction]] — compressing history vs. pointing past it: two answers to the same long-session problem.
+- [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] — keep state in cheap external structure instead of burning the model's attention re-deriving it.
