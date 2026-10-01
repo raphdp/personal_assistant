@@ -1,0 +1,25 @@
+---
+title: "D. Martin (@dmartin_trading) — build with a clear hypothesis first: the lesson from Sersan's writing, applied before any strategy code"
+source: https://x.com/dmartin_trading/status/2102759902376849716
+captured: 2026-10-01
+tags: [trading, twitter, strategy-design, hypothesis-first, methodology, sersan, dmartin]
+kind: reference
+---
+
+**Author:** D. Martin (@dmartin_trading) · posted 2026-09-23 14:00Z · received 2026-09-23T19:49:52Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 3 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("…there's a lot of work I do BEFORE "). Quotes Peter (@SystematicPeter) on skepticism toward short-term "seasonal tendencies" (weekday/hour filters producing nice backtests that deserve doubt even out-of-sample).
+
+## Summary
+
+Methodology tweet: **always build with a clear hypothesis first** — a key lesson Martin takes from Sersan's blogs, reinforced across his other writing. Before beginning to build any strategy, there's a lot of work done BEFORE (truncated) — i.e., the hypothesis and its economic rationale precede code. The quoted Peter tweet supplies the negative case: hunters of very-short-term seasonal tendencies (right weekday, hour, filter → nice backtest → "an edge") deserve skepticism even when profitable out-of-sample.
+
+## Why it matters
+
+- **A first-principles gate we already enforce, now with a name and an author.** The vault's replication standard ([[2026-08-29-milk-man-replication-metrics]]) and the skepticism gates across Milk-ecosystem notes are hypothesis-first in practice; Sersan/Martin state it as the design rule: no economic mechanism, no build.
+- **The quoted Peter tweet is the mirror image** of [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]]'s author — same skepticism he applies to seasonal filters is what Martin generalizes into the hypothesis-first principle. Two authors, one epistemics.
+- **Skepticism gates:** the concrete "work I do BEFORE" list is truncated away — the actionable checklist doesn't exist in the captured text; Sersan's blogs are referenced but unidentified. Principle captured, mechanics pending.
+
+## Links
+
+- [[2026-08-29-milk-man-replication-metrics]] — the replication-side enforcement of the same principle.
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — the quoted author's captured system.
+- [[2026-09-04-systematicpeter-why-publish-research]] — shared epistemics on publishable edges.

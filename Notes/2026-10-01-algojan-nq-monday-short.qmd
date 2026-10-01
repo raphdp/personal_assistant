@@ -1,0 +1,24 @@
+---
+title: "Jan / Algo Trader (@algojan) — NQ Monday-short strategy (Friday-high-unbroken): +573% backtest, 22.6% win rate, PF 2.96 — treat as a seasonal-tendency stress test"
+source: https://x.com/algojan/status/2103040446411030638
+captured: 2026-10-01
+tags: [trading, twitter, nq-futures, seasonality, backtest, skepticism, algojan]
+kind: reference
+---
+
+**Author:** Jan — Algo Trader (@algojan) · posted 2026-09-24 08:34Z · received 2026-09-24T12:18:38Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 14 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("Total " — total trade count cut off). One photo attached (unopened).
+
+## Summary
+
+A strategy tweet in the classic seasonal-tendency shape: **short NQ futures every Monday when Friday's high was never broken**, backtested on real tick data Feb 2022–May 2026. Claimed: **+573.30% return, PF 2.96, win rate 22.6%** (wins less than 1 in 4), **avg R:R 10.13, max DD −15.2%**. Total trades truncated.
+
+## Why it matters
+
+- **This is the exact genre Peter warns about** — the quoted tweet in [[2026-10-01-dmartin-hypothesis-first]] (same week, same ecosystem): "find the right weekday, hour and filter, get a nice backtest, call it an edge… I'm skeptical even when it stays profitable out of sample." A weekday-gated NQ short with a 10:1 average R:R is either a genuine gap-risk premium or a curve-fit to a handful of Monday crashes; the 22.6% win rate means the whole return rides on few fat tails.
+- **Sample-size math is the first check:** with wins <1-in-4 and avg R:R 10, +573% over ~4.25 years implies the edge concentrates in a small number of outsized Monday winners — remove the top 2–3 and the system likely flatlines. The truncated total-trade count is the key missing number.
+- **Skepticism gates:** no economic mechanism stated (why would unbroken Friday high predict Monday downside?); no out-of-sample split disclosed; "real tick data" ≠ walk-forward; photo unopened. Capture as a stress-test case for our seasonal-skepticism checklist, not a replication candidate.
+
+## Links
+
+- [[2026-10-01-dmartin-hypothesis-first]] — the hypothesis-first rule and Peter's quoted warning, same week.
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — the contrast case: published system with rules + code.

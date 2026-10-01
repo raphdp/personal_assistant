@@ -1,0 +1,24 @@
+---
+title: "lauren/poteto — how I shipped 2,500 PRs last month to production (free talk video, originally for Cursor Compile London)"
+source: https://x.com/poteto/status/2102050467505430555
+captured: 2026-10-01
+tags: [ai-agents, twitter, shipping, pr-throughput, poteto, video, needs-followup]
+kind: both
+---
+
+**Author:** lauren (@poteto) · posted 2026-09-21 15:01Z · received 2026-09-26T07:45:44Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 511 replies; likes/views not exposed by the syndication API this pass. Attached media: video (the talk, unwatched at capture).
+
+## Summary
+
+The source talk: **"here's how i shipped 2,500 PRs last month to production."** Originally prepared for Cursor Compile in London; she couldn't attend (livestreaming for Grok @ Bot Galaxy), so the talk is free on X — "watch it on 2x speed, i talk slowly."
+
+## Why it matters
+
+- **The primary source behind the same-week Pocock share.** Pocock's takeaway thread ([[2026-10-01-pocock-lock-down-agents]]) — "lock down your agents," agents perform better in extremely constrained environments — is commentary ON this talk. The vault now holds both the source and the annotation.
+- **2,500 PRs/month is a production-scale datapoint for constrained-agent shipping**, the practice our own draft-and-show + small-blast-radius posture approximates. The mechanics (what's locked down, what reviews the flood) are in the video.
+- **Skepticism gates:** video unwatched; PR count is one org's number with unknown review depth and unknown blast radius per PR; the talk is a marketing artifact for a Cursor-event audience — expect the best-case framing.
+
+## Links
+
+- [[2026-10-01-pocock-lock-down-agents]] — Pocock's takeaways from this talk.
+- [[2026-09-26-pocock-retro-pr-talk]] — the review-throughput counterpart from the same ecosystem.

@@ -1,0 +1,26 @@
+---
+title: "Matt Pocock — AI Engineer Paris talk announcement: /retro and /pr, stopping the slop, making PRs easier to review (canonical source tweet)"
+source: https://x.com/mattpocockuk/status/2103501498361798983
+captured: 2026-10-01
+tags: [ai-agents, twitter, code-review, pr-review, slop, pocock, claude-skills, talk]
+kind: reference
+---
+
+**Author:** Matt Pocock (@mattpocockuk; TypeScript educator, Total TypeScript) · posted 2026-09-25 15:06Z · received 2026-09-26T11:06:49Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window; the Sep 30 recovery batch captured the Shoopy share of this talk but dropped this, the author's own announcement). Stats at capture: 29 replies; likes/views not exposed by the syndication API this pass.
+
+## Summary
+
+Pocock's own announcement tweet for his AI Engineer Paris talk: he announces **/retro and /pr**, and talks about how to get more PRs through an org faster by **(1) stopping the slop** and **(2) making PRs easier to review (with /pr)**. Video link in-tweet (t.co → the talk).
+
+## Why it matters
+
+- **Canonical-source correction for an existing vault cluster.** [[2026-09-26-pocock-retro-pr-talk]] captured the talk via Shoopy's share and folded this announcement's facts into its Author line — but this tweet is the *author's own* announcement and the diff-verified missing status id from the Sep 30 false-complete batch. The vault now holds source (this note) + share ([[2026-09-26-pocock-retro-pr-talk]]) + technique lineage ([[2026-09-06-pocock-reviewable-ai-prs]]).
+- **The /retro + /pr pairing is one loop**: /pr raises review throughput, /retro feeds the findings back — the same accrete→enforce cycle as [[2026-09-26-pocock-coding-standards-accretion]] + [[2026-10-01-pocock-fix-one-thing-skill]], now stated as two named skills.
+- **Skepticism gates:** announcement tweet — the talk itself is the evidence, and it's already queued as an inbox task (watch + extract /retro mechanics). Nothing new to verify here beyond provenance.
+
+## Links
+
+- [[2026-09-26-pocock-retro-pr-talk]] — the talk capture (Shoopy share + this announcement's facts).
+- [[2026-09-06-pocock-reviewable-ai-prs]] — the earlier techniques list.
+- [[2026-09-26-pocock-coding-standards-accretion]] — the standards half of the loop.
+- [[2026-10-01-pocock-fix-one-thing-skill]] — the enforcement half.

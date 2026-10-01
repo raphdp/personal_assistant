@@ -1,0 +1,22 @@
+---
+title: "Nigel (@StratLaboratory) — one year from quitting his job to 975 subscribers on The StratLab"
+source: https://x.com/StratLaboratory/status/2102509111434998098
+captured: 2026-10-01
+tags: [trading, twitter, newsletters, systematic-trading, stratlab, milestone]
+kind: reference
+---
+
+**Author:** Nigel (@StratLaboratory) · posted 2026-09-22 21:23Z · received 2026-09-23T07:20:30Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window; link arrived twice as a duplicate relay comment — captured once). Stats at capture: 4 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("…and I'm ").
+
+## Summary
+
+Anniversary thread: a year ago Nigel quit his job to trade full-time and immerse in markets; he started The StratLab as a place to capture his research, and it has grown to **975 subscribers** — roughly the 1k mark. Attached photo (unopened) presumably the milestone chart.
+
+## Why it matters
+
+- **Source-tracking, not strategy-tracking.** The StratLab is one of the systematic-trading newsletters whose research the vault already samples via Twitter shares; crossing ~1k subscribers is a durability signal for the source (more likely to keep publishing), nothing more.
+- **Skepticism gates:** subscriber count is a business metric, not evidence of edge; the truncated tail may contain an offer or product push — capture-first, judge later. No task warranted.
+
+## Links
+
+- [[2026-09-04-systematicpeter-why-publish-research]] — the parallel "why share research" question for a similar author.

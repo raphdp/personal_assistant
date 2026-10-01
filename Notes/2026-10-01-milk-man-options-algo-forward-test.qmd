@@ -1,0 +1,26 @@
+---
+title: "The Milk Man — first options algo, <3 months old, +64% in 52 trading days forward-testing (Bilbo Box paper account, day 53: $16,397)"
+source: https://x.com/MrMilkTrading/status/2102571313441177819
+captured: 2026-10-01
+tags: [trading, twitter, options, forward-testing, bilbo-box, milk-man, track-record]
+kind: reference
+---
+
+**Author:** The Milk Man (@MrMilkTrading; options/futures trader, Texas) · posted 2026-09-23 01:30Z · received 2026-09-23T17:59:50Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 2 replies; likes/views not exposed by the syndication API this pass. Quoted tweet is his own day-53 Bilbo Box paper-account update ($16,397, up 64% since July 9).
+
+## Summary
+
+Forward-testing milestone: the first options algo he designed — less than 3 months old — is doing well in paper. **+64% in 52 trading days, one options contract at a time.** The deliberately unsexy profile: **40% win rate, 1.72 profit factor** — losses are frequent, the payoff distribution carries it.
+
+## Why it matters
+
+- **The stats ARE the strategy thesis.** 40% win rate × 1.72 PF is the exact shape his public methodology predicts: negative-skew-tolerant, distribution-over-win-rate thinking — a live extension of the backtest discipline captured in [[2026-09-01-milk-man-backtest-notional-normalization]] and the replication standard in [[2026-08-29-milk-man-replication-metrics]].
+- **52 trading days is forward-test evidence, not an edge.** The vault's existing skepticism path applies in full: one options contract at a time means sizing is trivially small; a 64% paper run over ~2.5 months is well inside what a favorable vol regime hands any short-premium-ish book. Track it as the forward-test leg of [[2026-09-17-milk-man-bilbo-box-article-teaser]], don't upgrade it.
+- **Skepticism gates:** paper account, not live; single underlying per trade, unknown underlyings mix; PF and win rate are self-reported snapshot stats, no curve shown.
+
+## Links
+
+- [[2026-09-17-milk-man-bilbo-box-article-teaser]] — the strategy writeup this forward-test belongs to.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — his own validation gate.
+- [[2026-08-29-milk-man-replication-metrics]] — independent replication standard.
+- [[2026-08-29-milk-spx-strategy-v1-1]] — the go-live hardening checklist this would face.

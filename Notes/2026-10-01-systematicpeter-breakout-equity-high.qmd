@@ -1,0 +1,24 @@
+---
+title: "Peter / Cracking Markets (@SystematicPeter) — intraday volatility breakout system: new equity high, and what trading a breakout system actually looks like"
+source: https://x.com/SystematicPeter/status/2102839841700601928
+captured: 2026-10-01
+tags: [trading, twitter, breakout-systems, intraday, volatility, drawdowns, systematicpeter]
+kind: reference
+---
+
+**Author:** Peter — Cracking Markets (@SystematicPeter) · posted 2026-09-23 19:17Z · received 2026-09-23T19:49:14Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 4 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("…then a few big winners that move the equity ").
+
+## Summary
+
+Equity-high update for the intraday volatility breakout system he shares on his website: "What a month." His framing of the lived experience: **plenty of losing trades, stretches of going nowhere, then a few big winners that move the equity [curve]** — the standard breakout-system signature. One photo attached (equity curve, unopened at capture).
+
+## Why it matters
+
+- **Expectation-setting from the same lineage we already replicate.** The vault holds his published-system captures ([[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]], queued for rules-pull) and his meta-view on publishing research ([[2026-09-04-systematicpeter-why-publish-research]]); this tweet is the affective counterweight — the drawdown texture between the equity highs that marketing never shows.
+- **"A few big winners" is the mechanism, not a vibe.** Breakout/intraday-vol systems earn their keep in the tail; win rate is structurally low. Anyone replicating his systems should size for the flat stretches, not the announcing-month.
+- **Skepticism gates:** one month, one system version, self-reported equity high; the photo is unopened — curve shape, trade count, and period all unverified at capture.
+
+## Links
+
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — his captured system with the replication task queued.
+- [[2026-09-04-systematicpeter-why-publish-research]] — why this system is public at all.

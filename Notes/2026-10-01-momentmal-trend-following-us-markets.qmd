@@ -1,0 +1,24 @@
+---
+title: "Joachim Klindworth (@momentmal22) — trend following does not work that well on the US market, per a research paper"
+source: https://x.com/momentmal22/status/2102298474888761803
+captured: 2026-10-01
+tags: [trading, twitter, trend-following, momentum, us-equities, research-paper, needs-followup]
+kind: both
+---
+
+**Author:** Joachim Klindworth (@momentmal22; trend-following/momentum background) · posted 2026-09-22 07:26Z · received 2026-09-23T08:27:01Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 8 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("…At least according to a research paper I " — the paper reference is cut off). Relay comment carried the link as @momentmal2022; the account's current handle is @momentmal22.
+
+## Summary
+
+From a trend-following/momentum practitioner: both styles remain core parts of his strategy portfolio, **but trend following works notably worse on the US market** — "at least according to a research paper" whose citation is truncated out of the captured text. One photo attached (unopened at capture).
+
+## Why it matters
+
+- **A regime/geography claim that touches our own TF replications.** The vault's trend-following captures ([[2026-08-29-three-simple-ma-atr-systems]]) and momentum variants ([[2026-09-09-l1vsun-yield-curve-aware-momentum]]) are largely US-equity tested; if the cited paper holds up, geography segmentation belongs in the replication checklist, not just asset-class segmentation.
+- **Practitioner-stated, paper-sourced — the right evidentiary shape**, but the paper itself is unidentified in the captured text. Nothing checkable until it's located.
+- **Skepticism gates:** truncation hides both the citation and the effect size; "does not work that well" is compatible with anything from mild underperformance to negative returns. Find the paper before updating any prior.
+
+## Links
+
+- [[2026-08-29-three-simple-ma-atr-systems]] — US-tested MA/ATR systems this claim would qualify.
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — momentum variant in the same family.

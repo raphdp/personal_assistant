@@ -1,0 +1,23 @@
+---
+title: "Cathryn Lavery — Tailscale is the most underrated tool in tech: exit-node routing, cross-device clipboard, family tech support"
+source: https://x.com/cathrynlavery/status/2103588600076214414
+captured: 2026-10-01
+tags: [tools, twitter, tailscale, networking, remote-work, security, cathrynlavery]
+kind: reference
+---
+
+**Author:** Cathryn (@cathrynlavery) · posted 2026-09-25 20:52Z · received 2026-09-26T07:49:31Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 85 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("• If her " — the list cuts off mid-item).
+
+## Summary
+
+Opinion + use-case list: **@Tailscale is the most underrated tool in tech.** Her recent uses: (1) hotel/airplane wifi sketchy or slow → route all traffic through her house in Austin with one tap (exit node); (2) copy on laptop, paste onto wife's clipboard (cross-device clipboard over the tailnet); (3) "If her…" — truncated, by context a family tech-support/remote-fix item.
+
+## Why it matters
+
+- **Personal-infrastructure pattern-match, not a trading signal.** The one-tap exit node is the interesting primitive: a private, geo-stable egress for hostile networks — relevant to the user's own travel/ops posture if it ever comes up, and a sane default for reaching home services (relays, bridges) without exposing them.
+- **The tailnet-as-family-LAN framing** (shared clipboard, remote fix of a partner's machine) is the adoption angle that makes it stick beyond the homelab crowd.
+- **Skepticism gates:** fan tweet, truncated list, no security trade-off discussion (routing everything through a home exit node presumes home uptime + a trustworthy home network); nothing here to act on now.
+
+## Links
+
+(none — no topical cluster in the vault yet; first Tailscale/networking capture.)

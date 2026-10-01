@@ -1,0 +1,26 @@
+---
+title: "Matt Pocock — skill idea: /fix-one-thing — read CODING_STANDARDS.md, fix one violation, small reviewable PR, small blast radius"
+source: https://x.com/mattpocockuk/status/2103506709633466648
+captured: 2026-10-01
+tags: [ai-agents, twitter, skills, coding-standards, continuous-improvement, pocock, claude-skills]
+kind: reference
+---
+
+**Author:** Matt Pocock (@mattpocockuk) · posted 2026-09-25 15:27Z · received 2026-09-26T07:47:08Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 118 replies; likes/views not exposed by the syndication API this pass.
+
+## Summary
+
+Skill proposal: **/fix-one-thing** — "Read CODING_STANDARDS.md. Find a violation in the codebase, and fix it. Make the PR small and easy to review, with a small blast radius." Run it whenever there's a spare moment, or once an hour on a schedule.
+
+## Why it matters
+
+- **This is the missing execution half of the standards-accretion loop.** [[2026-09-26-pocock-coding-standards-accretion]] covers where standards come from (observed failures, accreting into CODING_STANDARDS.md); this skill is what *spends* them: a cron-able agent that converts accreted rules into a steady drip of tiny reviewable PRs. Accrete → enforce → repeat.
+- **Porting to our own scaffolding is trivial in shape:** our equivalent of CODING_STANDARDS.md already exists in agglomerated form (skills Pitfalls sections, AGENTS.md conventions). A /fix-one-thing-style pass would target our own repos' drift — but the trading company's repos are out of scope here; the natural first target is this vault + personal tooling.
+- **"Once an hour on a schedule" is the interesting scaling lever**: continuous background repair instead of cleanup binges — the same cadence argument as our heartbeat/cron posture.
+- **Skepticism gates:** idea tweet, not a shipped skill — mechanics (violation-finding reliability, PR volume vs review capacity) unproven; an hourly PR drip can outpace review, recreating the slop problem it solves.
+
+## Links
+
+- [[2026-09-26-pocock-coding-standards-accretion]] — where the standards it enforces come from.
+- [[2026-09-26-pocock-jev-fuzzy-linter]] — the cheap-checker that runs rules post-edit.
+- [[2026-10-01-pocock-lock-down-agents]] — same-week: /fix-one-thing IS a locked-down agent.

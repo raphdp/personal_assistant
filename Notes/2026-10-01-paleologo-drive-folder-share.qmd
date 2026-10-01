@@ -1,0 +1,23 @@
+---
+title: "Gappy Paleologo (@__paleologo) — bare link share: Google Drive folder (t.co resolves to drive.google.com folder, contents unidentified)"
+source: https://x.com/__paleologo/status/2103596432909590725
+captured: 2026-10-01
+tags: [trading, twitter, paleologo, unverified-link, google-drive, needs-followup]
+kind: both
+---
+
+**Author:** Gappy (Giuseppe Paleologo) (@__paleologo; quant author — The Elements of Quantitative Investing) · posted 2026-09-25 21:24Z · received 2026-09-26T07:48:00Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 23 replies; likes/views not exposed by the syndication API this pass.
+
+## Summary
+
+**Link-only tweet: the entire body is one t.co URL** (https://t.co/sxTEXMRfHj), no commentary. Resolved at capture (curl -sI, location header): a **Google Drive folder** — `drive.google.com/drive/folders/1h1sMB-JkF9CjHbyGsoClY2Y1zbp_sZSY`. Folder name and contents not inspectable from the redirect alone; 23 replies suggest people found whatever it is.
+
+## Why it matters
+
+- **Author-credibility carries the capture.** Paleologo sharing a bare Drive folder with zero framing is unusual — his shares are normally accompanied by pointed commentary; the absence of text makes the folder itself the message (slides? a dataset? a paper draft?).
+- **Exactly the pattern the skill warns about**: bare t.co with no text → resolve the redirect first, capture the chain honestly, add an inbox task to pull the actual content. Do not guess at contents.
+- **Skepticism gates:** contents completely unverified at capture; the Drive folder could be anything from lecture slides to someone else's work he's amplifying — no claim exists to evaluate yet.
+
+## Links
+
+- [[2026-09-17-kovainvest-x-article-share]] — the prior capture-the-chain-honestly case.

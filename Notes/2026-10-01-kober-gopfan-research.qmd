@@ -1,0 +1,24 @@
+---
+title: "kober — how a top Polymarket trader does research: gopfan's ~$150K United Russia trade, research screenshots shared by @Atlantislq"
+source: https://x.com/kober1337/status/2102491588890931698
+captured: 2026-10-01
+tags: [trading, twitter, polymarket, research-process, prediction-markets, gopfan, needs-followup]
+kind: both
+---
+
+**Author:** kober (@kober1337) · posted 2026-09-22 20:13Z · received 2026-09-23T07:13:54Z (WhatsApp via RDP-30, routed by CoS; captured from RDP-608 backlog 2026-10-01 — missed in the Sep 23–26 stall window). Stats at capture: 10 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("It's clear that he has a deep …"). Two photos attached (research screenshots); quoted tweet is kober's own "Gopfan spasibo" reply in the thread.
+
+## Summary
+
+A window into how a top Polymarket trader researches: @r_gopfan made **~$150K betting on United Russia** in the Russian parliamentary elections; @Atlantislq shared screenshots of gopfan's research process behind the trade. The two attached photos ARE the artifact — the research method itself, not just the PnL.
+
+## Why it matters
+
+- **Process-over-PnL capture for prediction markets.** The vault's Polymarket cluster so far holds theses and data plumbing ([[2026-09-01-polymarket-copytrading-filter-thesis]], [[2026-09-01-pendulum-flow-polymarket-orderbook-archive]]); this is the missing piece — what a winning trader actually looks at before sizing a political bet.
+- **One trade is an anecdote, not an edge.** $150K on one election is survivorship-flavored until the method generalizes; the value here is the checklist in the screenshots, not the result.
+- **Skepticism gates:** text truncated mid-sentence; screenshots unopened at capture — everything depends on what they actually show. No sample size, no odds/entry detail in the tweet body itself.
+
+## Links
+
+- [[2026-09-01-polymarket-copytrading-filter-thesis]] — prior Polymarket thesis capture.
+- [[2026-09-01-pendulum-flow-polymarket-orderbook-archive]] — the data-plumbing side.
