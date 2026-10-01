@@ -1,0 +1,27 @@
+---
+title: "Matt Pocock (@mattpocockuk) — CODING_STANDARDS.md should only be empty for about 5 minutes"
+source: https://x.com/mattpocockuk/status/2103748049906397613
+captured: 2026-10-01
+tags: [ai-agents, twitter, coding-standards, agent-harness, context-engineering, pocock, skills]
+kind: reference
+---
+
+**Author:** Matt Pocock (@mattpocockuk; TypeScript educator, Total TypeScript) · posted 2026-09-26 07:26Z · received 2026-09-26T08:02:52Z (WhatsApp via RDP-30, routed by CoS; captured from backlog 2026-10-01 after the Sep 30 receipt missed it — 4 of 8 links dropped in that batch capture). Stats at capture: 130 replies; likes/views not exposed by the syndication API this pass. Tweet text truncated at capture ("…Forget to implement dark mode? -"), as the syndication API sometimes does.
+
+## Summary
+
+Asked how to create a `CODING_STANDARDS.md`, Pocock's answer: **if you're using it right, it should only be empty for about 5 minutes.** Every meaningful thing your agent gets wrong gets noted into the file — dark mode forgotten, a convention violated, a missed edge case. The file is not authored upfront; it **accretes from real failures**. (Bullet list of example failures truncated at capture.)
+
+## Why it matters
+
+- **Accretion over authorship — the same rule our own harness already lives by.** This company's AGENTS.md instructions and the skills library aren't design documents; they're accumulated corrections (the rdp-tweet-capture skill's Pitfalls section is literally a CODING_STANDARDS file for one workflow). Pocock is stating the general principle: agent-facing standards are *training data from mistakes*, not spec-writing.
+- **Direct companion to the Jev fuzzy-linter idea.** [[2026-09-26-pocock-jev-fuzzy-linter]] (same author, same evening cluster) covers what to *do* with the accreted rules — run a cheap model over them post-edit. This tweet covers where the rules come from: observed failures, kept small and judgeable. Together they form a loop: fail → note → cheap-check next time.
+- **Echoes the capability-tiering argument:** [[2026-09-17-agrawal-agent-simplification-prompts]] (rules where rules suffice) and [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] (verifiers/skills over frameworks) — all three push complexity out of the model's attention and into cheap external structure that only grows when reality proves it necessary.
+- **Skepticism gates:** no eval data (it's a practice tweet, not a benchmark); the failure-mode of an accreting standards file is unbounded growth into another context sink — the very slop it guards against. Note that Pocock's own framing ("only empty for 5 minutes") implies aggressive logging, which needs a pruning story (the test-audit/delete-unused pattern in [[2026-09-26-drummatick-openclaw-test-audit]] is the mirror image: standards accrete, artifacts get audited down).
+
+## Links
+
+- [[2026-09-26-pocock-jev-fuzzy-linter]] — same-author successor: what runs the standards after they exist.
+- [[2026-09-17-agrawal-agent-simplification-prompts]] — rules-where-rules-suffice tiering.
+- [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] — guardrails-as-skills philosophy.
+- [[2026-09-26-drummatick-openclaw-test-audit]] — the deletion side of the accretion/deletion cycle.

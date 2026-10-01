@@ -1,0 +1,27 @@
+---
+title: "Matt Pocock — AI Engineer Paris talk: /retro and /pr, stopping the slop, PRs fast enough to review (0xshoopy share + Pocock's own announcement)"
+source: https://x.com/0xshoopy/status/2103563508579254293
+captured: 2026-10-01
+tags: [ai-agents, twitter, code-review, agent-harness, pr-review, slop, pocock, claude-skills]
+kind: both
+---
+
+**Author:** two-part capture. Share by Shoopy (@0xShoopy) · posted 2026-09-25 19:13Z · received 2026-09-26T08:04:55Z; Pocock's own announcement (@mattpocockuk) posted 2026-09-25 15:06Z · received 2026-09-26T11:06:49Z (both WhatsApp via RDP-30, routed by CoS; captured from backlog 2026-10-01 after the Sep 30 receipt missed them — 4 of 8 links dropped in that batch capture). Stats at capture: 25 replies (share), 29 replies (announcement); likes/views not exposed this pass. The talk: YouTube, "AI Engineer Paris" — https://www.youtube.com/watch?v=g0vqT_wZtXA&t=26238s (t.co resolved at capture; timestamp deep-links into the talk).
+
+## Summary
+
+Pocock's announcement: the talk introduces **/retro** and **/pr**, and how to get more PRs through an org faster by (1) stopping the slop and (2) making PRs easier to review with /pr. Shoopy's share frames the hook: "Opus 5 got addicted to writing tests that just repeat the code back to itself" — and walks through how to stop AI PRs from turning your repo into a slop cannon (their marked timestamp: 5:30 → "the tests AI writes that…", text truncated at capture). The quoted tweet in the share chain (@0xShoopy, 2026-08-25) points to a login-gated X article (x.com/i/article/2091510704201228288) — content unfetchable at capture, same wall as the [[2026-09-17-kovainvest-x-article-share]] case.
+
+## Why it matters
+
+- **This is the video source for techniques already in the vault.** [[2026-09-06-pocock-reviewable-ai-prs]] captured the techniques list (/show-me diffs, pseudocode, Mermaid, TDD evidence); this talk is where /pr and /retro get their full treatment. The vault's Pocock cluster now covers: reviewable PRs (Sep 6) → standards accretion (Sep 26 morning) → this talk (Sep 25, captured here) → Jev fuzzy-linter endorsement (Sep 26 evening). One author, one thesis: **review throughput is the bottleneck of AI-assisted orgs, and it's solved with cheap artifacts, not more reviewer discipline.**
+- **"Tests that repeat the code back" names the exact failure the OpenClaw audit quantified.** [[2026-09-26-drummatick-openclaw-test-audit]] (same capture batch): 400k LOC of tests deleted with no coverage change. Shoopy's framing and Steinberger's audit are the same phenomenon from two ends — AI writes tests as an alibi, not a check.
+- **/retro is the piece our own workflow most lacks.** /pr has analogues (draft-and-show, review gates); /retro — presumably a structured post-task retrospective that feeds findings back into standing rules — is the missing half of the loop Pocock describes in [[2026-09-26-pocock-coding-standards-accretion]]: failures → standards → cheap checks. A /retro step at task close is a concrete, zero-cost adoption candidate for this company's own end-of-task checklist.
+- **Skepticism gates:** talk not yet watched — /retro's actual mechanics are inferred from the title, not verified (do not adopt from this note alone). No metrics in either tweet ("more PRs through your org faster" is a talk pitch, not a result). The X-article in the share chain is inaccessible without login; its content is assumed, not read.
+
+## Links
+
+- [[2026-09-06-pocock-reviewable-ai-prs]] — the earlier techniques list from the same lineage.
+- [[2026-09-26-pocock-coding-standards-accretion]] — where the accreted rules come from.
+- [[2026-09-26-drummatick-openclaw-test-audit]] — the 400k-LOC quantification of "tests as alibi."
+- [[2026-09-17-kovainvest-x-article-share]] — the login-gated X-article wall, prior case.
