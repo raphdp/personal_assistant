@@ -1,0 +1,25 @@
+---
+title: "Nico Bailon (@nicopreme) — Visual Explainer skill hits 10k stars: agents planning in HTML instead of markdown, and he can't go back to markdown plans"
+source: https://x.com/nicopreme/status/2105444189584666788
+captured: 2026-10-01
+tags: [ai-agents, twitter, planning, html-artifacts, agent-skills, claude-skills, github]
+kind: both
+---
+
+**Author:** Nico Bailon (@nicopreme) · posted 2026-09-30 23:46Z · received 2026-10-01T08:58:17Z (WhatsApp via RDP-30, routed by CoS; third link of the morning batch). Stats at capture: 8 replies; likes/views not exposed by the syndication API this pass. No media on the announcing tweet; quotes his own earlier tweet ("POV: Planning with the 'Visual Explainer' skill. I can't go back to markdown plans after getting used to this") with a video demo (not viewable at capture).
+
+## Summary
+
+Bailon's **Visual Explainer** Claude skill just crossed **10,000 GitHub stars**. Origin story in his words: a February hunch that **agents should plan in HTML instead of markdown**. The quoted tweet is the experience claim: once you've planned with the Visual Explainer, "I can't go back to markdown plans." The skill itself (repo behind the t.co link, not resolved at capture) turns plans into visual/interactive HTML artifacts instead of markdown documents.
+
+## Why it matters
+
+- **The planning-representation debate, now with adoption evidence.** [[2026-09-06-phelps-agentic-planning-loop]] covered a planning *process* (/grill-me → /council → plannotator, iterate to convergence); this is the complementary claim about planning *medium* — that the plan's representation itself (rich, visual HTML vs. flat markdown) changes plan quality and reviewability. 10k stars is a real adoption signal, not just a take.
+- **Connects to our own artifacts.** Our harness already produces plans and briefs as structured documents; the claim here is that *visual* structure (diagrams, layout, progressive disclosure) beats *textual* structure for both the agent planning and the human reviewing. That's testable cheaply on our next planning artifact: same plan, both representations, judge review speed and error-finding.
+- **Skill-ecosystem momentum keeps compounding.** Third heavily-starred agent-skill artifact captured this quarter (with the Jev plugin cluster and the OpenClaw skills) — the ecosystem is consolidating on small, composable SKILL.md-style artifacts as the unit of agent capability. Worth tracking which of these earn a slot in our own stack.
+- **Skepticism gates:** repo not opened at capture (t.co unresolved — 10k stars is self-reported in-tweet; the repo id, README, and what the skill actually outputs are unverified); the quoted "POV" is the author's own experience, n=1; star counts measure attention, not correctness; the video demo wasn't viewed.
+
+## Links
+
+- [[2026-09-06-phelps-agentic-planning-loop]] — planning *process*; this note is planning *medium* (HTML vs markdown representation).
+- [[2026-09-26-drummatick-openclaw-test-audit]] — the skill-ecosystem consolidation pattern (SKILL.md artifacts as capability units).
