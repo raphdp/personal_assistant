@@ -21,6 +21,12 @@ This repo is the **git-backed second brain** (Obsidian-compatible). The Libraria
 - `Sport/Running/`, `Sport/Gym/` — one note per session: `YYYY-MM-DD-<slug>.md` from `_templates/run.md` / `_templates/gym.md` (`.md` so Obsidian indexes them; not `.qmd`).
 - Data in via Telegram-forwarded sessions (manual) for now; Strava/Strong auto-import pending user green-light.
 
+## People (dossiers)
+- `People/` — one sheet per person: `People/<name-slug>.md` from `_templates/person.md`; `People/INDEX.md` is the directory.
+- The user sends a fact ("Julien: fact…") via WhatsApp/Telegram; the Librarian appends it to that person's Timeline (dated bullet, verbatim-faithful) and updates Summary/Key facts when it sharpens the picture. Sheet auto-created on first mention.
+- Frontmatter: `name`, `aliases` (nickname/name variants for matching), `tags: [person]`, `created`, `updated`.
+- Dates in the Timeline use capture date; `Sources` records the channel (e.g. WhatsApp via RDP-30).
+
 ## Git
 - Local working copy is the source of truth; `origin` (GitHub) backs it up and syncs devices.
 - The Librarian commits each edit with a clear message. Push uses Git Credential Manager (GitHub auth required).
