@@ -1,0 +1,33 @@
+---
+title: "The Momentum Investor (@themomentumplay) — \"100+ strategies beat $SPY by 2-5%\" vs InvestingAddict's index-first regret asymmetry"
+source: https://x.com/themomentumplay/status/2107118341886468219
+captured: 2026-10-05
+tags: [trading, twitter, indexing, spy, active-vs-passive, overfitting, momentum, backtesting, spiva]
+kind: reference
+---
+
+**Author:** The Momentum Investor (@themomentumplay) · posted 2026-10-05 14:38Z · received 2026-10-05T16:02:48Z (WhatsApp via RDP-30, routed by CoS). Stats not exposed at capture (likes/reposts/views null; 0 replies). Full text captured without truncation; no media. Quote-tweets @InvestingAddict (2026-10-03, id 2106744744525377941), captured with it.
+
+## Summary
+
+A quote-tweet disagreement in its purest form. @InvestingAddict posts the Bogleheads classic — *"Nobody ever regrets investing in the S&P 500. Many regret trying to outperform it."* — the regret-asymmetry argument for indexing. The Momentum Investor counters with a confident dual claim: **100+ strategies in hand that beat $SPY**, requiring only **one portfolio adjustment a year**, delivering a **consistent 2–5% annual edge**.
+
+Nothing is disclosed — no rules, no equity curves, no links. The claim is unfalsifiable as posted.
+
+## Why it matters
+
+- **"100+ strategies" is the overfitting tell, not the strength it sounds like.** If a hundred distinct rule-sets all post the same edge on the same history, they are almost certainly a hundred re-skinnings of one or two underlying factor exposures mined from the same window. A genuine edge is rare; a *zoo* of edges is the signature of data mining. "Consistently" is the load-bearing word, and edge decay is exactly what [[2026-09-16-guirao-breakout-decay-2026]] documents.
+- **The base rate is the quoted tweet's strongest card.** SPIVA-style scorecards show the large majority of professional active managers underperform the S&P 500 over 15–20yr windows — managers with more than annual rebalancing and more than 100 strategies at their disposal. "Adjust once a year and beat SPY by 2–5%" is a claim about beating people who spend their careers trying.
+- **Internal irony: momentum doesn't survive annual rebalancing.** Momentum as a factor decays on the order of weeks-to-months; a genuinely annual rebalance harvests almost none of it. A momentum-branded account advertising yearly adjustments is either not really running momentum (a value/quality/small-cap tilt wearing the label — the classic Fama-French way to "beat SPY" over long windows) or harvesting a different premium than the brand implies. Either way the label and the mechanism don't match.
+- **Plausibility calibration against our own captures:** the one fully-disclosed TAA system in the vault ([[2026-09-09-p123-five-etf-rotation]]) earned ~2.6pp/yr annualized (9.74% vs 7.14%) *against a 60/40 benchmark — not SPY —* over 28 years with the full stats card attached. An anonymous "2–5% over SPY, consistently" is claiming more edge with zero disclosure.
+- **Why it's in the vault anyway:** this is the cleanest one-tweet statement of the two poles the whole strategy-capture cluster lives between. Our replication queue ([[2026-09-13-cointradernik-regime-rotation-rr-pro]] with its disclosed IS→OOS Sharpe decay, [[2026-08-29-milk-man-replication-metrics]]) is the "you can beat SPY" pole; the quoted tweet is the standing caution that in-sample edges decay out-of-sample. Calibration anchor for how much weight any single backtest stat deserves — including the ones we capture sympathetically.
+- **Skepticism gates:** zero disclosure means zero replication candidates; reference only, no task. Practitioner honesty contrast: [[2026-10-01-momentmal-trend-following-us-markets]] is what a momentum practitioner sounds like when naming where the style *doesn't* work.
+- **Isolation note (CoS convention):** personal second-brain capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-09-16-guirao-breakout-decay-2026]] — edge decay: the mechanism that makes "consistently" the hardest word in the claim.
+- [[2026-09-09-p123-five-etf-rotation]] — the disclosed-rules pole: what a real 2-5%-ish edge claim looks like with evidence attached.
+- [[2026-09-13-cointradernik-regime-rotation-rr-pro]] — IS→OOS decay disclosed; what "consistent" costs in practice.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication standard any "beats SPY" claim must meet before earning belief.
+- [[2026-10-01-momentmal-trend-following-us-markets]] — the honest-practitioner contrast from the same style family.
