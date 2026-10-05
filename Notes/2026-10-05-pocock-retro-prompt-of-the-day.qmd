@@ -1,0 +1,37 @@
+---
+title: "Matt Pocock — Prompt of the day: /retro — mine team PR review comments into CODING_STANDARDS.md"
+source: https://x.com/mattpocockuk/status/2107077843859513769
+captured: 2026-10-05
+tags: [ai-agents, twitter, code-review, pr-review, coding-standards, retro, pocock, claude-skills, prompt]
+kind: reference
+---
+
+**Author:** Matt Pocock (@mattpocockuk; TypeScript educator, Total TypeScript) · posted 2026-10-05 11:58Z · received 2026-10-05T16:00:14Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 27 replies; likes/views not exposed by the syndication API this pass. Full text captured without truncation.
+
+## Summary
+
+The actual prompt text behind the **/retro** skill announced at AI Engineer Paris — first time the mechanics are visible without watching the talk. The prompt, verbatim:
+
+> /retro take a look at as many GitHub PR review comments as you have access to from my team. Create suggestions for updates to CODING_STANDARDS.md (breaking into multiple files as needed).
+>
+> Makes your PR comments inform the code going forward.
+
+Mechanics revealed: **input** = the team's real GitHub PR review history ("as many as you have access to"); **output** = *suggestions* for CODING_STANDARDS.md updates, not auto-writes; **structure** = the standards file may be split into multiple files as the corpus grows; **effect** = review comments stop being one-off corrections and become training data for future code.
+
+## Why it matters
+
+- **Answers half of the pending /retro inbox task** (watch the talk, extract what triggers it / what it writes / where findings land). Now known: what it writes (suggestions for CODING_STANDARDS.md, possibly split), where findings land (the standards files), what triggers it (a named, manually-invoked prompt). Still missing: how suggestions get accepted/rejected, and whether there's dedup against existing rules.
+- **"Suggestions" = draft-and-show**, the same governance posture this company runs on — a model pass proposes the standards diff, a human reviews it. The mining is automated; the merge is not.
+- **The multi-file split directly addresses the growth concern** flagged in [[2026-09-26-pocock-coding-standards-accretion]] (an accreting file becoming a context sink). Notably Pocock's answer is *structural* (split into files) rather than *subtractive* (prune) — the accretion/deletion tension with [[2026-09-26-drummatick-openclaw-test-audit]] stays open.
+- **The loop is now fully specified across the vault cluster**: reviewable PRs produce comments ([[2026-09-06-pocock-reviewable-ai-prs]]) → /retro mines comments into standards → standards accrete ("only empty for 5 minutes", [[2026-09-26-pocock-coding-standards-accretion]]) → a cheap model enforces them ([[2026-09-26-pocock-jev-fuzzy-linter]], [[2026-10-01-pocock-fix-one-thing-skill]]) → /pr raises review quality back into the loop ([[2026-10-01-pocock-retro-pr-announcement]]).
+- **Our own mirror**: this company's skills Pitfalls sections are exactly this loop run by hand. The tweet argues for automating the mining step over real review history — a candidate for our own end-of-task checklist (the decision the pending task defers).
+- **Skepticism gates**: it's a "prompt of the day" share, not a released tool — whether the named /retro *skill* does more than this single prompt (scoping, dedup, caching) is unverified until the talk. "As many PR review comments as you have access to" implies context limits bite fast on a large team; the multi-file split reads as the workaround, not a nicety.
+
+## Links
+
+- [[2026-10-01-pocock-retro-pr-announcement]] — the announcement this prompt operationalizes.
+- [[2026-09-26-pocock-coding-standards-accretion]] — where the standards come from; the growth concern the split addresses.
+- [[2026-09-06-pocock-reviewable-ai-prs]] — the review-quality half of the loop.
+- [[2026-09-26-pocock-jev-fuzzy-linter]] — the enforcement half.
+- [[2026-10-01-pocock-fix-one-thing-skill]] — enforcement granularity.
+- Pending inbox task: watch the talk (youtube.com/watch?v=g0vqT_wZtXA) — now narrowed to what /retro adds *beyond* this prompt.
