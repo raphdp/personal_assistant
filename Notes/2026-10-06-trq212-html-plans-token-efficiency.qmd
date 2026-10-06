@@ -1,0 +1,26 @@
+---
+title: "Thariq (@trq212) — the token-efficiency case for HTML planning: structured plans stop the model re-deriving components (state machines, diagrams, snippets)"
+source: https://x.com/trq212/status/2107294499282293017
+captured: 2026-10-06
+tags: [ai-agents, twitter, planning, html-artifacts, token-efficiency, context-engineering, agent-skills, claude-skills, claude-code]
+kind: reference
+---
+
+**Author:** Thariq (@trq212) · posted 2026-10-06 02:18Z · received 2026-10-06T04:08:26Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 43 replies; likes/views not exposed by the syndication API this pass. Quotes his own earlier announcement (posted 2026-10-05 19:35Z, 193 replies, video demo not viewable at capture): a Claude Code skill for "better HTML plans" — simple language, code snippets, surfaces questions, makes mockups, with linting to reduce "the normal failure cases that Claude runs into."
+
+## Summary
+
+A follow-up to his own skill announcement, adding the **cost argument** for planning in HTML: it is "a lot more token efficient compared to raw HTML" because the model no longer needs to remake the components or logic for common plan elements — state machines, diagrams, code snippets. The skill supplies and lints those primitives once, instead of the model re-deriving and re-emitting them from scratch in every plan.
+
+## Why it matters
+
+- **Completes the HTML-planning argument started in [[2026-10-01-nicopreme-visual-explainer-skill]].** Bailon's claim was about representation quality (visual plans review better; "can't go back to markdown"); Thariq adds the economics — structured HTML planning is *cheaper* than naive HTML generation because shared components are written once and reused. If both hold, the two standard objections (slower to generate, costlier to render) collapse together.
+- **The mechanism generalizes beyond his skill:** the efficiency comes from not paying the model to re-invent its own scaffolding — a component library plus linting. That is the same pattern as our own SKILL.md artifacts (encode the procedure once, stop re-deriving it) and Pocock's standards-into-cheap-enforcement loop ([[2026-10-01-pocock-fix-one-thing-skill]]). Context-economy rule worth keeping: shared primitives beat re-emitted prose.
+- **Sharpens the queued experiment.** The nicopreme note already proposed same-plan-both-representations on our next planning artifact; this adds a second measurement axis — token spend per representation, not just review speed and error-finding.
+- **Skepticism gates:** the skill is unreleased ("would love your feedback before shipping more broadly"); "a lot more token efficient" is a self-report with no numbers (tokens per plan, model, failure rate); the baseline is *raw HTML*, so the claim does not automatically extend to HTML-vs-markdown planning; the demo video wasn't viewable at capture; likes/views not exposed at capture.
+
+## Links
+
+- [[2026-10-01-nicopreme-visual-explainer-skill]] — the representation-quality claim; this note adds the token-cost claim to the same thread.
+- [[2026-10-01-pocock-fix-one-thing-skill]] — the encode-once / enforce-cheaply pattern applied to coding standards.
+- Quoted context: https://x.com/trq212/status/2107192901537329354 (the skill announcement itself).
