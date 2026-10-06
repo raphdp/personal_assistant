@@ -1,0 +1,27 @@
+---
+title: "Jungle Rock Research (@JungleRockRes) — Turtle trend-following with a 252-day Hurst-exponent gate: flat as a third state when markets aren't persistent"
+source: https://x.com/JungleRockRes/status/2107177752495612205
+captured: 2026-10-06
+tags: [trading, twitter, trend-following, hurst-exponent, regime-filter, turtle-system, tactical-asset-allocation, drawdown-control]
+kind: both
+---
+
+**Author:** Jungle Rock (@JungleRockRes) · posted 2026-10-05 18:35Z · received 2026-10-06T13:35:57Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 5 replies; likes/reposts/views not exposed by the syndication API this pass. One photo attached (system spec/equity chart; not analyzed at capture). **Tweet text truncated at capture** — cut mid-sentence at "The https://t.co/Zuw8HyiSIb"; the short link points to the full write-up, unfetched.
+
+## Summary
+
+A structural proposal for trend followers: stop living in a two-state long/short world and add a third state, **flat**. The Turtle-style core stays, but entries are gated by a **252-day Hurst exponent**: only when H > 0.55 — the regime is statistically persistent/trending — do the technical signals go active; otherwise the model sets the asset allocation to zero. The tweet cuts off exactly where the evidence would start (the t.co link behind "The …").
+
+## Why it matters
+
+- **This is a "when does trend following work" mechanism, not a new signal.** The vault's trend-following cluster keeps circling the same robustness question — [[2026-10-01-momentmal-trend-following-us-markets]] (where the style *doesn't* work), [[2026-08-30-ignis-trend-following-realtest]] (what it costs live) — and a Hurst gate is a direct, testable answer: measure persistence first, trade trends only when the regime says they exist.
+- **Flat ≠ short.** Most captured TAA systems rotate or flip ([[2026-09-09-p123-five-etf-rotation]]); an explicit zero-allocation state is rarer and is primarily a drawdown-control device. The drawdown claim itself is in the truncated/unfetched portion — treat as unverified until the write-up is pulled.
+- **Skepticism gates:** Hurst estimation on 252 daily observations is noisy and sensitive to the estimator (R/S vs DFA vs dispersional); the 0.55 threshold is a tuning knob, not a law; and a regime gate optimized on the same history as the signals is a classic in-sample-overfit vector — the exact failure mode [[2026-09-16-guirao-breakout-decay-2026]] documents for the underlying signals. One chart, one author, zero out-of-sample detail visible at capture.
+- **Isolation note (CoS convention):** personal second-brain capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-10-01-momentmal-trend-following-us-markets]] — the geography/robustness question a persistence gate is meant to answer.
+- [[2026-08-30-ignis-trend-following-realtest]] — live trend-following cost baseline.
+- [[2026-09-09-p123-five-etf-rotation]] — the rotation-style TAA contrast (always invested somewhere vs explicit flat).
+- [[2026-09-16-guirao-breakout-decay-2026]] — in-sample decay caution applied to the gate itself.

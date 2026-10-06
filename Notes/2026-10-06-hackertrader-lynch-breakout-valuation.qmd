@@ -1,0 +1,27 @@
+---
+title: "Niv Goren (@hackertrader) — 1,837 breakouts scored with Peter Lynch's valuation checks (point-in-time SEC filings): max drawdown halves (−38% → −19%) for 20% vs 23% CAGR"
+source: https://x.com/hackertrader/status/2107423259704660246
+captured: 2026-10-06
+tags: [trading, twitter, breakouts, valuation, peter-lynch, sec-filings, drawdown, lookahead-bias, replication]
+kind: both
+---
+
+**Author:** Niv Goren (@hackertrader) · posted 2026-10-06 10:50Z · received 2026-10-06T13:36:16Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 4 replies; likes/reposts/views not exposed by the syndication API this pass. One photo attached (results table/chart; not analyzed at capture). Full text captured without truncation.
+
+## Summary
+
+A quantified style-blend claim: score every breakout with **Peter Lynch's valuation checks**, using **only SEC filings that existed before each trade** (point-in-time data — no lookahead). Result on 1,837 breakouts: **max drawdown falls from −38% to −19%**, CAGR slips from 23% to 20%. The kicker: **the cheapest stocks were the worst breakouts** — the valuation filter's value came from vetoing junk, not from buying bargains. Full research behind a t.co short link.
+
+## Why it matters
+
+- **Methodology hygiene is the headline, ahead of the numbers.** Point-in-time filings kill the silent lookahead that inflates most fundamental-backtest edges — the same discipline [[2026-08-29-milk-man-replication-metrics]] demands before any claimed edge earns belief. Against zero-disclosure claims like [[2026-10-05-momentumplay-100-strategies-beat-spy]], this is what a falsifiable capture looks like: sample size, data discipline, and the cost of the filter all stated.
+- **The trade is drawdown-for-return, and it's explicit.** Halving max drawdown for 3pp of CAGR is a leverage-adjusted win for anyone who sizes off volatility or risk-of-ruin — the 20% strategy can likely be levered back to the same return at lower realized DD than the 23% one. Vault breakout captures ([[2026-09-16-guirao-breakout-decay-2026]], [[2026-10-01-systematicpeter-breakout-equity-high]]) mostly argue *whether* breakout edge survives; this adds a *cheap overlay* question on top.
+- **"Cheapest = worst" is the most interesting cell.** It inverts naive value intuition inside a momentum context: the valuation check works as a **quality/veto gate**, not a value signal — consistent with value-trap mechanics (things breaking out from cheap are often cheap for a reason).
+- **Skepticism gates:** single-author study, universe/survivorship of the 1,837 breakouts unstated in the tweet; "Lynch's checks" is a family of heuristics (PEG, growth-vs-multiple sanity), not one formula — exact operationalization lives in the unfetched write-up; one market, one window, no IS/OOS split visible at capture.
+
+## Links
+
+- [[2026-08-29-milk-man-replication-metrics]] — the replication/point-in-time standard this study meets on its face.
+- [[2026-09-16-guirao-breakout-decay-2026]] — breakout edge decay; a valuation veto is a candidate mitigant to test.
+- [[2026-10-01-systematicpeter-breakout-equity-high]] — breakout entry variant already in the vault.
+- [[2026-10-05-momentumplay-100-strategies-beat-spy]] — the unfalsifiable-claim contrast case from yesterday.
