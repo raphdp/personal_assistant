@@ -1,0 +1,26 @@
+---
+title: "Dave Kiss (@davekiss) — third-party endorsement of Thariq's HTML-plans skill: click-through decision pages beat a wall of Markdown, phone-friendly"
+source: https://x.com/davekiss/status/2107275639048843287
+captured: 2026-10-06
+tags: [ai-agents, twitter, planning, html-artifacts, agent-skills, claude-skills, claude-code, review-ux]
+kind: reference
+---
+
+**Author:** Dave Kiss (@davekiss) · posted 2026-10-06 01:03Z · received 2026-10-06T13:33:24Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 28 replies; likes/reposts/views not exposed by the syndication API this pass. Two photos attached (screenshots of the plan pages; not analyzed at capture).
+
+## Summary
+
+Independent endorsement of the skill Thariq (@trq212) announced for the Claude Code team (see [[2026-10-06-trq212-html-plans-token-efficiency]]): it "turns Claude's plans into a page you click through and make decisions on" — which Kiss judges "way better than looking at a wall of Markdown": phone-friendly, and good at "distilling technical jargon into action." Ends with an install line (`claude https://t.co/...`) whose short link resolves to the tweet's own photo page, not a repo — the skill itself must be reached via Thariq's announcement thread.
+
+## Why it matters
+
+- **New claim in the thread: the review-side experience.** Thariq's own posts argued generation quality and token economics; this adds the consumer angle — plans as *interactive decision pages* (click through, decide) rather than a static document to re-read. That's a workflow claim, not a representation claim, and it's the first independent (non-author) signal on the skill.
+- **Phone-friendly is the relevant axis for us.** The user reviews CoS artifacts (plans, briefs, receipts) mostly on their phone via WhatsApp/Telegram relays. A click-through decision format maps directly onto that review flow — the queued A/B experiment (Inbox task of 2026-10-01, nicopreme) should score phone readability and decision-throughput, not just review speed and error-finding.
+- **Pattern echo:** same encode-once/standardize-the-artifact bet as [[2026-10-01-nicopreme-visual-explainer-skill]] and [[2026-10-06-trq212-html-plans-token-efficiency]] — third data point that plan-as-HTML-page is becoming a convention among agent-tool builders, not a one-off.
+- **Skepticism gates:** endorsement predates broad availability (skill described as pre-release on Oct 5); "way better" is one power user's impression with no artifact shown beyond screenshots we couldn't analyze; the install link is unresolvable at capture, so the exact tool evaluated can't be confirmed.
+
+## Links
+
+- [[2026-10-06-trq212-html-plans-token-efficiency]] — the skill's token-economics case; this note adds the third-party review-experience case.
+- [[2026-10-01-nicopreme-visual-explainer-skill]] — the representation-quality claim that started this thread; queued A/B experiment lives there.
+- Skill announcement (quoted context): https://x.com/trq212/status/2107192901537329354
