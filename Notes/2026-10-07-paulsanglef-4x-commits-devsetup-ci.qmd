@@ -1,0 +1,26 @@
+---
+title: "Paul (@PaulSangleF) — 4x more commits/week broke their dev setup and CI, so they reworked both: lint 4x faster, memory halved, CI setup 50x, type check 10x"
+source: https://x.com/PaulSangleF/status/2107465723513561197
+captured: 2026-10-07
+tags: [ai-agents, twitter, agent-ops, devx, ci, scaling, opus-5-5, agent-harness, infrastructure]
+kind: reference
+---
+
+**Author:** Paul (@PaulSangleF) · posted 2026-10-06 13:39Z · received 2026-10-07T06:49:27Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 30 replies; likes/views not exposed by the syndication API this pass. One attached photo (screenshot, not viewable at capture).
+
+## Summary
+
+Their team merged 4x more commits last week than a month ago — which they attribute to opus 5.5 — and their existing dev setup and CI "couldn't keep up," so they rebuilt both. Results claimed: lint 4x faster, memory per agent session halved, CI setup step 50x faster, CI type check 10x faster. They "often run 10+ agents" (t.co link, presumably their platform/tooling post). The attached image likely shows before/after numbers, unfetchable at capture.
+
+## Why it matters
+
+- **The second-order cost of agent velocity is infrastructure, not code quality.** Most agent-ops discourse covers prompts and harnesses; this is the layer below: when commit volume 4x's, lint times, per-session memory, and CI setup become the bottlenecks. The pattern: agent output scaling exposes every fixed cost in the pipeline around it.
+- **Same physics as [[2026-10-01-robinebers-claude-architecture-review]]** — velocity (there via opus 5.5 too) outpacing the human-side scaffolding, forcing a rebuild of the surrounding tooling. And [[2026-10-01-pocock-lock-down-agents]] argues constrained agents perform better — this tweet is the infra version of the same argument: the environment must be tightened and rebuilt to absorb agent throughput.
+- **"10+ agents concurrently" is now an unremarkable operating mode.** Teams running parallel agent swarms routinely hits tooling designed for human serial commit rates. Relevant to our own multi-agent Paperclip setup as concurrency grows: our per-run overhead (checkouts, heartbeats, run logs) is the analogue of their lint/CI setup costs.
+- **Skepticism gates:** all numbers are self-reported "x times faster" claims with no baselines, no repo named, no CI provider named, and the 4x commit jump is correlated with opus 5.5, not attributed rigorously. 30 replies = curiosity, not validation. The screenshot presumably holds the receipts we can't see. Useful as a direction signal, not as benchmark data.
+
+## Links
+
+- [[2026-10-01-robinebers-claude-architecture-review]] — same force (agent-driven velocity) breaking a different layer (architecture coherence vs. dev infra).
+- [[2026-10-01-pocock-lock-down-agents]] — constrained environments improve agent output; this is the infrastructure-facing complement.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — the quality-gate side of keeping a codebase sane as AI-assisted commit volume climbs.
