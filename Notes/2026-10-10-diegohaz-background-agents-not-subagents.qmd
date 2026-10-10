@@ -1,0 +1,28 @@
+---
+title: "Haz (@diegohaz) — Fixed his subagent-orchestration rate-limit burn by asking the orchestrator to spawn background agent threads instead of subagents (be explicit, or it silently defaults back to subagents)"
+source: https://x.com/diegohaz/status/2108716584789233904
+captured: 2026-10-10
+tags: [ai-agents, twitter, claude, agent-harness, subagents, orchestration, context-engineering, cost-control]
+kind: both
+---
+
+**Author:** Haz (@diegohaz) · posted 2026-10-10 00:29Z · received 2026-10-10T17:30:30Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 42 replies; likes/views not exposed by the syndication API this pass. Tweet text truncated at capture ("My conclusion is that"). Self-quote of his own 2026-10-09 20:56Z tweet (225 replies; one attached screenshot, not transcribed at capture).
+
+## Summary
+
+Parent tweet (quoted): Haz burned **76% of his weekly Claude limit in under 24 hours, all in one session** — a session that was "orchestrating subagents for a larger project. But that shouldn't be a…" (cut off at capture; the screenshot presumably holds the punchline — usage shouldn't count that way, but it did).
+
+This follow-up: he fixed the workflow by **asking the orchestrator to spawn background threads (Claude agents) instead of subagents**, and to communicate with them. Operational gotcha, verbatim: "You have to be very specific about this. Otherwise, for some reason, it will still use subagents." His conclusion is truncated at capture.
+
+## Why it matters
+
+- **Fan-out has a billing shape.** A subagent gets its own context and its own tool loop; an orchestrating session that fans work out to many subagents multiplies token spend even when each child is cheap. Background threads that hold their own session and report back reportedly draw down the weekly cap far slower. The mechanism claim lives in the truncated tail — capture the thread before repeating it.
+- **Defaults are sticky; override explicitly.** "Be very specific or it will still use subagents" is the same lesson as our own prompt-contract rules: the harness has a default path, and a vague instruction quietly takes it — here, the expensive one. Naming the *mechanism* (background threads, not subagents) in the instruction is what flips behavior.
+- **Directly relevant to our compute caps.** We run a multi-agent company under $150/mo (Chief) + $50/mo (report) budgets; delegation fan-out is exactly the cost lever this pattern tunes. Before adopting: verify how "background agents/threads" are actually metered on our plan — one anecdote, one plan, metering changes fast.
+- **Family:** [[2026-09-26-voxyz-dashboard-subagent]] packages routine work into a cheap subagent; this note is the cost counterpoint — when fan-out itself is the expense, the *shape* of delegation matters as much as what's delegated. [[2026-10-01-robinebers-claude-architecture-review]] is the adjacent practice (delegating structural work to Claude); this one prices the delegation layer itself.
+- **Skepticism gates:** the causal claim ("subagent orchestration caused the 76% burn") is half-visible — the parent's key sentence cuts at "shouldn't be a"; the fix has no before/after numbers in the captured text; "background threads" is Claude-Code-speak whose billing semantics may differ by plan and date. Treat as a pointer to evaluate, not a verified practice.
+
+## Links
+
+- [[2026-09-26-voxyz-dashboard-subagent]] — subagent-as-skill; this note is when-the-subagent-is-the-cost.
+- [[2026-10-01-robinebers-claude-architecture-review]] — delegating structural work to Claude; same ecosystem of orchestration practice.
