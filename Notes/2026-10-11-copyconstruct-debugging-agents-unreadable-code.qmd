@@ -1,0 +1,29 @@
+---
+title: "Cindy Sridharan (@copyconstruct) — A debugging framework for agents that doesn't rely on human knowledge of the code to reach root cause"
+source: https://x.com/copyconstruct/status/2108967806666715591
+captured: 2026-10-11
+tags: [ai-agents, debugging, twitter, agent-harness, root-cause-analysis, ai-generated-code, software-engineering]
+kind: both
+---
+
+**Author:** Cindy Sridharan (@copyconstruct — distributed-systems engineer; writes the "concurrency" newsletter and curates the Systems Distributed conference) · posted 2026-10-10 17:08Z · received 2026-10-11T16:58:17Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 22 replies; likes/views not exposed by the syndication API this pass. Announces a new post; the TL;DR is carried by four attached screenshots (not transcribed at capture). Full post URL lives in her reply thread — auth-gated at capture (her personal domains don't resolve; her two Substacks don't carry it; post too fresh for search indexes).
+
+## Summary
+
+Self-quote of her 2026-09-14 tweet: she had to fix a real bug in **~9K LOC that was 100% AI-generated**, and "none of the tactics I started with here helped 'root cause' the issue" — she had to change approach to isolate it.
+
+The new post: **"How to effectively debug with agents when you no longer read or understand the code."** Her claim: a debugging framework for agents that **doesn't rely on human knowledge of the code** to reach the right "root cause." The four screenshots are the TL;DR of the framework; the post body elaborates.
+
+## Why it matters
+
+- **It names the new baseline.** Classic debugging assumes a human mental model of the code (read it, form a hypothesis, instrument). In AI-generated codebases the human *never had* that model — her 9K-LOC anecdote is the standard case now, not the edge. A framework that drops the human-comprehension premise is debugging built for the code we actually have.
+- **"Root cause" stays the goal, not "patch the symptom."** The framing is explicitly about reaching the *right* root cause via agents — the failure mode everyone fears in agent-driven fixes is symptom-level patches that pass tests. Whatever her framework does, it's aimed at that gap.
+- **Directly relevant to how we operate.** We run agents that write and maintain code (trading tooling, vault scripts, bridge daemons). When one of those breaks, nobody on the "team" has read every line. This is the manual for that moment.
+- **Family:** [[2026-09-01-quentin-cody-code-quality-gates]] is *prevention* (numeric gates to keep AI slop out); [[2026-09-06-pocock-reviewable-ai-prs]] is *review* (keeping AI PRs human-checkable); this note is the *diagnosis* layer — when prevention and review didn't catch it and the bug shipped anyway. Same-day capture [[2026-10-10-diegohaz-background-agents-not-subagents]] covers the economics of the agent layer this debugging runs on.
+- **Skepticism gates:** the framework's actual steps are in the 4 screenshots and the auth-gated post — **content unfetchable at capture**; everything above the framework's mechanics is announcement-level. Her evidence is one anecdote (n=1, her own bug). Don't adopt or repeat the method itself until the post text is in hand.
+
+## Links
+
+- [[2026-09-01-quentin-cody-code-quality-gates]] — quality gates keep AI code reviewable; this is what to do when it still breaks.
+- [[2026-09-06-pocock-reviewable-ai-prs]] — review-time practices for AI-authored code; the earlier stage of the same pipeline.
+- [[2026-10-10-diegohaz-background-agents-not-subagents]] — the cost shape of the agent layer; same-day capture, adjacent theme.
