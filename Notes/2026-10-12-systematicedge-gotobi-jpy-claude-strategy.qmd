@@ -1,0 +1,26 @@
+---
+title: "SystematicEdge (@SystematicEdge1) — Kieran Duff's Claude-built JPY strategy (Gotobi Days clue) independently confirmed on all JPY pairs: a seasonal that passes the mechanism gate"
+source: https://x.com/SystematicEdge1/status/2109489628915147132
+captured: 2026-10-12
+tags: [trading, twitter, jpy, forex, seasonality, calendar-effects, gotobi, llm-strategy-building, systematicedge]
+kind: reference
+---
+
+**Author:** SystematicEdge (@SystematicEdge1) · posted 2026-10-12 03:41Z · received 2026-10-12T07:41:41Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 2 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("…more ideas that are similar to this ( market" — cut mid-clause). One photo attached (unopened).
+
+## Summary
+
+A third-party confirmation tweet quoting Kieran Duff (@kieran__duff, status 2108591128303812954): Duff built a strategy via his "Claude funnel" — **zero modifications outside the original source** — described as "a specific edge for yen pairs (long & short)", claimed profitable on USDJPY, EURJPY, GBPJPY, AUDJPY and CADJPY. **Strategy clue: "research Gotobi Days."** SystematicEdge fed the clue into Claude himself: "works on all JPY pairs wtf", not yet tested on indices. Parameters: **none** (no tuned inputs), **ATR-based stop loss**. He closes (truncated) asking for more ideas in the same family.
+
+## Why it matters
+
+- **Gotobi is the rare seasonal with an economic mechanism.** Gotobi days (5, 10, 15, 20, 25, 30 of each month) are Japanese corporate settlement/remittance dates driving recurring JPY demand flows — a documented calendar anomaly, unlike the mechanism-less weekday filter in [[2026-10-01-algojan-nq-monday-short]]. Under the hypothesis-first rule of [[2026-10-01-dmartin-hypothesis-first]], this idea passes the gate most "seasonal tendency" backtests fail: there is a *why* before the code.
+- **The workflow signal: clue → Claude → strategy, zero human edits, independently reproduced.** Duff publishes a clue, a third party runs the same funnel and confirms on five pairs. That's the LLM-assisted research loop working as advertised — and the exact genre Peter/Martin demand skepticism toward, so the confirmation is interesting *as a process demonstration* even before believing the edge.
+- **The index test is the built-in falsification probe.** If the edge is truly Gotobi settlement flows, it is JPY-specific and should NOT transfer to indices. SystematicEdge hasn't run it yet; transfer to indices would suggest curve-fit, non-transfer would be consistent with the mechanism.
+- **Skepticism gates:** "profitable" carries no metrics — no period, trade count, win rate, or PF (fewer numbers than even the algojan claim supplied); "works on all JPY pairs" is weaker than it sounds because JPY crosses are highly correlated — five pairs ≈ one clustered sample, not five independent confirmations; no test shown that performance concentrates around Gotobi dates vs. the rest of the month (the mechanism's direct fingerprint); ATR SL with "no parameters" still hides ATR period choices; photo unopened; text truncated. Capture as a mechanism-positive seasonal candidate and a process exemplar — not a replication target until the Gotobi-date concentration check exists.
+
+## Links
+
+- [[2026-10-01-dmartin-hypothesis-first]] — the hypothesis-first gate this idea (unusually) passes.
+- [[2026-10-01-algojan-nq-monday-short]] — the mechanism-less seasonal as contrast case.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication standard any future test must meet.
