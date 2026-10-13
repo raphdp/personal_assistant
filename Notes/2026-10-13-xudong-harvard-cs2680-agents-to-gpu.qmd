@@ -1,0 +1,24 @@
+---
+title: "Xudong Han (@Xudong07452910) — Harvard CS2680 Modern AI Systems: agents taught all the way down to the GPU (Claude Code, agent loops, evals, token cost → deployment, routing, KV cache, quantization, speculative decoding)"
+source: https://x.com/Xudong07452910/status/2109441921471205608
+captured: 2026-10-13
+tags: [ai, twitter, cs2680, harvard, course, agents, llm, inference, gpu, education, token-cost, china-twitter]
+kind: both
+---
+
+**Author:** Xudong Han (@Xudong07452910) · posted 2026-10-12 00:32Z · received 2026-10-13T06:22:16Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 95 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture ("…5 个作业都围着同一个 Agent" — cut mid-sentence). Chinese-language tweet.
+
+## Summary
+
+A recommendation of Harvard's **CS2680 "Modern AI Systems"**, framed by the observation that top universities teaching agents now go all the way down to the GPU. The course arc: starts at **Claude Code, agent loops, evals, and token cost**, then descends the systems stack through **model deployment, routing, KV cache, quantization, and speculative decoding**. The assignment design is singled out as clever — 5 assignments all built around the same agent (claim truncated at capture).
+
+## Why it matters
+
+- **The curricular claim is the signal.** A Harvard course that treats Claude Code / agent loops as the motivating application and teaches inference economics (token cost, KV cache, quantization) as core syllabus material marks where practical AI engineering is consolidating: agents as the entry point, the full serving stack as the prerequisite. That's a useful map of what "modern AI systems" competence now includes.
+- **Direct overlap with our own stack decisions.** Token cost, routing, and evals are exactly the levers in our agent operations (compute caps, model routing, capture-quality checks). The public course materials could serve as a free, structured reference for those topics rather than ad-hoc blog posts.
+- **Skepticism gates:** single enthusiast's recommendation, no personal outcome claimed; tweet truncated mid-assignment-description so the "5 assignments, one agent" design claim is unverifiable from the capture; course site/materials unverified as of capture (may be login-gated or partially public); 95 replies unread — possible pushback or corrections not examined.
+
+## Links
+
+- [[2026-10-10-diegohaz-background-agents-not-subagents]] — the token-metering/cost side of agent fan-out, one of the practical problems CS2680 formalizes.
+- [[2026-10-11-copyconstruct-debugging-agents-unreadable-code]] — agent eval/debugging practice, adjacent to the course's evals module.
