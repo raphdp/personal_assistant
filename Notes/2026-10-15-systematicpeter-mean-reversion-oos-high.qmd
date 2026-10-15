@@ -1,0 +1,27 @@
+---
+title: "Peter (@SystematicPeter) — long Nasdaq mean reversion at new out-of-sample equity high (CAGR +35%, MaxDD −10.6%, ~15% average capital use)"
+source: https://x.com/SystematicPeter/status/2110376586864468122
+captured: 2026-10-15
+tags: [trading, twitter, mean-reversion, nasdaq, systematicpeter, equity-curve-update, out-of-sample, low-exposure-strategies]
+kind: reference
+---
+
+**Author:** Peter - Cracking Markets (@SystematicPeter) · posted 2026-10-14 14:26Z · received 2026-10-15T16:17:30Z (WhatsApp via RDP-30, routed by CoS). 1 photo (equity curve — https://pbs.twimg.com/media/HUmQUlzbEAAsHIL.png, unopened at capture). 15 replies; likes/views/reposts not exposed by the syndication API this pass.
+
+## Summary
+
+One-month-later live update on his long mean reversion model ("all rules shared"): **new out-of-sample equity high**. Headline stats over the period shown: **+35% CAGR, −10.6% max drawdown, average capital use only 15%**. He frames it as "a typical long mean reversion system trading Nasdaq 100 stocks," and teases "the same approach also works…" — the trailing t.co resolves to the tweet's own photo (no external target), so the also-works claim (presumably other universes) has no follow-through in-text.
+
+## Why it matters
+
+- **This is the same system as [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]], one month later.** Same +35% CAGR headline, drawdown ticked from ~−11% to −10.6%, same ~15% average exposure. A public system still making OOS highs a month after capture is small but real persistence evidence — exactly what the queued replication task should weigh.
+- **The open question from the prior capture is still open:** whether 35% CAGR is measured on deployed or total capital. The update repeats the ambiguity verbatim, so resolving the basis stays the first item of the rules-pull.
+- Live instance of his publish-everything philosophy ([[2026-09-04-systematicpeter-why-publish-research]]): public rules, then unfiltered OOS equity updates.
+- **Skepticism gates:** author-reported stats; the OOS window remains the friendly post-2022 Nasdaq regime; photo unopened (period shown, curve shape, trade count unverified); "the same approach also works" is unsubstantiated in-text; engagement stats null at capture.
+- **No new task** — the existing Inbox task (pull public rules + code, resolve CAGR basis, open chart at orig res, size into the TAA replication queue) covers this system; this update folds into it (add: confirm the period the new chart covers).
+
+## Links
+
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — original capture of this exact system; the CAGR-basis question lives there.
+- [[2026-10-01-systematicpeter-breakout-equity-high]] — same author's equity-high update pattern, different system (intraday breakout); the lived-drawdown counterweight.
+- [[2026-09-04-systematicpeter-why-publish-research]] — why the rules are public at all.
