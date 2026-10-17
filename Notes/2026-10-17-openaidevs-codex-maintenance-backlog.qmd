@@ -1,0 +1,35 @@
+---
+title: "OpenAIDevs — how OpenAI's Core Experimentation team uses Codex (GPT-6 Astra / 6.1 Sol) to chew through the maintenance backlog: dead code, stale experiments, flaky CI"
+source: https://x.com/OpenAIDevs/status/2111213093577691337
+captured: 2026-10-17
+tags: [ai-agents, twitter, openai, codex, gpt-6, maintenance, dead-code, feature-flags, ci, engineering-practices]
+kind: both
+---
+
+**Author:** @OpenAIDevs (OpenAI Developers, official account) · posted 2026-10-16 21:50Z · received 2026-10-17T19:28:10Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 88 replies; likes/reposts/views not exposed by the syndication API this pass. Announces the engineering post "Maintaining software with the GPT-6 family" on developers.openai.com — full text fetched and summarized at capture (the quoted tweet by @rrroim carries the same link).
+
+## Summary
+
+An OpenAI Core Experimentation engineer's first-person account of turning maintenance from a static-analysis problem into an **agentic evidence-gathering problem**. Three workflows:
+
+- **Dead code.** A deliberately vague prompt ("identify and clean up dead code… feel free to check Slack, Statsig, or any other source") was too ambiguous for GPT-5.6 Sol but Astra handled it: read past PRs, pulled context from Slack threads and internal trackers, checked **production performance profiling tables** to confirm deleted lines were never reached, and explained each deletion's rationale. Five engineers, two weeks, part-time: **1,400+ merged PRs, 800k+ lines deleted**; one container image 3.31GB → 1.72GB (−48%).
+- **Stale experiments.** The mature version: engineer + Astra **co-wrote the prompt** (a /goal with safeguards: preserve killswitches, ignore SDK fallbacks, one small draft PR per cleanup, evidence attached). Astra then drafted an even broader whole-repo audit prompt itself, and surfaced a years-old "Permanent" flag whose single inconspicuous mapping line caused major CPU fan-out — it quantified the cost but **escalated to human review instead of deleting**, because the flag was marked permanent. 0.42% CPU saving after review.
+- **Flaky tests + CI load.** Short prompts ("look at recent CI runs, find flaky tests, try simple fixes, PR each") → ~30 CI optimization PRs; median CI 10 min → 4.5 min, p90 12.5 → 6. One missing mock cut a 63-test suite 592.6s → 29.8s (−95%).
+
+**The model economics are the quiet headline:** on the same stale-experiment audit (~6k files, 1M+ LOC), **GPT-6.1 Sol Ultra found 92% as many accepted findings as GPT-6 Astra Ultra at 14% of the API cost.** Their response: study the gap (Sol missed flags used as dependencies in other flags), patch the prompt, and re-benchmark on every model release since new models obsolete old prompt fixes. Recommended on-ramp: one small task, compare model/effort tiers on it, scale to a subdirectory, then the codebase — folding review feedback into the next prompt at each step.
+
+## Why it matters
+
+- **First-party evidence that agent-driven maintenance scales.** 1,400 merged PRs and −800k LOC with review acceleration (evidence attached per PR) is the largest public dataset on this workflow shape — validates the backlog-burn pattern we keep capturing from individual practitioners, now from a shop with production telemetry to verify against.
+- **Verification against production, not just the repo.** The old way (static analysis + runtime logging) failed on reflection, activatable dead paths, eligibility-dependent experiments. Astra's replacement loop — Slack threads + Statsig state + profiling tables + git history — is exactly the multi-source evidence discipline that separates safe deletion from incident creation (they say mistaken removals caused several incidents pre-agents).
+- **The escalation judgment matters more than the deletion.** The "Permanent" killswitch-flag story is the note's core lesson: the agent quantified the win but deferred the decision to a human because the artifact was explicitly marked operational. That boundary-drawing is what we want from our own agents (draft-and-show posture).
+- **Cheap-model-first is now OpenAI's own advice.** 92% of findings at 14% of cost, with prompt patches closing known gap patterns — mirrors our own compute-cap thinking, and [[2026-08-30-codex-sol-scope-guard-rules]] (Sol's over-engineering habit, scope-guard rules): the blog even concedes some proposals "added more complexity than their expected benefit justified," so prioritization and measurement stayed in the loop.
+- **Directly relevant to our own tooling.** We self-host agents that maintain code (bridge daemons, vault scripts). The flaky-CI and dead-code prompts are copy-paste candidates for a bounded maintenance pass, and the graduated on-ramp (small task → subdir → repo) is how to try it without betting the codebase.
+- **Skepticism gates:** single vendor narrating its own models' wins on its own codebase — no failure modes quantified (how many of the 1,400+ PRs were rejected/reverted?), the "92% at 14% cost" is one audit on one repo, and the post is also a hiring pitch for the team (last paragraph). Prompt excerpts are curated by the author, not the raw transcripts.
+
+## Links
+
+- [[2026-10-17-craigbarrdev-roll-your-own-pr-review-agent]] — same-day capture, complementary angle: build your own review agent with company context vs. SaaS; this note is the evidence-attachment + escalation discipline that makes such agents trustworthy.
+- [[2026-08-30-codex-sol-scope-guard-rules]] — Sol's over-engineering habit and the AGENTS.md guard rules; the blog's "some proposals added more complexity than their benefit justified" is that habit surfacing at OpenAI's scale.
+- [[2026-09-06-pocock-reviewable-ai-prs]] — keeping AI-authored PRs reviewable; the one-small-draft-PR-per-cleanup pattern is the concrete implementation.
+- [[2026-10-13-dearlordylord-specs-as-state-machine]] — grounding agents in real artifacts; the /goal audit prompt (telemetry, console state, git history) is the same bet with production data.
