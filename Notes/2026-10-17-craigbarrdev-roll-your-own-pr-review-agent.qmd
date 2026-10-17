@@ -1,0 +1,26 @@
+---
+title: "CraigBarrDev — roll your own PR-review agent (GitHub-webhook triggered, company/architecture context) instead of SaaS codex/claude reviewers: best cost-quality balance"
+source: https://x.com/CraigBarrDev/status/2111250498733175150
+captured: 2026-10-17
+tags: [ai-agents, twitter, code-review, pr-review, github-webhooks, build-vs-buy, cost-quality, agent-context, ci, devtools]
+kind: reference
+---
+
+**Author:** Craig B. (@CraigBarrDev) · posted 2026-10-17 00:18Z · received 2026-10-17T19:22:09Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 37 replies; likes/views not exposed by the syndication API this pass. Text truncated at capture after "Any key" (point 2 cut mid-list; re-fetch truncates the same way). Quotes @bcherny praising Claude Code Review ("runs on all of my PRs, catches almost every bug … secret sauce").
+
+## Summary
+
+A build-vs-buy take on agentic code review: for the **best cost/quality balance, skip the SaaS codex/claude reviewer products**. Instead, **create your own agent triggered by GitHub webhooks on PR-raised/updated events**, and **give it company and architecture context** (tweet truncates mid-way through what context to give).
+
+## Why it matters
+
+- **The counter-position to the SaaS case.** The quoted tweet (@bcherny, presumably Anthropic-adjacent) is the strongest public endorsement of the managed product; this tweet is the direct rebuttal from the same timeline. Useful as the anchor of a pro/con pair on agentic review tooling.
+- **"Company and architecture context" is the load-bearing claim.** That's the actual argument: a generic reviewer pays for multi-tenant convenience with context-blindness, while a self-hosted webhook agent can be fed the repo's own conventions, architecture docs, and review priors — the same context-engineering bet as [[2026-10-13-dearlordylord-specs-as-state-machine]] (ground the agent in *your* real artifacts, not generic priors).
+- **Build-vs-buy economics, echoing a recurring theme.** Same shape as [[2026-10-07-paulsanglef-4x-commits-devsetup-ci]]: own your dev loop's agent layer because the marginal cost is low (webhook + prompt + context files) and the fit to your codebase is the whole value. Craig's framing is explicitly **cost-quality balance**, not maximal quality.
+- **Skepticism gates:** single tweet, truncated mid-argument (the numbered recipe is incomplete — we don't see what "any key…" context items are); 37 replies unread; no cost numbers, no quality comparison, no mention of maintenance burden (self-hosted review agents rot: webhook infra, model drift, prompt upkeep). The SaaS side of the trade (zero setup, updates included) is argued only by the quoted tweet, not evaluated.
+
+## Links
+
+- [[2026-10-13-dearlordylord-specs-as-state-machine]] — same thesis from the spec side: ground agents in your real artifacts instead of generic ones.
+- [[2026-10-07-paulsanglef-4x-commits-devsetup-ci]] — owning the dev-loop agent layer as leverage.
+- [[2026-10-11-copyconstruct-debugging-agents-unreadable-code]] — the debugging-side argument for how agents read (or misread) code.
