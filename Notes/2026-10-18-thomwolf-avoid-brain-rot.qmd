@@ -1,0 +1,27 @@
+---
+title: "Thom Wolf on avoiding AI brain rot — Socratic AI over answer AI"
+source: https://x.com/Thom_Wolf/status/2111397076764438554
+captured: 2026-10-18
+tags: [ai, twitter, learning, socratic-method, brain-rot, miles-cranmer, thom-wolf, talk, truncated-at-capture]
+kind: both
+---
+
+**Author:** @Thom_Wolf (Thomas Wolf, Hugging Face co-founder), posted 2026-10-17 10:01Z; received 2026-10-18 18:49Z (WhatsApp via RDP-30, routed by CoS). Engagement: 40 replies; likes/reposts/views not exposed at capture.
+
+## Summary
+
+Wolf endorses Miles Cranmer's MPhil talk **"How to avoid AI Brain Rot"** ("a great watch") and lists favorite points:
+
+- **Socratic AI > answer AI:** using AI to ask yourself Socratic questions instead of giving you the answer *feels* like you're learning less, but research shows you actually learn more.
+- **(truncated at capture)** "ai tooling is moving so fast that…" — tweet text cut mid-sentence by the syndication API; remaining points unknown.
+
+**Chain:** Wolf's tweet quotes Cranmer's "Here is the full talk" post → [talk video tweet](https://x.com/MilesCranmer/status/2111105654211608847), which quotes Cranmer's original announcement: *"Had fun writing this talk for our MPhil students today: 'How to avoid AI Brain Rot'. Discussing how to avoid intelligence atrophy from AI use in work and study. And how to stand out on an ever-narrowing bell curve."* The t.co links resolve to the tweets' own video/photo — no external article.
+
+## Why it matters
+
+- The Socratic pattern is directly deployable here: AI that *quizzes* you on captured material (Librarian study notes) instead of only summarizing — summarizing is exactly the "atrophy" Cranmer warns about.
+- "Standing out on an ever-narrowing bell curve" is the same thesis as the taste/curation notes ([[2026-10-18-copyconstruct-claude-md-curated-corpus]] is the adjacent angle: curation as the scarce skill).
+
+**Skepticism gates:**
+- "Research shows" is uncited in the tweet — no paper linked. Treat as *claimed*, not verified, until the talk is watched.
+- Wolf's list is second-hand and truncated at capture; the primary source is the talk itself (not yet viewed).
