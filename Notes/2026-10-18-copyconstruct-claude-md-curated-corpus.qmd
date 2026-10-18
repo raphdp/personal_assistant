@@ -1,0 +1,38 @@
+---
+title: "Cindy Sridharan (@copyconstruct) — Built her claude.md by having Claude read her favorite programming books + blogs, the best OSS projects, and the code of the engineers she respects most; with proper instructions, constraints and context, Claude now writes better code than her, almost always"
+source: https://x.com/copyconstruct/status/2111068549469098492
+captured: 2026-10-18
+tags: [ai-agents, twitter, claude, claude-md, context-engineering, curation, taste-transfer, code-quality, agent-harness, instructions-files, copyconstruct]
+kind: both
+---
+
+**Author:** Cindy Sridharan (@copyconstruct — distributed-systems engineer; writes the "concurrency" newsletter and curates the Systems Distributed conference) · posted 2026-10-16 12:15Z · received 2026-10-18T11:13:36Z (WhatsApp via RDP-30, routed by CoS). Second capture from this author (first: [[2026-10-11-copyconstruct-debugging-agents-unreadable-code]]). Stats at capture: 103 replies; likes/reposts/views not exposed by the syndication API this pass. No media. Quote-tweet of @zack_overflow: "the coding agent haters are getting dunning-kruger'd so hard right now … it is very very likely that fable is better than you in every branch of software — it has been trained on all the" [quoted text truncated at capture].
+
+## Summary
+
+Her recipe for creating a `claude.md` is not hand-writing rules — it's **delegating the digest of a curated corpus**. She had Claude read:
+
+- her favorite programming books + blogs,
+- the best OSS projects,
+- the code of the engineers she respects the most.
+
+The result, her claim: "Claude (when given proper instructions, constraints, and context) now writes better code than me, almost always." The tweet is a reply into the "coding agent haters getting Dunning-Kruger'd" discourse — her "almost always" is the measured version of the quoted take that the model already beats most engineers.
+
+## Why it matters
+
+- **The mechanism is taste transfer by exemplar, not by rule.** A hand-written CLAUDE.md can *say* "write clean, idiomatic code"; a corpus of the books, blogs, OSS and engineers the author already trusts *shows* what she means by good. The model infers the standard from examples — the same way it learned code in the first place. She's running a personal preference-tuning pass at the context layer.
+- **This names a third stratum for the instructions-file model.** [[2026-10-01-mikeysee-claude-md-what-i-need]] is the transient stratum ("What I need from you", rewritten each session); [[2026-09-26-pocock-coding-standards-accretion]] is the slow stratum (standards accreted from failures). Sridharan's is the **taste stratum**: distilled once from exemplars the author vouches for, changed only when the corpus changes. Three layers, three lifecycles, same file.
+- **The flip side is her own debugging note.** A week ago she documented that fixing a bug in ~9K LOC of AI-generated code defeated every classic tactic ([[2026-10-11-copyconstruct-debugging-agents-unreadable-code]]). Together the two tweets are the full bargain: the output can now beat your best day, *and* you no longer hold the mental model needed to fix it when it breaks. Better-than-me code and unreadable-code are the same coin.
+- **Curation is the hidden skill — and it's circular.** The file inherits the quality of what got included: books/blogs/OSS/engineers *she* already judged best. You need taste to build the taste file. That makes the method an amplifier of existing judgment, not a substitute for it — which is also why it plausibly works for her (deep, decades-built filter) and may disappoint when copied by someone borrowing others' "best-of" lists.
+- **Direct relevance to us.** Our agent instruction files (AGENTS.md, SKILL.md) are built almost entirely the Pocock way — rules accreted from failures. A complementary one-time play: curate our own exemplar corpus (the engineering blogs/OSS/reference repos we already consider best-in-class) and have a model distill a taste section from it, then judge the output delta on a real task.
+- **Skepticism gates:** (1) n=1 self-report — "better code than me, almost always" with no tasks, baselines, or before/after; (2) survivorship — we see the winning config, not the corpus attempts that didn't move the needle; (3) cost is unmeasured — having Claude read "the best OSS projects" is a large context/compute spend per refresh; (4) "fable" in the quoted tweet is an unverified model reference from a partisan frame; (5) quoted text truncated at capture, so the strongest claim in the chain is only half-visible.
+
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-10-11-copyconstruct-debugging-agents-unreadable-code]] — same author, the other side of the bargain: better-than-me output vs. debugging code you never comprehended.
+- [[2026-10-01-mikeysee-claude-md-what-i-need]] — the transient stratum of the instructions file; this note adds the taste stratum.
+- [[2026-09-26-pocock-coding-standards-accretion]] — the accreted-standards stratum; completes the three-layer model.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — keeping AI output quality measured, not vibes; the check on claims like "better than me".
+- [[2026-10-13-dearlordylord-specs-as-state-machine]] — same family: hand the model richer structure than prose rules.
