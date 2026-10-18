@@ -1,0 +1,32 @@
+---
+title: "Concretum Research (@ConcretumR) — 'Chasing Skew in Trend Following': 1,500+ trades from a futures trend program suggest CTA positive skew isn't what it's cracked up to be (tweet teaser; article not linked)"
+source: https://x.com/ConcretumR/status/2111403867845837293
+captured: 2026-10-18
+tags: [trading, twitter, trend-following, cta, managed-futures, futures, skew, trade-level-analysis, concretum-research, teaser, needs-followup]
+kind: both
+---
+
+**Author:** Concretum Research (@ConcretumR) · posted 2026-10-17 10:28Z · received 2026-10-18T11:08:06Z (WhatsApp via RDP-30, routed by CoS). Second capture from this author (first: [[2026-09-18-concretum-rebalancing-flows-alpha]]). Stats at capture: 3 replies; likes/reposts/views not exposed by the syndication API this pass. 1 attached photo — chart, not yet OCRed (https://pbs.twimg.com/media/HU02ahOWwAACN4O.png). Tweet text truncated at capture ("…isn't quite what" — syndication cut, known quirk; the trailing t.co resolves to the tweet's own photo, not an external article).
+
+## Summary
+
+Concretum analyzed **more than 1,500 trades from a futures trend program** to interrogate the single most praised characteristic of CTA funds: **positive skew** — the fat-right-tail payoff profile ("lose small often, win big occasionally") that trend following's marketing rests on. Their finding, per the truncated teaser: the positive asymmetry often credited to trend following **"isn't quite what"** [text cut] — i.e., something about the conventional story doesn't survive contact with the trade data. The actual punchline is in the unlinked full piece; the attached chart presumably shows the trade-level distribution evidence.
+
+## Why it matters
+
+- **This stress-tests the exact prior our TF cluster rests on.** The vault's trend-following replications ([[2026-08-29-three-simple-ma-atr-systems]], [[2026-08-30-ignis-trend-following-realtest]], [[2026-10-06-junglerockres-turtle-hurst-gate]]) are evaluated mostly on aggregate stats (CAGR/Sharpe/drawdown). If skew is weaker, more fragile, or more concentrated than advertised, trade-level distribution checks belong in every replication's acceptance criteria — not just aggregate performance.
+- **Right evidentiary shape:** trade-level analysis of 1,500+ real trades from an actual futures program beats narrative claims about "CTA skew" hands down. Plausible findings this could be: skew driven by a handful of outlier trades (removing top-1% collapses the asymmetry), skew varying wildly by market regime, or position-sizing (vol targeting) manufacturing the skew rather than the signal itself.
+- **Same shop as [[2026-09-18-concretum-rebalancing-flows-alpha]]** — Concretum (Carlo Zarattini & co.) publish SSRN-grade, methodology-heavy work; a "your favorite property is weaker than you think" headline from them is a genuine research finding, not engagement bait.
+- **Skepticism gates:** (1) the finding itself is truncated mid-sentence — do not assume the skew is *absent*, only that it's *not what it's claimed to be*; (2) one program, 1,500+ trades — single-sample; a different futures book (markets traded, sizing scheme) could tell a different story; (3) "futures trend program" is unidentified in the tweet — whose program, what period; (4) chart unOCRed; (5) full article not yet located.
+- **Actionable:** locate the full piece (concretumgroup.com publications / their SSRN cluster), OCR the chart, and add a trade-level skew check (P&L histogram, top-decile trade contribution) to the TF replication checklist.
+
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-09-18-concretum-rebalancing-flows-alpha]] — same author, prior capture; forced-flow front-running vs this piece's skew deconstruction.
+- [[2026-08-29-three-simple-ma-atr-systems]] — TF replication family whose evaluation this evidence extends.
+- [[2026-08-30-ignis-trend-following-realtest]] — futures TF replication, direct target for the trade-level skew check.
+- [[2026-10-06-junglerockres-turtle-hurst-gate]] — TF entry-gate variant in the same cluster.
+- [[2026-10-01-momentmal-trend-following-us-markets]] — same "stress-test the trend-following prior" family (geography claim); both argue the TF story needs qualification.
+- [[2026-09-16-guirao-breakout-decay-2026]] — adjacent edge-decay evidence for breakout/TF styles.
