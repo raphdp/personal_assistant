@@ -1,0 +1,27 @@
+---
+title: "Milk Man weekly ATR puts — the edge is tail-probability mispricing"
+source: https://x.com/MrMilkTrading/status/2111507868046246042
+captured: 2026-10-18
+tags: [trading, twitter, spx, options, strategy, risk, volatility]
+kind: reference
+---
+
+**Author:** The Milk Man (@MrMilkTrading) · 2026-10-17 · 4 replies, other stats not exposed at capture · received 2026-10-18 (WhatsApp via RDP-30, routed by CoS)
+
+## Summary
+Reply to @AEY_Capital's warning that "a lot of people on here sell SPX put spreads" and that this week was a close one. The Milk Man names the alpha source of his free weekly ATR strategy (95% winning weeks since 2020 per AEY_Capital, who rebuilt it back to 2011 on their own option data and "added one…" — quoted text truncated at capture):
+
+- On most weeks, options price an **~8% chance** of closing below **-1 ATR**
+- The **actual rate is less than 5%** → those options are typically **overpriced**
+- Sell them → win ~95% of the time, but **one loss wipes out weeks of PnL**
+
+## Why it matters
+- Names the *mechanism* behind a strategy lineage this vault already tracks: a volatility-risk-premium / tail-mispricing claim, not a technical signal. That makes it directly testable — the 8%-implied vs <5%-actual gap either shows up in the data or it doesn't.
+- Corroboration is partial: AEY_Capital independently rebuilt the strategy to 2011 on their own options data, but their tweet truncates at "added one …", and the implied-vs-actual probabilities are the author's claims, not independently shown.
+- "This week was a close one" + "one loss wipes out weeks of PnL" is the live warning: a 95% win rate says nothing about risk-adjusted return. The profile is deep negative skew — sizing, not entry, is the survival variable.
+
+## Links
+- [[2026-08-30-milk-man-dip-buy-rules]] — same author's mean-reversion spec; the other side of his playbook.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — same author's pre-acceptance gate: express edge as % of notional before believing any variant.
+- [[2026-08-29-milk-spx-strategy-v1-1]] — @MarginCall4's SPX variant go-live checklist; same premium-selling risk profile.
+- [[2026-08-29-milk-man-replication-metrics]] — the independent-replication bar this implied-vs-actual claim should eventually meet.
