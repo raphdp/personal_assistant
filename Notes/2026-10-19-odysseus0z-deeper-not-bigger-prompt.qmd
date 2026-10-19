@@ -1,0 +1,43 @@
+---
+title: "George / sarthakgh — the 'deeper version, not a bigger one' meta-prompt: four expert-framing questions, then rewrite the task"
+source: https://x.com/odysseus0z/status/2112128515898552733
+captured: 2026-10-19
+tags: [ai-agents, twitter, agent-prompts, prompt-engineering, task-specification, experts, verification, learning]
+kind: both
+---
+
+**Author:** George (@odysseus0z), posted 2026-10-19 10:27Z; received 2026-10-19 17:35Z (WhatsApp via RDP-30, routed by CoS). Engagement: 0 replies; likes/reposts/views not exposed at capture. Prompt text transcribed via OCR from the quoted tweet's photo.
+
+## Summary
+
+George: "I thought prompt engineering is dead, but the amount of miles I get out of this prompt just blows my mind. It's particularly surprising because it is very plain language with no jargon whatsoever."
+
+The prompt itself (photo in the quoted tweet, verbatim):
+
+> A simple prompt that often helps me: I want a deeper version of this task, not a bigger one. Before rewriting it: (1) say what a top professional in this field would do here that I'm not asking for; (2) name the rawest material they would start from instead of what has already been digested for me; (3) name the specific methods and tools they would use; (4) say what, other than you or me, would show the result is right. Then rewrite my prompt to ask for exactly that.
+
+**Share chain:** George (2026-10-19) ← Sar Haribakti (@sarthakgh, 2026-10-14, "A prompt to come up with a better prompt" + the photo) ← Felix Rieseberg (@felixrieseberg, Claude eng lead) announcing a tutorial on "being more ambitious" with AI — tutorial link 404 at capture, so the prompt's original authorship is unverified (likely the tutorial, possibly sarthakgh's own recipe).
+
+The move: before executing a task, make the agent elicit the *expert's* version of the task — scope you didn't ask for (1), rawer inputs (2), real methods/tools (3), an external check (4) — then rewrite the ask to target that. Depth through better specification, not more volume.
+
+## Why it matters
+
+- **The sibling of Agrawal's compression prompts** ([[2026-09-17-agrawal-agent-simplification-prompts]]): his "much simpler solution, 80% of benefits" pass compresses the *solution* after planning; this compresses-and-deepens the *task* before execution. Same economics — the default failure is bigness (more features, more scope) when what pays is sharpness.
+- **Q4 is verifiers-first in one sentence** — "what, other than you or me, would show the result is right" is exactly [[2026-09-14-rauchg-verifiers-skills-new-frameworks]]: an external check beats self-report. A task spec that demands its own falsification channel is stronger than any instruction to "be accurate".
+- **Q2 is a brain-rot defense** — "the rawest material instead of what has already been digested for me" is the same muscle as Socratic AI over answer AI ([[2026-10-18-thomwolf-avoid-brain-rot]]): route work through primaries, not pre-digested feeds.
+- **Slots into the planning loop** ([[2026-09-06-phelps-agentic-planning-loop]]): run this rewrite pass on the PRD/task before the critique loop — better question in, better plan out. Prompts steer one output; where a rule must hold every time it graduates to a check ([[2026-09-06-julian-risk-based-code-review]]).
+- **"Prompt engineering is dead" counterpoint:** the leverage was never jargon — it's task specification. Plain language that forces expert framing outperforms decorated prompts.
+- **Directly adoptable here:** we produce research briefs and plans for the user (Concierge & Research lane). A standing "deeper version, not bigger" pass on the *ask* before dispatching research would raise every brief's floor.
+
+**Skepticism gates:**
+- "Blows my mind" is n=1 enthusiasm; 0 replies and no engagement stats at capture — no saved-as-recipe signal from the crowd yet.
+- Attribution is soft: prompt photographed in sarthakgh's tweet; Felix's tutorial (the likely source) is a dead link at capture.
+- OCR transcription is faithful-looking but a re-read of the photo settles any wording dispute.
+
+## Links
+
+- [[2026-09-17-agrawal-agent-simplification-prompts]] — sibling compression prompt (simpler-solution pass); this one aims the same compression at the task definition.
+- [[2026-09-06-phelps-agentic-planning-loop]] — the loop this rewrite pass slots into, ahead of multi-model critique.
+- [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] — Q4's external-check demand is verifiers-first, stated in plain language.
+- [[2026-09-06-julian-risk-based-code-review]] — prompts steer single outputs; invariants graduate to deterministic checks.
+- [[2026-10-18-thomwolf-avoid-brain-rot]] — Q2's rawest-material instinct is the same anti-atrophy muscle as Socratic AI.
