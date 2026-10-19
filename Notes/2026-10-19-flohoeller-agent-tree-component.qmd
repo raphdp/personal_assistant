@@ -1,0 +1,39 @@
+---
+title: "Flo (@flohoeller) — Agent tree component, see who started whom (live orchestration tree: per-agent model, cost, status, inline failure retry)"
+source: https://x.com/flohoeller/status/2112150373565612534
+captured: 2026-10-19
+tags: [ai-agents, twitter, agent-orchestration, multi-agent, observability, ui-ux, claude-code, cost-control]
+kind: both
+---
+
+**Author:** Flo (@flohoeller) · posted 2026-10-19 11:54Z · received 2026-10-19T17:37:50Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 63 replies; likes/views not exposed by the syndication API this pass. Payload is a 23s screen-recorded video (loops); content below reconstructed by frame-extraction + OCR, so minor transcription garble is possible. Flo is the founder of Conductor (conductor.build), a parallel Claude Code agent manager — product context inferred from his handle + site, not stated in the tweet itself.
+
+## Summary
+
+The video demos an **agent tree UI component**: an orchestrator and every subagent it spawns, rendered live as a nested tree where each node carries **role name, model, status, task prompt, running cost, and elapsed time** — and the parentage is explicit ("see who started whom").
+
+The demo scenario: an **Orchestrator (opus 5.5)** receives the goal *"Launch the new pricing page by Friday."* It fans out typed subagents, each with its own model class:
+
+- **Researcher (Sonnet 5.5)** → "Compare the pricing of five competitors" · $0.29 · 45s
+- **Scraper (Gemini 3.8 Flash)** → "Read the pricing pages of Linear, Notion and three more" · $0.03 · 22s
+- **Analyst (Sonnet 5.5)** → "Summarize 120 G2 reviews that mention price" · $0.08 · 27s
+- **Writer (Sonnet 5.5)** → "Write the copy for the three plans" · $0.19 · 1m09s
+- **Coder (GPT-6 sol)** → "Build the page and wire up checkout" · $0.56 · 1m20s
+- **Tester (GPT-6 Mini)** → "Write and run the checkout tests" · $0.03 · 22s
+
+The interesting beat: the Tester **fails** — "2 of 14 checkout tests fail — coupon codes aren't applied." The failed node expands inline with **Dismiss / Retry**. Retry spawns a *new* child under the failed test node — "Fix the coupon test and run all again" ($0.04, 26s) — rather than re-running the whole fan-out. When a child stalls, the orchestrator flags itself **"Needs you"** (the human-attention state) and can **Stop** a runaway child. Final state: 8 agents, **$2.15 total, 1m41s**, one inline-recovered failure, all green.
+
+## Why it matters
+
+- **Lineage is the missing axis.** Flat dashboards show *what* ran; a tree shows *who started whom* — causal structure. When a fan-out burns budget or a child loops, the tree tells you which parent's decision to fix. "See who started whom" is a one-line spec for agent observability.
+- **Cost and duration live on the node.** Putting $ and seconds per subagent (rolling, next to the prompt) makes the economics of orchestration visible *during* the run, not in a post-hoc invoice. The whole job priced itself at $2.15 while running — that's the mental model our compute caps ($150/mo Chief, $50/mo reports) need to stay honest.
+- **Failure is a first-class UI state, not a log line.** Failed → inline expand → read the actual error → Retry spawns a *scoped* remediation child (not a full re-run). That mirrors our own retry discipline (bounded media retries, idempotent re-PATCH) but makes it visible and cheap.
+- **Heterogeneous models per role.** Opus orchestrates, Sonnet researches/writes, Flash scrapes, GPT-6 Mini tests. Per-role model assignment — with per-node cost — is how a $2.15 job stays $2.15. Directly relevant to how we should think about delegating inside Paperclip.
+- **Family:** [[2026-10-10-diegohaz-background-agents-not-subagents]] is the cost counterpoint — subagent fan-out is exactly what burned 76% of his weekly limit; this tree is the visibility layer that would have shown the burn as it happened. [[2026-09-26-voxyz-dashboard-subagent]] packages routine work into one cheap agent; this note is the orchestration *view* above many such agents. [[2026-10-01-robinebers-claude-architecture-review]] — delegating structural work — is what this UI supervises.
+- **Skepticism gates:** the component is a demo, not a shipped product in the tweet (no link, no repo); "8 agents / $2.15" is a curated scenario; model names ("opus 5.5", "GPT-6 sol", "Gemini 3.8 Flash") are the demo's own labels, reconstructed via OCR from a compressed video. The pattern is the takeaway, not the numbers.
+
+## Links
+
+- [[2026-10-10-diegohaz-background-agents-not-subagents]] — fan-out cost burn; this tree is the real-time countermeasure.
+- [[2026-09-26-voxyz-dashboard-subagent]] — single packaged subagent; agent tree supervises many of these.
+- [[2026-10-01-robinebers-claude-architecture-review]] — delegating structural work to agents; the tree shows that delegation's shape.
