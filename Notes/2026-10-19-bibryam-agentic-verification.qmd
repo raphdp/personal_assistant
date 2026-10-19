@@ -1,0 +1,35 @@
+---
+title: "Bilgin Ibryam — agentic verification (Addy Osmani's diagram: stop reading diffs, let agents test their own work)"
+source: https://x.com/bibryam/status/2111924483024179314
+captured: 2026-10-19
+tags: [ai-agents, twitter, bibryam, addyosmani, agentic-verification, testing, e2e-tests, property-tests, agent-loops, verification, harness-design]
+kind: reference
+---
+
+**Author:** Bilgin Ibryam (@bibryam — architect/author; books on microservices, patterns, Kubernetes) · posted 2026-10-18 20:56Z · received 2026-10-19T20:27:51Z (WhatsApp via RDP-30, routed by CoS). 16 replies at capture; likes/views not served by the syndication API. Content = tweet's key-ideas text + the attached summary card (photo OCR'd; diagram by Addy Osmani @addyosmani). Tweet text truncated at capture mid-sentence ("They define…") — completed from the card. No primary Osmani post found on addyosmani.com at capture (guessed slug 404; blog index has no verification entry) — card + tweet text are the source of record.
+
+## Summary
+Ibryam distills Osmani's "Agentic Verification" into five beats, the attached card carrying the loop diagram:
+
+1. **"Stop reading diffs."** Human review of agent output is the bottleneck — not code generation.
+2. **"Verifying agent output is harder than writing the code."** The checking problem, not the writing problem, dominates agentic work.
+3. **"Build loops where agents test their own work."** The card's two loops:
+   - *Human-dominated loop:* agent writes → agent reports back → **you** review (hours, days) → you find bugs. Slow, costly, and "you're the test suite" — the agent guesses at correctness between your reviews.
+   - *Self-verifying agent:* write → **run ×100s** → check → read output → try again. Tight, cheap, done before you look. The agent gets signal from the world instead of waiting on your eyes.
+4. **"Test types matter: prioritize E2E & property tests."** Whole-behavior checks over per-assertion unit pinning — tests that catch what matters when the writer is a model.
+5. **"Tests aren't just for bugs; they define how your agent senses the world and knows when it's done."** Tests as the agent's sensorium and stopping condition. Card's coda: **"a much better loop beats a slightly better model."**
+
+## Why it matters
+- **The vault's verification cluster, named at the loop level.** Rauchg's "verifiers are the new frameworks" says *build the environment*; this card says *why*: without self-checks the agent flies blind between human reviews, and the human becomes the test suite. The loop diagram is the missing picture behind [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] and the gate rubric in [[2026-09-01-quentin-cody-code-quality-gates]].
+- **Tests-as-sensors is the operational form of "verifiers first."** A test suite is how an agent "senses the world and knows when it's done" — same design instinct as this harness's verify-then-close contract (grep the delivery log before claiming sent; diff the window before claiming complete). The agent-writing rules this vault keeps capturing are all one rule: give the loop a machine-readable exit condition.
+- **Test-type prioritization (E2E + property) is the actionable kernel.** For AI-written code, a few high-leverage behavior checks + property/invariant tests outperform blanket coverage mandates — a gentler target than Quentin Cody's 100%-coverage/0-mutants rubric, and a direct answer to the "verifying is harder than writing" asymmetry.
+- **"A better loop beats a better model"** is the budget argument: harness work compounds; model upgrades are rented. Same bet as Julian's team dropping human review behind an 85% coverage floor ([[2026-09-06-julian-risk-based-code-review]]) — the loop, not the reviewer, became quality control.
+- **Skepticism gates:** primary Osmani text unfetchable at capture — fidelity rests on Ibryam's summary card (OCR, minor glyph noise possible); like/view counts null (API); no data yet on *whose* E2E suite the agent runs against (stale tests = false-green loops — the failure mode the card doesn't draw); self-verification inherits whatever blind spots the tests encode, so "stop reading diffs" is an endpoint, not a day-one posture. E2E/property priority is Osmani's stated heuristic, not a measured result.
+
+## Links
+- [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] — same law from the tooling seat: verifiers + skills as the new frameworks; this card supplies the loop-level *why* (agent senses via tests, human otherwise becomes the test suite).
+- [[2026-09-01-quentin-cody-code-quality-gates]] — the numeric-gate counterpart; Osmani's E2E/property priority is the pragmatic subset of that 100%-coverage rubric.
+- [[2026-09-06-julian-risk-based-code-review]] — measured production version: humans out of the review loop behind mechanical floors.
+- [[2026-09-06-pocock-reviewable-ai-prs]] — the bridge posture: make output reviewable *while* verification is still human; this card is where that road ends.
+- [[2026-10-19-flohoeller-agent-tree-component]] — same-day capture: componentizing agent systems; self-verifying loops are the runtime counterpart.
+- [[2026-09-14-manning-designing-ai-agents-book]] — shared-vocabulary project; "tests as sensors / stopping conditions" is exactly a pattern-name candidate.
