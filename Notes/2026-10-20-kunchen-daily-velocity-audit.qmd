@@ -1,0 +1,30 @@
+---
+title: "Kun Chen — the daily 3am velocity-audit loop: have your agent review the last 24h of work, name the bottlenecks, propose fixes"
+source: https://x.com/kunchenguid/status/2112245086725841047
+captured: 2026-10-20
+tags: [ai-agents, twitter, kunchenguid, agent-prompts, retrospectives, continuous-improvement, agent-loops, velocity, kaizen, workflow-design]
+kind: both
+---
+
+**Author:** Kun Chen (@kunchenguid). Posted 2026-10-19 18:10Z; received 2026-10-20 06:03Z (WhatsApp via RDP-30, routed by CoS). 54 replies at capture; likes/reposts/views not exposed by the syndication API. Text-only tweet, complete at capture. Author profile beyond the handle not verified at capture.
+
+## Summary
+A one-line prompt Chen runs *every day at 3am* against his own development work:
+
+> "audit my development work in the last 24h, identify bottlenecks that slowed down my velocity, and propose improvements"
+
+Three moves in one sentence: (1) **scoped retrospective** — a fixed 24h window, so the review stays small and grounded in recency rather than surveying everything; (2) **bottleneck diagnosis** — asks for the *things that slowed velocity*, i.e. friction named concretely, not a grade; (3) **proposals, not verdicts** — the output is a change list for tomorrow, closing the loop. His payoff line: "it feels great to see your work gets smoother every day" — the point isn't any single audit, it's the compounding drift toward smoothness (kaizen run by an agent).
+
+## Why it matters
+- **It's a retro scheduled like a cron job.** Most teams do retrospectives weekly or per-sprint, when memories have already decayed and the sample is huge; Chen's loop is a daily micro-retro over a bounded window — cheap enough to run forever, fresh enough that the bottleneck data is still accurate. The prompt itself is trivially stealable.
+- **The 3am slot makes it zero-attention.** The audit runs while he sleeps; by morning there's a friction report + fix proposals waiting. Same design instinct as this relay's overnight heartbeat pattern: put agent cycles where human attention isn't.
+- **Direct sibling of the prompt-share cluster.** Yesterday's [[2026-10-19-odysseus0z-deeper-not-bigger-prompt]] was a task-level meta-prompt (make the *spec* better before dispatching); this one is an *operational* meta-prompt (make the *process* better after the work). Together they bracket a workday: sharpen the ask on the way in, audit the friction on the way out.
+- **It's the retro instalment of the loops-over-willpower theme.** [[2026-09-26-pocock-retro-pr-talk]] argues the retro is a company's highest-leverage habit; [[2026-10-05-pocock-retro-prompt-of-the-day]] packages it as a prompt; Chen's version removes the last human activation cost by scheduling it daily. And per [[2026-10-19-bibryam-agentic-verification]] / [[2026-09-14-rauchg-verifiers-skills-new-frameworks]]: the audit *is* the agent sensing its own work — here applied to velocity rather than correctness.
+- **Skepticism gates:** single tweet, no example output shown — we don't see what an audit report looks like, how long it runs, or what it costs in tokens per night; "smoother every day" is a vibe, not a measured velocity delta (no before/after metric offered); an agent auditing its own 24h of work inherits its own blind spots (it can only see friction recorded in the artifacts it can read — unlogged context, interruptions and bad specs upstairs are invisible to it); and a daily "propose improvements" stream can itself become a bottleneck if nothing filters the proposals — the loop needs a discard rule as much as a generate rule.
+
+## Links
+- [[2026-10-19-odysseus0z-deeper-not-bigger-prompt]] — same-day-genre sibling: expert-framing meta-prompt before dispatch vs. velocity audit after; the two brackets of a self-improving workday.
+- [[2026-09-26-pocock-retro-pr-talk]] — the case for retrospectives as the highest-leverage habit; Chen's loop is that habit at daily cadence, agent-run.
+- [[2026-10-05-pocock-retro-prompt-of-the-day]] — the retro-as-prompt predecessor; this tweet adds the schedule + scope window.
+- [[2026-10-19-bibryam-agentic-verification]] — self-verification loops applied to correctness; Chen's loop applies the same shape to velocity.
+- [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] — build the environment/loop, rent the model; a daily audit loop is environment work that compounds.
