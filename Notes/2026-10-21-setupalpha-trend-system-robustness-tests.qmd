@@ -1,0 +1,41 @@
+---
+title: "SetupAlpha — 6 robustness tests for trend-following systems (cost-stress chart captured; full list in login-gated X article)"
+source: https://x.com/SetupAlpha/status/2112535068531130524
+captured: 2026-10-21
+tags: [trading, twitter, trend-following, backtesting, robustness, execution-costs, stress-testing]
+kind: both
+---
+
+**Author:** SetupAlpha (@SetupAlpha — systematic-trading commentator; bio not exposed at capture) · posted 2026-10-20 13:23Z · received 2026-10-21T07:59:01Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 1 reply; likes/views not exposed by the syndication API this pass. Self-quotes his own 2026-10-18 tweet, which links the full article — an X long-form article (login-gated, unfetchable from this host; setupalpha.com itself rate-limits us 429). Content below is reconstructed from the tweet text + OCR of the attached chart.
+
+## Summary
+
+The tweet: **"if you build trend-following systems, bookmark this and run the same 6 tests on yours. it might save you from trading a lucky backtest."**
+
+The chart (attached photo, OCR'd) shows the one test visible to us — **Execution & Cost Stress Testing**: cumulative equity curves 2000–~2028 for the same trend system under degraded execution:
+
+| Variant | Assumptions | Final equity |
+|---|---|---|
+| Baseline | 1 bps slippage + $0.005/sh comm | $7.27M |
+| 2x costs | 2 bps + $0.010/sh | $7.18M |
+| 3x costs | 3 bps + $0.015/sh | ~$7.08M |
+| 5x costs | 5 bps + $0.025/sh | $6.61M |
+| 10x costs | 10 bps + $0.050/sh | $5.18M |
+| 1-day execution lag | delay 1d | $6.73M |
+| 2-day execution lag | delay 2d | $7.58M |
+
+Read: the edge degrades **gracefully and monotonically** under cost inflation (10x costs still compounds, −29%), and — the striking wrinkle — **lag is not monotonic**: 1d lag costs more than 5x costs do, yet 2d lag ends *above* baseline ($7.58M). For a slow trend system, a day or two of execution delay is noise around the signal, not death; transaction costs are the real tax. A "lucky backtest" is one that needs the 1 bps / zero-lag fairy tale to work.
+
+The other 5 of the 6 tests are inside the X article (login-gated at capture) — not yet read, not guessed at here.
+
+## Why it matters
+
+We keep a live line of systematic strategies in this vault — [[2026-08-29-three-simple-ma-atr-systems]], [[2026-08-30-ignis-trend-following-realtest]], the milk-man series ([[2026-09-01-milk-man-backtest-notional-normalization]] and forward) — and the failure mode this tweet warns about (edge that evaporates under realistic friction) is exactly the gap between a pretty curve and a tradeable one. The cost-grid is mechanical to implement in RealTest/our backtest harness: rerun the same config at 2x/3x/5x/10x friction and with a 1–2 bar execution delay, and look for graceful degradation rather than collapse.
+
+Skepticism gates: single chart from one demo system — the dollar figures are his, not ours; universe/period parameters beyond the 2000–~2028 axis are unknown; social-proof stats weren't exposed at capture; and 5 of the 6 tests remain unread behind the login wall, so this note captures the *method demonstrated*, not the full checklist.
+
+## Links
+
+- [[2026-08-29-three-simple-ma-atr-systems]] — trend systems in this vault
+- [[2026-08-30-ignis-trend-following-realtest]] — our trend-following backtest line
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — backtest hygiene precedent
