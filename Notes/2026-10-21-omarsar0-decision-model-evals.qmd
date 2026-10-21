@@ -1,0 +1,38 @@
+---
+title: "elvis (@omarsar0) → Hamel Husain — decision models as eval judges: tune the threshold, set precision/recall minimums, check calibration (Jev, Decider, d1, Clef, OpenAI Decisions benchmarked)"
+source: https://x.com/omarsar0/status/2112632133357346889
+captured: 2026-10-21
+tags: [ai-agents, twitter, evals, llm-judge, decision-models, jev, metrics, calibration, agent-harness]
+kind: both
+---
+
+**Author:** elvis (@omarsar0 — long-time ML/AI commentator and newsletter author; context from prior knowledge, bio not exposed at capture) · posted 2026-10-20 19:48Z · received 2026-10-21T03:52:56Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 33 replies; likes/views not exposed by the syndication API this pass. Tweet text truncated at capture mid-sentence ("…a few resources on applying"). Quotes @HamelHusain announcing "How To Use Decision Models For Evals" (with Antaripa Saha, Oct 20 2026). The tweet's t.co resolves to a login-gated X article, but the post is open at hamel.dev — fetched and read in full for this note (see Links).
+
+## Summary
+
+The tweet's claim: "Learn to build evals, folks" — recommending Hamel's post, plus a first-party data point: **"From our internal evals, System One models like Jev are a great fit for LLM Judges."**
+
+The post itself (hamel.dev, read in full) benchmarks **decision models** — TypeSafe Jev 1.13, Perplexity Decider 1.1 27B, Liquid d1 / d1-ultra, Cloudflare Clef Flash, OpenAI Decisions (GPT-6 Luna) — as cheap LLM-judge replacements for automated evals, on 98 labeled production traces from an apartment-leasing agent (61 failures / 37 clean; binary pass/fail). Four practices, each with a copy-paste coding-agent prompt in the post:
+
+1. **Never trust the 0.50 default threshold.** A model scoring failures 0.40 and passes 0.10 separates the classes perfectly — at threshold 0.30. At the 0.50 default it catches nothing. Tune on saved scores (stratified 5-fold CV; no new API calls).
+2. **Set minimum precision AND recall before comparing models.** They required 80%/80% ("if this classifier feeds automated alerting, I want minimum 80% on both"). On this task Perplexity, Liquid d1-ultra, and OpenAI qualified; Jev, d1, and Clef Flash fell below.
+3. **Weigh cost on a Pareto frontier, not a leaderboard.** Perplexity: F1 0.79 at 0.82¢ per 100 eval runs. OpenAI Decisions: F1 0.87 at 3.72¢ (~4.5×) — "breakout performance at a higher cost." Randy Olson's broader comparison (cited): decision models match LLMs on classification/routing; LLMs pull ahead on knowledge and reasoning.
+4. **Scores are not probabilities until you check calibration.** Clef Flash predicted ~8% failure for a trace group where 60% actually failed; Platt scaling fixed Perplexity/d1/Clef, left Jev and d1-ultra (already well-calibrated) untouched, and made OpenAI slightly *worse*. Brier scores: OpenAI 0.159 < d1-ultra 0.173 < Jev 0.187.
+
+Plus craft advice: one narrow judge per failure mode beats one broad judge; start with a bigger model, then try smaller; a failure-mode checklist lifted Jev's F1 from 0.78 to 0.80 at the default threshold.
+
+## Why it matters
+
+- **First rigorous eval backing for the vault's Jev cluster.** [[2026-09-26-pocock-jev-fuzzy-linter]], [[2026-09-17-anthdm-jev-agent-memory]], [[2026-09-19-altryne-jev-instant-compaction]], [[2026-09-20-rbilgil-jev-realtime-slop-detector]] are all the same shape — small model, cheap judgment, before something expensive — and all carry the caveat "promising, no numbers." This post IS the numbers, method first: on a broad failure-finding task Jev fell below an 80/80 precision-recall bar while remaining well-calibrated — which is exactly the nuance the cluster lacked.
+- **The elvis-vs-Hamel tension is the lesson.** elvis's internal evals say Jev is "a great fit" for judging; Hamel's public benchmark says Jev missed the 80/80 bar on a broad task. Both can be true — decision-model performance "varies substantially across tasks and datasets," so the post's real takeaway is *measure things yourself* with the four-step recipe, not any model ranking.
+- **Threshold blindness generalizes far beyond evals.** Any cheap classifier wired into a personal pipeline — alerting on agent runs, triaging inbound, flagging failed fetches — ships with a default cutoff nobody checked. The 0.40-vs-0.10 example is the cleanest one-paragraph explanation of why defaults fail I've captured.
+- **The agent prompts are the reusable artifact.** The post hands over ready prompts for threshold tuning and Platt-scaling calibration *for a coding agent* — eval mechanics have become agent-delegable work. Same "deterministic where possible, judged where not" split as [[2026-09-01-quentin-cody-code-quality-gates]].
+- **Skepticism gates:** n=98 traces, one domain (leasing), one labeling pass with 22 failures discovered by tooling and then manually validated; latency excluded from rankings; the authors teach evals commercially (Maven course linked on the same page) — aligned incentives, but incentives nonetheless. Model names/prices are October-2026 snapshots. The tweet's own resource list is truncated at capture.
+
+## Links
+
+- [[2026-09-26-pocock-jev-fuzzy-linter]] — the Jev-as-cheap-judge pattern this post finally benchmarks; its "no numbers, self-graded" caveat is answered here.
+- [[2026-09-19-altryne-jev-instant-compaction]] — held the cluster's measured-perf data point; this is the eval-methodology complement.
+- [[2026-09-17-anthdm-jev-agent-memory]] — same decide-cheap-before-expensive shape, now with a tuning recipe attached.
+- [[2026-09-20-rbilgil-jev-realtime-slop-detector]] — consumer-facing twin; threshold choice is precisely where a feed ranker's precision/recall trade gets made.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — deterministic gates vs. judged calls; this post is the "how to validate the judged calls" layer.
