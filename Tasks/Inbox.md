@@ -68,3 +68,4 @@
 - [ ] Trial the "deeper version, not a bigger one" meta-prompt (4 expert-framing questions, then rewrite) on the next research brief before dispatching (https://x.com/odysseus0z/status/2112128515898552733 2026-10-19)
 - [ ] Trial the daily velocity-audit loop ("audit the last 24h of dev work, name bottlenecks, propose improvements") on our own harness for one week — log each morning report, keep fixes that survive, discard the rest (https://x.com/kunchenguid/status/2112245086725841047 2026-10-20)
 - [ ] Ramener bouquin Emirates — bring the Emirates book back (WhatsApp via RDP-30 2026-10-20)
+- [ ] Trial a /merge-risk-style 5-category grade (alignment, impact, verification, rollback cost, error detection) on our next agent-authored harness/vault change — write the grade into the PR/commit message and judge whether it changes the trust decision (https://x.com/BHolmesDev/status/2112653011369807971 2026-10-21)

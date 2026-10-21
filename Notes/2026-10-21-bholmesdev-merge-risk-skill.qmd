@@ -1,0 +1,39 @@
+---
+title: "Ben Holmes — /merge-risk: an agent skill that grades PR merge risk across 5 categories before you review"
+source: https://x.com/BHolmesDev/status/2112653011369807971
+captured: 2026-10-21
+tags: [ai-agents, twitter, code-review, agent-skills, pr-review, risk-grading, engineering]
+kind: both
+---
+
+**Author:** Ben Holmes (@BHolmesDev) · posted 2026-10-20 21:11Z · received 2026-10-21T03:52:06Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 17 replies; likes/views not exposed by the syndication API this pass. Payload is an 8.3s screen-recorded demo; content below reconstructed by frame-extraction + OCR, so minor transcription garble is possible. Author bio not exposed at capture — no affiliation claim made. Tweet text verbatim: "We made a skill for assessing the risk of merging a PR: /merge-risk. This addresses the code review bottleneck by helping devs trust the agent for lower risk changes. It grades risk across 5 categories: alignment, impact, verification, rollback cost, and error detection."
+
+## Summary
+
+A **slash-command skill** (`/merge-risk this PR`) that makes an agent produce a **structured merge-risk grade** before a human looks at the diff. The 8-second demo shows the output assembling in a chat console — one row per category, each with a **grade + one-line justification**:
+
+| Category | Grade | Justification (OCR'd from demo) |
+|---|---|---|
+| Alignment | good | "Code matches the description" |
+| Impact | small | "Contained to the sidebar module" |
+| Verification | poor | "Adds unit tests, lacks before/after screenshots" |
+| Rollback cost | low | "Client-only. Clean revert." |
+| Error detection | decent | "Failures-on-save should trigger an alert" |
+
+Verdict line: **MERGE RISK: medium** (each row also shows a high/med/low scale marker). The interesting beat is the trade-off handling: verification grades *poor* (missing before/after screenshots), yet the verdict stays **medium**, not high — because impact is contained and rollback is a clean client-only revert. The grade isn't a sum; it weighs cheap-to-fix evidence gaps against expensive-to-reverse blast radius.
+
+The stated goal is the code-review bottleneck: "helping devs trust the agent for lower risk changes" — i.e. use the grade to decide **where the human looks**, not to remove review.
+
+## Why it matters
+
+- **This is the tooling leg of the vault's review cluster.** [[2026-09-06-julian-risk-based-code-review]] replaced blanket human review with risk *triggers* (API/auth/schema/skills) and measured 26h → 1h median merge time; /merge-risk is the same philosophy as an agent skill — a per-PR *graded* risk report instead of a label rule. Julian decided *which surfaces* need humans; this grades *each change* on five axes.
+- **The five categories are a reusable checklist even without the skill.** Alignment (does it do what was asked), impact (blast radius), verification (what evidence exists), rollback cost (how expensive is undo), error detection (will failure be visible). That's a better pre-merge mental scan than "did the diff look fine" — and it maps directly onto our own agent-authored changes (harness scripts, vault tooling, bridge patches).
+- **Verdict logic > score sum.** Poor verification + low rollback = medium. The categories encode the real trade-off in trusting agent code: the question isn't "is it perfect" but "if it's wrong, how expensive is finding out and undoing it." Same instinct as our rollback-first patching habits.
+- **Skill-shaped, not product-shaped.** It's a slash command inside the coding agent — no new tool to adopt, just a prompt-shaped grading contract. Family resemblance to [[2026-10-17-craigbarrdev-roll-your-own-pr-review-agent]] (self-hosted PR-review agent): the review layer is collapsing into the agent session itself.
+- **Skepticism gates:** one curated demo, one PR, chosen to look good (a sidebar module with clean revert is the easy case — the test is a schema-touching PR). The grader is the same class of model that wrote the PR: self-assessment bias is unaddressed. No link to the skill's source or prompt (the tweet's t.co resolves to the tweet's own video); grades like "decent" are unquantified; and "error detection: decent — failures-on-save *should* trigger an alert" is a prediction, not a verified property. The pattern is the takeaway, not the tool.
+
+## Links
+
+- [[2026-09-06-julian-risk-based-code-review]] — risk-based review at company scale (measured outcomes); /merge-risk is the per-PR grading implementation of the same idea.
+- [[2026-09-06-pocock-reviewable-ai-prs]] — making AI PRs *legible* (pseudocode, TDD evidence, narrated demos); this makes them *risk-graded*. Verification ("lacks before/after screenshots") is the category Pocock's artifacts would fill.
+- [[2026-10-17-craigbarrdev-roll-your-own-pr-review-agent]] — self-hosted PR-review agent; sibling tooling moving review into the agent session.
