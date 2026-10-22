@@ -73,3 +73,4 @@
 - [ ] Add a cost-stress + execution-lag grid to our trend/backtest harness: rerun one existing strategy (e.g. ignis trend or a milk-man variant) at 2x/3x/5x/10x costs and 1-2 bar delay, and require graceful degradation before trusting the edge (https://x.com/SetupAlpha/status/2112535068531130524 2026-10-21)
 - [ ] Chercher un oreiller orthopédique — research orthopedic pillows and bring a motivated top pick + alternatives (WhatsApp via RDP-30 2026-10-22)
 - [ ] Ouvrir un compte IBKR — prep the Interactive Brokers application: docs checklist + form draft, submission stays user-only (WhatsApp via RDP-30 2026-10-22)
+- [ ] Brainstorm « solution investissement » Julien — frame the options and open questions (link to structure-comp decision RDP-1005 if that's the angle, else new sleeves/mandats); produce a framing note to react to (WhatsApp via RDP-30 2026-10-22)
