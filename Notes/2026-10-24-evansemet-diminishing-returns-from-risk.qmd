@@ -1,0 +1,34 @@
+---
+title: "Evan Semet — Diminishing returns from risk: why wider position limits buy almost nothing (market-making intuition test)"
+source: https://x.com/Lihong062/status/2113747539023315303
+captured: 2026-10-24
+tags: [trading, twitter, market-making, position-limits, ev-risk, kacs-lemma, random-walks, interview-questions]
+kind: reference
+---
+
+**Author:** Evan Semet (@evan_semet — "Thanos Chad", trader; CS/math/econ at Vanderbilt; writes Bits, Bytes, and Bets) · posted 2026-10-23 20:53Z · received 2026-10-24T09:51:04Z (WhatsApp via RDP-30, routed by CoS). Quote-tweeted by @Lihong062 2026-10-23 21:40Z: "if you are trading prediction markets and not following this dude you are literally missing out on free alpha". Stats at capture: 4 replies on the QT; likes/views not exposed by the syndication API this pass. The tweet's link card goes to his substack post "Diminishing Returns from Risk" (published 2026-10-23 20:50Z, ~3 min before the tweet) — full text recovered via the substack's public API; tweet photo is just the link-card thumbnail.
+
+## Summary
+
+The post poses the interview-style question he'd use to test a junior or intern for a coveted seat: you're a market maker on a never-expiring contract (spot/perp) with an absolute position limit N — at +N you stop posting bids, at −N you stop posting asks. Order flow is random, non-toxic, fixed expectancy E per fill; you don't adjust your market with inventory. **How do EV and risk scale as N grows?**
+
+The naive answers — "EV grows linearly (linearity of expectations)" or "position is a binomial-ish random walk" — both miss the key feature: **it's a bounded random walk.**
+
+His solution:
+
+- Model position as a graph: nodes from −N to +N, each interior node has two bidirectional edges (buy/sell, equally likely); each terminal node has one edge back inward plus a self-loop. Stationary distribution = node connectivity / total connectivity → every node equally likely → **position is uniform on {−N, …, 0, …, +N}**, probability 1/(2N+1) each.
+- **EV:** identical in every interior state, halved at the two boundary states (you can only take the order that shrinks |position|). EV(N) = P(not at boundary)·E + P(at boundary)·E/2; ∂EV/∂N is **O(1/N²)** — the marginal expectancy from a wider limit collapses quadratically.
+- **Risk:** mean |position| ≈ N/2 exactly computable via the N-th triangular number; variance from E[x²] with mean 0 → **standard deviation grows linearly, O(N)**.
+- **Sharpe** = EV/σ → for large N the O(1/N²) EV gain over O(N) risk growth means Sharpe **decays** as limits widen — hence "diminishing returns from risk."
+
+## Why it matters
+
+The clean version of a result traders usually learn the hard way: once inventory bounds bind, widening them buys almost no extra edge while risk scales linearly. Lihong's QT frames it as prediction-market alpha-relevant — the same bounded-inventory logic applies to making markets on Polymarket-style books where you hit your own size limits. It connects to the vault's market-microstructure and strategy-hygiene threads: the marginal-fill logic is the mirror of the cost-sensitivity logic in [[2026-10-21-setupalpha-trend-system-robustness-tests]] (there, friction eats the edge; here, the bound eats the *marginal* edge).
+
+Skepticism gates: author self-labels the scenarios as "simplified theoretical exercises, not real trading strategies"; the derivation assumes symmetric non-toxic flow and no inventory-adjusted quoting — real books shade quotes with inventory, which changes the boundary-state EV and the stationary distribution itself. The formulas' intermediate steps are images in the original post (not recovered); only the text and stated big-O results were captured. Engagement stats null at capture, so "free alpha" is Lihong's endorsement, not measurable social proof.
+
+## Links
+
+- [[2026-10-21-setupalpha-trend-system-robustness-tests]] — the other side of strategy hygiene: friction stress-tests vs inventory-bound math
+- [[2026-08-29-three-simple-ma-atr-systems]] — vault trend-system line for EV/risk framing
+- [[2026-08-30-ignis-trend-following-realtest]] — backtest line where position-sizing assumptions get tested
