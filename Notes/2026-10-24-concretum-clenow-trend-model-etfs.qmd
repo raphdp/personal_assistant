@@ -1,0 +1,35 @@
+---
+title: "Concretum Research (@ConcretumR) — Clenow's core trend model + Concretum portfolio construction has historically outperformed the SG CTA Index net of costs (tweet teaser + paywalled preview; chart OCRed)"
+source: https://x.com/ConcretumR/status/2113626469876240861
+captured: 2026-10-24
+tags: [trading, twitter, trend-following, cta, managed-futures, futures, etf, portfolio-construction, clenow, concretum-research, teaser, paywalled, needs-followup]
+kind: both
+---
+
+**Author:** Concretum Research (@ConcretumR) · posted 2026-10-23 13:39Z · received 2026-10-24T17:27:35Z (WhatsApp via RDP-30, routed by CoS; link first relayed 14:47Z and re-sent by the user after a dropped run). Third capture from this author ([[2026-09-18-concretum-rebalancing-flows-alpha]], [[2026-10-18-concretum-chasing-skew-trend-following]]). Stats at capture: 4 replies; likes/reposts/views not exposed by the syndication API this pass. Tweet text truncated at capture ("Moreover, it …") — the trailing t.co resolves to the tweet's own chart photo, not an external article; the full piece lives at concretumgroup.substack.com ("Following the Trend… With ETFs!", 2026-10-23), **paywalled** (`audience: only_paid`) — free preview (~1.4K chars) + OCRed chart captured here.
+
+## Summary
+
+Concretum revisited **Andreas Clenow's core trend strategy** — the rules laid out in *Following the Trend* (2nd ed, 2023): when to enter and exit positions and how to estimate each market's risk — but paired it with **their own portfolio construction** (choice of contracts, cross-contract risk allocation). Their claim, from the preview + chart:
+
+- **Net of costs, the combo has historically outperformed the SG CTA Index, both absolute and risk-adjusted** — and "can still look competitive after typical management and performance fees" (preview text continues the truncated tweet).
+- **Chart (OCRed):** growth of $100, **January 2001 → March 2026**, three lines — "Clenow Trend", "Clenow Trend (1%, HWM)", "SG CTA Index". Caption: traded across **31 liquid futures markets**, risk budget **scaled to match the SG CTA Index volatility**; returns **net of costs**, before and after a **1% management fee + 10% performance fee (HWM)**; index returns net of fees. The two Clenow lines end materially above the index line (exact end values not readable from the OCR).
+- The full piece also walks through an **ETF implementation** — ETF selection through practical considerations — entirely behind the paywall.
+
+## Why it matters
+
+- **Third-party validation of the trading-book canon.** A shop with no incentive to flatter Clenow (they supply the portfolio construction, he supplies the rules) shows a *published, fully disclosed* strategy keeping pace with — and beating — the industry benchmark net of costs over 25 years. That is the strongest possible evidence for the vault's TF-replication thesis: disclosed simple rules + disciplined construction remain competitive ([[2026-08-29-three-simple-ma-atr-systems]], [[2026-10-06-junglerockres-turtle-hurst-gate]], [[2026-08-30-ignis-trend-following-realtest]]).
+- **Fees are priced in, not hand-waved.** The chart explicitly shows the after-fee (1%/10% HWM) curve — the honest version of the claim. Most TF content stops at gross.
+- **Same shop, opposite angle a week apart:** [[2026-10-18-concretum-chasing-skew-trend-following]] found CTA *skew quality* weaker than advertised; this piece says net *performance* is competitive. Both can hold — average returns and tail shape are different properties; together they sharpen what a TF allocation is actually buying.
+- **Skepticism gates:** (1) rules and construction details are paywalled — nothing independently verified here beyond the preview and chart caption; (2) the claim is about the **combo**, not Clenow's rules alone — Concretum's construction may do much of the lifting; (3) risk budget "scaled to match" the index's volatility — vol-matching choices can flatter risk-adjusted comparisons; (4) cost assumptions unstated in the preview — see [[2026-10-21-setupalpha-trend-system-robustness-tests]] for why the cost grid decides whether such an edge survives; (5) 2001–2026 is a TF-friendly window and the SG CTA Index has its own fee/survivorship critiques — geography/period qualification per [[2026-10-01-momentmal-trend-following-us-markets]].
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-10-18-concretum-chasing-skew-trend-following]] — same author, prior week: trade-level skew weaker than advertised; performance vs payoff-shape counterpoint.
+- [[2026-09-18-concretum-rebalancing-flows-alpha]] — same author, first capture; flow-front-running alpha.
+- [[2026-08-29-three-simple-ma-atr-systems]] — disclosed-rules TF replication family this evidence supports.
+- [[2026-08-30-ignis-trend-following-realtest]] — futures TF replication; candidate to pair with Clenow-style construction.
+- [[2026-10-06-junglerockres-turtle-hurst-gate]] — TF entry-gate variant in the same cluster.
+- [[2026-10-21-setupalpha-trend-system-robustness-tests]] — cost-stress methodology that would adjudicate the "net of costs" claim.
+- [[2026-10-01-momentmal-trend-following-us-markets]] — geography/period qualification for TF performance claims.
