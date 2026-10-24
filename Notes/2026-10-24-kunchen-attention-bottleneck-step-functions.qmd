@@ -1,0 +1,30 @@
+---
+title: "Kun Chen ← Calvin Grunewald — the only real bottlenecks are compute and human attention; orchestration changes show up as step-function PR velocity"
+source: https://x.com/kunchenguid/status/2113773744925921289
+captured: 2026-10-24
+tags: [ai-agents, twitter, kunchenguid, calvingrunewald, bottlenecks, human-attention, orchestration, pr-velocity, step-change, agent-loops, workflow-design]
+kind: reference
+---
+
+**Author:** Kun Chen (@kunchenguid), quoting Calvin Grunewald (@CalvinGrunewald). Chen posted 2026-10-23 23:25Z; received 2026-10-24 09:29Z (WhatsApp via RDP-30, routed by CoS). 22 replies at capture; likes/reposts/views not exposed by the syndication API. Tweet text complete at capture; the quoted tweet is truncated mid-sentence at capture ("You can…" — syndication cut). Attached photo OCR'd; the trailing t.co link resolves to the tweet's own photo (the chart *is* the payload), not an external article.
+
+## Summary
+Quote-tweet chain, one argument in two voices:
+
+- **Calvin (quoted, truncated at capture):** "Today, there are only two REAL bottlenecks left in software development. Compute and Human Attention. Not PRs, Planning, CI/CD. Those aren't real bottlenecks. You only think they are because they consume your Human Attention." The reframe: PRs, planning, CI/CD feel like constraints because they *spend attention* — they're attention sinks, not true scarcities. The two things you actually can't manufacture more of: compute (rentable) and human attention (not).
+- **Chen (reply):** "totally agree minimizing human attention is the key unlock now and moving forward." He flags Calvin's observation that *workflow changes correlate with productivity gain*, says his own experience matched, and lists where his **step-function gains** came from: overnight loops (gnhf), plus the attached chart.
+- **The chart (OCR):** "My weekly PR count stepped up at each orchestration change" — PRs opened per week, by branch type, with numbered pins marking the six orchestration changes in a ledger: stacked PRs → risk-gated auto-merge → adding Codex → Factory lanes (ten lanes, AeroSpace) → Claude subagents → gh-stacked. Each orchestration change lands as a visible step up in weekly PR count. Two honesty footnotes printed on the chart itself: each stack of stacked PRs counts as *one* PR, and "gh-stacked opened up to 22 PRs in a single minute, which inflated January" — i.e. he corrects the metric for tooling that games it.
+
+Net claim: velocity gains in agentic dev don't come from trying harder at the old bottlenecks; they come in **step functions at orchestration changes** — each one buying back a slice of human attention (overnight loops remove the wait, auto-merge removes the merge-gate vigilance, stacked PRs remove the queue).
+
+## Why it matters
+- **It's the step-function sequel to Chen's own kaizen loop.** [[2026-10-20-kunchen-daily-velocity-audit]] was incremental: a daily 3am audit that names friction and proposes fixes. This chart is what the accumulated fixes look like from above — not a smooth ramp but stairs, each riser an orchestration change. Daily loops find *where* the attention leaks; orchestration changes are the *repair*; the PR count is just the witness.
+- **The bottleneck reframe is a design rule, not a hot take.** "PRs/planning/CI-CD aren't bottlenecks, attention is" converts directly to: *spend compute to buy back attention, then re-measure.* That's the same architecture as this relay — the bridge, the capture flow, and the 3am-style heartbeats all exist so the user's attention is only spent on decisions, never on fetching, remembering, or re-finding. Calvin's framing is the theory; Chen's ledger is the receipts.
+- **Overnight loops appear again as the canonical first move.** Chen's first step change and his prior 3am audit are the same shape: put agent cycles where attention isn't. Matches [[2026-10-10-diegohaz-background-agents-not-subagents]] — background agents (not interactive subagents) as the attention-preserving primitive.
+- **Risk-gated auto-merge is on the ledger as a step change.** The merge gate is a classic attention sink; Chen's chart credits removing it (with risk grading) as one of the six risers. Direct complement to [[2026-10-21-bholmesdev-merge-risk-skill]] — the skill cluster is the implementation detail of exactly this move.
+- **Skepticism gates:** the chart is self-reported, single-author, no review quality, defect rate, or merge outcomes shown — PR count is a volume metric, not a value metric; Chen corrects for stacked-PR inflation (good) but the six steps are a narrative pinned on a chart, not a controlled comparison (some risers could be team/tooling onboarding effects); "correlating workflow changes with productivity" is directionally plausible and causally unproven; Calvin's tweet truncates exactly where the how-to would start; and no cost line anywhere — the compute bill that bought back each attention-hour is the missing column of the ledger.
+
+## Links
+- [[2026-10-20-kunchen-daily-velocity-audit]] — same author, four days earlier: the daily loop that finds the friction; this chart is the cumulative result of acting on it. Increment vs step function.
+- [[2026-10-10-diegohaz-background-agents-not-subagents]] — background agents as the attention-preserving primitive; Chen's overnight loops are the same design with a clock.
+- [[2026-10-21-bholmesdev-merge-risk-skill]] — risk-gated auto-merge, one of Chen's six step changes, as a concrete skill implementation.
