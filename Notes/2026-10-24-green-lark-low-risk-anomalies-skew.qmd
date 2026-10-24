@@ -1,0 +1,29 @@
+---
+title: "Green Lark (@green_lark) — 'Low risk anomalies?': BAB and low-vol strategies work best in negative-skew stocks — because the anomaly IS coskewness compensation (Schneider/Wagner/Zechner, J. Finance 2020)"
+source: https://x.com/green_lark/status/2113963911074766891
+captured: 2026-10-24
+tags: [trading, twitter, low-vol-anomaly, betting-against-beta, coskewness, skew, factor-models, options-implied, academic-paper, green-lark]
+kind: reference
+---
+
+**Author:** Green Lark (@green_lark) · posted 2026-10-24 12:00Z · received 2026-10-24T14:47:38Z (WhatsApp via RDP-30, routed by CoS). First capture from this author. Stats at capture: 2 replies; likes/reposts/views not exposed by the syndication API this pass. 1 attached photo — the paper's Figure 11, OCRed at capture. No external article — the tweet points straight at the SSRN preprint (SSRN:2858933).
+
+## Summary
+
+The tweet shares one plot from **"Low-Risk Anomalies?" by Paul Georg Schneider, Christian Wagner, and Josef Zechner** — SSRN preprint 2858933 (2016), published in *The Journal of Finance* 75(3), June 2020 (DOI 10.1111/jofi.12910; 152 citations). The chart (Figure 11) shows **cumulative returns of betting-against-beta and betting-against-volatility strategies run separately in low-skew vs high-skew stock universes**, Jan/96–Jan/14, across five panels: Equity excess returns, CAPM Beta, CAPM Idiosyncratic Volatility, FF3 Idiosyncratic Volatility, and Ex-ante Variance. The tweet's framing: *"Betting against beta or volatility strategies work best in stocks with negative skew"* — the spread between using the most-negative and most positive skew quintile as the universe is the whole picture.
+
+The paper's claim is stronger than the tweet's: per the JoF abstract, low-risk anomalies in the CAPM and traditional factor models **arise when investors require compensation for coskewness risk**. Option-implied ex ante skewness is strongly related to ex post residual coskewness (which lets them build coskewness factor-mimicking portfolios); **controlling for skewness renders the alphas of betting-against-beta and betting-against-volatility insignificant**; and the returns of beta- and vol-sorted portfolios are driven largely by a single principal component, which is itself explained largely by skewness.
+
+## Why it matters
+
+- **"Your anomaly is my risk premium" — applied to one of the biggest anomalies there is.** BAB (Frazzini–Pedersen) is standard factor-model furniture; this paper says its alpha is not a distinct mispricing but compensation for coskewness (crash-space exposure). If you consume any low-vol/BAB-flavored product or backtest, the universe's skew profile — not the beta filter — may be doing the work.
+- **Practical read of the chart:** the strategy spread between negative-skew and positive-skew quintile universes is large and persistent across all five factor definitions — universe selection on skew dominates implementation details. Negative-skew stocks (lottery-short, crash-prone profiles) are where low-risk strategies earn.
+- **Third skew-centric capture in the vault this month** — [[2026-10-18-concretum-chasing-skew-trend-following]] (CTA positive skew weaker than advertised), [[2026-10-18-milk-man-atr-put-mispricing]] (put-side skew mispricing), and now this. The incoming stream keeps stress-testing skew as both a risk to be paid for and a marketing story that oversells. Skew is quietly becoming a running theme worth a synthesis someday.
+- **Skepticism gates:** (1) the key regressor is *option-implied* ex ante skewness — a sophisticated, options-market-derived measure, not plain realized return skew; the mechanism lives or dies with that link. (2) Figure numbering is from the 2016 SSRN preprint; the published 2020 JoF version may differ. (3) Tweet engagement minimal (2 replies, other stats not exposed) — but the underlying paper is JoF-published with 152 citations; the credibility is the paper's, not the tweet's. (4) The chart shows *where* the strategies work; the insignificance claim for BAB/BAV alphas comes from the paper's skew-controlled factor regressions, not from this plot alone.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-10-18-concretum-chasing-skew-trend-following]] — skew as oversold marketing story (CTA side); this paper is skew as the hidden driver of a factor anomaly. Companion pieces of the same theme.
+- [[2026-10-18-milk-man-atr-put-mispricing]] — options-implied skew mispricing on the put side; same options-derived-skew evidence family.
+- [[2026-10-24-evansemet-diminishing-returns-from-risk]] — same-day capture, risk-vs-return intuition testing; both interrogate what "risk" actually earns.
