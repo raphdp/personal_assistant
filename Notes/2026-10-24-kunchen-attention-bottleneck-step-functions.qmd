@@ -25,6 +25,7 @@ Net claim: velocity gains in agentic dev don't come from trying harder at the ol
 - **Skepticism gates:** the chart is self-reported, single-author, no review quality, defect rate, or merge outcomes shown — PR count is a volume metric, not a value metric; Chen corrects for stacked-PR inflation (good) but the six steps are a narrative pinned on a chart, not a controlled comparison (some risers could be team/tooling onboarding effects); "correlating workflow changes with productivity" is directionally plausible and causally unproven; Calvin's tweet truncates exactly where the how-to would start; and no cost line anywhere — the compute bill that bought back each attention-hour is the missing column of the ledger.
 
 ## Links
+- [[2026-10-24-calvingrunewald-minimize-human-attention]] — the quoted origin, captured later the same day: Calvin's full text (untruncated) plus his linked post on the Factory workflow and the attention×impact matrix. This note is the reply side; that one is the source.
 - [[2026-10-20-kunchen-daily-velocity-audit]] — same author, four days earlier: the daily loop that finds the friction; this chart is the cumulative result of acting on it. Increment vs step function.
 - [[2026-10-10-diegohaz-background-agents-not-subagents]] — background agents as the attention-preserving primitive; Chen's overnight loops are the same design with a clock.
 - [[2026-10-21-bholmesdev-merge-risk-skill]] — risk-gated auto-merge, one of Chen's six step changes, as a concrete skill implementation.
