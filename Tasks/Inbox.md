@@ -74,3 +74,4 @@
 - [ ] Chercher un oreiller orthopédique — research orthopedic pillows and bring a motivated top pick + alternatives (WhatsApp via RDP-30 2026-10-22)
 - [ ] Ouvrir un compte IBKR — prep the Interactive Brokers application: docs checklist + form draft, submission stays user-only (WhatsApp via RDP-30 2026-10-22)
 - [ ] Brainstorm « solution investissement » Julien — frame the options and open questions (link to structure-comp decision RDP-1005 if that's the angle, else new sleeves/mandats); produce a framing note to react to (WhatsApp via RDP-30 2026-10-22)
+- [ ] Pull the full Concretum "Following the Trend… With ETFs!" piece (their paid Substack; preview+chart already captured) for Clenow entry/exit/risk rules + Concretum portfolio construction + the ETF implementation, then size a Clenow-core replication vs the SG CTA benchmark in the TF queue (https://x.com/ConcretumR/status/2113626469876240861 2026-10-24)
