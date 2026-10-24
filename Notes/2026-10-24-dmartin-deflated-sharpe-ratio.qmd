@@ -1,0 +1,33 @@
+---
+title: "D. Martin (@dmartin_trading) — the Deflated Sharpe Ratio: 'good out of the box', plus a three-step explainer graphic"
+source: https://x.com/dmartin_trading/status/2113993927011512748
+captured: 2026-10-24
+tags: [trading, twitter, risk-management, methodology, statistics, deflated-sharpe, backtest-validation, dmartin]
+kind: reference
+---
+
+**Author:** D. Martin (@dmartin_trading) · posted 2026-10-24 14:00Z · received 2026-10-24T17:57:00Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 2 replies; likes/views not exposed by the syndication API this pass. Content lives in the attached photo — a full DSR explainer graphic, OCR'd below; the tweet's t.co resolves to its own `photo/1`, no external article.
+
+## Summary
+
+Appreciation tweet: the **Deflated Sharpe Ratio** is "simply genius" — unusually, an academic paper Martin implemented in practice **without having to make adjustments** for limitations or shortcomings. "It's good out of the box." He's been looking into it (truncated at capture).
+
+The graphic (reconstructed by OCR) explains DSR in three steps:
+
+1. **How far the best of many lands, from the number of tries.** With many no-edge strategies spread by luck around 0, the highest result lands a predictable number of standard deviations above 0 — growing slowly with N: 10 tries → ~1.6σ, 100 → ~2.5σ, 1,170 → ~3.3σ. Example: luck level 2.0 = 3.3 × 0.6 spread — what the best of 1,170 strategies with *no edge* would typically reach.
+2. **"What if the best is just lucky?"** That is exactly what the luck level encodes. If the best is only luck, its Sharpe lands ≈ the luck level and **DSR comes out around 0.5 or below**; only a best *above* the luck level earns a high DSR. Trying more strategies gives more chances at a luckier best but raises the luck level by the same logic — the two cancel out.
+3. **Why look only at the best?** Because expecting the best to be the luckiest *is the assumption DSR tests*: whether the best beat what the luckiest pure-luck strategy would reach. Worked example: a measured Sharpe of **1.70 gives DSR 0.19** against a 2.0 benchmark — i.e. only a 19% chance the true Sharpe exceeds 2.0, because a Sharpe measured over a few years carries estimation error; 95% confidence would require a measured Sharpe near **2.7**.
+
+## Why it matters
+
+- **The statistical formalization of the vault's verification bar.** [[2026-08-29-milk-man-replication-metrics]] scrutinizes claimed Sharpes; DSR is the tool that *prices in the number of strategies tried* before believing any single best one. The claimed-1.87-Sharpe case in [[2026-09-09-l1vsun-yield-curve-aware-momentum]] (zero replication path, unknown trial count) is exactly what a DSR screen exists to deflate.
+- **The ex-post half of the same author's ex-ante rule.** [[2026-10-01-dmartin-hypothesis-first]] limits N up front (no mechanism, no build); DSR deflates whatever selection remains after the fact. Two halves of one epistemics: reduce trials ex ante, pay the trial-count tax ex post.
+- **Explains IS→OOS decay as arithmetic, not bad luck.** The disclosure bar in [[2026-09-04-systematicpeter-why-publish-research]] treats in-sample→out-of-sample Sharpe decay as the honest tell; DSR shows *why* the best-of-N backtest decays — the luck level rises with N even as each new try looks "better".
+- **Skepticism gates:** the OCR tail is partially garbled (rows 2–3 of the "why look only at the best" section); the σ-table, the 0.5 threshold logic, and the 1.70→0.19 / 2.7 worked example are clean. The graphic deliberately omits the full DSR machinery (variance, skew, kurtosis, N adjustments per Bailey & López de Prado) — "good out of the box" is Martin's practitioner verdict, not a claim the formula is trivial.
+
+## Links
+
+- [[2026-10-01-dmartin-hypothesis-first]] — same author, the ex-ante half of this epistemics.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication bar DSR formalizes statistically.
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — the cautionary case: claimed Sharpe 1.87, unknown N, no replication.
+- [[2026-09-04-systematicpeter-why-publish-research]] — IS→OOS decay as the observable symptom of best-of-N selection.
