@@ -1,0 +1,32 @@
+---
+title: "Calvin Grunewald — the two real bottlenecks are compute and human attention; reframe optimization around minimizing attention (the Factory workflow)"
+source: https://x.com/CalvinGrunewald/status/2113757494015410598
+captured: 2026-10-24
+tags: [ai-agents, twitter, calvingrunewald, bottlenecks, human-attention, orchestration, agent-factories, prioritization, workflow-design, scaling-agents]
+kind: reference
+---
+
+**Author:** Calvin Grunewald (@CalvinGrunewald), solo builder of The Building Machine. Posted 2026-10-23 22:20Z; received 2026-10-24 18:06Z (WhatsApp via RDP-30, routed by CoS — re-sent by the user after an earlier relay at 17:57Z went uncaptured). 309 likes, 12 replies, 44k views at capture (via fxtwitter mirror; the syndication API truncated the text at "You can…" and returned null stats). Tweet links his own post "My New Agentic Workflow" (thebuildingmachine.com, 2026-10-23) — full post read at capture.
+
+## Summary
+Tweet + linked post, one argument:
+
+- **The tweet:** only two REAL bottlenecks remain in software development — compute and human attention. Not PRs, planning, CI/CD: "You only think they are because they consume your Human Attention." Compute is solved by throwing money at it; human attention is solved by throwing compute at it. He reframed his workflow optimization around *minimizing places that need his attention*.
+- **Hitting the wall:** after 9 months scaling parallel agents (more concurrent agents, Herdr to see them all on one screen, mobile keep-alive via Tailscale/Moshi), he could no longer track what any agent was doing — scanning sessions over and over, "my brain was melting." Peak productivity flatlined; all his time went to managing agents, none to thinking or the rest of the job.
+- **A new prioritization function:** Big Tech impact/cost t-shirt sizing breaks when build cost → ~0. New axis: for each item of work, estimate *how much attention it needs*, then pick the tool. The "loop" ladder: human *in* the loop (managing the SDLC) → human *around* the loop (watching observable points) → agent *around* the loop (harness/adversarial review monitors the points) → no loop (just the agent).
+- **Three workflows by attention×impact cell:** (1) Claude Code + subagents — high impact/high attention, fan-out work, multiple PRs from one session; (2) **the Factory** — the SDLC on rails covering most of the matrix: automated PR polling, CI fixing, unblocking agents, with check-in points (planning, review) he can attend or skip; (3) /goal loops & custom harnesses to one-shot non-critical projects — e.g. rustify, a harness walking the import graph to port a 314k-line TypeScript CLI to Rust with CI failing if the port falls behind.
+- **Results:** PRs/week as velocity witness (each PR ≈ one task, 600–1,200 LOC): ~50/wk in January → ~200/wk when he hit the wall in August → 300–520/wk since the Factory. 7,142 PRs this year. But he has since stopped maximizing velocity — the metric he now minimizes is *where he must spend attention*.
+
+## Why it matters
+- **Origin side of the chain captured this morning.** [[2026-10-24-kunchen-attention-bottleneck-step-functions]] is Kun Chen's quote-tweet of exactly this tweet, captured from the reply side with Chen's step-function chart. That note had Calvin's text truncated at "You can…"; this note closes the gap — full text plus the linked post. Read together: Calvin's theory (attention is the bottleneck), Chen's ledger (each orchestration change = a step up in PR velocity).
+- **"Minimize attention, not maximize agent output" is the design rule this company already runs on.** The WhatsApp relay, the traffic-only issue, draft-and-show — all exist so the user's attention is spent only on decisions. Calvin's wall is the failure mode of violating it: parallel agents without an attention budget melt the operator's brain. Same lesson as [[2026-10-10-diegohaz-background-agents-not-subagents]] — background agents as the attention-preserving primitive.
+- **The Factory = "agent around the loop."** Automated review/CI/polling with optional human check-in points is precisely the pattern of [[2026-10-19-bibryam-agentic-verification]] (adversarial verification harnesses) and [[2026-10-21-bholmesdev-merge-risk-skill]] (risk-gated auto-merge). Calvin's version adds the insight that the check-in points should be *optional dials*, not fixed gates.
+- **The attention×impact matrix is a reusable triage grid.** Cheap version for any agent fleet: classify work by (attention demanded, impact), then match to harness — interactive subagents for high-attention/high-impact, railed pipelines for the middle, one-shot harnesses for the low-attention periphery.
+- **Skepticism gates:** PR count is a volume metric and he admits it (600–1,200 LOC self-sized tasks, no defect rate, no review quality, no reverts shown); single-author, self-reported, no baseline team comparison; the impact/attention t-shirt sizing is "pseudo-scientific" by his own admission; token cost is hand-waved ("tokens aren't free, but go with me") — the compute bill that bought back each attention-hour is again the missing column; and the post is newsletter promotion for his own setup — the honest brain-melting failure account is the strongest part, the 300–520 PRs/wk claim the softest.
+
+## Links
+- [[2026-10-24-kunchen-attention-bottleneck-step-functions]] — same chain from the reply side: Chen's step-function PR chart with six orchestration changes; this note is the quoted origin with the full text and linked post.
+- [[2026-10-20-kunchen-daily-velocity-audit]] — the daily-loop discipline that finds attention leaks; Calvin's reframe is the objective function those leaks are measured against.
+- [[2026-10-10-diegohaz-background-agents-not-subagents]] — background agents as the attention-preserving primitive; Calvin's mobile keep-alive (Tailscale/Herdr/Moshi) is the same bet, and his wall shows its limit without an attention metric.
+- [[2026-10-19-bibryam-agentic-verification]] — adversarial verification as "agent around the loop"; the Factory's review check-points industrialized.
+- [[2026-10-21-bholmesdev-merge-risk-skill]] — risk-gated auto-merge: the concrete skill version of the Factory's biggest attention reclaim (reviews, CI failures).
