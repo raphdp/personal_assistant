@@ -1,0 +1,38 @@
+---
+title: "Mark Ajzenstadt (@mardehaym) — seven steps from tool adoption to agentic org; most companies sit on step one shopping for step-seven technology"
+source: https://x.com/alex_prompter/status/2114421207252480123
+captured: 2026-10-25
+tags: [ai-agents, twitter, mardehaym, alex_prompter, agentic-org, org-design, adoption-ladder, context-layer, harness-engineering, headless-automation, governance, rbac, agent-to-agent, orchestration]
+kind: reference
+---
+
+**Author:** Mark Ajzenstadt (@mardehaym) posted the framework 2026-10-24 13:47Z (550 likes, 114k views, 70 replies at capture). Shared by Alex Prompter (@alex_prompter) 2026-10-25 18:17Z — "if you're deep in the trenches of AI implementation, this is the guy you need to be following" (6 replies; likes/views not exposed at capture). Received 2026-10-25 20:30Z (WhatsApp via RDP-30, routed by CoS). Syndication API truncated the main tweet mid-word; full text recovered via fxtwitter in one call.
+
+## Summary
+A seven-step maturity ladder for companies going from AI tool adoption to an agentic org. The diagnostic punchline: **most companies sit on step one while shopping for step-seven technology — what they actually lack is step-four discipline.**
+
+1. **Tool adoption** — AI tools exist across the org, a human runs each one. Developer closes the lid, automations die; somebody goes on vacation, the workflow goes with them.
+2. **Context layer** — knowledge graphs per department, each behind its own API gateway. Sales queries engineering through an API. Separated domains keep agents from hallucinating across departmental boundaries.
+3. **Harness engineering** — build evals, routing logic, and quality gates *before* picking a model; the LLM comes in last. "Your harness is your IP and your capex. The model underneath is a commodity you swap when something better ships. If changing the LLM breaks your system, you built a dependency, not a platform."
+4. **Go headless** — host every automation outside a laptop; it fires on schedule, on conditions, without a human logging in at 9am. Companies stall here because nobody forces the migration from "script on my desktop" to "service that runs on its own."
+5. **Governance** — RBAC on every knowledge structure from day one. TTL on every agent: "Dead agents are tech debt with active API keys." Past 100 tools you need lifecycle management — retire anything idle 90 days, deprecate anything whose eval scores drop below threshold.
+6. **Agent-to-agent** — stitch headless instances into a value chain; Agent A finishes, hands off to Agent B, with an LLM sitting between them as a quality gate judging every handoff.
+7. **Step functions** — orchestrated, semi/fully automated workflows. Agents handle volume, humans handle exceptions; the org runs on agent output.
+
+Closing anecdote: they walked a VP of Engineering through all seven — "You're on step one. But over a hundred tools means step four is closer than you think."
+
+## Why it matters
+- **The ladder is descriptive, not prescriptive — and that's the test it invites.** Its real value is as a *self-audit*: the user's Paperclip companies can be scored against it honestly. The relay that carried this very tweet is the counter-example to step one: this capture ran headless (step 4), woke on traffic (event-conditioned, not 9am-login), with scoped keys per channel (step 5's RBAC instinct) and a non-LLM daemon as the deterministic base layer. The gap areas are the honest ones: no per-department context graph with API gateways (step 2 is partly satisfied by profile isolation, not by design), and eval scores don't yet drive agent retirement (step 5's deprecation rule is a policy this org has never written down).
+- **Step 3 is the "harness is the IP" argument, stated at org scale** — direct match to [[2026-09-14-rauchg-verifiers-skills-new-frameworks]]: verifiers and skills (not model choice) are the durable asset, because the model layer commoditizes. Ajzenstadt adds the swap test as the failure detector: if changing the LLM breaks the system, you built a dependency, not a platform.
+- **Step 5's "dead agents are tech debt with active API keys" is the sharpest line in the piece** — TTL and the 90-day/eval-threshold retirement rules are concrete and checkable. The org-design cousin of [[2026-10-18-copyconstruct-claude-md-curated-corpus]]: curation of what agents may know (context hygiene) pairs with lifecycle discipline over what agents may do.
+- **Steps 4→6 are this vault's running theme, formalized.** Step 4 (headless) = [[2026-10-10-diegohaz-background-agents-not-subagents]] — background agents as the attention-preserving primitive; step 6's LLM-judged handoffs need exactly the observability of [[2026-10-19-flohoeller-agent-tree-component]]; step 7's step-function workflows = [[2026-10-24-kunchen-attention-bottleneck-step-functions]], where each orchestration change showed up as a visible step up in PR velocity. Ajzenstadt's ladder is the org chart of what those notes showed in one dev's ledger.
+- **The endpoint rhymes with Calvin's bottleneck thesis.** "Agents handle volume, humans handle exceptions" is [[2026-10-24-calvingrunewald-minimize-human-attention]] stated as an org-design target — the whole ladder is a sequence of attention buybacks.
+- **Skepticism gates:** it's a maturity model, and maturity models sell consulting — the seven steps are unfalsiable as stated (any org can be placed anywhere, and "you need step-four discipline" is always available advice); no company is named as having climbed past step four, and the VP-of-Engagement anecdote is a sales vignette; "knowledge graph per department behind an API gateway" is a big architectural claim asserted in one sentence with no failure modes; the step-5 thresholds (100 tools, 90 days, eval-threshold) are stated as universals but are almost certainly context-dependent; and the ladder implies strict sequencing, while real orgs commonly run steps 4 and 5 concurrently with step 2 retrofits. Useful as a checklist, not as a law.
+
+## Links
+- [[2026-09-14-rauchg-verifiers-skills-new-frameworks]] — step 3 at product scale: harness/verifiers as the durable IP over commodity models.
+- [[2026-10-18-copyconstruct-claude-md-curated-corpus]] — step 2 in miniature: a curated context corpus is a personal knowledge graph with taste.
+- [[2026-10-10-diegohaz-background-agents-not-subagents]] — step 4's primitive: background agents that don't need the laptop open.
+- [[2026-10-19-flohoeller-agent-tree-component]] — step 6's instrument: live orchestration tree showing who started whom, at what cost.
+- [[2026-10-24-kunchen-attention-bottleneck-step-functions]] — step 7's evidence: orchestration changes landing as step-function velocity gains.
+- [[2026-10-24-calvingrunewald-minimize-human-attention]] — the thesis the ladder serves: compute and attention are the only real bottlenecks.
