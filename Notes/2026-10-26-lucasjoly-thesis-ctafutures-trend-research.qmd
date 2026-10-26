@@ -1,0 +1,45 @@
+---
+title: "Lucas Joly — trends-research: a Carver-style futures trend-following master's thesis, open-sourced with a live paper-trading dashboard (via @SystematicPeter)"
+source: https://x.com/SystematicPeter/status/2114740341387768259
+captured: 2026-10-26
+tags: [trading, twitter, cta, trend-following, futures, carver, backtesting, open-research, multiple-testing, deflated-sharpe, academic, replication]
+kind: both
+---
+
+**Author:** Peter - Cracking Markets (@SystematicPeter) · posted 2026-10-26 15:26Z · received 2026-10-26T18:16:49Z (WhatsApp via RDP-30, routed by CoS). 1 attached photo (paper-trading dashboard screenshot, OCRed: NAV $98.5m → $117.9m from 2026-01-02 to 2026-10-22; deepest drawdown −5.60% on 2026-08-25, currently −1.23%). Repo: github.com/Lucas-Joly-GH/trends-research (Python, 88 stars at capture, last push 2026-10-26).
+
+## Summary
+
+Peter spotlights Lucas Joly's master's-thesis research programme (MSc 2 Finance, INSEEC) on trend-persistence in futures, now published on GitHub with a live paper-trading dashboard at a new all-time high. The tweet is a pointer; the payload is the repo, and the repo is serious:
+
+- **S183 "IG VoV Quad Sharpened"** — a four-alpha equal-weight composite (Time-Series Trend · Carry · Skew · Vol-of-Vol) on 62 liquid futures, backtested day-by-day over 1990–2026 (~9,341 trading days) on the Carver (2023) forecast-to-position framework.
+- **Headline metrics:** raw annualised Sharpe 0.97 (excess T-Bill), Harvey–Liu-corrected 0.78 (K = 118 audited trials), CAGR 15.5% at 12.9% vol, max DD 21.6%, Fama–French 5F alpha 10.6% (t = 3.21), Fung–Hsieh 7F alpha 13.0%. Decade Sharpes 0.90/1.02/1.19/0.74 — no decade below 0.7.
+- **The honesty claim:** zero parameters optimised on the backtest — every value either closed-form derived (FDM cap √4 = 2.0; sigmoid steepness 2/vol_target) or literature-cited (EWMAC speeds from Levine & Pedersen 2016; VoV direction from Baltussen et al. 2018).
+- **Robustness battery:** Deflated Sharpe z = 4.28, 1,000-draw Monte-Carlo parameter search (realised SR top 1.8%), signal-shuffle null tests 24–33σ, WGAN synthetic-market stress test, 98.1% of performance retained under T+1 execution lag.
+- **45-signal alpha library**, each backtested standalone over the full window (best standalone: EWMAC Ensemble SR 0.57; the point is the combination survives correction, not any single signal).
+- **Out-of-sample paper trading:** 145 days Jan–May 2026, Sharpe +0.44, +7.33% annualised at 8.56% vol; author's own read — too short for significance, ~33rd percentile vs bootstrapped historical windows, meaningful live conclusions need 2–3 years.
+- **Read-only showcase:** NorgateData panel and data-loading layer are private; code is for review, not execution.
+
+## Why it matters
+
+- **The most complete open disclosure of a CTA-style futures system captured in the vault yet.** Named author, institution, supervisor, thesis PDFs (French + English), full method, statistics battery, and an adversarial-critique section in the S183 report — it clears every disclosure bar the vault has been accumulating ([[2026-09-13-cointradernik-regime-rotation-rr-pro]] passing, [[2026-09-09-l1vsun-yield-curve-aware-momentum]] failing). It is also the direct exemplar of the open-research case Peter made in [[2026-09-04-systematicpeter-why-publish-research]] — this is what "a trader could understand the logic, test it, and run it" looks like at thesis grade.
+- **Directly load-bearing for the vault's trend-following thread.** The TF queue already runs Clenow/Concretum ETF-trend replication vs the SG CTA benchmark ([[2026-10-24-concretum-clenow-trend-model-etfs]]); S183 is the same asset class and Carver-style framework, at institutional statistics depth. The repo's production/ folder is a lean four-dependency reimplementation of the same signal path for daily paper trading — a reference architecture for any future futures-trend sleeve.
+- **The multiple-testing hygiene is the rarest part.** Most captured systems report a raw backtest; this one reports the Harvey–Liu haircut (0.97 → 0.78), Deflated Sharpe, and Monte-Carlo percentile alongside — exactly the corrections [[2026-10-24-dmartin-deflated-sharpe-ratio]] says pros run "out of the box." Using corrected Sharpe as the headline number is the disclosure practice worth copying.
+- **Skepticism gates:** self-reported metrics, no third-party verification of the backtest or the paper-trading dashboard; the dashboard is author-run (self-backtest tier in the vault's evidence hierarchy). Norgate data and the full engine are private, so claims are not independently runnable — read-only showcase. Paper trading is 145 OOS days + 5 months more (Jan–Oct 2026 dashboard) — far short of the 2–3 years the author himself says are needed. 88 stars is real but modest traction; the "new ATH" framing is Peter's, from a dashboard whose numbers are not externally audited. No capacity, fee, or live-money detail.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-09-04-systematicpeter-why-publish-research]] — same curator; this capture is the thesis-grade instance of the open-research practice that tweet argued for.
+- [[2026-10-24-concretum-clenow-trend-model-etfs]] — same asset class, retail-scale implementation; S183 is the institutional-statistics version of the same trend-following question.
+- [[2026-10-24-dmartin-deflated-sharpe-ratio]] — the correction tool this repo actually applies (DSR z = 4.28, HL-corrected Sharpe as headline).
+- [[2026-08-30-ignis-trend-following-realtest]] — single-instrument breakout trend-following; S183 shows the 62-futures diversified version of the same edge.
+- [[2026-08-29-three-simple-ma-atr-systems]] — diversify-the-behavior argument at retail scale; the 45-alpha library is the same argument made exhaustively.
+- [[2026-09-13-cointradernik-regime-rotation-rr-pro]] — the prior disclosure-bar exemplar; this repo raises the bar.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication standard this repo invites by publishing code + thesis.
+
+## Source
+
+- Tweet: https://x.com/SystematicPeter/status/2114740341387768259 (20 likes, 1,959 views at capture — early)
+- Repo: https://github.com/Lucas-Joly-GH/trends-research
+- Thesis PDFs (FR corpus/annexes, EN translation, S183 report) under thesis/ in the repo.
