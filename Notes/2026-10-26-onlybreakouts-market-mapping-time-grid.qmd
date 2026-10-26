@@ -1,0 +1,38 @@
+---
+title: "Breakout Trading Academy (@onlybreakouts) — Market mapping: hour×hour×weekday profit grids as an edge-discovery method (NQ Monday example)"
+source: https://x.com/onlybreakouts/status/2114780626742075742
+captured: 2026-10-26
+tags: [trading, twitter, nq-futures, seasonality, time-of-day, backtesting, multiple-testing, robustness, onlybreakouts]
+kind: both
+---
+
+**Author:** Breakout Trading Academy (@onlybreakouts) · posted 2026-10-26 18:06Z · received 2026-10-26T18:36:53Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 2 replies, 5 likes, 282 views (via fxtwitter — syndication API nulled them). Syndication text truncated mid-method (cut at the grid step, trailing t.co); full text recovered via fxtwitter in one call. One photo attached — the colored time-grid product screenshot (512×203); OCR returned nothing at native size or 3x upscale (heat-map cells, not text) — not a content loss, the text describes the whole method.
+
+## Summary
+
+A method tweet: find time-of-day/weekday structure in any market with **no indicators**, in ~60 seconds. The process ("market mapping"):
+
+1. Load 15 years of 60-minute data.
+2. Map **every entry hour × exit hour × day of the week** combination.
+3. Color the grid by net profit.
+4. Filter for **average trade size** and **profit/drawdown ratio**.
+5. Check a **robustness index**: does the edge survive shifting entry/exit by 1–3 hours?
+6. Confirm it still holds in the **last 1–3 years** (recency).
+
+The claimed payoff: on E-mini NASDAQ this "immediately surfaces strong structural tendencies, especially Mondays and certain overnight holds." Clean example: **enter 6am → exit 4pm (or longer) every Monday** — the edge survives time shifts and remains valid recently. Framed as "the market's own built-in time tendencies," not indicator curves; trade the window standalone or drop a breakout strategy inside it.
+
+## Why it matters
+
+- **The grid IS the idea, and it's implementable today.** Our backtest line ([[2026-08-30-ignis-trend-following-realtest]], [[2026-08-29-three-simple-ma-atr-systems]]) already has the data; the map is a group-by over entry-hour × exit-hour × weekday — cheap to compute, and a genuinely different discovery lens from the signal-based systems we usually capture.
+- **But it is the most multiple-testing-heavy method in this genre.** 24 entry hours × 24 exit hours × 5 weekdays ≈ **2,880 cells per market**, then colored and filtered by performance. The best cell out of ~3,000 looks impressive *by construction* — the day-of-week/hour genre Peter warns about in [[2026-10-01-dmartin-hypothesis-first]]. Any replication must lead with a multiplicity haircut (White's Reality Check / deflated-Sharpe logic — [[2026-10-24-dmartin-deflated-sharpe-ratio]]), not the raw grid.
+- **The tweet's own guards are half-right.** The ±1–3h robustness shift and the last-1–3-years check are real discipline (same family as [[2026-10-21-setupalpha-trend-system-robustness-tests]]) — but adjacent grid cells are highly correlated, so surviving a time shift is weaker protection than it sounds, and the last-3-years check happens *after* selection on the full 15y, so it isn't clean out-of-sample.
+- **Tension worth noting:** the flagship example is a **Monday long** on NASDAQ futures (6am→4pm+). Our closest captured cousin is the opposite trade — [[2026-10-01-algojan-nq-monday-short]] (short NQ Monday when Friday's high unbroken, +573% claimed, 22.6% win rate). Same market, same day, opposite direction — both can't be unconditionally true; whichever window wins, the condition/detail is doing all the work. That contrast is exactly why the grid needs mechanism + haircut before belief.
+- **Source context:** 5 likes / 282 views, marketing handle ("Academy") — this is a product-demo tweet for their grid software; the screenshot is the product, which explains the "60 seconds" hook. Method still stands on its own merits.
+
+## Links
+
+- [[2026-10-01-algojan-nq-monday-short]] — the Monday NQ short cousin; opposite direction, same seasonality family.
+- [[2026-10-24-dmartin-deflated-sharpe-ratio]] — the haircut any grid-selected cell needs.
+- [[2026-10-01-dmartin-hypothesis-first]] — the weekday/hour backtest genre warning.
+- [[2026-10-21-setupalpha-trend-system-robustness-tests]] — the robustness-check family (shifts, costs, lags) to pair with a grid hit.
+- [[2026-10-15-systematicpeter-mean-reversion-oos-high]] — OOS-split discipline the "last 1–3 years" gesture at.
