@@ -1,0 +1,37 @@
+---
+title: "MarginCall4 long/short breakout portfolio addition — backtest table (SPY/QQQ/BTC, 2022–2026)"
+source: https://x.com/MarginCall4/status/2114807577645335027
+captured: 2026-10-27
+tags: [trading, twitter, breakout, portfolio, backtesting, strategy]
+kind: both
+---
+
+**Author:** HedgeAlgo 🇺🇸 (@MarginCall4) · posted 2026-10-26 19:53Z · received "(WhatsApp via RDP-30, routed by CoS — queued-inbound recovery after API outage)" · replies 6 · stats otherwise not exposed at capture.
+
+## Summary
+
+Another long/short breakout strategy addition to the author's portfolio, positioned as a diversifier. The content lives in the chart image (recovered by OCR): a 2022–2026 backtest across three instruments, with combined and per-instrument performance.
+
+**Backtest table (OCR-recovered):**
+
+| Sleeve | Trades | Trades/yr | Win rate | Profit factor | Sharpe | Return/yr | Max DD | t-score |
+|---|---|---|---|---|---|---|---|---|
+| **Combined** | 1,672 | 289 | 52.3% | 1.46 | 1.89 | 46.3% | -15.9% | 5.79 |
+| SPY | 597 | 103 | 49.4% | 1.26 | 0.90 | 10.0% | -15.6% | 2.21 |
+| QQQ | 603 | 104 | 53.6% | 1.44 | 1.35 | 16.3% | -8.8% | 3.33 |
+| BTCUSD | 472 | 81 | 54.2% | 1.81 | 1.83 | 19.9% | -8.6% | 4.56 |
+
+OCR caveat: table cells transcribed verbatim from the chart image; column alignment in the source is dense, so treat per-sleeve cells as approximate until checked against the full-res image. Full-res chart preserved at `rdp_media/mc4_2114807577645335027.jpg` (2322×1606).
+
+Additional image text: cumulative returns by sleeve — Combined 268%, BTCUSD 115%, QQQ 95%, SPY 58%; equity curves 2022→2026 rising; "Returns, drawdown and Sharpe use fixed starting capital with daily results on all weekdays. Max drawdown is peak to trough as % of starting capital."
+
+## Why it matters
+
+- Diversifier logic: the combined Sharpe (1.89) exceeds every individual sleeve (SPY 0.90 / QQQ 1.35 / BTC 1.81) — consistent with real diversification, the tweet's actual claim.
+- BTC is the workhorse (best PF 1.81, best t-score per trade history) and SPY the drag: low PF 1.26 with 15.6% DD on 10%/yr.
+- **Skepticism gates:** 46%/yr combined on fixed capital with ~289 trades/yr is a strong claim; "fixed starting capital" return math can inflate compounding-style figures vs a margined/compounded account. Win-rate column alignment across sleeves is exactly where OCR (or author) error hides; treat per-sleeve cells as approximate until verified against the source image.
+
+## Links
+
+- Author's prior work in the vault: [[2026-08-29-milk-spx-strategy-v1-1]] · [[2026-08-29-milk-man-replication-metrics]] · [[2026-08-30-milk-man-dip-buy-rules]] · [[2026-09-27-milk-man-nq-scalping-algo-v0]] · [[2026-10-18-milk-man-atr-put-mispricing]]
+- Sibling breakout methodology: [[2026-10-26-onlybreakouts-market-mapping-time-grid]]
