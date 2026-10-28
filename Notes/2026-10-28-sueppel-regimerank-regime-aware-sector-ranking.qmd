@@ -1,0 +1,32 @@
+---
+title: "RegimeRank — Regime-Aware Interpretable Ranking for Sector Rotation (Koa et al., arXiv 2610.26456)"
+source: https://x.com/macro_synergy/status/2114985448883790085
+captured: 2026-10-28
+tags: [trading, twitter, paper, arxiv, sector-rotation, regime-aware, ranking, attention, interpretability, ml, portfolio-management]
+kind: reference
+---
+
+**Author:** Ralph Sueppel (@macro_synergy, macro research curator) · posted 2026-10-27 07:40Z · received 2026-10-28T19:14:22Z (WhatsApp via RDP-30, routed by CoS) · 77 likes · 7,103 views (via fxtwitter; syndication nulls likes/views on fresh tweets). Tweets the paper announcement; the attached image is **Figure 1 — the RegimeRank architecture diagram** (857×381, OCR-recovered, preserved at `rdp_media/HVPb04CWoAAf6sM.jpg`).
+
+## Summary
+
+An arXiv paper (2610.26456, submitted 2026-10-19; Koa, Liu, Li, Feng, Liang, Giroux, Wen, Yao, Huang, Lamarre — NUS/CFM-shaped author list; q-fin.PM + cs.LG) that builds an **interpretable deep-learning ranker for sector rotation**:
+
+- **Task framing:** sector rotation as *ranking* sectors by expected forward risk-adjusted active performance (forward sector-vs-benchmark Sharpe), not point-forecasting returns — matches how benchmark-relative PMs actually allocate overweights/underweights.
+- **Architecture (from the OCR'd Figure 1):** (1) fundamental + technical signals represented through **expert-defined temporal characteristics** (per-pillar encoders); (2) **regime conditioning** — signals conditioned on learned latent macro states via **cross-attention** (macro factors gate which signals matter now); (3) **cross-sector self-attention** (sectors modelled jointly, not independently); (4) a ranking head on top.
+- **Interpretability is a first-class output:** expected-gradient attributions decompose contributions of individual signal×transformation pairs; macro attention maps and cross-sector attention maps expose the learned conditioning and dependency structure. You can interrogate *why* a sector ranked top this month.
+- **Evaluation:** weekly S&P 500 sector data, **2002–2024**, under **combinatorial purged cross-validation** (López de Prado-style leakage control); claims outperformance vs. representative ranking and ML baselines on multiple ranking metrics. Ablations attribute gains to latent macro states, regime conditioning, and cross-sector modelling.
+
+## Why it matters
+
+- This is the *institutional, methods-careful* version of the regime-conditioned rotation idea the vault has been circling all quarter: [[2026-09-09-l1vsun-yield-curve-aware-momentum]] (anonymous AI card, unverifiable) → [[2026-09-09-p123-five-etf-rotation]] (disclosed vendor screen) → [[2026-09-02-pristinecap-techno-fundamental-suite]] (macro-conditioned suite, real but closed) → **this** (full paper: named authors, arXiv ID, purged CV, ablations, attribution diagnostics). Same concept family at the top of the evidence hierarchy.
+- The purged cross-validation + ablation discipline is exactly the multiple-testing/leakage hygiene demanded by [[2026-10-24-dmartin-deflated-sharpe-ratio]] and [[2026-10-26-lucasjoly-thesis-ctafutures-trend-research]] — the paper practises what those captures preach.
+- Sueppel (macro-synergy.com) is a long-standing systematic-macro research curator; him flagging it is a quality signal, not engagement bait — unlike the L1vsun card, the artifact checks out on every verification gate: real ID, real authors, real abstract, fetchable full text.
+- **Skepticism gates:** (1) "outperforms baselines on ranking metrics" ≠ tradable alpha — no net-of-costs, turnover, or capacity discussion in the abstract; a ranking model that beats on rank-correlation can still be uneconomical after sector-swap friction. (2) Ranking metrics under CPCV still involve researcher degrees of freedom (signal set, characteristic definitions, hyperparameters) — deflated-Sharpe-style multiple-testing corrections are not mentioned in the abstract. (3) Weekly sector data 2002–2024 is one market, one regime set (GFC, ZIRP, COVID, hiking cycle) — external validity to other markets unproven. (4) Figure 1 OCR recovered the component labels but garbled some arrow captions — diagram read is approximate; check against the PDF.
+- **Not actionable for the personal book:** no sector-rotation pipeline exists here; this is a reference capture for the ML-rotation knowledge thread. If that thread ever turns into a build, this paper is the starting design doc.
+
+## Links
+
+- Evidence-hierarchy twins (rotation family): [[2026-09-09-l1vsun-yield-curve-aware-momentum]] · [[2026-09-09-p123-five-etf-rotation]] · [[2026-09-02-pristinecap-techno-fundamental-suite]]
+- Validation discipline: [[2026-10-24-dmartin-deflated-sharpe-ratio]] · [[2026-10-26-lucasjoly-thesis-ctafutures-trend-research]] · [[2026-09-04-systematicpeter-why-publish-research]]
+- Regime/trend context: [[2026-08-30-ignis-trend-following-realtest]]
