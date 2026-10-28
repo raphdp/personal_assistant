@@ -1,0 +1,37 @@
+---
+title: "MarginCall4 long/short breakout 10-year extension — TSLA in, SPY out (QQQ/TSLA/BTC, 2017–2026)"
+source: https://x.com/MarginCall4/status/2115258103289807128
+captured: 2026-10-28
+tags: [trading, twitter, breakout, portfolio, backtesting, strategy]
+kind: both
+---
+
+**Author:** HedgeAlgo 🇺🇸 (@MarginCall4, 2,357 followers — "Algo and options trader. Be dumb, follow price. Fade macro. NFA.") · posted 2026-10-28 01:43Z · received "(WhatsApp via RDP-30, routed by CoS)" · 29 likes · 34 bookmarks · 1 repost · 6 replies · 2,851 views. Bookmarks exceed likes — saved-as-reference signal.
+
+## Summary
+
+Direct follow-up to [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]]: the author extended the same long/short breakout strategy from the ~4-year window to 10 years (2017–2026, after costs), kicked out SPY ("just a lower return version of QQQ") and swapped in less-correlated TSLA. Same algo, no setting changes, running on 3 markets.
+
+**10-year backtest table (OCR-recovered from chart):**
+
+| Sleeve | Trades | Trades/yr | Win rate | Profit factor | Sharpe | Return/yr | Max DD | t-score |
+|---|---|---|---|---|---|---|---|---|
+| **Combined** | 2,735 | 279 | 51.8% | 1.57 | 2.34 | 55.3% | -14.9% | 8.32 |
+| QQQ | 999 | 102 | 51.7% | 1.42 | 1.28 | 15.4% | -10.6% | 4.09 |
+| TSLA | 1,004 | 102 | 51.2% | 1.55 | 1.61 | 20.4% | -10.2% | 5.17 |
+| BTCUSD | 732 | 75 | 52.7% | 1.83 | 1.59 | 19.5% | -8.6% | 5.14 |
+
+Cumulative returns (fixed starting capital): Combined 542%, TSLA 200%, BTCUSD 191%, QQQ 151%.
+
+OCR caveat: per-sleeve cells transcribed from the chart image and approximate until checked against full-res. Chart preserved at `rdp_media/2115258103289807128/photo1.jpg` (1668×1085).
+
+## Why it matters
+
+- The diversifier claim survives the longer window and strengthens: combined Sharpe 2.34 vs every sleeve ≤1.61, t-score 8.32 on 2,735 trades. Trades/yr (~279) matches the prior 2022–2026 run (289) — consistent test density, not a re-tuned fluke.
+- The TSLA swap is correlation logic made concrete: SPY was the drag sleeve in yesterday's table (PF 1.26, Sharpe 0.90, redundant with QQQ); TSLA enters at Sharpe 1.61 / PF 1.55 with only -10.2% max DD — the upgrade shows up directly in the combined line (Sharpe 1.89 → 2.34).
+- **Skepticism gates:** 55.3%/yr uses fixed-starting-capital return math — same inflation risk flagged on the prior capture; 10 years at that rate is an extraordinary claim resting on chart-OCR numbers. Win rates cluster suspiciously tight (51.2–52.7%). The 2017 start conveniently spans a monster BTC and TSLA decade. Verify cells against full-res before quoting.
+
+## Links
+
+- Prior capture (2022–2026 window, SPY sleeve): [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]]
+- Breakout decay context: [[2026-09-16-guirao-breakout-decay-2026]] · sibling methodology: [[2026-10-26-onlybreakouts-market-mapping-time-grid]]
