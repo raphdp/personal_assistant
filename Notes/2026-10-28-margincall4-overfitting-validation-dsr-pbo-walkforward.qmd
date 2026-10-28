@@ -1,0 +1,32 @@
+---
+title: "MarginCall4 overfitting validation — DSR 0.9998, PBO 0.7%, walk-forward keeps ~70-80% (38%/yr OOS)"
+source: https://x.com/MarginCall4/status/2115500833509188057
+captured: 2026-10-28
+tags: [trading, twitter, breakout, backtesting, overfitting, deflated-sharpe, walk-forward]
+kind: reference
+---
+
+**Author:** HedgeAlgo 🇺🇸 (@MarginCall4, 2,357 followers — "Algo and options trader. Be dumb, follow price. Fade macro. NFA.") · posted 2026-10-28 17:47Z · received "(WhatsApp via RDP-30, routed by CoS)" · 1 like · 211 views (fresh at capture; stats not yet meaningful). Quotes his own 10-year extension ([[2026-10-28-margincall4-breakout-10y-tsla-extension]]) and answers the question "Is this algo strategy an overfitted POS?" with **No** — backed by a three-measure validation table (OCR-recovered from chart, 1338×432, preserved at `rdp_media/2115500833509188057/chart.png`).
+
+## Summary
+
+The author stress-tests the 10-year QQQ/TSLA/BTC breakout portfolio against the three standard overfitting batteries:
+
+| Measure | What it is | Usual pass mark | Ours |
+|---|---|---|---|
+| **Deflated Sharpe ratio** (Bailey & López de Prado) — most cited in quant finance | probability the Sharpe survives multiple-testing deflation | > 0.95 | **0.9998** |
+| **Probability of Backtest Overfitting** (PBO), t-score after multiple testing (Harvey & Liu) — "closest to what you asked" | share of resamples where the in-sample best underperforms out-of-sample; t after multiple-testing haircut | PBO under 10–20%; over 50% = overfit · t > 3 | **PBO 0.7%** · **t 2.9 strict, 3.7 at 1,000 tries** |
+| **Walk-forward test** — what most practitioners actually use | re-fit/evaluate on rolling out-of-sample windows | keeps > 50–60% of backtest return OOS | **keeps ~70–80% (38%/yr vs 49.5%/yr backtest)** |
+
+## Why it matters
+
+- This is the missing third leg of the MarginCall4 breakout series: [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]] (4y, SPY sleeve) → [[2026-10-28-margincall4-breakout-10y-tsla-extension]] (10y, TSLA swap, combined Sharpe 2.34) → this tweet answers the exact skepticism gates flagged in both captures. The walk-forward line also quietly re-bases the headline: **38%/yr out-of-sample vs 49.5%/yr in backtest** — the honest number is the former.
+- Methodological bridge to the vault: the DSR row is the applied version of [[2026-10-24-dmartin-deflated-sharpe-ratio]] (same Bailey & López de Prado machinery, one day after we captured the explainer), and the Harvey & Liu t-score-after-multiple-testing haircut is the same hygiene demanded by [[2026-10-26-lucasjoly-thesis-ctafutures-trend-research]] and the market-map task — three independent captures converging on one rule: a backtest that only clears its in-sample bar is not evidence.
+- **Skepticism gates:** the numbers are self-reported by the strategy's author answering his own question; t = 2.9 sits below his own quoted > 3 bar on the strict view (he flags the 3.7-at-1,000-tries alternative — the number of trials assumed is doing real work there). Table transcribed by OCR from a compressed chart; cells approximate until checked against full-res. 38%/yr OOS is still an extraordinary claim, and "walk-forward keeps 70-80%" spans a wide band.
+- Actionable? The 10y note already carries a verify task; this tweet adds the specific validation metrics to check (recompute DSR/PBO/walk-forward on the replication), so the existing task gains a concrete checklist rather than a new one.
+
+## Links
+
+- Verifies/supersedes the skepticism gates in: [[2026-10-28-margincall4-breakout-10y-tsla-extension]] · [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]]
+- DSR methodology: [[2026-10-24-dmartin-deflated-sharpe-ratio]] · multiple-testing hygiene: [[2026-10-26-lucasjoly-thesis-ctafutures-trend-research]]
+- Breakout decay context: [[2026-09-16-guirao-breakout-decay-2026]] · sibling methodology: [[2026-10-26-onlybreakouts-market-mapping-time-grid]]
