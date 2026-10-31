@@ -1,0 +1,35 @@
+---
+title: "D. Martin (@dmartin_trading) — calibrating robustness checks: Walk-Forward + MCPT carry the load; stacked parameter-stability checks hurt"
+source: https://x.com/dmartin_trading/status/2115805855706681796
+captured: 2026-10-31
+tags: [trading, twitter, backtesting, robustness, walk-forward, monte-carlo, methodology, dmartin]
+kind: both
+---
+
+**Author:** D. Martin (@dmartin_trading) · posted 2026-10-29 14:00Z · received 2026-10-30T18:36Z, landed on the board 2026-10-31 19:42Z after the WA inbound-outage backfill (WhatsApp via RDP-30, routed by CoS) · 3 replies · 43 likes · 3,001 views. Quotes his own earlier tweet announcing the research project ("all robustness checks now fully built and bug free; running full research on false positive/negative rates, 2–4 days"). The tweet was TRUNCATED at capture by the syndication API (cut before the findings) — full text recovered via fxtwitter. Content in the attached photo (913×437 summary table) + his blog post (denelio.com — JS-rendered SPA, body not plain-curl-able; findings below come from tweet + OCR of the table).
+
+## Summary
+
+He measured which robustness checks actually discriminate real edges from junk, on data-mined strategies. The table (OCR-recovered):
+
+| Check | Junk passed | Real edges passed | Verdict |
+|---|---|---|---|
+| **MCPT** (Monte Carlo Permutation Test, Masters) | **1.4%** | **76%** | "The best single check. It tells real edges from luck well." |
+| **Walk-Forward** | **0.2%** | **44%** | "Strict, but it is the only check that catches edges that stop working." |
+| Monte Carlo Retest (SQX) | 15% | 63% | "Lets a lot of junk through. Useful at most as a cost stress at the end." |
+| SPP (System Parameter Permutation) | 0–5% | 64% (2–45% range) | "Lets junk through and overlaps with Walk-Forward. Adds little." |
+| Sequential Optimization | — | — | "Overlaps with Walk-Forward. Strict settings fail almost every edge, and loosening it lets junk in." |
+
+Headline finding (his words): "Walk Forward and MCPT are the standouts. Parameter stability checks like sequential optimization and SPP added nothing when used alongside Walk Forward. They actually hurt the pipeline."
+
+## Why it matters
+
+- Directly actionable on our own stack: the MarginCall4 audit standard we set two days ago ([[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]) leans on DSR + PBO + walk-forward. Martin's calibration says the load-bearing checks are **WF + MCPT**, and that stacking extra parameter-stability checks on top of WF is not free — it can reject real edges. Third dmartin capture, all one program: [[2026-10-01-dmartin-hypothesis-first]] (research discipline) → [[2026-10-24-dmartin-deflated-sharpe-ratio]] (the DSR explainer) → this (which checks to actually run).
+- The junk-passed column is the multiple-testing hygiene our TF-queue standards keep circling ([[2026-10-26-lucasjoly-thesis-ctafutures-trend-research]], [[2026-10-21-setupalpha-trend-system-robustness-tests]]): a check that passes 15% of junk strategies (MC Retest) isn't a validation, it's a vibe.
+- **Skepticism gates:** single author, self-built test harness, no sample sizes / edge counts / data published in the tweet — the rates are his summary of his own research; "junk" and "real edge" are his labels (circularity risk he'd presumably address in the blog). WF passing only 44% of real edges cuts both ways: strict means false negatives are the price. OCR cells approximate until checked against full-res.
+
+## Links
+
+- Same program: [[2026-10-01-dmartin-hypothesis-first]] · [[2026-10-24-dmartin-deflated-sharpe-ratio]]
+- Applied to our audits: [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] · [[2026-10-21-setupalpha-trend-system-robustness-tests]]
+- Multiple-testing hygiene: [[2026-10-26-lucasjoly-thesis-ctafutures-trend-research]]

@@ -1,0 +1,35 @@
+---
+title: "MarginCall4 — BoB: second L/S QQQ breakout strategy, -0.08 corr to QQQ, 0.44 to UnoMas; combined Sharpe 1.18 after costs"
+source: https://x.com/MarginCall4/status/2116585846191366452
+captured: 2026-10-31
+tags: [trading, twitter, breakout, long-short, qqq, portfolio-construction, correlation, backtesting]
+kind: both
+---
+
+**Author:** HedgeAlgo 🇺🇸 (@MarginCall4, "Algo and options trader. Be dumb, follow price. Fade macro. NFA.") · posted 2026-10-31 17:39Z · received 2026-10-31T19:27Z (WhatsApp via RDP-30, routed by CoS) · 0 replies · 8 likes · 631 views (2h fresh at capture; stats not yet meaningful). Content lives in the attached chart (2,152×1,441, preserved at `rdp_media/2116585846191366452/photo.jpg`).
+
+## Summary
+
+Fourth installment of the breakout family: **BoB**, another long/short QQQ strategy, positioned as a diversifier — **-0.08 correlation to QQQ buy-and-hold, 0.44 correlation to the L/S strategy posted a few days ago** (SPY/TSLA/QQQ/BTC — "UnoMas", QQQ leg only, = [[2026-10-28-margincall4-breakout-10y-tsla-extension]]).
+
+Chart metrics, 2017–2026, after costs (OCR-approximate cells):
+
+| Sleeve | Trades | Trades/yr | Win rate | PF | Sharpe (OOS) | Return/yr | MaxDD | t-score |
+|---|---|---|---|---|---|---|---|---|
+| Combined | 2,072 | 211 | 40.2% | 1.29 | 1.18 (1.12) | 17.2% | -16.4% | **3.67** |
+| Long | 1,094 | 111 | 43.1% | 1.34 | 1.05 (0.94) | 8.9% | -8.4% | 3.22 |
+| Short | 978 | 100 | 36.9% | 1.25 | 0.69 (0.72) | 8.3% | **-19.7%** | **2.19** |
+
+Equity curves 2018–2026 (combined 169%, long 88%, short 81%) with out-of-sample segments marked.
+
+## Why it matters
+
+- The diversifier thesis is getting a real correlation budget: two L/S breakout books at 0.44 to each other and ~0 to the underlying is the portfolio-construction argument the whole series builds toward ([[2026-10-27-margincall4-l-s-breakout-portfolio-addition]] → 10y extension → validation → this). It echoes the edge-index architecture of [[2026-10-31-futako1013-17-edge-index-forward-first]] captured the same day.
+- **Skepticism gates:** the short leg's t-score 2.19 sits well below the >3 bar the author himself quoted in his own validation tweet ([[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]) — the combined 3.67 is carried by the long leg. Combined Sharpe 1.18 after costs is far more modest than the 10y extension's 2.34 headline — same author, same method family, one week apart; the honest comparison is OOS-to-OOS. Win rate 40.2% confirms the breakout/trend profile (fat right tail, most trades lose). Self-reported, OCR cells approximate, stats fresh.
+- Actionable: verify task filed (below) — same standard as the two prior installments.
+
+## Links
+
+- Series: [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]] · [[2026-10-28-margincall4-breakout-10y-tsla-extension]] · [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]
+- Same-day ensemble echo: [[2026-10-31-futako1013-17-edge-index-forward-first]]
+- Validation-hierarchy context: [[2026-10-31-dmartin-calibrating-robustness-checks]]

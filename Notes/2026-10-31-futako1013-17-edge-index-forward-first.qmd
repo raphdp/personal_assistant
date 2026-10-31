@@ -1,0 +1,28 @@
+---
+title: "FUTAKO (@Futako1013) — 17 confirmed discretionary edges run as one index, forward-first (Japanese, machine-translated)"
+source: https://x.com/Futako1013/status/2115710647568879956
+captured: 2026-10-31
+tags: [trading, twitter, ensembles, edge-diversification, forex, forward-testing, japanese]
+kind: reference
+---
+
+**Author:** FUTAKO (@Futako1013) · posted 2026-10-29 07:41Z · received 2026-10-30T13:40Z, landed on the board 2026-10-31 19:42Z after the WA inbound-outage backfill (WhatsApp via RDP-30, routed by CoS) · 7 replies · 152 likes · 14,719 views. Original in Japanese; translation below is mine, original preserved in the source. Content partly in the attached photo — a 4-panel per-instrument performance grid (2020–2026, one panel identified as XAU/gold), OCR-approximate cells transcribed in the Summary.
+
+## Summary
+
+Translation: "I have 17 discretionary-derived edges whose advantage I've already confirmed — I've decided to incorporate all of them index-style and run them together. Designed so that if one edge breaks, the others compensate. My past self-built EAs have run publicly on myfxbook for over a year without blowing up — but in the end, forward performance is everything. This one too: first go collect forward data."
+
+The chart shows the per-instrument members of the index: panels around PF 1.9–2.0, Sharpe 2.1–3.1 (e.g. XAU: PF 1.94, Sharpe 2.09, NXDD 7.1; another PF 2.04, Sharpe 3.06), 2020–2026 windows with HDD/NXDD-style risk columns (OCR cells approximate — one panel reads "PF .89", likely a mangled 1.89; don't quote without the full-res check).
+
+## Why it matters
+
+- Same architecture thesis as the MarginCall4 breakout family in our vault: many mediocre-correlated edges, combined into one book so single-edge decay doesn't kill the machine — cf. [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]] (combined Sharpe above every sleeve) and [[2026-10-31-margincall4-bob-l-s-qqq-low-corr]] (correlation budgeting across strategies, 0.44 between siblings).
+- The humility line is the capture reason: "in the end, forward is everything" from someone with 1+ year of public, unbroken myfxbook track record — he still refuses to sell the backtest. This is the lived version of the rule our validation captures keep converging on ([[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]): the honest number is out-of-sample.
+- **Skepticism gates:** 17 edges each "confirmed" is a multiple-testing pile — each edge cleared some in-sample bar before being admitted, and combining them doesn't launder that selection. Same-day caution from [[2026-10-31-dmartin-calibrating-robustness-checks]]: stacking more checks on top of each other added nothing and can hurt. Self-reported grid, discretionary-FX context (different market microstructure than our futures/ETF queue), OCR cells approximate, machine translation.
+- Reference only — no vault task. The idea (edge-index + correlation budget + forward-first) is already represented in the TF-queue replication standards.
+
+## Links
+
+- Ensemble-of-edges sibling family: [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]] · [[2026-10-31-margincall4-bob-l-s-qqq-low-corr]]
+- Forward-first / validation hygiene: [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] · [[2026-10-31-dmartin-calibrating-robustness-checks]]
+- FX-systematic sibling capture: [[2026-10-12-systematicedge-gotobi-jpy-claude-strategy]]
