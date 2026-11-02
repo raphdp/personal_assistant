@@ -1,0 +1,37 @@
+---
+title: "MarginCall4 — BoS: intraday L/S QQQ algo, 4 variants on one $25k account, -0.05 corr to QQQ; combined Sharpe 1.31, t 5.20 over 2011–2026"
+source: https://x.com/MarginCall4/status/2116964890867077149
+captured: 2026-11-02
+tags: [trading, twitter, intraday, long-short, qqq, breakout, portfolio-construction, correlation, ensembling, backtesting]
+kind: both
+---
+
+**Author:** HedgeAlgo 🇺🇸 (@MarginCall4, "Algo and options trader. Be dumb, follow price. Fade macro. NFA.") · posted 2026-11-01 18:45Z · received 2026-11-02T12:11Z (WhatsApp via RDP-30, routed by CoS) · 2 replies · 38 likes · 37 bookmarks · 2,667 views (bookmarks ≈ likes — saved-as-recipe signal). Content lives in the attached chart (2,053×1,449, preserved at `rdp_media/2116964890867077149/photo.jpg`).
+
+## Summary
+
+Fifth installment of the breakout family: **BoS**, an **intraday** long/short QQQ algo — first intraday member of the series. Four variants of the same strategy trade a **single $25k account** (2x max leverage → up to $50k intraday size). Correlations: **-0.05 to QQQ buy-and-hold**, 0.37 to UnoMas ([[2026-10-28-margincall4-breakout-10y-tsla-extension]]), 0.38 to BoB ([[2026-10-31-margincall4-bob-l-s-qqq-low-corr]]) — the three L/S books are now pairwise 0.37–0.44 while sitting ~0 to the underlying.
+
+Chart metrics, 2011–2026, after costs (OCR-approximate cells):
+
+| Sleeve | Trades | Trades/yr | Win rate | PF | Return/yr | MaxDD | Sharpe | t-score (daily) |
+|---|---|---|---|---|---|---|---|---|
+| Combined | 25,092 | 1,586 | 29.4% | 1.18 | 22.6% | **-18.3%** | 1.31 | **5.20** |
+| Variant 1 | 6,675 | 422 | 28.9% | 1.20 | 6.0% | -7.4% | 1.21 | 4.80 |
+| Variant 2 | 5,748 | 363 | 30.0% | 1.18 | 5.3% | -9.8% | 1.06 | 4.20 |
+| Variant 3 | 6,802 | 430 | 29.0% | 1.19 | 6.1% | -5.0% | 1.14 | 4.54 |
+| Variant 4 | 5,867 | 371 | 30.0% | 1.17 | 5.2% | -8.2% | 0.99 | 3.92 |
+
+Equity curves 2012–2026, terminal bars OCR-read as Combined $89k, V1/V3 $24k, V2/V4 $21k.
+
+## Why it matters
+
+- The ensemble thesis is compounding: a third L/S book at 0.37–0.44 pairwise correlation, ~0 to QQQ, is exactly the diversifier budget the series has been building since [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]] — and this one extends the family to intraday holding periods. Same architectural argument as [[2026-10-31-futako1013-17-edge-index-forward-first]]: pool imperfectly-correlated edges rather than pick one.
+- **Ensembling math worth internalizing:** four variants each at Sharpe ~1.0–1.2 / 5–6%/yr combine to 22.6%/yr at Sharpe 1.31. But the combined t (5.20) is far below the ~8.7 you'd get pooling four uncorrelated t≈4.4 books — back-of-envelope, the variants are ~0.6 correlated **with each other**. They're four parameterizations of one bet, not four strategies. The combined MaxDD (-18.3%) being WORSE than every single variant's (-5.0 to -9.8%) says the same thing: drawdowns overlap in time.
+- **Skepticism gates:** the equity bars don't obviously reconcile with the table — if all curves start at $25k, variants ending at $21–24k are net losers despite claimed 5–6%/yr; if each variant runs a quarter of the account (~$6k start), $21–24k terminal implies ~9%/yr compounded, above the table's per-variant cell. Capital-allocation convention needs pinning down before quoting 22.6%/yr. Also self-reported, OCR cells approximate, and the author's own validation bar ([[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]) applies: combined t 5.20 passes his >3 screen, per-variant t 3.92–4.80 pass too, but 1,586 trades/yr makes multiple-testing haircuts cheap to apply and mandatory.
+- Actionable: verify task filed (below) — same standard as the prior four installments.
+
+## Links
+
+- Series: [[2026-10-27-margincall4-l-s-breakout-portfolio-addition]] · [[2026-10-28-margincall4-breakout-10y-tsla-extension]] · [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] · [[2026-10-31-margincall4-bob-l-s-qqq-low-corr]]
+- Ensemble echo: [[2026-10-31-futako1013-17-edge-index-forward-first]] · validation-hierarchy context: [[2026-10-31-dmartin-calibrating-robustness-checks]]
