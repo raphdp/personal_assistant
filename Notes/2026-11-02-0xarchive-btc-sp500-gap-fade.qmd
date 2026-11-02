@@ -1,0 +1,36 @@
+---
+title: "0xArchive — fade big S&P opening gaps in BTC (9:35–11:35 ET): Sharpe 2.06 after fees on Hyperliquid, held on 195 trades back to 2022 — the time-gated genre done with unusual rigor"
+source: https://x.com/0xArchiveIO/status/2117303882082885692
+captured: 2026-11-02
+tags: [trading, twitter, bitcoin, sp500, gap-fade, intraday, mean-reversion, cross-asset, backtest, hyperliquid, 0xarchive]
+kind: both
+---
+
+**Author:** 0xArchive (@0xArchiveIO) · posted 2026-11-02 17:12Z · received 2026-11-02T19:31:08Z (WhatsApp via RDP-30, routed by CoS). 4 replies; likes/views not exposed at capture. Syndication text truncated mid-sentence — full text recovered via fxtwitter (794 chars). Chart OCR'd (preserved at `rdp_media/2117303882082885692/HWIrsjmbEAA3BtC.jpg`). Rule originates from @skepticalxbt (credited in-tweet).
+
+## Summary
+
+A two-hour cross-asset mean-reversion rule: **when the S&P 500 opens with a big gap, take the other side in BTC.** S&P gaps up → short BTC at 9:35 New York; gaps down → buy it; close at 11:35. A "big gap" = **≥1.5× the S&P's typical opening move over the trailing 60 sessions** (1× on the first session of a week).
+
+Claimed results, Hyperliquid, March 2025–Nov 2026 (58 trades = 30 gap-up + 28 gap-down):
+
+- **Sharpe 2.06 after fees**, +0.45%/trade, 60% winners, worst drawdown 4.0%.
+- **The mirror loses:** trading WITH the gap instead costs −0.65%/trade.
+- **Out-of-sample discipline:** rule received as-is from @skepticalxbt, "we didn't tune it", and it also held on **195 trades back to 2022**.
+- **Multiple-testing check:** 500 randomized versions (random days, random side) all did worse.
+- **Fragility disclosed:** entering an hour late kills the edge — the open is what matters.
+- Chart (average path from 9:35): gap-up days drift −0.4%→−0.6% into 11:05–11:35; gap-down days +0.58%; other sessions +0.03% (n = 30/28/348). Source: Hyperliquid BTC 5-min candles + Yahoo S&P open/close.
+
+## Why it matters
+
+- **This is the [[2026-10-01-algojan-nq-monday-short]] genre — time-gated index fade — executed with the rigor that genre almost never shows:** the rule came from outside (hypothesis-first testing, per [[2026-10-01-dmartin-hypothesis-first]]), no tuning is claimed, it held out-of-sample back to 2022 (195 trades), and the 500-random-versions check is a poor-man's PBO in the spirit of [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]. Even the entry-time sensitivity is disclosed rather than hidden.
+- **Economic mechanism is plausible:** a large S&P gap is a liquidity/panic event; BTC's 24/7 book absorbs the displaced flow and mean-reverts once equities stabilize. The chart's clean separation (+0.58% fade-day vs −0.5% gap-up path) is what a real risk-premium looks like — but it's also what a 19-month BTC–S&P coupling regime looks like.
+- **Skepticism gates:** self-reported, and everything hangs on fee/slippage assumptions at Hyperliquid for 2-hour holds (+0.45%/trade is thin — taker fees both ways on a perp would eat most of it, so the backtest presumably assumes maker or net-of-feats fills); 58 live-window trades with worst-DD 4% is small-sample comfort; and the S&P→BTC linkage is regime-dependent — a 2022–2026 sample spans exactly one coupling era. The OOS 195-trade count is the single most load-bearing claim and is unverifiable from the tweet.
+- Actionable: replication task filed (below) — pull Hyperliquid 5-min candles + S&P opens, rebuild the 30/28 gap-day sample, check the fee assumption before this earns any sizing. Same-day intraday companion: [[2026-11-02-margincall4-bos-intraday-l-s-qqq-variants]].
+
+## Links
+
+- [[2026-10-01-algojan-nq-monday-short]] — same genre, weaker evidence: the contrast case.
+- [[2026-10-01-dmartin-hypothesis-first]] — test received hypotheses, don't mine them: exactly what happened here.
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — randomization checks as multiple-testing defense.
+- [[2026-11-02-margincall4-bos-intraday-l-s-qqq-variants]] — same-day intraday capture; ensemble/diversification context.
