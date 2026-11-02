@@ -1,0 +1,24 @@
+---
+title: "sitenley — BoardUI: 'stop ai slop in your UI' — React design system for dashboards (103 components, 19 chart cards, Tailwind)"
+source: https://x.com/batukrskl/status/2117004164567875910
+captured: 2026-11-02
+tags: [tools, twitter, react, design-system, dashboards, tailwind, frontend]
+kind: reference
+---
+
+**Author:** launch by sitenley (Mertcan) @sitenley 2026-11-01 15:33Z ("stop ai slop in your UI" → boardui.com); received via batukrskl (Batuhan) endorsement 2026-11-01 21:21Z ("most advanced, most beautiful i've seen so far… appreciate Mertcan's work") — 1,025 likes · 1,908 bookmarks · 312k views · 5 replies on the endorsement; 71 replies on the launch tweet. Received 2026-11-02T12:15Z (WhatsApp via RDP-30, routed by CoS).
+
+## Summary
+
+BoardUI (boardui.com) — a React design system positioned explicitly against generic AI-generated UI: **103 React components including 19 chart cards, 10 Pro dashboard templates, Tailwind CSS styling, editable source code**. The launch hook ("stop ai slop in your UI") is a counter-position to the flood of samey LLM-generated dashboards; the endorsement that surfaced it calls it the most advanced dashboard UI the author has seen.
+
+## Why it matters
+
+- Reference bookmark for any dashboard-heavy frontend work — the chart-card component set (19 variants) is the relevant part for trading/perf dashboards, and "editable source" means components are meant to be forked, not just consumed.
+- The bookmark ratio on the endorsement (1,908 saves vs 1,025 likes) is the saved-as-tool signal — people are filing this for their next build, same reflex as a recipe.
+
+**Skepticism gates:** vendor page, marketing copy; pricing/license not verified; breadth (103 components) says nothing about depth — would need a hands-on pass before adopting anywhere. No action filed; reference only.
+
+## Links
+
+- Launch: x.com/sitenley/status/2116916615644057920 · endorsement (source): x.com/batukrskl/status/2117004164567875910 · product: boardui.com

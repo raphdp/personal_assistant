@@ -1,0 +1,29 @@
+---
+title: "quantbeckman — KG-enhanced LLM sentiment paper (FinLLM-KG, Imperial): Sharpe 3.15 with his own caveat — 'high R² is not tradeable signal'"
+source: https://x.com/quantbeckman/status/2116813671401701459
+captured: 2026-11-02
+tags: [trading, twitter, machine-learning, llm, knowledge-graph, sentiment, ensemble, microstructure, validation, papers]
+kind: both
+---
+
+**Author:** Quant Beckman (@quantbeckman) · posted 2026-11-01 08:44Z · received 2026-11-02T12:16Z (WhatsApp via RDP-30, routed by CoS) · 2 replies · 61 likes · 76 bookmarks · 5,737 views. Self-quote thread (3 links, 2026-10-31 → 11-01); content lives in four paper figures (OCR'd, preserved under `rdp_media/`).
+
+## Summary
+
+A three-tweet self-arc quoting his way down the evidence chain:
+
+1. Root (2116056655980810472, 10-31): "I got an idea from incorporating a **differentiable diversity penalty into an ensemble**" — photo of **Fig 3 of "Calibration of Passive Market Impact with a Queue-Sensitive Propagator Model"** (Hafsit, Lillo, Szymanski + Ouazzani-Chahdi/Rosenbaum lineage — Hawkes-driven order flow + queue-reactive LOB dynamics; price = universal propagator term + state-dependent queue correction; calibrated on HF order-book data, passive-impact term adds explanatory power beyond the classical propagator).
+2. Middle (2116455549332042118, 10-31): "The main price proxy depends on the explanatory variables. **High R² ≠ tradeable signal.**" — Fig 3 shows the caution in his own pipeline: queue-drift affine fits with **R² 0.82–0.94 on the fit region but -0.81 the moment you extend the queue-state range past q≈140** (slope flips, fit collapses) — in-sample fit evaporating one regime over.
+3. Top (2116813671401701459, 11-01): the result — **"Sharpe 3.15"** on the FinLLM-KG paper's sentiment long-short portfolio, immediately caveated by himself: "main concerns are potential **backtest selection bias, unrealistic trading assumptions and insufficient OOS**." Paper: **FinLLM-KG — Knowledge Graph-Enhanced LLMs for Financial Sentiment Analysis in Algorithmic Trading** (Iacovides, Hannibal, Zhou, Mandic — Imperial College London). KG triples from SEC 10-K filings injected at inference (no weight updates) as company profiles or relevance-ranked triples; sentence- and triple-level SHAP makes predictions inspectable. Fig 2: cumulative returns of the 35% long-short portfolio, Baseline vs Summary vs Top-k Triples vs S&P 500, 2016–2021.
+
+## Why it matters
+
+- Two vault threads meet here. (a) **Validation discipline:** the author applies to his own Sharpe 3.15 exactly the screens our MarginCall4 series runs into — selection bias, unrealistic assumptions, insufficient OOS ([[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]], [[2026-10-31-dmartin-calibrating-robustness-checks]]) — and his R²-vs-signal tweet is the same lesson as the DSR/PBO walk-forward bar: fit quality inside the sample says nothing about tradeability outside it. (b) **Ensembling:** the differentiable-diversity-penalty idea echoes the correlation-budget architecture of [[2026-11-02-margincall4-bos-intraday-l-s-qqq-variants]] and [[2026-10-31-futako1013-17-edge-index-forward-first]] — but as a *learned* penalty rather than post-hoc variant correlation.
+- The FinLLM-KG design is the interesting artifact: inference-time KG grounding + per-fact Shapley attributions = explainable sentiment, at near-zero compute — the opposite pole to black-box fine-tunes; Fig 2's gap between Baseline and Top-k Triples is the whole pitch.
+- **Skepticism gates:** Sharpe 3.15 is the paper's simulated portfolio (2016–2021 window, sentiment LS, 35% leg — pre-cost assumptions unknown); the author himself flags all three failure modes. The propagator figure is context/inspiration, not his result. Bookmark ratio (76 vs 61 likes) = saved-for-reference.
+- Actionable: verify task filed (below) — pull the FinLLM-KG paper and pin down whether 3.15 survives costs/oss.
+
+## Links
+
+- Validation thread: [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] · [[2026-10-31-dmartin-calibrating-robustness-checks]]
+- Ensemble thread: [[2026-11-02-margincall4-bos-intraday-l-s-qqq-variants]] · [[2026-10-31-futako1013-17-edge-index-forward-first]]
