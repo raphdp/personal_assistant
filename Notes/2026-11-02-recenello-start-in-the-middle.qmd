@@ -1,0 +1,29 @@
+---
+title: "Anthony Recenello — start every conversation in the middle"
+source: https://www.instagram.com/reel/DdmA6QQAdai/
+captured: 2026-11-02
+tags: [communication, people-skills, social-skills, instagram, reel, dating, first-impressions]
+kind: reference
+---
+
+**Source:** Anthony Recenello (@anthonyrecenello) · Instagram reel · ~35s talking-head · received 2026-11-02 (WhatsApp via RDP-30, routed by CoS). Reconstructed by transcript (faster-whisper); caption is a coaching promo ("curated dating ecosystem — no apps, no bars, link in bio"), content is the spoken tip.
+
+## Summary
+
+A piece of advice he got 20+ years ago that he's used since: **start every conversation in the middle.** Skip the small talk, skip the intro — talk to the person about what you actually want to talk about, *as if you're already friends*. The full transcript (short reel):
+
+> "Somebody gave me a really great piece of advice over 20 years ago and they said start every conversation in the middle. In other words, skip the small talk, skip the intro, skip all that bullshit. Just start talking to them about what you want to talk about as if you guys are already friends. And so if I only have minimal context for who they are as a person and for how we connect, I just use that minimal context, which is what I see on them or the way that they hold themselves, what they're wearing, all that type of stuff. And I use my curiosity to find any interest and that's what I focus on. I don't make this difficult. I make it as easy as possible and also that's the most organic way anyway."
+
+Mechanically: (1) open with substance, not scripts; (2) when you know nothing about the person, mine the observable — how they carry themselves, what they're wearing; (3) let genuine curiosity pick one interesting thing and focus there; (4) don't over-engineer it — ease is the point.
+
+## Why it matters
+
+- Direct counterpart to the Van Edwards blueprint ([[2026-10-18-van-edwards-conversation-blueprint]]): she argues Level-1 small talk's real job is *ease and warmth* — not skip-worthy — while Recenello says skip it entirely. The synthesis: skip the **scripts** ("how are you, what do you do"), never the warmth. Both agree the engine is real curiosity about the other person, and both land on "be easy to talk to" as the whole game.
+- The "use what's observable + curiosity" move is the in-person version of the information-gap opener pattern from [[2026-08-29-clickbait-dating-openers]] — hook with something specific and genuine rather than a generic template.
+- Low-cost, immediately triallable tactic; costs nothing if it flops.
+- **Skepticism:** single anecdote ("somebody told me 20 years ago"), zero evidence, and the reel is itself a funnel for his high-ticket dating coaching (the caption's "you've optimized every area of your life — dating's the one missing the education" is pure qualification copy). The tip stands on its own, but this is marketing, not research.
+
+## Links
+
+- [[2026-10-18-van-edwards-conversation-blueprint]] — the mechanics-backed version: small talk as warmth, question swaps, turn-taking.
+- [[2026-08-29-clickbait-dating-openers]] — same curiosity-gap mechanism, first-messages variant.
