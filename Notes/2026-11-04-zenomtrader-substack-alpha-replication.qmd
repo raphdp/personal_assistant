@@ -1,0 +1,30 @@
+---
+title: "ZenomTrader — 'Substack might be the best source of alpha': 12,000 posts harvested, 149 strategies auto-replicated"
+source: https://x.com/ZenomTrader/status/2117596622200697246
+captured: 2026-11-04
+tags: [trading, twitter, llm, agents, strategy-replication, substack, backtesting, overfitting, sharpe]
+kind: reference
+---
+
+**Author:** ZenomTrader (@ZenomTrader) · posted 2026-11-03 12:35Z · received 2026-11-04T09:31:50Z (WhatsApp via RDP-30, routed by CoS) · 11 replies · 23,981 views (via fxtwitter; syndication nulls likes/reposts). Text recovered FULL via fxtwitter (syndication truncated it mid-sentence); content image is a replication-dashboard screenshot (OCR-recovered, preserved at `rdp_media/2117596622200697246/zenom1.jpg`).
+
+## Summary
+
+Claim: an LLM pipeline has mined **12,000+ Substack posts** and **automated 149 of them** — attempting to replicate the authors' stated results as runnable strategies. The closing thesis (recovered from truncation): *"The less efficient the market and the more heuristic-driven the instrument, the higher the potential Sharpe ratio. But the harder it becomes to find a way to actually trade it."*
+
+The dashboard screenshot shows the replication fleet (OCR-approximate titles): country-ETF IBS rank, noise-band intraday momentum variants (Zarattini/Concretum lineage, appears twice), BTC Donchian breakout ensembles (5–36 lookbacks), SPY overnight-gap reversal, BTC short-term reversal after large jumps ("paper: De …"), BTC EMA20/50+ATR trend, 5-min opening-range breakout on TQQQ/QQQ (two variants), VIX term-structure basis switching (VIXY/SVXY), static QQQ/GLD/GBTC weekly rebalance, commodity calendar (VIX-aware), Gotobi-day USD/JPY (03:00–09:55 Tokyo), skew-fade, Antonacci absolute momentum top-5 — with a Sharpe column reading ≈1.1–1.35 for most rows, **and the pipeline's own "overfit suspect" flags visible on several**.
+
+## Why it matters
+
+- This is the industrialized version of what the vault's validation thread keeps preaching: don't read claims, **replicate them** — then distrust your own replications. The screenshot's honest tell is those "overfit suspect" flags and the mundane ~1.1–1.3 Sharpes once actually coded, versus the flashy numbers Substack authors advertise.
+- Direct companion to [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] — same "LLM reads the research corpus" shape; here the output is strategies, there it was sentiment. Both converge on selection-bias/realism-of-assumptions as the binding constraint.
+- The efficiency thesis (inefficient market + heuristic instrument → higher potential Sharpe, harder execution) is a clean one-liner for why odd corners (JPY time-of-day, commodity calendars, VIX basis) keep showing up in the replication list.
+- **Skepticism gates:** "12,000 posts / 149 automated" is unfalsifiable from the tweet — no repo, no methodology page cited in what we captured. The dashboard Sharpes are the *pipeline's own* numbers (in-sample until proven otherwise); a fleet of 149 strategies is itself a multiple-testing machine — the DSR/PBO haircut in [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] applies to the fleet, not just each row. No costs/turnover visible.
+- Reference only — no task; nothing here is runnable without their code.
+
+## Links
+
+- [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]]
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]
+- [[2026-10-31-dmartin-calibrating-robustness-checks]]
+- [[2026-10-31-futako1013-17-edge-index-forward-first]]

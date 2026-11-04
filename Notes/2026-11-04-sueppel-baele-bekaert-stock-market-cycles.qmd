@@ -1,0 +1,33 @@
+---
+title: "Sueppel → Baele & Bekaert, 'Stock Market Cycles' (SSRN 7649303) — bandwidth-calibrated bull/bear identification"
+source: https://x.com/macro_synergy/status/2117517382893891990
+captured: 2026-11-04
+tags: [trading, twitter, paper, ssrn, market-cycles, regimes, bull-bear, methodology, macro]
+kind: reference
+---
+
+**Author:** Ralph Sueppel (@macro_synergy, macro research curator) · posted 2026-11-03 07:21Z · received 2026-11-04T09:31:50Z (WhatsApp via RDP-30, routed by CoS) · 2 replies · likes/views not exposed at capture. Tweet quotes the paper's abstract (truncated at capture — text ends mid-clause on the t.co, which resolves to the tweet's own photo/1); the four attached images are the paper's event-study figures (OCR-recovered, preserved under `rdp_media/2117517382893891990/`).
+
+## Summary
+
+Sueppel signal-boosts **Baele & Bekaert, "Stock Market Cycles" (SSRN 7649303, 2026)** — matched via Crossref exact-title search. From the quoted abstract: a **new methodology to identify bear and bull markets** in the US stock market that relies on calibrating **a single bandwidth parameter around each trading day** to define peaks and troughs; it **focuses on mean regimes** (price level, not variance) and uses **cumulated returns** [abstract truncated at capture].
+
+The four figure panels (OCR-annotated event studies around identified crash episodes):
+
+- **Panel A — 1987 Crash:** Sep–Dec 1987; annotations incl. "crash", Oct 1987, "Tax threatens takeovers", liquidity pledge, Hong Kong crash spillover, dollar to new lows.
+- **Panel B — TMT/Dot-Com, 2000–01:** Mar–Sep 2001; NASDAQ margin-call spiral, NASDAQ 2,000, failed holiday-season rally, dot-com bankruptcies, 9/11 market reopen.
+- **Panel C — GFC, 2007–09:** TARP vote, Nov 2009, Mar 6 (2009 bottom) among the recovered annotations.
+- **Panel D — COVID, 2020:** 24 Feb (Italy), 09 Mar (market-wide circuit breaker), 16 Mar, 23 Mar, oil-price collapse, Fed intervention.
+
+## Why it matters
+
+- Regime identification is upstream of every regime-conditional idea in the vault — the same curator's [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] *consumes* a regime definition like this one as an input. A cleaner bull/bear segmentation (one bandwidth parameter, mean-focused, no arbitrary drawdown thresholds) would change what "regime" even means in those pipelines.
+- Baele/Bekaert lineage is serious (their bull/bear and volatility-regime work is two decades deep) — this is a methods paper by people who have run these screens before, not an anonymous card.
+- The event-study panels double as a compact crash-annotation atlas (1987 → COVID) — useful reference for how each historical episode actually unfolded day-by-day.
+- **Skepticism gates:** SSRN working paper (2026), not yet journal-refereed; SSRN itself is Cloudflare-walled from this host, so only the abstract fragment Sueppel quoted + the four figures were captured — the "cumulated returns…" continuation and all calibration results are unread. Bandwidth-parameter methods still embed researcher choices (window, smoothing) — "one parameter" ≠ zero degrees of freedom. US-only sample.
+- Reference only — no task; if the paper ever matters for a build, pull it via an authenticated session (Inbox precedent for gated papers).
+
+## Links
+
+- [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]]
+- [[2026-10-31-dmartin-calibrating-robustness-checks]]

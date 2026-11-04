@@ -1,0 +1,32 @@
+---
+title: "Lihong062 — leveraged-ETF rebalancing as a tradable distortion in $SOXX/$SOXL/$SOXS (quote chain to the 'quiet part' market-maker tweet)"
+source: https://x.com/Lihong062/status/2117444304348029137
+captured: 2026-11-04
+tags: [trading, twitter, letf, leveraged-etf, rebalancing, microstructure, semiconductors, soxl, market-makers]
+kind: both
+---
+
+**Author:** Lihong | Freeport (@Lihong062) · posted 2026-11-03 02:30Z · received 2026-11-04T09:31:50Z (WhatsApp via RDP-30, routed by CoS) · 4 replies · likes/views not exposed at capture. Self-quote chain two levels deep; deeper quote's photo is @DeepDishEnjoyer's viral market-maker tweet (OCR-recovered, preserved at `rdp_media/2117517382893891990/lh_q.jpg`).
+
+## Summary
+
+Tweet: *"People seem to doubt that leveraged-ETF rebalancing creates a sufficiently meaningful incentive to distort, say, the semiconductor index $SOXX $SOXL $SOXS. We can actually very easily put numbers on the mechanism and show roughly how much money can be made from the distortion"* — thread head; the numbers themselves are in the continuation (not captured; requires the full thread).
+
+The quote chain it rides on:
+
+1. **Root quote (2117335494858293405, 11-02):** "saying the quiet part out loud here" — quoting @DeepDishEnjoyer (12:16 PM · 11/2/26 · 18K views): *"im old enough to remember when market makers provided liquidity and bonafide price discovery and didn't just make 90% of their pnl on dynamic arbs where they monotonically push the price of an instrument in one direction to fuck over some retail product like a levered etf."*
+2. **Deeper root (2111145997900652815):** Lihong's own *"lower till $SOXL inflows negative."*
+
+Mechanism: daily-rebalanced 3x funds (SOXL/SOXS) force mechanical end-of-day flow in SOXX components; market makers anticipate it and front-run the rebalance — pushing price "monotonically" into the flow — so the distortion is itself a predictable, sizeable, tradeable pattern (in Lihong's framing, directional until SOXL inflows turn negative).
+
+## Why it matters
+
+- A concrete microstructure edge candidate tied to *structure* (mandated flows) rather than signals — the vault's leverage thread ([[2026-10-24-evansemet-diminishing-returns-from-risk]]) covers the risk side of LETFs; this is the flow side: who eats the rebalancing, and can anyone harvest it.
+- The quote chain is unusually strong rhetoric for the claim: a market maker *confirming* the PnL mix ("90% of pnl on dynamic arbs") is anecdotal but on-mechanism.
+- **Skepticism gates:** the "we can easily put numbers on it" numbers are NOT in the captured tweet — thread continuation unfetched; the DeepDishEnjoyer quote is a rage-shaped anecdote (18K views, zero verification); "monotonically push price" overstates what's provable — anticipatory front-running competes away most clean-arb margins, and the distortion's size vs. SOXX's natural liquidity is exactly what the thread claims to quantify. Captured = claim + mechanism, not evidence.
+- Task filed: pull the full Lihong thread (and any linked note) for the actual quantification (Inbox).
+
+## Links
+
+- [[2026-10-24-evansemet-diminishing-returns-from-risk]]
+- [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] (adjacent "measure before believing" thread)

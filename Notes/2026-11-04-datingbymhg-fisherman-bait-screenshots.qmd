@@ -1,0 +1,30 @@
+---
+title: "DatingByMHG — 'A fisherman can't change his bait every single time…' (templated openers at scale)"
+source: https://x.com/DatingByMHG/status/2117665591339225258
+captured: 2026-11-04
+tags: [dating, twitter, screenshots, openers, volume-game, social-dynamics]
+kind: reference
+---
+
+**Author:** Dating By Murray Hill Guy (@DatingByMHG) · posted 2026-11-03 17:09Z · received 2026-11-04T09:31:50Z (WhatsApp via RDP-30, routed by CoS) · 6 replies · likes/views not exposed at capture. Content lives in two screenshots (OCR-recovered, preserved at `rdp_media/2117665591339225258/mhg1.jpg`, `mhg2.jpg`).
+
+## Summary
+
+A two-screenshot joke-with-a-thesis:
+
+1. **Screenshot 1 (the catch):** a texting conversation with "Emily" — his line *"I'll never see a face like yours in years of girls to come"* (sent 1:25PM), her delighted reply *"Hehe stopp you're so sweet Ty handsome?!"* (1:55PM).
+2. **Screenshot 2 (the punchline):** the SAME compliment pasted verbatim into parallel threads with **Hannah, Blair, Mariah, greta, anna** (and implied more) — the identical "I'll never see a face like yours in years…" line in every chat.
+
+The metaphor: a fisherman doesn't re-tie new bait every cast — one proven opener, cast wide. The line worked on Emily; the second screenshot shows it deployed as a template across the whole pipeline.
+
+## Why it matters
+
+- Direct companion to [[2026-08-29-clickbait-dating-openers]] — that capture covered openers as engagement content; this one shows the *operational* side: openers as a reusable, copy-pasted asset across many simultaneous conversations. Volume + template, not bespoke craft.
+- Sits in the same "systems over spontaneity" bucket as [[2026-11-02-recenello-start-in-the-middle]] (social dynamics content) — but from the high-volume online-dating angle rather than in-person.
+- **Skepticism gates:** @DatingByMHG is a persona/advice account (finance-guy-dates-in-NYC bit) — screenshots are unverifiable staging, plausibly curated or invented for engagement; "Emily" conversation timestamps (1:25PM → 1:55PM reply) are exactly the shape a manufactured screenshot would take. Take the mechanism (templated openers scale) as the idea; don't take the screenshots as evidence the specific line converts.
+- Reference only — no task.
+
+## Links
+
+- [[2026-08-29-clickbait-dating-openers]]
+- [[2026-11-02-recenello-start-in-the-middle]]

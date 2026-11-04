@@ -1,0 +1,31 @@
+---
+title: "owengretzinger — agent-era CI checklist (Oxlint, bun check, blobless clones, nx affected, pre-push hooks)"
+source: https://x.com/owengretzinger/status/2117003552472355024
+captured: 2026-11-04
+tags: [devtools, twitter, ci, developer-experience, agents, testing, monorepo]
+kind: both
+---
+
+**Author:** owen (@owengretzinger) · posted 2026-11-01 21:19Z · received 2026-11-04T09:31:50Z (WhatsApp via RDP-30, routed by CoS) · 70 replies · likes/views not exposed at capture. Tweets a TL;DR; the quoted tweet links an **X long-form article (login-gated, unfetchable at capture)**; the attached image is the CI cost breakdown (OCR-recovered, preserved at `rdp_media/2117003552472355024/owen1.jpg`).
+
+## Summary
+
+A checklist for making repos fast for *agents* (and humans) — framed as "send this to your agent :)":
+
+- **Faster runners** (e.g. ex-Blacksmith class) — the chart shows ~2 min per PR burned just *waiting for a machine*, inside an ~11 min job (≈70s lint, ≈33s typecheck, <5s test shard once isolated, ≈35s checkout, ≈12–13s install/deps — OCR-approximate).
+- **Oxlint** replacing ESLint, **`bun check`/bun for tsc** — linter/typecheck engine swaps.
+- **Bigger test machines + Vitest isolation OFF** — throw hardware at it instead of paying isolation overhead.
+- **Fix caching, blobless clones** (`git clone --filter=blob:none`) — checkout and dep-install are pure waste when cacheable.
+- **Parallel jobs + `nx affected`** — only build/test what changed.
+- **Pre-push hooks** — catch before CI minutes burn.
+
+## Why it matters
+
+- The pitch is agent-era: agents burn CI cycles iterating, so per-PR latency and queue time compound into agent wall-clock — the same "buy back attention" logic this vault applies to life, applied to build pipelines.
+- Most items presume a monorepo with real CI (runners, nx, Vitest). Our repos are small script/report repos with no CI matrix — the *transferable* subset is: pre-push hooks, blobless/partial clones on big-history repos, and caching installs.
+- **Skepticism gates:** the full checklist sits behind a login-gated X article (known dead end from this host — content unfetchable at capture; only the TL;DR + chart are verified). Numbers on the chart are OCR-approximate; "bun check for tsc" is a tooling claim worth verifying per-repo, not a drop-in.
+- Task filed: triage which items apply to our own repos (Inbox).
+
+## Links
+
+- [[2026-11-02-sitenley-boardui-stop-ai-slop-ui]] (adjacent agent-era tooling capture)
