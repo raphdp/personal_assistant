@@ -4,6 +4,7 @@ This repo is the **git-backed second brain** (Obsidian-compatible). The Libraria
 
 ## Layout
 - `Notes/` — one reference note per captured item (article / tweet / reel / page).
+- `Dating/` — dating / dating-app notes (carved out of Notes on user request 2026-11-04; same `.qmd` format + frontmatter as Notes/).
 - `Tasks/Inbox.md` — actionable items captured from links, plain checkboxes.
 - `Daily/` — (optional) daily logs / weekly summaries from other agents, routed via the Librarian.
 
