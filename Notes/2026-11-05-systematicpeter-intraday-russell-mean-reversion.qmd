@@ -1,0 +1,39 @@
+---
+title: "Peter (@SystematicPeter) — intraday long/short mean reversion on Russell 3000 reversals ($100k → $411k combined 2016–2026, fees in, no overnights) — an edge he stopped trading but keeps coming back to"
+source: https://x.com/SystematicPeter/status/2118364974288695797
+captured: 2026-11-05
+tags: [trading, twitter, mean-reversion, intraday, russell-3000, long-short, systematicpeter, backtest, abandoned-strategy, equity-curve]
+kind: reference
+---
+
+**Author:** Peter - Cracking Markets (@SystematicPeter, ~10.6k followers) · posted 2026-11-05 15:29Z · received 2026-11-05T21:20:39Z (WhatsApp via RDP-30, routed by CoS). 28 likes, 3 reposts, 3.2k views, 2 replies (via fxtwitter). 1 photo — backtest equity curve, OCR'd at capture (below).
+
+## Summary
+
+A different Peter system from the Nasdaq mean-reversion lineage: **an intraday long/short mean reversion strategy on Russell 3000 stocks that he STOPPED trading a few years ago** — "the average profit per trade had become too small for me" — "but I keep coming back to it. The backtest still suggests there is an edge."
+
+Rules as shared (complete in-tweet, no thread):
+
+- Screen Russell 3000 stocks for **large, volatile moves**.
+- Next day, **limit orders to trade a reversal**.
+- Up to **10 long + 10 short** positions.
+- Exit on a **wide intraday stop** or **end of day** — no overnight positions.
+- **Fees included** in the backtest (IBKR).
+
+Photo (reconstructed by OCR): equity curve net of IBKR fees, $100,000 start, 10% of equity per position, 2016–2026 with SPY scaled to $100k as reference — final values **Combined (long + short) $411,172 · Long only $227,847 · Short only $178,860**.
+
+## Why it matters
+
+- **The honest-framing counterweight to his own equity-high posts.** The Nasdaq MR lineage ([[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]], [[2026-10-15-systematicpeter-mean-reversion-oos-high]]) is all OOS highs and live persistence; this is the same author showing a strategy where **edge survived but economics didn't** — per-trade profit too thin for him personally. That's a trader-specific capacity/size story, not a dead-signal story, and the distinction is the whole lesson.
+- **~3.4x on $100k over ~10.5 years ≈ 15% CAGR combined, with both legs additive** (long $228k + short $179k) — modest next to his 35% CAGR Nasdaq headline, which is itself a sanity tell: the intraday version earns its keep through diversification, not raw return. Short-only reaching $179k means the edge is genuinely two-sided, not a bull-market artifact — though 2016–2026 contains no true bear besides 2022 for stress-testing the short leg.
+- **Fees-in + no-overnight removes the two usual backtest cheats** (costless fills, overnight gap risk parked off-book). Open questions the chart alone can't answer: slippage on limit-order fills (limit orders model fill-or-no-fill — adverse-selection fills are the real killer in reversal systems), the definition of "large, volatile moves," and the reversal entry rule.
+- **Skepticism gates:** author-reported backtest, not OOS-live; OCR-approximate numbers ($411,172 etc. read from chart labels — verify at orig res before quoting); avg profit/trade and trade count NOT shared — the "too small for me" threshold is unaudited; 10% of equity per position with 20 positions = up to 200% gross notional exposure unclear (intraday margin rules unaddressed).
+- **No new task** — Peter's publish-everything pattern means full rules/code likely exist on Cracking Markets; if the intraday-L/S family ever enters the replication queue, this is the seed capture. His intraday breakout system ([[2026-10-01-systematicpeter-breakout-equity-high]]) is the other member of that family.
+
+## Links
+
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — his overnight Nasdaq mean reversion system (35% CAGR @ 15% exposure), the high-flyer this is not.
+- [[2026-10-15-systematicpeter-mean-reversion-oos-high]] — one-month OOS update on that system; persistence evidence.
+- [[2026-10-01-systematicpeter-breakout-equity-high]] — his other intraday system (breakout), with the lived-drawdown counterweight.
+- [[2026-09-04-systematicpeter-why-publish-research]] — why the rules are public at all.
+- [[2026-11-02-margincall4-bos-intraday-l-s-qqq-variants]] — MarginCall4's intraday L/S QQQ family; same design space (screen → L/S buckets → intraday exit), different universe/rule set.
