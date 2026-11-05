@@ -1,0 +1,41 @@
+---
+title: "Driada Medical — grey-market PED vendor catalog (injectables, orals, peptides, SARMs, HGH, GLP-1)"
+source: https://driadamedical.com/catalog
+captured: 2026-11-05
+tags: [health, vendor, peptides, sarms, hgh, steroids, glp-1, harm-reduction, catalog]
+kind: reference
+---
+
+**Source:** Driada Medical official site ("Forged in Quality") · catalog page · received 2026-11-05T09:30:49Z (WhatsApp via RDP-30, routed by CoS). Full catalog + homepage + /verify fetched at capture; raw HTML kept at `rdp_driada/` (catalog 62 KB, verify 11 KB).
+
+## Summary
+
+Driada Medical is a grey-market performance-enhancing-compound brand selling direct-to-consumer via resellers (verified by Telegram/Wickr/email — see below). The catalog lists **101 products across 8 categories** (no prices shown publicly):
+
+| Cat | Category | Count | Representative contents |
+|---|---|---|---|
+| Β | Injection Ampoules | 20 | Testosterone esters (enanthate/propionate/cypionate/undecanoate/suspension, Sustanon mix), trenbolone (ace/en/hex/mix), nandrolone (deca/phenylprop), boldenone, drostanolone, methenolone, trestolone, stanozolol, "Cut Stack" |
+| Γ | Injection Vials | 20 | Same compound families in multi-dose vial format |
+| Α | Orals | 26 | Oxymetholone, methandienone, turinabol, oxandrolone, superdrol, halotestin, stanozolol, clenbuterol, T3/T4/T3+T4, yohimbine, L-carnitine |
+| Ζ | Sexual Health | 6 | Tadalafil (5/20 mg), sildenafil (50/100 mg), dapoxetine |
+| Ϛ | SARMs | 8 | Ostarine, Ligandrol, Testolone (RAD-140), Andarine (S4), YK-11, S23, MK-677, SR-9009 |
+| Η | Weight Management (GLP-1) | 2 | **Semaglutide, cagrilintide** |
+| Ε | Peptides | 17 | BPC-157 (2/10 mg), TB-500, CJC-1295 DAC, ipamorelin, GHRP-2/6, IGF-1 LR3, PEG-MGF, MOTS-c, GHK-Cu, PT-141, Melanotan, HGH fragment, HCG 2000/5000iu, HMG |
+| Δ | HGH | 2 | Somatropin (powder and liquid) |
+
+Two structural details beyond the product list:
+
+1. **Ancillaries as a first-class category** — the Orals section carries a full harm-reduction/ancillary shelf: anti-estrogens (anastrozole, exemestane, letrozole, tamoxifen, raloxifene), enclomiphene/clomiphene, finasteride, cabergoline, isotretinoin, telmisartan (an ARB popular in bodybuilding for blood-pressure management), modafinil. The catalog is built for a self-managing user base, not naive ones.
+2. **Anti-counterfeit infrastructure** — every pack carries a two-layer scratch sticker with QR + text code; the /verify page checks the code and shows a **check-count that must read exactly 1** (a higher count = the code was checked before you = possible counterfeit). The same page verifies *sellers* by Telegram/Wickr/email/website handle. There is also a "Lab Tests" page (published per-batch test claims — not fetched at capture).
+
+Footer legal posture: "Products are intended for use under the supervision of a qualified physician and only where permitted by local law. Customers are responsible for complying with the regulations of their country."
+
+## Why it matters
+
+- First health/PED-vendor capture in the vault — a clean taxonomy of what the grey market currently stocks. Notable market signal: GLP-1s (semaglutide + cagrilintide) now sit beside classic AAS in grey catalogs — the weight-loss wave has fully propagated to this channel.
+- The verification-count mechanic (count must = 1) is a genuinely interesting anti-counterfeit design: it turns re-checks into tamper evidence, and seller verification by chat handle formalizes what is otherwise an informal reseller network.
+- **Skepticism gates:** "published lab tests" is a marketing claim until the Lab Tests page is actually pulled and the COAs read (not done at capture); the entire verification system is run by the vendor itself — self-attested, unauditable from outside; no prices captured (catalog is list-only); no reputation research done (no Reddit/community sourcing evidence in this capture); possession/use legality varies by country and is the customer's problem per their own footer. Capture = taxonomy + vendor claims, nothing verified.
+
+## Links
+
+- None yet — first vendor/health capture in the vault. (No fitness/PED notes exist to cross-link; Sport/ holds training logs only.)
