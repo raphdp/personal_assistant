@@ -1,0 +1,46 @@
+---
+title: "Review — oh-my-hermes / dag-ulw (@rlaope): graph-planned Hermes Agent jobs with verification-first done-criteria — legit and unusually honest, but unmeasured and overlapping with our own orchestration"
+source: https://x.com/rlaope/status/2118172353238810733
+captured: 2026-11-05
+tags: [tools, twitter, ai-agents, hermes-agent, orchestration, dag-ulw, oh-my-hermes, review, verification]
+kind: reference
+---
+
+**Author:** HOPE. (@rlaope, 2.6k followers) · posted 2026-11-05 02:43Z · received 2026-11-05T21:24:58Z + "do a review of that" 21:25:07Z (WhatsApp via RDP-30, routed by CoS). 255 likes, 23 reposts, 12k views, 14 replies — ~10x the account's follower count. Quotes the "Meet Oh-My-Hermes" launch tweet ("burned 200B tokens tuning my Hermes Agent setup"). 1 video (TUI demo, unwatched at capture — text + repo carry the content).
+
+## Summary
+
+User ask: review it. **oh-my-hermes (OMH)** — github.com/rlaope/oh-my-hermes — is a free/MIT "operating layer" over Hermes Agent (this company's own runtime). Headline feature `dag-ulw`: give one goal, it decomposes the job into a graph of small nodes; ready nodes run in parallel; nothing is "done" until verified.
+
+Claimed mechanics (tweet + README agree):
+
+- **Finish line written first** — a real check that can fail (e.g. `pytest -q` exit 0) defines done before work starts.
+- Each node gets its own context and **write scope** — parallel nodes never touch the same file.
+- Dispatch through **Hermes' own subagents**, layer by layer; per-lane model+effort routing with fallback chains.
+- Node acceptance requires **reading the handoff file** — "'done' is a claim, not proof."
+- Failed node → **repair node**; only downstream nodes wait.
+- **Separate verify node** runs the real suite — never the node that built the work.
+- **Irreversible actions stop for human approve/reject** (e.g. schema migrations).
+
+## Review
+
+**What checks out (repo-verified at capture):** real, mature project — 5,169 stars / 411 forks since 2026-06-03, v4.0.6 released the morning of this tweet, pushed same day, MIT, 10-language READMEs, security policy, sponsors, Discord, tests/ + benchmarks/ dirs. Not a vibe-coding toy.
+
+**Genuinely sound design — three ideas are the real signal:**
+1. **Evidence-before-done taxonomy**: `Plan · not run` / `Code · reported done` / `Test · verified` — the explicit split between an executor CLAIMING completion and a gate OBSERVING it. This is the single most correct idea in agent orchestration, and most tools spell both "complete".
+2. **Verifier ≠ builder** separation + repair-nodes-with-downstream-only-waiting — dependency-aware failure handling instead of global re-runs.
+3. **Finish-line-first** (write the failing check before the work) — TDD applied to agent jobs.
+
+**Honesty flags in its favor:** the README states outright that the A/B benchmark (Hermes alone vs Hermes+OMH) has **"no measured run published yet"** — they ship the claim's absence instead of hiding it. The "200B tokens" line is marketing, but the repo's candor earns benefit of the doubt.
+
+**Skepticism gates:**
+- **Zero published measurements.** Every capability claim (routing quality, parallel speedup, memory recall) is design-asserted, not benchmarked — by their own admission. The 5k stars measure attention, not outcomes.
+- **Install surface**: `curl | sh` / `irm | iex` one-liners, 308MB repo, 150+ injected skills, model-chain overrides. Interesting detail: their own INSTALL_FOR_AGENTS.md pins a commit SHA before following any instructions — prompt-injection-hardened install, which tells you they've thought about (and expect) adversarial reads of their repo.
+- **Doesn't patch Hermes** (additive layer, claims to leave Hermes' own memory untouched) — but model routing re-points which models run which lanes, i.e. it interposes itself on exactly the machinery we hand-tune.
+
+**Fit for us specifically — the honest answer is "overlaps":** we already run a verification-gated orchestrator — Paperclip decomposes, dispatches, checks out work, and enforces dispositions; this heartbeat was itself woken, verified, and re-closed by that loop. Adopting OMH on the production RDP host would stack a second orchestration layer over a working one. IF ever trialed: isolated machine/profile only, never on the relay host, and the trial question is whether dag-ulw's graph decomposition beats Paperclip child-issues for big one-shot builds — a measurable question, their A/B lane would answer it if they ever publish.
+
+## Links
+
+- [[2026-11-04-owengretzinger-agent-ci-checklist]] — same lane: agent tooling with verification discipline (pre-push gates vs evidence-before-done).
+- [[2026-11-02-sitenley-boardui-stop-ai-slop-ui]] — adjacent agent-tooling capture from the same feed.
