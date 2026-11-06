@@ -1,0 +1,31 @@
+---
+title: "Capture — @trevin (endorsed chain from @steveruizok): the state-machine audit prompt — 'find all of the implicit state machines in my app', formalized into an evidence-graded bug hunt ending in a living document"
+source: https://x.com/trevin/status/2118690987153186845
+captured: 2026-11-06
+tags: [ai-agents, twitter, prompt-recipes, state-machines, code-audit, debugging, invariants, concurrency, testing, living-documents]
+kind: both
+---
+
+**Author:** Share chain — Steve Ruiz (@steveruizok, 62.2k followers, verified; founder @tldraw, London) posted the seed observation "good prompt 'find all of the implicit state machines in my app'" (2026-10-31 15:24Z); Trevin Chow (@trevin, 8.5k followers, verified; product leader, Seattle; builder of Compound Engineering, 25k★) quote-tweeted it with the fully operationalized prompt, "an amazing prompt that helps find a ton of bugs for me" (2026-11-06 13:04Z). Received 2026-11-06T15:14:43Z (WhatsApp via RDP-30, routed by CoS). Stats not exposed at capture (2 replies on the Chow tweet).
+
+## Summary
+
+The prompt, verbatim and complete (recovered via fxtwitter after the syndication API truncated it mid-sentence):
+
+> "Find the app's explicit and implicit state machines and document their states, invariants, and transition tables in one file. Identify invalid states or transitions the code can actually reach, with evidence, including through retries and concurrency. Prioritize confirmed bugs by impact, group related fixes into issues, then fix them with regression tests and keep the document updated."
+
+A five-stage pipeline: **census** (explicit machines you designed + the implicit ones you didn't) → **formalize** (states, invariants, transition tables, one file) → **prove** (invalid states *reachable in practice*, with evidence, retries and concurrency included) → **triage** (impact-ranked, grouped into issues) → **fix and maintain** (regression tests, document stays current).
+
+## Why it matters
+
+- **The retrofit counterpart to our spec-as-state-machine note.** [[2026-10-13-dearlordylord-specs-as-state-machine]] was design-time: model the system as a reducer *before* building. This one is audit-time: extract the machines from code that already exists. Together they bracket the lifecycle — formalize up front when you can, recover the formalism later when you didn't. The chain itself shows the diffusion: Ruiz names the trick (Oct 31), Chow ships the operational prompt six days later (Nov 6).
+- **"Explicit and implicit" is the load-bearing phrase.** The explicit machines (auth flows, order lifecycles) are usually documented and tested; the bugs live in the implicit ones — nullable field combinations, boolean flag pairs, retry queues, half-finished async transitions. Asking for both forces the model to hunt the second kind, which no linter names as a state machine.
+- **"Can actually reach, with evidence, including through retries and concurrency" is the evidence grade.** Not "looks wrong" but *reachable in practice* — and the two named vectors (retries, concurrency) are exactly our own hardest bug classes: the RDP-30 Sep 20–30 stall was a state bug (comments on `done` issues inert → dead channel), the wa-bridge backflush double-posts were retry-lane behavior, sibling-run races are concurrency. The prompt would have surfaced each as a documented invalid transition instead of a post-mortem.
+- **"Keep the document updated" turns output into an artifact.** One-shot lint output rots; a living transition-table file is the same principle as our skills — durable state that changes future runs, not session exhaust.
+- **Applicability here is direct:** wa-bridge.mjs + the relay issue cycle IS a state machine (bridge-state.json retry queues, `todo`/`in_progress` wake transitions, delivered-flag idempotency). Running this prompt over it would formalize what incidents have taught us one outage at a time.
+- **Skepticism gates:** single anecdote ("a ton of bugs for me"), no worked example in the tweet, 2 replies unread; on a large codebase the census itself needs scoping or the model will fabricate plausible-but-wrong transitions — "with evidence" is the guard, and it only works if you actually check the evidence; the final clause ("fix them with regression tests") is the riskiest — auto-fixing against a possibly-wrong model of the state space can inject the very bugs the audit was meant to find. Fix manually, audit-assisted.
+
+## Links
+
+- [[2026-10-13-dearlordylord-specs-as-state-machine]] — the design-time counterpart (spec as executable reducer); this note is the audit-time retrofit.
+- [[2026-10-11-copyconstruct-debugging-agents-unreadable-code]] — interrogating agents about code; the "with evidence" clause is this discipline applied to a bug hunt.
