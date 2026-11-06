@@ -1,0 +1,43 @@
+---
+title: "SystematicIRE — Concretum's 'Trend Following on Coin Flips': random coin-flip entries + Darwinian trailing-stop exits compound over 4 decades, net of costs (tweet + paywalled piece; chart OCRed)"
+source: https://x.com/systematicire/status/2118760071731556722
+captured: 2026-11-06
+tags: [trading, twitter, trend-following, cta, managed-futures, futures, random-entry, coin-flip, tom-basso, concretum-research, systematicire, teaser, paywalled, needs-followup, ocr-recovered]
+kind: both
+---
+
+**Author:** Systematic Investment Research & Education (@SystematicIRE) · posted 2026-11-06 17:39Z · received 2026-11-06T20:55:56Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 10 likes, 530 views, 1 reply (fxtwitter). Fourth capture touching Concretum Group ([[2026-09-18-concretum-rebalancing-flows-alpha]], [[2026-10-18-concretum-chasing-skew-trend-following]], [[2026-10-24-concretum-clenow-trend-model-etfs]]). Tweet text truncated mid-sentence in the syndication API; FULL text recovered via fxtwitter (see Summary). The linked piece — Concretum's "Trend Following on Coin Flips: A Darwinian Approach to Trading Trends" (concretumgroup.substack.com, 2026-11-06, 2,462 words) — is **paywalled** (`audience: only_paid`): ~1.6K-char free preview + OCRed chart captured here.
+
+## Summary
+
+The tweet (complete text):
+
+> This verifies and extends the results that have been produced many times now, strengthening the case for systematic trend. My own studies on long only stock and ETF portfolios have shown similar results. Entering with a trailing stop produces what this piece describes as a Darwinian effect.
+
+The piece it recommends — from the free preview:
+
+- **The experiment:** a rerun of **Tom Basso's random-entry coin-flip study** (~30 years old, "attracted the interest of Tom Basso and a few others"), scaled up: **nearly 1.8 million coin-flip trades across more than four decades of market data**. Entries are decided *entirely* by coin flip; the strategy around them — exits, risk, and a "process of natural selection" — does the rest.
+- **The claim:** "trends can be traded profitably even when entries are left entirely to chance", and — "truth be told, we never expected" it — a futures program built on coin-flip entries delivered "attractive historical returns, **net of costs**."
+- **The Darwinian mechanism** (the tweet's hook): entering with a trailing stop means random losers are cut fast while random winners are kept on — selection pressure culls the unfit trades and lets the fit survive. Entry *timing* contributes ~nothing; survival is exit- and risk-driven.
+- **Chart (OCRed from the paywalled piece):** growth of $1, **January 1980 to October 2026**, log-scale y-axis ($1 → $512), three lines — "Coin Flip Trend (Gross)", "Coin Flip Trend (Net)", "S&P 500 Total Return". Caption (verbatim OCR): "Growth of $1 in a trend following program whose entries are determined entirely by a random coin flip process. Results are presented both gross and net of costs. The S&P 500 Total Return Index is shown for comparison." Gross and net lines both compound to visually large multiples over 46 years.
+- **Context:** the piece is tied to Concretum's recent **Tom Basso interview** (promo card OCRed: "BASSO — An Interview by Concretum Research"); the experiment was rerun "on a large scale" for that occasion.
+- **Meta:** Concretum raises subscription pricing 2026-11-09 ($125→$150/mo, $350→$400/yr; existing subs locked).
+
+## Why it matters
+
+- **Strongest-form evidence for the vault's TF-replication thesis.** The cluster's running argument is that disclosed simple rules + disciplined construction stay competitive ([[2026-08-29-three-simple-ma-atr-systems]], [[2026-08-30-ignis-trend-following-realtest]], [[2026-10-24-concretum-clenow-trend-model-etfs]]). A coin-flip-entry program that still compounds net of costs for 4+ decades says the edge lives almost entirely in **exits, risk sizing, and portfolio construction** — not entry signals. That reframes where research effort should go.
+- **Endorsement is third-party.** SystematicIRE independently states their own long-only stock/ETF studies "have shown similar results" — a second shop corroborating both Concretum's method and the random-entry conclusion.
+- **Basso lineage gives it a pedigree** — this is the famous "coin-flip entry" demo from *Trade Your Way to Financial Freedom* folklore, now tested at ~1.8M-trade scale rather than anecdotal scale.
+- **Skepticism gates:** (1) the rules — exit mechanics, "natural selection" specifics, per-market risk, cost assumptions — are all behind the paywall; nothing here is independently verifiable beyond the preview and chart; (2) random-entry programs are extremely **path-dependent** — one realization; no confidence intervals visible; (3) growth-of-$1 vs the S&P 500 TR flatters trend following in bull-equity decades and understates its actual role (diversification / crisis convexity — see [[2026-10-18-concretum-chasing-skew-trend-following]] for the skew-quality counterpoint); (4) net-of-costs is asserted but the cost model is unstated — [[2026-10-21-setupalpha-trend-system-robustness-tests]] shows the cost grid decides such claims; (5) the chart is log-scale and OCR can't read terminal values — "visually large" ≠ quantified CAGR; (6) 4 decades is a TF-friendly window ([[2026-10-01-momentmal-trend-following-us-markets]]).
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-10-24-concretum-clenow-trend-model-etfs]] — same shop, prior piece: Clenow rules + Concretum construction vs SG CTA Index, net of costs.
+- [[2026-10-18-concretum-chasing-skew-trend-following]] — same shop: CTA trade-level skew weaker than advertised; counterpoint on what TF buys.
+- [[2026-09-18-concretum-rebalancing-flows-alpha]] — same shop, first capture: flow-front-running alpha.
+- [[2026-08-29-three-simple-ma-atr-systems]] — disclosed-rules TF family this experiment supports.
+- [[2026-08-30-ignis-trend-following-realtest]] — futures TF replication; candidate to test a random-entry variant against.
+- [[2026-10-21-setupalpha-trend-system-robustness-tests]] — cost-stress methodology to adjudicate "net of costs".
+- [[2026-10-01-momentmal-trend-following-us-markets]] — period/geography qualifications for TF performance claims.
+- [[2026-10-05-momentumplay-100-strategies-beat-spy]] — adjacent "simple beats benchmark" evidence cluster.
