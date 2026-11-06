@@ -1,0 +1,45 @@
+---
+title: "Capture — Recall: how a skill became our company brain (@MiguelriosEN, endorsed by @dorkitude): indexed session memory for coding agents — context retrieval as the path to agent self-knowledge"
+source: https://x.com/dorkitude/status/2118362311685746936
+captured: 2026-11-06
+tags: [tools, twitter, ai-agents, agent-memory, session-search, parcha-skills, recall, grepdot, knowledge-systems]
+kind: reference
+---
+
+**Author:** Share chain — Kyle Wild (@dorkitude, 12.1k followers, verified; applied-AI engineer, CTO endgame.io, "focused on knowledge systems") quote-tweeted "This is the correct build." (posted 2026-11-05 15:18Z) the original by Miguel Ríos Berríos (@MiguelriosEN, 10.2k followers, verified; founder/CTO GrepDotAI, ex-Head of Data Science at Twitter, ex-Head of Platform Eng at Brex) sharing his own long-form X article "Recall: how a skill became our company brain" (2026-11-04 20:20Z). Received 2026-11-06T10:47:53Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture — original: 476 likes, 33 RTs, 1,237 bookmarks, ~64.8k views; dorkitude QT: 136 likes, 3 RTs, 347 bookmarks, 27.5k views. The bookmark:like ratio (~2.6:1 on the original, 2.5:1 on the QT) is the "save-for-later reference" signature, not casual scrolling — the bookmark signal is real here.
+
+## Summary
+
+**The share chain:** dorkitude (knowledge-systems CTO) points at a long-form article by Miguel Ríos explaining how his team built **Recall** — an indexed local search engine over prior Claude Code and Codex session transcripts — and how "it slowly became [our] company brain" (preview text, truncated at capture).
+
+**The article body is X-login-gated at capture** (x.com/i/article/2118054956880244736; syndication 404s on the article id, og: tags generic). Recovered substance comes from the article preview + the linked open-source repo, which the preview names explicitly: **github.com/Parcha-ai/parcha-skills** — verified real, MIT, 130 stars, actively pushed same-day (2026-11-06T08:32Z).
+
+**What Recall actually is (repo-verified at capture):**
+
+- **Indexed session memory**: Claude Code (`~/.claude/projects`) and Codex (`~/.codex/sessions`) sessions on the machine are indexed into a local SQLite engine. Queries return ranked, best-supported sessions with a per-match "WHY" explanation, instead of the agent re-reading entire transcripts (or, worse, forgetting prior sessions entirely).
+- **"First: pick the outcome"** — the skill routes by intent: *find/verify* ("did we…", "which session…"), *continue* ("continue what we did yesterday on X"), *repeat with fresh inputs*, or *distill into a skill* ("turn what we did about Y into a skill").
+- **Degraded mode is designed-in**: if the index doesn't exist yet, the skill instructs raw `rg`-grep over the JSONL transcripts while the first index builds in the background — and tells the user when an answer came from a cold scan. Incremental indexing after the first build.
+- **Runs from Claude Code, Codex, or pi** — cross-harness portable by design; the repo is a collection of "portable Agent Skills" with a shared payload and no harness forks ("canonical `skills/<name>/SKILL.md` directories… there are no Claude/Codex/pi forks to drift apart").
+- **Sibling skills in the same repo** form a coherent agent-lifecycle stack: `recap` (reconstruct everything observable from one exact session, using Recall's evidence), `precap` (a grounded past-tense account of the finished work that long-running agents check themselves against for drift), `tether` (keeps Slack threads attached to the exact agents that created them), `hands-free` (calls your phone when the agent needs an answer or approval), plus `tdd`, `review-loop`, `blast-radius`, `autoqa`, `verify-release`, `cascade`, `parable` (plans batches, routes to cheaper executors, verifies).
+- **Note the boundary**: the public repo carries the skill (agent instructions + manifests) but NOT the Recall engine implementation — "The implementation, installers, and deployment configuration are maintained separately and are not included." `npx skills add` gets you the skill, not the brain.
+
+## Why it matters
+
+**The core idea is the strong one:** agent sessions are the richest, most-wasted data asset in any agentic company. Every Claude Code/Codex session contains decisions, dead ends, corrected mistakes, and context — and then it's gone. Recall's thesis: index that exhaust, and "what did we do last time about X" becomes an indexed lookup instead of a lost weekend. The arc in the title — *a skill became the company brain* — is the organization learning to remember itself.
+
+**The irony that makes it stick:** the skill explicitly says it is "Not for … facts already in MEMORY.md" — it's the retrieval layer for what memory compression drops. That's a solved-problem-shaped boundary: recall (verbatim, high-bandwidth, indexed) vs memory (compressed, curated, small) are different jobs, and this stack draws the line cleanly.
+
+**Skepticism gates:**
+
+- **Article body unread** — everything above comes from preview + repo. The "how it slowly became our company brain" narrative (adoption arc, failure modes, org lessons) is exactly the part still behind X's login wall. Don't quote the article's claims beyond the preview until the text is recovered.
+- **Engine is closed**. The public skill is a thin client over a separately-maintained engine ("Use your organization's private setup instructions to provision it"). For anyone outside Parcha/GrepDotAI, Recall is a pattern + a grep fallback, not a product you can run. 130 stars ≠ usable system.
+- **Ex-Twitter DS / Brex platform pedigree is real but the company is young** (GrepDotAI, YC F26) — the article is partly a build-in-public recruiting post. Fine; just weight it as such.
+- **Bookmark counts on X can be inflated by engagement-farming reposts**; here the ratio is consistent across both tweets, so the save-signal reads genuine.
+
+**Connection to our own stack:** this is the same problem class our RDP capture pipeline already solves for WhatsApp inbound → Obsidian (capture once, retrieve forever) — Recall does it for coding-agent sessions. Our own MEMORY.md compression + session_search tooling is the same recall-vs-memory split. Nothing to adopt (the engine isn't public); the takeaway is the pattern and the Parcha skill suite as a reference for cross-harness skill design.
+
+## Links
+
+- [[2026-11-05-rlaope-oh-my-hermes-dag-ulw-review]] — same lane: agent orchestration tooling capture; OMH's context-per-node vs Recall's indexed session memory — complementary answers to agent context problems.
+- [[2026-11-04-owengretzinger-agent-ci-checklist]] — agent tooling with verification discipline; Parcha's `precap` (drift-checking account of finished work) is the memory-side sibling of CI gates.
+- [[2026-10-21-omarsar0-decision-model-evals]] — adjacent agent-infrastructure capture from the same feed.
