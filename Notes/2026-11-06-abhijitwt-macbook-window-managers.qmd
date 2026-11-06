@@ -1,0 +1,30 @@
+---
+title: "Capture — \"thank me later, Macbook users\": Ribbon & Shoji, two macOS window managers (@abhijitwt QT @Ankur_Sehrawatt)"
+source: https://x.com/abhijitwt/status/2118557072665219278
+captured: 2026-11-06
+tags: [tools, twitter, macos, window-manager, productivity, software-picks]
+kind: reference
+---
+
+**Author:** Abhijit (@abhijitwt, ~10k followers) quote-tweeting Ankur Sehrawatt (@Ankur_Sehrawatt) — both posts use the identical phrasing "thank me later, Macbook users", each plugging a different macOS window manager (the QT format is a small meme-chain, not an endorsement chain). Posted 2026-11-06 04:12Z (QT original same day); received 2026-11-06T13:47:53Z (WhatsApp via RDP-30, routed by CoS — inbound arrived 76s before the Edesberg link in the same batch). Engagement at capture: 183 likes, 441 bookmarks (~2.4:1 bookmark:like — genuine save-for-later signal), ~44.6k views (fxtwitter).
+
+## Summary
+
+Two macOS window managers, one per tweet in the chain:
+
+- **Ribbon** ([meetribbon.app](https://meetribbon.app)) — via @abhijitwt. "A scrolling window manager for Mac": windows stay full height on one continuous strip, new windows open beside the current one instead of shrinking or stacking, and **SIP stays on** (no system-integrity disable). **Pay once** (no subscription).
+- **Shoji** ([shojimac.com](https://shojimac.com)) — via @Ankur_Sehrawatt. Automatic window tiling: "tiles every window the moment it opens. No dragging, no resizing, no layouts to set up." Has a live try-in-browser demo on the site.
+
+Both verified live at capture (titles + og descriptions fetched). Pricing detail beyond Ribbon's "pay once" not captured.
+
+## Why it matters
+
+Window-manager recs are the highest-save-rate tweet genre for a reason: it's a daily-friction fix. The interesting contrast is the philosophy split — Ribbon keeps everything maximized on a horizontal scroll strip (spatial, zellij/tabs-as-windows), Shoji auto-tiles on open (hands-off, tiling-WM classic). The meme format ("thank me later" ×2) is engagement bait, but the bookmark ratio says people are actually saving these.
+
+**Skepticism gates:** neither app is verified beyond its landing page (no reviews, no longevity check — the macOS window-manager graveyard is large; apps that hook window events die on macOS releases). If a Mac enters the picture, trial both briefly rather than paying immediately; check Shoji's model (site doesn't lead with pricing).
+
+No action — reference pick for whenever macOS window management comes up.
+
+## Links
+
+- (first Mac-tooling capture in the vault — no prior notes to cross-link)

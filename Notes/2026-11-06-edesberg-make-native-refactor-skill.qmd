@@ -1,0 +1,48 @@
+---
+title: "Capture — make-native: the Agent Skill that rewrites bolted-on features to look native (@Edesberg / Sloyd, open-sourced)"
+source: https://x.com/Edesberg/status/2118339489382686842
+captured: 2026-11-06
+tags: [tools, twitter, ai-agents, agent-skills, code-review, refactoring, dev-workflow, claude-code, sloyd]
+kind: both
+---
+
+**Author:** Andreas Edesberg (@Edesberg), founder at Sloyd (sloyd.ai, the generative-3D-tools company; repo published under the Sloydai org). Posted 2026-11-05 13:47Z; received 2026-11-06T13:49:09Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture: 193 likes, ~100.4k views (fxtwitter; syndication nulls fresh stats). Tweet text recovered COMPLETE via fxtwitter (display confirms full text; syndication copy ended mid-sentence on a t.co). The trailing "Link below 👇" t.co resolves to the tweet's own photo — the actual repo link was recovered via GitHub search, not the tweet.
+
+## Summary
+
+**The claim: "4× more of our PRs pass first review"** since running one skill at the end of every coding session. They open-sourced it: **make-native**, MIT, at [github.com/Sloydai/make-native](https://github.com/Sloydai/make-native) (27 stars at capture, pushed 2026-11-05 — hours before the tweet).
+
+**The problem it names precisely:** coding agents (and people in a hurry) add features with least disturbance — an `if (newThing)` here, a flag there, a copied component "just for this case". Each change is safe alone; together the code only makes sense if you know the order it was written in.
+
+**What the skill does** (README-verified): takes the feature diff and asks — *if the original author had known about this feature on day one, what would the code look like?* — then writes that version, deletes the workarounds, rewrites the tests. Concretely: reads the diff against the PR base branch, reads surrounding code/types/callers/git history, redesigns the touched code as if the feature were in the original spec, makes common cases simple, **rewrites tests to match and deletes tests that only preserved the workaround**, and checks no trace of the old workaround remains.
+
+**Smell list it hunts:** aliases re-deriving a value the code already has; `if (newKind)` branches where the code already dispatches on kind; near-copies of an existing file/component for one variant; flags duplicating what a type already says; a second system for a concern that already has one (cost tracking, logging, retries, config).
+
+**Boundary:** features only — "Bug fixes should stay minimal, so don't run it on a bug-fix commit." Output is a separate commit (`refactor` if behavior unchanged, `feat` if not) so the reshape reviews apart from the feature.
+
+**The tweet's image** (OCR'd + cross-validated against the repo's own before-after.png alt text): a bolted-on `save(media, isVideo?)` with a copied `{gif, png}` SAVERS map and separate gifCopy call → rewritten as one more `{gif, mp4, png}` entry in the existing SAVERS table and a plain `save(media)`. The whole thesis in one diff.
+
+**Real example from the README:** run on the "What is Sloyd" page feature — found an optional `locale` prop only 1 of 7 call sites passed (fixed: make it required + route through the existing coverage check; localized links went 1→17 of 28) and the same rule written twice across `/llms.txt` and `llms-full.txt` (both now read from the module that already owned the opposite rule; `/llms.txt` came out byte-identical).
+
+**Install:** `npx skills add Sloydai/make-native` — works with Claude Code, Codex, opencode, Kiro, GitHub Copilot. Single-file skill (SKILL.md).
+
+## Why it matters
+
+**The strongest idea here is the review-shaped framing.** "Code that only makes sense if you know the order it was written in" is exactly the debt agent-driven development accumulates fastest — agents optimize for least-disturbance diffs because that's what passes review cheaply. Reframing the fix as *make the feature look native to the codebase* (rather than "clean up later") attacks the debt at commit time, when the context is still loaded. The 4× first-review-pass number is self-reported and unfalsifiable — treat as marketing, not measurement.
+
+**Second-strongest: deleting tests that only preserve the workaround.** Most refactoring guidance leaves test debt untouched; naming test-rewriting as part of the reshape (not an afterthought) is the detail that makes this more than a lint-runnable.
+
+**Skepticism gates:**
+
+- **4× claim is a tweet number** — no baseline, no denominator, no methodology. The mechanism is plausible; the multiplier is not evidence.
+- **27 stars, released yesterday** — zero community validation yet; the README example is the authors' own site (dogfooding, which is honest, but n=1).
+- **LLM-rewritten code can silently change behavior** while claiming equivalence — the separate-commit discipline mitigates (you review the reshape diff), but "checks that no trace of the old workaround remains" is a heuristic, not a proof.
+- Fits an emerging pattern: end-of-session verification/refactor skills as the new CI layer for agent-written code.
+
+**Connection to our stack:** directly relevant to our own coding workflows — every Hermes/Paperclip repo change already goes through the PR + AI review gate; make-native is a candidate pre-review pass on feature branches. Cheap to trial (single-file skill, MIT).
+
+## Links
+
+- [[2026-11-06-miguelrios-parcha-recall-company-brain]] — same lane, same week: agent-skills as company infrastructure; Recall indexes the past, make-native reshapes the present diff.
+- [[2026-11-04-owengretzinger-agent-ci-checklist]] — verification discipline for agent code; make-native adds the "shape-native at commit time" gate to that stack.
+- [[2026-11-05-rlaope-oh-my-hermes-dag-ulw-review]] — adjacent agent-orchestration tooling capture.
