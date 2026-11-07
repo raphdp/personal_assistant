@@ -1,0 +1,32 @@
+---
+title: "thomasmc (Th0rgal) — satmux: agent-deployed BBR multiplexer that fixes non-Starlink inflight Wi-Fi (~4× faster, reset-free)"
+source: https://x.com/thomasmc/status/2119102696280240176
+captured: 2026-11-07
+tags: [tools, twitter, networking, inflight-wifi, agents, travel, thomasmc, satmux]
+kind: both
+---
+
+**Author:** @thomasmc (Th0rgal) · posted 2026-11-07 16:20Z · received 2026-11-07T20:40:51Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 1,008 likes · 54.0k views · 15 replies. Repo open-sourced 11 minutes before the tweet (github.com/Th0rgal/satmux, created 16:09Z, MIT, pure Python 3 stdlib, 195 stars day-one) — literally shipped from the plane.
+
+## Summary
+
+"Life hack if your flight doesn't have Starlink: ask your agent to bypass the 443 split-TCP proxy via a $0.03/h BBR multiplexer and get ~4× faster, reset-free internet."
+
+satmux targets the three things that actually break GEO-satellite cabin Wi-Fi (Inmarsat GX, Viasat, Panasonic, SITA) — none of which is raw bandwidth:
+
+1. **Cabin `:443` middleboxes** — transparent split-TCP proxy (PEP) whose state table drops connections under load (TCP resets / TLS timeouts on GitHub, package registries); onboard DNS is intercepted too. Non-443 TCP ports pass untouched.
+2. **Handshake tax** — every new origin pays multiple ~620 ms GEO round-trips (DNS + TCP + TLS) before first payload byte.
+3. **Cubic congestion collapse** — cabin packet loss makes standard TCP halve cwnd repeatedly, leaving the per-seat token-bucket cap unused.
+
+The fix: 12 pre-warmed persistent TCP carriers on `:8444` to a $0.01–0.03/h Linux ground VM near the satellite ground station (Amsterdam for Inmarsat GX / SITA AS206433 — i.e. Emirates & most EU/Middle East flights), with BBR + MSS 1280. Streams schedule onto the least-loaded carrier; SOCKS5/HTTP-CONNECT opens are 0-RTT (local OK in <1 ms); a ground-fetch mode does DNS + verified TLS 1.3 on fiber and zlib-compresses responses before they cross the satellite. Even wires `gh`/`git` through a local Unix socket so already-running coding agents keep working without restart. Measured 6-origin burst: 19.13 s (3/6 failed) → 5.35 s (0/6 failed), 3.6× faster, −76% TTFB (the tweet's photo shows a 6.4×/−78% run). Teardown after landing restores all proxy/git config with one command.
+
+## Why it matters
+
+- **Directly deployable on the user's airline.** Emirates / Middle East flights are the readme's first-listed case (Inmarsat GX via Amsterdam/Hetzner EU). Next long-haul without Starlink: rent VM, deploy, connect, benchmark — and the readme is written to be executed by a coding agent from one natural-language command ("spin up a temporary Ubuntu VM near my current satellite egress…").
+- **The pattern generalizes:** middlebox bypass by port avoidance + moving TLS termination to fiber + compressing the expensive link. Same problem class as [[2026-10-01-cathrynlavery-tailscale]] (hostile networks), opposite objective — raw performance vs private geo-stable egress.
+- **Agent-as-infrastructure:** the "ask your agent" framing is the real signal — this is a task only an agent reasonably executes mid-flight (VM provisioning, deploy, proxy wiring, teardown). One more datapoint that the agent's job description now includes "fix my plane's internet".
+- **Skepticism gates:** single author, self-benchmarked on one provider (Inmarsat GX); burst numbers differ between his own two runs (3.6× readme vs 6.4× photo); incompressible media stays bounded by the ~4–5 Mbps per-seat shaper (zlib only helps HTML/JSON/code); custom PSK crypto (BLAKE2b+HMAC frames) is unaudited — fine for a perf tool, not for hostile-traffic protection; day-old repo. Doesn't bypass captive portals — needs your paid session. Speed-of-light floor (~600 ms RTT) doesn't move; he removes round-trips, not physics.
+
+## Links
+
+- [[2026-10-01-cathrynlavery-tailscale]] — hostile-network egress for privacy; satmux is the performance twin (cabin Wi-Fi problem class).
