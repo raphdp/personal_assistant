@@ -1,0 +1,28 @@
+---
+title: "The Milk Man — SPX weekly put credit spread at Multi-Day Saty ATR -1: strategy reveal + Grok performance scorecard ask"
+source: https://x.com/MrMilkTrading/status/2119190532517659024
+captured: 2026-11-08
+tags: [trading, twitter, options, spx, credit-spreads, atr, milk-man, backtest, track-record]
+kind: reference
+---
+
+**Author:** The Milk Man (@MrMilkTrading; options/futures trader, Texas) · posted 2026-11-07 22:09:30Z · received 2026-11-08T08:38:39Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 95 likes, 7 replies, 3 reposts, 240 bookmarks. Quotes his own 2026-08-13 strategy-reveal tweet (3,132 likes, 137 replies, 196 reposts, 8,658 bookmarks — his highest-engagement capture in the vault; full text recovered via fxtwitter after syndication truncation).
+
+## Summary
+
+Two-layer capture. The **quoted Aug-13 tweet is the payload**: the full rules of a previously-teased strategy, given away free — *sell one SPX put credit spread per week at the Multi-Day Saty ATR -1 level*. Self-reported backtest: 326 trades since May 2020, 95.4% win rate, profit factor 2.48, +$53,328 on a single contract, max drawdown $4,605, zero losing years, 2026 is 32-for-32. Chart (OCR'd, milkmantrades.com): cumulative P&L per 1-lot May 2020–Aug 2026 with the 15 losing weeks as red dots; **fills modeled at quote midpoint less $2.64/spread**. The **new Nov-7 tweet** is the scorecard ask: he prompts @grok to compute wins vs losses, premium collected, total loss, and profit factor *since his initial share* — i.e., holding the strategy up to an independent (LLM-computed) forward window.
+
+## Why it matters
+
+- **This is the strategy behind the vault's existing Milk Man ATR thread.** Weekly ATR-level short puts are exactly the pattern captured in [[2026-10-18-milk-man-atr-put-mispricing]] (the edge claim there: tail-probability mispricing) and the forward-test discipline of [[2026-10-01-milk-man-options-algo-forward-test]]. The Aug-13 reveal adds the concrete rule set the earlier notes lacked: one spread/week, SPX, short strike at Multi-Day Saty ATR -1.
+- **The Grok ask is a self-audit pattern worth copying.** Asking a third party (even an LLM with data access) to score your strategy *since publication* is a cheap forward-test integrity check — separating "backtest was lucky" from "edge persisted out of sample." Bookmarks (240 on the ask, 8.6k on the reveal) say people save these as recipes.
+- **Cost realism is modeled, not ignored.** The $2.64/spread haircut on midpoint fills is a real-world execution assumption many retail backtests skip — consistent with the cost-stress discipline already queued for our own harness (Inbox: cost-stress + execution-lag grid).
+- **Skepticism gates:** self-reported backtest, no curve of the forward window yet (the Grok answer isn't in the captured data); 95.4% win rate on credit spreads implies high negative skew — the 15 red dots carry the entire risk story, and max DD $4,605 vs +$53k cumulative means the strategy is one bad tail from giving back a chunk. "Multi-Day Saty ATR" level definition is not fully specified in-tweet (likely from his paid/original work); replication needs the exact ATR lookback and strike-selection rule. Same regime caveat as prior captures: May 2020–Aug 2026 was mostly a favorable vol regime for short premium.
+
+## Links
+
+- [[2026-10-18-milk-man-atr-put-mispricing]] — the edge thesis behind weekly ATR-level short puts.
+- [[2026-10-01-milk-man-options-algo-forward-test]] — his forward-test discipline (Bilbo Box paper account).
+- [[2026-09-17-milk-man-bilbo-box-article-teaser]] — the article thread this strategy reveal completes.
+- [[2026-08-29-milk-man-replication-metrics]] — independent replication standard to apply before sizing any of this.
+- [[2026-08-29-milk-spx-strategy-v1-1]] — community (MarginCall4) hardening checklist for a Milk-derived SPX strategy gone live.
