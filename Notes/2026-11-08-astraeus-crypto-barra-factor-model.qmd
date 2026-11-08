@@ -1,0 +1,38 @@
+---
+title: "Astraeus (@AstraeusCap) — a PIT Barra factor model for crypto perps: 9 factors, 62% of a median coin's move explained, reversal/size/momentum pay before costs — endorsed by @skepticalxbt"
+source: https://x.com/skepticalxbt/status/2119232267805725109
+captured: 2026-11-08
+tags: [trading, twitter, crypto, quant, barra, factor-model, cross-sectional, reversals, momentum, size, funding-carry, crypto-perps, astraeus, skepticalxbt]
+kind: reference
+---
+
+**Author:** Astraeus (@AstraeusCap; "average crayon eater | I build and run mev bots and trade systematic crypto strategies", ~unknown follower count) · article posted 2026-11-02 17:54Z · shared by @skepticalxbt ("this is very good writeup", posted 2026-11-08T00:55:20Z) · received 2026-11-08T13:48:26Z (WhatsApp via RDP-30, routed by CoS). Quoted tweet at capture (fxtwitter): 119 likes, 6 replies, 18,807 views. Full article body recovered via fxtwitter `article.content.blocks` (draft.js blocks, 5.8k chars) — the X login-gate did not block this lane.
+
+## Summary
+
+Astraeus builds a **Barra-style cross-sectional factor model for crypto perps** (top-50 by market cap, daily rebalance, out-of-sample since 2022) to answer: what actually drives perp returns, how long do effects last, and how much of a coin's move is coin-specific vs systemic?
+
+- **The hook:** since 2022, $BTC returned +22% while an equal-weight top-50 basket returned **−94%**. A market-neutral portfolio buying recent losers / shorting recent winners returned **+94% with a third of BTC's drawdown — before costs**.
+- **What a factor is:** a shared trait that explains away part of returns. Size sort demo: long top-third / short bottom-third market-cap thirds → +67% since 2022 with market move cancelled.
+- **Method:** regress daily returns of the universe on factors (the "tall people earn more / but men earn more" confounder intuition). Residual = coin-specific edge hunting ground.
+- **The 9 factors:** size, beta, volatility, liquidity (turnover), carry (high−low funding rate), reversals (1d / 2–3d / 4–5d), momentum (8–14d).
+- **Before costs, three earned a premium: reversals, size, momentum.** Negative loadings flip: liquidity (−.82) → premium is in **illiquidity**; reversal-1d (−.89) → **1d momentum tends to continue**; vol (−.26) and beta (−0.17) → small low-vol/low-beta premia.
+- **Lookbacks:** winners keep winning ~1 day; mean-revert by days 3–5; momentum dominates 8–14d.
+- **Factor correlations:** median 0.06 — near-orthogonal (except size/vol/liquidity overlap = small-cap cluster), which is what makes combining valuable.
+- **Consistency:** premia are NOT consistent y/y — reversal & momentum flat/negative 2022–23, peaked on a 12m rolling basis in 2026 (Sharpe > 4; yearly Sharpes 1.9–2).
+- **The catch (author's own):** everything is before trading costs; next writeup will be on why execution/turnover eats the edges.
+
+## Why it matters
+
+- **Second @skepticalxbt endorsement in this vault, different genre.** The first was the [[2026-11-02-0xarchive-btc-sp500-gap-fade]] rule — a single time-gated intraday rule with unusually honest disclosure. This one is the complementary half: instead of one rule, the question of **how much of crypto returns is just trait exposure** before you go hunting coin-specific edge. Same endorser vouching for both the micro (one rule, executed well) and the macro (decompose before you trade) views.
+- **The +22% / −94% / +94% triptych is the single most clarifying stat pair about crypto market structure I've captured.** BTC up while the average top-50 coin loses 94% means the "market" in crypto is mostly beta-concentration in one asset; everything else has been a treadmill of churn. And the reversal factor recovering +94% of that loss market-neutrally says the treadmill itself (daily churn, pump/dump dynamics in small caps) is the tradable structure.
+- **PIT (point-in-time) is the load-bearing adjective.** Out-of-sample since 2022 with point-in-time data means no survivorship of delisted perps and no lookahead in factor construction — the two ways crypto factor studies usually lie. Not independently verifiable from the writeup, but the author flags costs honestly and promises an execution-focused follow-up, which is the right disclosure pattern.
+- **Connects directly to the vault's cross-sectional trading thread.** [[2026-08-29-milk-man-replication-metrics]] and [[2026-09-09-l1vsun-yield-curve-aware-momentum]] are the same species: cross-sectional sorts on crypto/equity universes. This note adds the missing layer those notes lack — a multi-factor regression *decomposing* the sort before trading it, rather than trading the sort itself.
+- **Skepticism gates:** single anonymous author, no data/code released, 2022+ window (a regime-specific sample: no 2018/2021-style blowoff tops with alts outperforming BTC); "Sharpe > 4 rolling" is pre-cost on daily-rebalanced market-neutral perp portfolios — @Quanticator's reply (turnover math: at 10 bps/side, every 10% of book traded daily ≈ 3.65%/yr cost) puts a realistic floor under how much of that Sharpe survives. The author concedes the point in advance ("The catch"). 18.8k views with only 119 likes (~0.6%) suggests broad pass-along, shallow engagement — treat as interesting, not authoritative.
+
+## Links
+
+- [[2026-11-02-0xarchive-btc-sp500-gap-fade]] — same endorser (@skepticalxbt), the single-rule micro end; this note is the decomposition macro end.
+- [[2026-08-29-milk-man-replication-metrics]] — cross-sectional replication metrics, same species of study.
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — cross-sectional momentum with macro overlay.
+- [[2026-11-07-avi-eisen-alpha-capture-program]] — the execution/alpha-capture discipline this article's "catch" is pointing at.
