@@ -1,0 +1,29 @@
+---
+title: "GoldenDustbin (Aamodh Kuthethur) — one year of MCX commodities positional trend following: 14.7% net on account, 2.3% max DD, >100% on average margin deployed"
+source: https://x.com/goldendustbin/status/2119653980544647624
+captured: 2026-11-09
+tags: [trading, twitter, commodities, mcx, india, trend-following, positional, track-record, small-account]
+kind: reference
+---
+
+**Author:** Aamodh Kuthethur (@GoldenDustbin; Indian systematic trader) · posted 2026-11-09 04:51Z · received 2026-11-09T09:52:10Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 81 likes, 12 replies, 5,578 views, 35 bookmarks. Chart (OCR'd): cumulative gross vs net PnL, Nov 2025 → Oct 2026, grinding up to ~15-17% gross / 14.7% net with no visible deep drawdown phase. Quotes his own Oct-2024 tweet asking where to get 5min/15min/1H data for MCX GOLDM/SILVERM beyond TradingView's 20k-bar premium cap — i.e. the scorecard marks one year from data-scarcity beginner to live positional system.
+
+## Summary
+
+One-year anniversary self-scorecard for a positional (multi-day hold) trend-following system on MCX commodity futures (gold/silver mini contracts et al.): **14.7% net return on account size, 2.3% maximum drawdown, >100% net return on average margin deployed.** He calls starting commodities trend-following "the decision I'm most thankful for in the last year which was otherwise tough."
+
+## Why it matters
+
+- **The dual-metric framing is the interesting part.** "14.7% on account size" vs ">100% on average margin deployed" is the honest small-account accounting: most of the account sits in cash earning interest while the system rents small margin slices — so the strategy's capital efficiency is far higher than the headline. Compare [[2026-09-01-milk-man-backtest-notional-normalization]] (same notional-vs-margin honesty discipline, different author).
+- **2.3% max DD on positional trend following is extraordinarily low** — that's either very small position sizing, wide diversification across MCX contracts, or a favorable year (gold/silver 2026 trended). Realistic expectation for the style is 10-15% DD; this is one year, one regime.
+- **Adds the Indian MCX sleeve to the vault's trend-following cluster** — [[2026-08-30-ignis-trend-following-realtest]], [[2026-08-29-three-simple-ma-atr-systems]], [[2026-09-13-cointradernik-regime-rotation-rr-pro]] are US/crypto; this is the first MCX/India data point, from an account that documents its own build-out publicly (the quoted data-scarcity tweet is the origin story).
+
+## Skepticism gates
+
+Self-reported, no rules shared, one year of one regime (trending metals), and the DD figure is implausibly smooth for the style — size discipline + luck, not a property of the strategy. No trade list, no costs breakdown (MCX futures carry STT + brokerage that matter at mini-contract size). Fine as a track-record data point; nothing replicable here.
+
+## Links
+
+- [[2026-08-30-ignis-trend-following-realtest]] — trend-following realtest discipline.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — the notional/margin accounting standard this tweet echoes.
+- [[2026-08-29-three-simple-ma-atr-systems]] — the simple-systems trend cluster root.
