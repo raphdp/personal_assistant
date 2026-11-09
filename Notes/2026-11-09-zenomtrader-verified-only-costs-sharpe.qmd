@@ -1,0 +1,35 @@
+---
+title: "ZenomTrader — experiment v3: verified-only, costs-in — median Sharpe holds at 0.9; the 7-author allowlist"
+source: https://x.com/ZenomTrader/status/2119776908455915555
+captured: 2026-11-09
+tags: [trading, twitter, llm, agents, strategy-replication, substack, backtesting, overfitting, sharpe, trading-costs, quantconnect]
+kind: reference
+---
+
+**Author:** ZenomTrader (@ZenomTrader) · posted 2026-11-09 12:59Z · received 2026-11-09T18:02:17Z (WhatsApp via RDP-30, routed by CoS) · 22 likes · 1,958 views (via fxtwitter; syndication nulls likes/reposts). Text recovered FULL via fxtwitter. Three of four content images OCR-recovered (preserved at `rdp_media/zenom_2119776908455915555/`; the fourth 404s on every pbs.twimg.com URL variant — deleted or transient at capture). Quotes the original experiment tweet (source of [[2026-11-04-zenomtrader-substack-alpha-replication]]). Third installment: setup → first cut → this.
+
+## Summary
+
+The upgrade part 2 promised: the pipeline now codes strategies **exclusively from publishers with verified track records**. Headline: **with realistic trading costs included, verified-trader strategies still show a median Sharpe of 0.9** — essentially holding part 2's 0.89 ex-costs figure after costs.
+
+Protocol now explicitly two-stage: (1) replicate each author's results on their original instruments, accounting for realistic trading costs; (2) survivors pass through his harness's **robustness gate** — only then is any alpha counted as real.
+
+New evidence in the images (OCR-recovered):
+
+1. **Live run log** — the experiment executing in real time: 3 workers active, each on its own post; 15 posts finished since 14:33 (recaps and paywalled posts skipped); **73 authors checked → 7 verified**, and from now on only these blogs get tested: Moontower, NilssonHedge, Kieran Duff, Two Quants, Peter Brandt, ETR World, Factor Investor.
+2. **Replication parity + fleet stats** (near-identical OCR to part 2 — likely carried-over evidence, not a new cut): QuantConnect vs own saved series agree within ~0.01–0.05 Sharpe (RSInative_LS 1.45/1.47, RSI_LS 1.40/1.38, RSI_L 1.39/1.38, RSInative_L 1.33/1.34, TU_L 0.86/0.84, LQD_L 0.86/0.81); fleet table Sharpe 1.45→0.73, worst falls −13% to −24%, positive years mostly 9-of-9, ~6.5–8.7%/yr.
+
+## Why it matters
+
+- The quiet headline is **0.89 ex-costs → 0.9 with costs**: if it survives the robustness gate, "filter by verified track record, replicate with realistic costs" is a workable recipe for mining public strategy writing — the same replicate-then-distrust-your-replication loop the vault's validation thread keeps converging on.
+- The allowlist mechanics are the operational insight: harvesting is cheap (12,000 posts), **verification is the bottleneck** (73 checked → 7 credible). The scarce resource in Substack alpha isn't content, it's verifiable track records.
+- Same-day resonance with [[2026-11-09-milk-man-po10-extreme-full-receipts]] — two independent experiments landing on the same answer this week: receipts (verified history, reproducible pipeline) are what separate alpha from content.
+- **Skepticism gates:** median 0.9 remains the pipeline's own in-sample number — the robustness gate is *promised*, not yet shown; n=7 verified authors beats n=2 but is still small; the parity/stats images appear recycled from part 2; no costs/turnover detail quantified. The DSR/PBO multiple-testing haircut from [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] still applies fleet-wide.
+- Reference only — next watch-point for this series: the robustness-gate results cut.
+
+## Links
+
+- [[2026-11-05-zenomtrader-verified-author-sharpe-split]]
+- [[2026-11-04-zenomtrader-substack-alpha-replication]]
+- [[2026-11-09-milk-man-po10-extreme-full-receipts]]
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]

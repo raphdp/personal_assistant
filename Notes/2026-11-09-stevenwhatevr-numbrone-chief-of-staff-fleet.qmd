@@ -1,0 +1,36 @@
+---
+title: "Steven Michael Thomas — numbrone: open-source chief-of-staff fleet for coding agents (chief → managers → workers, on herdr)"
+source: https://x.com/stevenwhatevr/status/2119557987513565319
+captured: 2026-11-09
+tags: [agents, twitter, chief-of-staff, orchestration, herdr, git-worktrees, multi-agent, workflow, open-source]
+kind: reference
+---
+
+**Author:** Steven Michael Thomas (@stevenwhatevr) · posted 2026-11-08 22:29Z · received 2026-11-09T18:06:19Z (WhatsApp via RDP-30, routed by CoS) · 412 likes · 34,697 views (via fxtwitter; syndication truncated the text mid-sentence — full text + GitHub link recovered via fxtwitter; repo readme fetched from the GitHub API). Quotes his own reply inside the [[2026-11-08-brian-armstrong-agent-org-queue]] thread (126 likes · 52,923 views).
+
+## Summary
+
+He open-sourced **numbrone** (github.com/stevenmichaelthomas/numbrone — repo created 2026-11-08, ~99 stars in its first day): "a chief of staff for your coding agents," a community project built on herdr. Architecture:
+
+- **Chief** — the one agent you talk to; does *not* write code; routes and delegates plain-language requests, tracks everything, watches inbound sources (Linear, GitHub issues, …).
+- **Managers** — one per project, living in that project's herdr workspace; answers small things itself (questions, investigations), spawns workers for code changes, and reviews their work before reporting it ready.
+- **Workers** — one per task, each in its own herdr tab **and its own git worktree** (branch `numbrone/<task>`), so many tasks run at once without stepping on each other or on your checkout. Reports flow back up: worker → manager → chief → you.
+
+Implementation detail that matters: the whole system is **one skill + one bash script + three Markdown role files**, and all state is plain text files you can read and edit. Claimed throughput: **~50–100 PRs/day across several personal projects**; he calls the model "expressive and perfect for ADHD brains."
+
+From the quoted tweet (context): he switched to this working model two weeks prior — "central context and interface and the ability to fan out to get work done; high-level context in one place, localized deeper context across additional agent trees," with herdr keeping large workloads structured "beyond tabs and split panes."
+
+## Why it matters
+
+- Independent validation of the org shape this vault already runs on (chief routes a board queue; per-domain agents own their lanes): numbrone is the same chief → manager → worker tree, credited with 50–100 PRs/day in a coding context. The design choices rhyme with what works here: the chief routes instead of doing; state is plain text (auditable, greppable); workers isolated in worktrees (no shared-checkout races).
+- The counterweight is already in the vault: [[2026-10-24-calvingrunewald-minimize-human-attention]] — 9 months scaling parallel agents *with herdr* ended in "my brain was melting." Throughput wasn't his constraint; attention was. Numbrone's reporting spine (worker→manager→chief→you) is one answer, but Calvin's wall says even a clean hierarchy needs an attention budget.
+- The "ADHD brains" framing echoes the [[2026-11-08-brian-armstrong-agent-org-queue]] thesis: agent orgs as attention prosthetics, not just automation — one interface, fan-out underneath.
+- **Skepticism gates:** 50–100 PRs/day is a self-reported peak on the author's own projects; the repo is a day old (no evidence yet on maintenance, review quality, or what fraction of those PRs actually merge); macOS/Linux only (herdr requirement) — not directly runnable on the Windows host.
+- Reference only — the pattern is the value; the stack here already implements it.
+
+## Links
+
+- [[2026-11-08-brian-armstrong-agent-org-queue]]
+- [[2026-10-24-calvingrunewald-minimize-human-attention]]
+- [[2026-10-25-mardehaym-seven-steps-agentic-org]]
+- [[2026-10-19-flohoeller-agent-tree-component]]
