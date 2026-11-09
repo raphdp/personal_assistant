@@ -1,0 +1,40 @@
+---
+title: "Mikk Martin (@mikkmartin) — deltaviz: a repo-scale diff visualization tool for faster PR judgment (video demo, reconstructed by frame-OCR)"
+source: https://x.com/mikkmartin/status/2119491196062200158
+captured: 2026-11-09
+tags: [ai-agents, twitter, code-review, dev-tools, observability, ui-ux, workflow]
+kind: both
+---
+
+**Author:** Mikk Martin (@mikkmartin 🇪🇪🇺🇦) · posted 2026-11-08 18:04Z · received 2026-11-09T17:54:45Z (WhatsApp via RDP-30, routed by CoS). Stats at capture: 213 likes / 19 replies / 9,394 views (fxtwitter). Payload is a 23s screen-recorded video; content below reconstructed by frame-extraction + OCR, so minor transcription garble is possible. No repo or product link in the tweet — GitHub search finds no matching repo (hits are an unrelated 2016 Qlik extension etc.), so the tool appears private/unreleased at capture.
+
+## Summary
+
+The video demos **deltaviz** (visible in the app title bar, served locally at 127.0.0.1:4849) — a diff-visualization tool whose pitch is exactly the tweet text: *"Code review is now the bottleneck. I'm experimenting with diff visualization tools to help me judge PRs faster and ship quality software."*
+
+The demo repo is **shadcn/ui** (a 466k-line / 3,946-file monorepo), and the demo PR is an uncommitted toast-component change (+1.2k / −259 lines, +15 new imports, 34 files touched). Reconstructed views/panes:
+
+1. **Branch-state header** — `detached HEAD @ 91f21df`, +1,2xx / −259 src lines, **+15 new imports**, 34 changed files / 34 modules touched, "Uncommitted". One glance answers "how big is this PR really".
+2. **File-tree dependency map** — every folder with its line count (apps/v4 380k, registry 241k, examples 99k, packages/shadcn 66k …), changed paths highlighted with per-folder **deltas** (+86 / −36, +62 / −61 …); a toggle "show folder dependencies on hover"; a line-number gutter (1109–1141). Hover shows **"imports / imported by"** — the dependency edges behind the diff, not just the files in it.
+3. **Modules-touched / dropped-imports counters** — "34 modules touched, −4 dropped", import-flow annotations (+278/+209/+184/+82/+72 …). Structural summary of the change's blast radius across the import graph.
+4. **Dropped-import ledger** — e.g. a long list of file-ids (1108–1141) under `__components__.tsx`, `toast-types.tsx`, `_registry.ts`, `next.config.mjs`; a detailed side panel for `__index__.tsx` / `apps/v4/registry/bases/base/ui/textarea.tsx` showing registry metadata (`registryDependencies: [button]`, docs links, file lists, categories) and "imports *278 4184 +39 25".
+5. **Inline code diff** — actual code, readable: `sonner-position.tsx` (`apps/v4/examples/base/`) showing `import { toast } from "sonner"`, `<Button variant="outline" toast("Event has been created", { position: "top-left" }) …` — marked **−60 deleted**, with per-block plus/minus counts (+27 / +72 / +39 / +25 / −25 / −36 / −61 / −24 / −21). The diff you'd read on GitHub, embedded in the structural views.
+
+The throughline: deltaviz turns a 34-file, +1.2k/−259 diff from a wall of text into a **repo-scale structural map** — size, blast radius across imports, dropped dependencies, and the readable diff in one screen.
+
+## Why it matters
+
+- **This is the review leg of the agent-workflow cluster going visual.** The vault already holds the text-based review techniques — [[2026-09-06-pocock-reviewable-ai-prs]] (readable diffs, pseudocode, Mermaid, TDD evidence), [[2026-09-01-quentin-cody-code-quality-gates]] (numeric gates), [[2026-09-06-julian-risk-based-code-review]] (risk triggers deciding which PRs need a human). deltaviz is the same instinct at tool level: when AI agents generate most of the code (and 34-file PRs become routine), the diff view itself must scale.
+- **Blast radius is the headline number.** +1.2k/−259 lines says size; **+15 new imports / −4 dropped** says coupling change. For a monorepo, the import graph is the real architecture — surfacing per-folder deltas and imports/imported-by on hover is a cheaper architecture-review than any doc.
+- **Directly adjacent to [[2026-10-19-flohoeller-agent-tree-component]]**: Flo's tree makes *orchestration* visible (who started whom, cost per node); deltaviz makes the *output diff* visible. Two observability layers for the same agent-heavy world — one for the run, one for the artifact it leaves.
+- **Actionable lane for us:** the wa-bridge / desk tooling could adopt the cheap 80% — a PR header line (files touched, ±lines, imports added/dropped) is a `git diff --stat` + `git diff | grep '^+import'` away, no UI needed.
+- **Skepticism gates:** demo, not a shipped product — no repo, no link, no pricing, "experimenting" is the author's own word. The shadcn demo repo is friendly to the tool (registry-style metadata everywhere); an arbitrary legacy codebase may render less cleanly. Numbers reconstructed via OCR from a compressed video — treat specifics as approximate. Also note the video shows what looks like a browser-chrome pinned-tab row (e.g. "e", "O ui", "inL tev", "lev (repo)") — the tool is local-first, not a cloud service.
+
+## Links
+
+- [[2026-09-06-pocock-reviewable-ai-prs]] — text techniques for reviewable AI PRs; deltaviz is the same "review must be structural" instinct as a visual tool.
+- [[2026-09-06-julian-risk-based-code-review]] — which PRs deserve a human at all; deltaviz is what the human looks at once one does.
+- [[2026-09-01-quentin-cody-code-quality-gates]] — numeric gates on merged code; structural diff views gate what reaches merge.
+- [[2026-10-19-flohoeller-agent-tree-component]] — sibling observability demo (video-lane capture): the run tree vs the output diff.
+- [[2026-11-06-edesberg-make-native-refactor-skill]] — refactor skill producing reviewable rewrites; deltaviz is the review surface such rewrites need.
+- [[2026-11-06-trevin-state-machine-audit-prompt]] — audit prompt reads state machines; tools like this make the audit diff legible.
