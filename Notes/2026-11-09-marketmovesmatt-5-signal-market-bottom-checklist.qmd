@@ -1,0 +1,38 @@
+---
+title: "MarketMovesMatt (Matt Giannino) — 5-signal market-bottom timing checklist (VIX>25, −10% pullback, weekly RSI<40, volume capitulation, level sweep-and-hold)"
+source: https://x.com/marketmovesmatt/status/2119522637730718127
+captured: 2026-11-09
+tags: [trading, twitter, market-bottoms, vix, rsi, capitulation, checklist, timing, discretionary]
+kind: reference
+---
+
+**Author:** @MarketMovesMatt (Matt Giannino) · posted 2026-11-08 20:09Z · received 2026-11-09T09:54:52Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter; syndication nulled likes/views): 302 likes, 8 replies, 22,380 views. Text-only — no charts, no media, no quoted tweet. Text truncated mid-sentence in the syndication API; full 402 chars recovered via fxtwitter.
+
+## Summary
+
+Giannino's checklist for timing market bottoms — "the same 5 signals for years":
+
+1. **VIX spikes above 25**
+2. **Market pulls back 10%+**
+3. **Weekly RSI drops below 40**
+4. **Volume capitulates and dries up**
+5. **Price sweeps a key level and holds**
+
+He claims **all five hit "last Thursday"** (posted Sunday Nov 8 → Thursday 2026-11-05), and closes with the actual thesis: *"If you don't know what you're looking for BEFORE the selloff, you'll never pull the trigger during one. Checklists beat 'gut feelings' every day of the week."*
+
+## Why it matters
+
+- **Same-day VIX cluster, third angle**: [[2026-11-09-kashin-vix-vix3m-evrp-strategies]] is the systematic version (VIX/VIX3M term-structure gates, backtested), [[2026-11-09-quantifiedstrategies-vix-futures-article]] the rules-backtest version — this is the **discretionary-checklist** version. Same feed, same week, three genres of "VIX tells you when to act". The convergence itself is signal: vol-based timing is what's circulating.
+- **The core point survives the skepticism**: pre-committing to written criteria *before* a selloff is exactly how [[2026-08-29-milk-spx-strategy-v1-1]] and every other rules-based system in the vault avoids freezing at the moment of maximum opportunity. "Checklists beat gut feelings" is the same thesis as dmartin's hypothesis-first discipline — the tweet is a compact restatement.
+- **Every input is free and daily-checkable**: VIX close, index drawdown, weekly RSI, volume, price levels — no paid data needed for a weekend backtest of the confluence.
+
+## Skepticism gates
+
+No instrument, index, or timeframe defined (10% on what? RSI on which index? what counts as a "key level"?), no backtest, no stats, no chart — "they all hit last Thursday" is unverifiable as stated. The thresholds look loose as *bottom* criteria: VIX>25 fires in plenty of non-bottom corrections, weekly RSI<40 is mild (classic bottom readings are <30), and "sweep a key level and holds" is hindsight language — sweep-and-hold is only identifiable after the hold. A confluence of weak filters still leaves the trigger decision discretionary, which ironically undercuts the checklist-vs-gut kicker. First capture from this author; modest engagement; treat as a template for pre-commitment, not a strategy.
+
+## Links
+
+- [[2026-11-09-kashin-vix-vix3m-evrp-strategies]] — same-day systematic VIX/VIX3M counterpart.
+- [[2026-11-09-quantifiedstrategies-vix-futures-article]] — same-day VIX futures backtest (bot-walled).
+- [[2026-08-29-milk-spx-strategy-v1-1]] — checklist-driven SPX system, the disciplined version of this idea.
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — rules-based buying of pullbacks.
