@@ -1,0 +1,42 @@
+---
+title: "Al Smallwood (@SmallwoodAl_) — five foundations for production-grade autonomous equity research agents; without them \"you just become a busy fool\""
+source: https://x.com/SmallwoodAl_/status/2119486117150142813
+captured: 2026-11-09
+tags: [ai-agents, twitter, smallwoodal, equity-research, agentic-investing, data-infrastructure, auditability, ui-design, own-your-stack, oshag-reply, hedge-funds, anti-hype]
+kind: reference
+---
+
+**Author:** Al Smallwood (@SmallwoodAl_) — builds autonomous equity research agents for hedge funds "at the frontier of using AI". Posted 2026-11-08 17:44Z; received 2026-11-09 09:39Z (WhatsApp via RDP-30, routed by CoS). Engagement: 99 likes, 11 replies (reposts/views not exposed at capture).
+
+A reply to Patrick O'Shaughnessy (@patrick_oshag, 2026-11-08): *"The gap between investors who've embraced ai (especially in research + admin) and those who haven't is staggering — one of the best I know said 90%+ of firms work is now Ai/automated; another sole practitioner has a whole firm run by grok bots. Era of agentic investing is here."*
+
+## Summary
+
+Smallwood's counterpoint: agentic research systems are only possible if the foundation is right. Five facets:
+
+1. **Connect all your data — but connection alone isn't enough.** "Just adding FactSet MCP doesn't cut the mustard" — you must optimize data processing and storage for best-in-class *agent retrieval*.
+2. **Auditable and understandable for both agents and humans.** This requires specialist UI design; it doesn't happen by accident.
+3. **Skills / process / preferred-output layers only work once 1 and 2 work.** Layering on top of a bad foundation buys nothing.
+4. **Customization and flexibility is the key priority.** The system has to get better with every model increase, tool change, or SOTA method evolution — too rigid and it "drifts from the frontier every few weeks". This includes **owning the source code of the full system**: if you subscribe to a web-app product, you can't add new functionality when you need it.
+5. **Best-in-class tools that take load off the LLMs** (modelling, maths, data analysis) — with storage of that data both agent-accessible and human-readable.
+
+Closer: ambitious teams with Claude Code in hand feel like everything is achievable — but production grade is a very different challenge with little room for errors or false confidence. "If your system is making errors, then all the promised productivity gain slips away and you just become a busy fool."
+
+## Why it matters
+
+- **Grounded pushback on the agentic-investing hype wave** — from a practitioner who builds these systems for HFs, not a vendor. The O'Shaghnessy framing ("90%+ of work automated") describes the frontier; Smallwood describes the price of admission.
+- **The "busy fool" failure mode is the sharpest line**: agent errors don't just cost accuracy, they *invert* the productivity gain — you spend your attention supervising a system that was supposed to save it. Same principle as [[2026-10-24-calvingrunewald-minimize-human-attention]] and the attention-audit argument in [[2026-10-24-kunchen-attention-bottleneck-step-functions]].
+- **"Own the source code, or drift from the frontier"** is the build-vs-buy argument stated for agents: a web-app subscription can't absorb model/tool/SOTA churn. Tension worth noting with the "small surface, few tools" school (e.g. [[2026-09-17-agrawal-agent-simplification-prompts]]) — Smallwood says rigidity, not complexity, is what kills you.
+- **Data retrieval > data connection** (point 1) and **human-readable audit trails** (point 2) echo the foundation-first ladder in [[2026-10-25-mardehaym-seven-steps-agentic-org]] — companies shopping for step-seven tech while sitting on step-one foundations.
+- Directly relevant to RD's own agent companies: both the trading side (factor/research infrastructure, cf. [[2026-11-08-astraeus-crypto-barra-factor-model]]) and RDP's org design ([[2026-11-08-brian-armstrong-agent-org-queue]]) live or die on the same five foundations — the audit/review surface (point 2) is exactly Armstrong's "single review queue" argument.
+
+Skepticism gates: single practitioner anecdote, no disclosed track record of his systems; "hedge funds at the frontier" is self-describing; point 4 conveniently serves a shop that sells custom builds. The five facets stand on engineering merit regardless.
+
+## Links
+
+- [[2026-11-08-brian-armstrong-agent-org-queue]] — agent org design: review queue as the human-audit surface (Smallwood's point 2).
+- [[2026-10-25-mardehaym-seven-steps-agentic-org]] — foundation-before-frontier adoption ladder; same "step one" warning.
+- [[2026-10-24-calvingrunewald-minimize-human-attention]] — the attention budget the "busy fool" mode destroys.
+- [[2026-10-24-kunchen-attention-bottleneck-step-functions]] — measuring whether agents actually save attention.
+- [[2026-11-08-astraeus-crypto-barra-factor-model]] — production-grade research infrastructure on the trading side.
+- [[2026-09-17-agrawal-agent-simplification-prompts]] — the simplify-first school; useful counterweight to point 4.
