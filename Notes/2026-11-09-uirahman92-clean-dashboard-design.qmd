@@ -1,0 +1,27 @@
+---
+title: "Rah Man Designer (@UiRahMan92) — 'clean dashboard design you'll ever see': a Personal Life OS reference that became the desk's design system"
+source: https://x.com/uirahman92/status/2119664109037973910
+captured: 2026-11-09
+tags: [design, twitter, uirahman92, dashboards, ui, design-tokens, life-os, rdp-implementation, lattice-desk]
+kind: both
+---
+
+**Author:** Rah Man Designer (@UiRahMan92). Posted 2026-11-09 05:31Z; received 2026-11-09 13:39Z (WhatsApp via RDP-30, routed by CoS). Engagement: 350 likes, 19 replies, 38,440 views (fxtwitter). Content lives in the tweet's photo (2048×1387) — recovered by WinRT OCR + pixel sampling; archived at `C:\Users\Administrator\rdp_media\2119664109037973910\design.jpg`.
+
+## Summary
+
+A single image tweet presenting a "Personal Life OS" dashboard concept — the kind of clean-light UI post that circulates as design inspiration. Layout: left icon sidebar (Chat/Tasks/Files/Settings) → main canvas of white cards on a light-gray field: greeting hero ("Good morning, [name]") with a large AI prompt box ("Ask [AI] to plan, search, or do anything…"), Life Pillars chips (Health · Career · Relations · Finance), Goals panel with progress rings (Health 78%, "Longevity", "Active Targets"), Vision Board, To Do / In Progress task columns, Quick Stats / Quick Entry / Waiting, a right-side AI chat panel with privacy disclaimer, and a Files panel (Semantic Groups, Cloud Sync, Local Folder, Smart View; rental agreement, passport scan, investor deck).
+
+The ask that came with it: *"write a whole detailed md for this design and implement that in all dashboard."*
+
+## Why it matters
+
+- **It was implemented, not just captured.** Design tokens were measured from the image (canvas `#E4E4E4`, cards `#FBFBFB`, ink `#0B0B0B`, hero gradient `#65DAFD→#449EFE→#2D53DC`) and rolled out as a presentational reskin across every dashboard on the host — spec: `~/lattice-desk/docs/2026-11-09-clean-dashboard-design.md`. Pure token remap: no data logic, endpoints, auth, or safety banners touched. Commit `c5c5ff4` (polymkt-main).
+- **Design inspiration → design system.** The reference is a life-OS app, not a trading desk; the mapping borrows layout DNA and tokens (light canvas, white cards, hairlines, gradient accent), not features. Sidebar/AI-chat/progress-ring *features* were deliberately not adopted — new surfaces need their own spec, and the desk's dashboards are read-only viewers.
+- **Contrast discipline is the transferable rule.** Dark-palette saturated mid-tones don't survive on white: pos/neg/amber were shifted darker (`#12833F`/`#D5212B`/`#9A6B00`) to keep ≥4.5:1. Charts needed JS constant changes, not just CSS — hand-rolled SVG doesn't read CSS vars.
+
+## Links
+
+- Spec + rollout record: `~/lattice-desk/docs/2026-11-09-clean-dashboard-design.md`
+- Tweet media archive + screenshots of the reskinned dashboards: `~/rdp_media/2119664109037973910/`
+- Desk dashboard inventory context: [[2026-11-09-smallwood-agent-research-foundation]] (point 2 — specialist UI design doesn't happen by accident)
