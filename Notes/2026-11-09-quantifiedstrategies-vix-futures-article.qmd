@@ -1,0 +1,27 @@
+---
+title: "QuantifiedStrategies: VIX futures trading strategy — backtest & example (article promo; site bot-walled again)"
+source: https://x.com/quantifiedstrat/status/2119339147332575641
+captured: 2026-11-09
+tags: [trading, twitter, vix, futures, volatility, strategy, backtest, quantifiedstrategies, bot-walled]
+kind: both
+---
+
+**Author:** QuantifiedStrategies.com (@QuantifiedStrat) · posted 2026-11-08 08:00Z · received 2026-11-09T09:44:21Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 19 likes, 3 replies, 1,923 views, 18 bookmarks. Attached chart (OCR'd): equity curve labelled "Portfolio 546,235.1", axis 2010→2015+, values ~150,000→500,000 — a long-only-looking compounding curve from their backtest.
+
+## Summary
+
+Promo tweet for their article "VIX Futures Trading Strategy – Backtest and Example": the tweet text is boilerplate definition ("financial derivatives that represent an agreement to buy or sell at a specified price…") with no rules. The t.co in the text resolves to the tweet's **own photo** (link-card pattern), not the article. Article URL: `https://www.quantifiedstrategies.com/vix-futures-trading-strategy/` — **bot-walled** (lsrecaptcha "Bot Verification" stub, HTTP 200/~2KB) from this host, same wall as the 2026-08-30 RSI/ADX/IBS capture. Full rules NOT captured; read-later task filed alongside the existing one. Second capture from this account.
+
+## Why it matters
+
+- VIX futures strategies are a structural counterpart to the equity-index captures filling the vault (term-structure carry, contango decay, vol spikes) — first VIX-futures-specific capture; prior VIX mentions were incidental ([[2026-09-09-l1vsun-yield-curve-aware-momentum]], [[2026-11-04-zenomtrader-substack-alpha-replication]]).
+- The account's format is fully-specified backtest rules — exactly what the wall keeps blocking. Two independent walls (Aug 30, Nov 9) say the lane from this host is closed; a browser session is the standing unlock.
+
+## Skepticism gates
+
+Chart OCR is partial (axis fragments only); curve magnitude (~150K→546K) unverifiable without the article; their backtests are typically long-only VIX-basis strategies where the equity curve depends entirely on the rebalance rule and cost assumptions — neither visible. No rules, no judgement.
+
+## Links
+
+- [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — same account, same wall, same handling precedent.
+- [[2026-11-09-milk-man-po10-extreme-full-receipts]] — same-day contrast: same genre (backtest strategy disclosure), opposite posture (full receipts vs bot-walled promo).

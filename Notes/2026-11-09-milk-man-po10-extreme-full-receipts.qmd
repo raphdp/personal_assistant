@@ -1,0 +1,44 @@
+---
+title: "The Milk Man — PO10 Extreme forward-test scorecard (9 trades, PF 13.1) + the full-receipts page is live: rule, formula, 511-trade backtest, reproduction package"
+source: https://x.com/MrMilkTrading/status/2119450893342941465
+captured: 2026-11-09
+tags: [trading, twitter, nq, futures, intraday, momentum, phase-oscillator, milk-man, backtest, forward-test, track-record, full-disclosure]
+kind: both
+---
+
+**Author:** The Milk Man (@MrMilkTrading; options/futures trader, Texas; milkmantrades.com) · posted 2026-11-08 15:24Z · received 2026-11-09T09:40:48Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 86 likes, 6 replies, 7,172 views, 117 bookmarks. Photo = the forward-test scorecard card (OCR'd below); quotes his own tweet on the strategy's origin. Tweet says "page and trade list on my site shortly" — **the page is already live** (milkmantrades.com/po10-extreme.html, fetched this capture).
+
+## Summary
+
+Two-layer capture, and the deepest disclosure in the Milk thread so far.
+
+**The tweet + card (forward test since the July share):** first signal 2026-07-24 through 2026-11-05, paper account on frozen rules, NDX quotes with 1-pt friction. **9 trades, 7/9 winners (78%), +2,484 NQ pts ≈ +$49,682 on 1 contract, PF 13.1** — vs backtest PF 2.55. Trade-by-trade on the card: best +1,110 (Oct 16 short), then +398, +362, +282, +51, +31, −24…; final trade Nov 5 short held to the close. Card annotates itself: **"tiny sample, say it twice."** Same signals trade live at probe size on Darwinex; backtest agrees on 8 of 8 shared dates. The quoted tweet gives the origin: he built it to *fade* extreme momentum, and found extreme momentum at the cash open predicts **continuation** — the strategy trades with it.
+
+**The receipts page (the real payload):** the PO10 Extreme page publishes everything the teasers never did:
+- **Rule:** NQ 10-minute Phase Oscillator (Saty Mahajan's indicator) closes beyond ±100 in the first 30 min (signal closes 09:30–10:00 ET, four slots/day, one position at a time) → enter at next 1-min open in the cross direction. Exit at whichever comes first: (a) completed 1-min bar with PO ≥95 against the position → out at next 1-min open; (b) opposite 10m cross; (c) flat 15:59 ET. In 511 trades (b) never fired first.
+- **Formula (exact):** on the full 24h tape, midnight-ET aligned. Pivot = EMA(21) of close; ATR(14) Wilder-style (α=1/14); Raw = (close − pivot)/(3 × ATR14) × 100; PO = EMA(3) of Raw. Same code runs in backtest and live trader; ships in the package.
+- **Backtest:** 2008-03 → 2026-10, **511 trades, 53.4% WR, PF 2.55, +13,044 pts ≈ $260,872** on 1 contract at 1.0-pt round-trip cost. Deepest DD 971 pts (−$19,428, 2019-01→2021-02); longest underwater 2009-07→2013-04. Five negative years of nineteen (2009, 2011, 2015, 2019, 2020). Regime split: 2008–18 PF 1.64 vs **2019→ PF 2.96**; 2026 YTD 23 trades, PF 11.1, +3,504 pts.
+- **Exit anatomy:** the 1-min-extreme exit is the loss sink (298 trades, PF 0.60, −2,773 pts, avg −9.3); hold-to-close is the engine (213 trades, PF 12.2, +15,816 pts, avg +74.2). Taking profit at a *favourable* 1-min extreme destroyed the edge in their sweep (PF 1.89→1.40). Without the adverse exit at all: +13,022 pts at PF 2.25 with *smaller* DD (691) — they keep it for trend-failure detection, stated as a judgment.
+- **Provenance:** ±100 cross found in their July 2026 PO-rules sweep (±23.6 no edge, ±61.8 a little, ±100 most); revealed 2026-08-26; the 11:00→10:00 cutoff change (2026-08-29) came from @etbent1's independent USTEC replication halving DD; the 1-min exit from their own 2026-07-22 sweep that froze the prereg.
+- **Robustness:** all 25 cells of the ±20% entry/exit threshold grid profitable (PF 1.49–2.55; deployed cell's 4 neighbours within 17%); random-direction baseline (same times, coin-flip side, same exits): median PF 1.40, 95th pct 1.71, **0 of 100 seeds reached +13,044** — exit asymmetry alone is positive on a trending index; the cross direction adds ~+17.5 pts/trade. Cost break-even 26.5 pts/trade ≈ 5× the assumption. PF strengthens across OOS blocks: 1.51 → 1.70 → 2.24 → 3.70; 2025→ PF 4.43.
+- **Forward-test governance:** prereg frozen 2026-07-22. Gates: **kill at 13 closed trades if PF < 0.7; evaluate at 26 (GO = PF ≥ 1.3 and net > 0). Paper is at 9 of 26.** Paper sleeve runs on Darwinex NDX CFD quotes (1-pt friction); three live mirrors at probe size. Second-feed check: paper NDX vs NQ backtest agree 8/8 on side, 7/8 on exit type, exits within 2 min, largest gap 33 pts.
+- **Reproduction package:** downloadable zip — backtest engine (same oscillator code as live), forward/live collector, page builder, raw trade lists for both signal windows, 5×5 parameter grid, every statistic as JSON, paper-trade log, README with rule + formulas.
+
+## Why it matters
+
+- **This upgrades the Milk thread from teasers to receipts.** Prior captures were partial reveals ([[2026-09-27-milk-man-nq-scalping-algo-v0]] was the strongest replication candidate — an untranscribed NT8 screenshot); this ships the exact formula, every trade since 2008, costs, parameter neighbourhood, and the code. Strongest replication candidate in the vault, full stop — and it inverts the QuantifiedStrategies wall pattern (see today's companion capture): same genre, opposite disclosure posture.
+- **His forward-test governance is the copyable pattern** already flagged in [[2026-10-01-milk-man-options-algo-forward-test]], now with actual numbers: frozen prereg *before* the share, pre-registered kill/evaluate gates, paper sleeve on a different feed than the backtest, live mirrors at probe size, trade-by-trade agreement published. This is what [[2026-08-29-milk-man-replication-metrics]] demands — applied by the author to himself before anyone asks.
+- **The stat to trust is 2.55, not 13.1.** The card's own annotation ("tiny sample, say it twice") is correct: 9 trades cannot distinguish PF 13.1 from PF 2.55. The honest scoreboard: a 511-trade backtest at PF 2.55 whose edge *concentrates* post-2019, plus a 9-trade forward window inside pre-registered gates at 9/26.
+- **Connection to yesterday's capture:** [[2026-11-08-milk-man-spx-put-credit-spread-strategy]] was the *ask* for an independent (Grok) forward scorecard; this is the same author *publishing his own* forward scorecard with full methodology. The two notes bracket the standard: external audit asks vs self-audit receipts.
+
+## Skepticism gates
+
+Self-reported throughout; the page is his own marketing for a (free) reproduction package. PF 13.1 forward = small-sample inflation — the chart says so itself. The 2019→ regime split cuts both ways: it's either a genuine regime fit or the rule was effectively selected on the recent half (the sweep that chose ±100 was July 2026 — recent-data selection bias). PF *rising* monotonically across OOS blocks (1.51→3.70) is unusual and worth side-eye: real edges usually decay forward, not strengthen. Cost realism: 1-pt RT is NQ-tight; the live sleeves trade CFDs with wider spreads (their own §10 comparison admits basis drift up to 33 pts/trade), and the 200-pt catastrophic stop isn't in the backtest (would have cost −1,072 pts across 12 trades). 2020 was the worst year (−603) — March crash printed adverse 1-min extremes against directionally-right shorts; a repeat is the known failure mode. No third-party replication yet (@etbent1 replicated the *indicator*, pre-freeze, not the frozen spec).
+
+## Links
+
+- [[2026-11-08-milk-man-spx-put-credit-spread-strategy]] — yesterday's Grok-scorecard ask; this is the self-audit counterpart.
+- [[2026-10-01-milk-man-options-algo-forward-test]] — the forward-test discipline pattern (Bilbo Box paper account).
+- [[2026-09-27-milk-man-nq-scalping-algo-v0]] — prior strongest replication candidate from this author; superseded by this.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — his cost/notional realism standard; the 26.5-pt break-even panel applies it.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication standard the package finally satisfies.
