@@ -1,0 +1,38 @@
+---
+title: "かしん／kashin_moneylab (東大卒投資家) — VIX/VIX3M volatility risk premium strategies: eVRP + backwardation + sizing, backtest 2008-2025 (crisis alpha +86.9% in 2008, +42.3% in 2020)"
+source: https://x.com/kashin_moneylab/status/2119440436670738737
+captured: 2026-11-09
+tags: [trading, twitter, vix, vix3m, volatility, variance-risk-premium, term-structure, japanese, backtest, strategy]
+kind: both
+---
+
+**Author:** かしん (@kashin_moneylab; Tokyo-University-graduate investor, Japanese finfluencer) · posted 2026-11-08 14:42Z · received 2026-11-09T09:50:08Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 769 likes, 9 replies, 55,372 views, **1,352 bookmarks** — heavyweight engagement for a quant tweet. Quotes @Mr_tamura's AI-backtest tweet (394 likes, 81.8k views): after 2 full days of AI-assisted backtesting he found nothing that beats JustKeepBuying's conclusion — (1) hold non-equity cash flow, accumulate cash; (2) **buy the day after VIX>VIX3M** (backwardation); (3) eat the subsequent drawdown; (4) leverage ≤2x only for those who can stomach −70%. Four attached images (all OCR'd): equity curves, strategy summary table, calendar-year returns, vol-mix weight study.
+
+## Summary
+
+かしん's answer to Mr_tamura: he too digs through papers, and the best backtests he's found use **VIX and VIX3M as primary signals to buy/sell volatility**. The four tables describe an escalating ladder (clearly reformatted from an academic study — exact paper not identified from the tweet; figures "net of 5bps transaction costs, backtest 2008-2025"):
+
+1. **Passive** — short-vol base (VIXSHORT always on), size 20% VIX% notional.
+2. **eVRP** — VIXSHORT only if expected variance risk premium > 0 and VIX < VIX3M (contango); Cash otherwise. Both long (VIXLONG if eVRP<0, VIX>VIX3M) and short variants appear in the table's ladder.
+3. **eVRP + BoC** (backwardation-of-contango / term-structure gate refinement).
+4. **eVRP + BoC + Sizing** — position 0.5×VIX% scaling. Signal 3:45pm, **MOC orders**, rebalance rules per strategy.
+
+Calendar-year table highlights (net, 2008–2025): the full ladder returned **+86.9% in 2008** (S&P −36.8%) and **+42.3% in 2020** (crisis alpha from the long-vol branch), 2008–2025 nearly all-positive years (worst ≈ −1.6% to −1.9% in 2024/2025 for the strategy variants), while passive short-vol did −18.6%/−19.0%/−12.0% in 2008/2018/2020. Chart 1 equity curves: ladder compounds to ~$1,200-1,400 vs passive ~$100-400. Chart 4: an end-of-month SPY + vol-strategy mix weight study ("Improve Passive" label) — vol as an overlay improves risk-adjusted passive returns at moderate weights.
+
+## Why it matters
+
+- **Third VIX-themed capture of the day** — a same-day cluster: [[2026-11-09-quantifiedstrategies-vix-futures-article]] (VIX futures backtest, walled) and the VIX>VIX3M signal here. The vol risk premium + term-structure gate pattern is clearly circulating in the user's feeds; Mr_tamura's quoted tweet is the naive version (buy SPX after backwardation), かしん's the systematic one (conditioned VRP harvesting both directions).
+- **The signal is checkable with free data**: VIX/VIX3M/SPX daily closes — eVRP needs a realized-variance proxy (e.g. 21d realized vol) vs VIX². Simpler than every other replication candidate this week except PO10. The ladder design (each overlay's marginal contribution isolated, calendar-year table) is itself a clean template.
+- **Crisis-alpha claim is the headline**: +86.9% in 2008 and +42.3% in 2020 from a vol strategy means the LONG-vol branch fired big in exactly the years equities cratered — i.e. negative correlation to equities when it matters, which is the whole thesis of vol as an overlay (chart 4).
+- **Japanese finfluencer ecosystem note**: high bookmark ratio (1,352 on 769 likes = people saving it as a recipe) matches the vault's prior signal that saved-tweets = treat-as-reference.
+
+## Skepticism gates
+
+Source paper unidentified — tables are a repackage, so the backtest methodology (vehicle! futures roll costs vs options vs ETFs, fill assumptions at MOC, exactly how eVRP is computed) is not verifiable from the tweet. Short-vol ladder tails: "VIXSHORT" strategies are one Feb-4-2018 ("Volmageddon") from catastrophic; 2018's −8.1% (eVRP+BoC row) is the tell. The +86.9% 2008 figure implies the long-vol branch captured the crash — long-vol implementations are notoriously cost-sensitive (spreads on VIX options/futures), and 5bps TCost is futures-tight optimism. Sizing at "0.5×VIX%" scales notional with vol level — path-dependent leverage needs careful margin modelling. AI-backtest context (the quoted tweet) is reminder that these circulate as folk-wisdom; treat as a research lead, not a strategy.
+
+## Links
+
+- [[2026-11-09-quantifiedstrategies-vix-futures-article]] — same-day VIX futures capture (bot-walled rules).
+- [[2026-11-09-milk-man-po10-extreme-full-receipts]] — same-day contrast: milk ships receipts (code + every trade), this is tables-from-a-paper.
+- [[2026-09-09-l1vsun-yield-curve-aware-momentum]] — prior VIX-incidental capture.
+- [[2026-11-04-zenomtrader-substack-alpha-replication]] — prior alpha-replication skepticism standard to apply.
