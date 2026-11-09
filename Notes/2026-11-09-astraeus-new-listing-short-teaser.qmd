@@ -1,0 +1,33 @@
+---
+title: "Astraeus (@AstraeusCap) — teaser: shorting new Binance perp listings isn't free money — the split by listing-day move (249 down / 213 up, 2021–2025) is the signal; stop-losses and squeeze blowouts flagged; write-up incoming"
+source: https://x.com/AstraeusCap/status/2119503386047308118
+captured: 2026-11-09
+tags: [trading, twitter, crypto, quant, listings, short-selling, binance, perps, event-study, astraeus, teaser]
+kind: reference
+---
+
+**Author:** Astraeus (@AstraeusCap; "average crayon eater | I build and run mev bots and trade systematic crypto strategies", author of [[2026-11-08-astraeus-crypto-barra-factor-model]]) · posted 2026-11-08T18:52:40Z · received 2026-11-09T10:53:00Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 82 likes, 9 replies, 7,105 views. Full tweet text recovered via fxtwitter (429 chars, complete — the syndication API had truncated it); chart payload reconstructed by photo OCR.
+
+## Summary
+
+Teaser for Astraeus's next write-up: **is it free money to short every new exchange listing? "Maybe, but you need to refine the signal quite a bit."**
+
+- **The chart (OCR-reconstructed):** Binance USDT perpetuals **listed 2021-01-01 → 2025-08-18** (462 listings), returns tracked **from the close of the listing day** out to ~100 days, **split by listing-day move: Down (n=249) vs Up (n=213)**. Three panels: mean cumulative simple return, mean cumulative log return, and median cumulative return — the median panel being the robust check (means get dominated by squeeze outliers). Axis labels show cumulative-return scales reaching roughly −0.3 to −0.4 on at least one cohort's horizon; per-cohort paths are the write-up's actual payload and are OCR-limited here.
+- **The refinement is the split itself:** the naive trade ("short every listing") treats 462 events as one bucket; the chart's point is that the listing-day-move split separates cohorts with different post-listing drift — signal refinement before sizing.
+- **Two explicit warnings carried over from the tweet:** (1) **a stop loss doesn't immediately solve the problem** — the obvious risk bandage fails on this trade; (2) **how not to get blown out when it gets short squeezed** — listing shorts carry asymmetric squeeze risk (the 2021-era GME/short-squeeze dynamics applied to fresh, low-float perps).
+- **Author is taking requests:** "Are there other topics / ideas that you guys have that you'd want me to do research on / write about? Happy to do so if helpful."
+
+## Why it matters
+
+- **This is the announced sequel to the vault's deepest quant capture.** [[2026-11-08-astraeus-crypto-barra-factor-model]] ended on the author's own catch ("everything is before trading costs; next writeup will be on why execution/turnover eats the edges"). The sequencing has shifted — this listing-short study lands first — but the pattern holds: tease with data, publish the method, disclose the costs honestly. The prior note earned its depth via the fxtwitter article lane; expect the same for this write-up when it drops.
+- **Event-study structure is the connective tissue.** n=462 split into 249/213 cohorts, measured from listing-day close, median alongside mean — this is a clean event-study design, the same species as the cross-sectional sorts in [[2026-08-29-milk-man-replication-metrics]] and the factor decompositions of the prior Astraeus note. The vault's crypto quant thread is converging on one author's research program.
+- **The squeeze/stop-loss warnings are the practitioner tell.** Most "short new listings" takes stop at the drift chart; flagging that stops fail (gap-through risk on illiquid fresh perps, borrow/funding mechanics, squeeze asymmetry) and that blowout-prevention is a design constraint is what separates a trader's write-up from a backtester's. It also directly tempers the free-money hook.
+- **Skepticism gates:** teaser, not the write-up — the chart alone doesn't establish which cohort drifts where, only that the split exists (n=249/213); OCR reconstruction can misread axis labels, so the −0.3/−0.4 read is indicative, not quoted; no data/code released yet ("our data"); 2021–2025 window is regime-specific (covers the 2021 blowoff top tail and the 2024–25 ETF regime, no full-cycle test); 82 likes on 7,105 views (~1.2%) is a niche-research audience, consistent with the prior note's pass-along pattern. No author site found at capture (bounded probe) — the write-up will presumably land as an X article like the last one.
+- **For the user:** nothing actionable yet — watch for the write-up; the author is explicitly soliciting research topics (reply on X if any of the vault's open threads — e.g. the cost/execution catch from the factor-model note — are worth requesting).
+
+## Links
+
+- [[2026-11-08-astraeus-crypto-barra-factor-model]] — same author, the prior write-up whose "next writeup" promise this teaser extends.
+- [[2026-08-29-milk-man-replication-metrics]] — cross-sectional study discipline, same event-study species.
+- [[2026-11-02-0xarchive-btc-sp500-gap-fade]] — the honest-disclosure genre this author's endorsement network shares.
+- [[2026-11-07-avi-eisen-alpha-capture-program]] — execution/cost discipline, the lens the stop-loss warning points through.
