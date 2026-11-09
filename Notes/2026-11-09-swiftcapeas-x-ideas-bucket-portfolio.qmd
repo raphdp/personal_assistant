@@ -1,0 +1,43 @@
+---
+title: "SwiftCap EAs — X ideas bucket: 15 tested, 4 survivors, one low-correlation portfolio"
+source: https://x.com/swiftcapeas/status/2119821480079114369
+captured: 2026-11-09
+tags: [trading, strategies, portfolio-construction, backtesting, out-of-sample, diversification, nasdaq, forex]
+kind: reference
+---
+
+**Author:** @swiftcapeas (Hassan | SwiftCap EAs) — posted 2026-11-09T15:56Z, received 17:54Z (WhatsApp via RDP-30, routed by CoS). Engagement: 28 likes / 1,005 views / 3 replies (via fxtwitter; syndication API nulls stats).
+
+## Summary
+
+Hassan closed the loop on his "X ideas bucket": 15 strategy ideas collected from Twitter, all run through the same pipeline — scan on 40+ markets, robustness checks, a test against **random entries**, then years of data the strategy had never seen. **4 survived, 11 didn't.**
+
+Survivors:
+- **PDBO** (USDJPY + NQ)
+- **Turnaround Tuesday** (indices)
+- **ORB on NQ**
+- **NQ Key Levels**
+
+His key finding: what killed most ideas wasn't the backtest — it was the unseen data. "Plenty looked great 2018–22 and just stopped working after." The four survivors have **daily correlation close to zero**; combined, the drawdown is **less than a third** of what they'd have run separately.
+
+Next step: all four go into one **Twitter Portfolio EA** running on a prop account, with plans to keep adding strategies found on X.
+
+**Photo (equity chart, reconstructed by OCR):** combined portfolio backtest 2018 → Nov 2026, ending ~**$309k**; **max drawdown $13.2k**; **every year positive (2018–2026)**; **$1,000 risk per trade**. Test split shown on-chart: in-sample 2018–22, unseen data 2023–26. Footer: IC Markets data, commission included, *"Backtests are not live results"* — the author's own disclaimer.
+
+## Why it matters
+
+- **The process is the signal.** Random-entry baseline + true out-of-sample holdout is exactly the validation discipline the replication-skepticism thread in this vault keeps endorsing. The funnel (15 → 4, most killed by post-2022 regime decay, not by in-sample stats) is a clean, honest shape.
+- **Correlation-first portfolio construction.** Four near-zero-correlation intraday/index strategies producing a combined DD under ⅓ of standalone is the diversification math that matters more than any single edge. Good template for judging any multi-strategy stack: the portfolio number isn't the sum of its parts' risk.
+- **Chart hygiene.** Commissions included, in-sample/unseen split drawn on the chart, live-results disclaimer printed by the author himself.
+
+**Skepticism gates:**
+- The ~$309k endpoint and $13.2k DD come from OCR of a chart — no verifiable per-strategy stats are published, only the combined equity curve.
+- The 11 failures are unnamed, so the 15 → 4 funnel is self-reported; survivorship of the bucket itself can't be audited.
+- "Prop account" is a claim, not evidence — no account statement or live tracking linked.
+- Engagement is modest (28 likes / ~1k views) — niche audience, nothing crowd-validated.
+
+## Links
+
+- [[2026-09-04-systematicpeter-why-publish-research]]
+- [[2026-08-29-milk-man-replication-metrics]]
+- [[2026-11-09-kashin-vix-vix3m-evrp-strategies]]
