@@ -1,0 +1,37 @@
+---
+title: "limitlesstack — the modafinil manual (X long-form article; full text recovered)"
+source: https://x.com/limitlesstack/status/2030019458345980296
+captured: 2026-11-10
+tags: [health, nootropics, modafinil, twitter, long-form-article, protocol]
+kind: reference
+---
+
+**Author:** limitlesstack (@limitlesstack — self-described "biochemical engineer of nootropic stacks | pursuing limitless biology | safe, evidence based protocols", 25,736 followers) · article created 2026-03-06 20:35Z, last modified 2026-11-01 17:46Z · received 2026-11-10T18:20:50Z (WhatsApp via RDP-30, routed by CoS — the "X article about modafinil" RD asked about at 18:16Z; his first send never reached the bridge, this is the re-sent link). Engagement at capture (fxtwitter): 5,875 likes · 12.27M views · 168 replies. Full 8,321-char body recovered anonymously from fxtwitter's `article.content.blocks` (draft.js blocks; the tweet itself is just a t.co card → x.com/i/article/2029960092053872648, which is login-gated).
+
+## Summary
+
+"the modafinil manual. use it or lose to someone who does." — a complete self-experimenter's protocol:
+
+**What it is:** modafinil = S-enantiomer (3-5h half-life, weaker, fades fast) + R-enantiomer (10-15h, stronger) → roughly 12h sustained effect; armodafinil = R-only, longer runway.
+
+**Claimed effects:** tunnel-vision concentration ~12h, decreased impulsivity/distraction, mild mood + motivation lift, strong appetite suppression, "no euphoria and no crash. just output."
+
+**Claimed neurological benefits (all uncited):** neuronal survival, cognitive resilience under sleep deprivation, neuroplasticity, anti-glutamate-excitotoxicity, reduced neuroinflammation, mitochondrial support, BDNF increase, antioxidant effects, "no deaths associated to modafinil overdose", minimal tolerance, low addiction risk.
+
+**Risks it names:** sleep destruction (10-15h half-life, timing is everything); headaches from increased acetylcholine demand — prevent with a choline source; appetite suppression → forgetting to eat for 12h; **SJS** — "extremely rare (single digit per million) but serious skin reaction. if you develop a rash in the first few weeks stop immediately"; reduces effectiveness of hormonal contraceptives (accelerates their metabolism).
+
+**Dose + timing + cycle:** start 50-100mg first time; standard modafinil 200mg / armodafinil 150mg; author personally uses 300mg on extra-demanding days taken ~4am ("have to take it very very early"); armodafinil after 8am or modafinil after 9am "will destroy your sleep". His trick: alarm 2h before intended wake, dose, go back to sleep — wake already locked in. Cycling: 5 days on / 2 off (default) or 3 on / 1 off; after any extended daily stretch, a full week off to reset baseline. **Stack:** l-theanine 600mg (blunts jitters) + CDP-choline 500mg (headache prevention); optional experienced-user add-ons bromantane (dopamine-synthesis upregulation) + l-tyrosine.
+
+**Vendors:** a section of region-to-region shipping lanes ("US to US", "AU to AU", "UK to UK", "EU to EU", "international" — for modafinil, armodafinil, bromantane) presented as "my personal vendors which i personally use and trust". The links are embedded entities in the article; their URLs were NOT extracted at capture (deliberately — see skepticism gates).
+
+**Habits:** the environment half — one monitor / clean desk, semi-cold room, same instrumental playlist every workday (Pavlov into flow), write down spontaneous ideas then forget them, first 4-6h phone-free and input-free, breaks = staring/walking only (no novelty), light breakfast, electrolytes not just water.
+
+## Why it matters
+
+This is the referent of RD's Nov 5-10 modafinil thread: [[2026-11-05-driada-medical-catalog]] is the vendor catalog he saved Nov 5; this article is the "thesis" behind the interest. Kept as reference for that thread — it is the fullest statement of the pro-modafinil position RD has sent us.
+
+Skepticism gates: **zero citations anywhere** — the neuro-benefit list is assertion, and "no deaths associated to overdose" is a framing, not a safety claim (SJS is the one documented serious risk, and even the author flags it as non-negotiable). The author is a nootropics-stack influencer whose "vendors" section is monetization-adjacent gray-market shipping (the exact category of order that gets seized in UAE customs; modafinil is prescription-only/controlled in the UAE — the CoS guidance RD received on this thread 2026-11-10 stands). Dose anecdotes (300mg, 4am dosing) are n=1. The habits section is the least controversial and most reusable part. Reference-only: no task filed — RD explicitly said "don't want to order just check if it's that" (2026-11-10T18:11Z).
+
+## Links
+
+- [[2026-11-05-driada-medical-catalog]] — the vendor catalog RD sent Nov 5 (modafinil in the orals/ancillaries shelf); same thread
