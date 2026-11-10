@@ -1,0 +1,29 @@
+---
+title: "hoostethics — low-dose daily tadalafil as a longevity/cognition drug (study cited in quote)"
+source: https://x.com/Hoostethics/status/2111823213818999290
+captured: 2026-11-10
+tags: [health, longevity, tadalafil, pde5, cognition, twitter]
+kind: reference
+---
+
+**Author:** Hoo (@Hoostethics) · main tweet posted 2026-10-18 14:14Z · received 2026-11-10T18:34:26Z (WhatsApp via RDP-30, routed by CoS — landed ~2 min after the wake snapshot; caught by the end-of-run capture diff). Engagement at capture (fxtwitter): main 489 likes · 45,671 views · 15 replies; quoted tweet 578 likes · 287,000 views. Both t.cos resolve to the tweets' own photos (no external article); main photo OCR-empty (graphic), quote photo 1 carries the study citation (below), photo 2 is a brain figure.
+
+## Summary
+
+**Main tweet — the pitch:** "tadalafil costs me $0.08c per week. i should be paying more for all these health benefits:" — his 13-item list: improves blood vessel health; linked to lower all-cause mortality; anti-inflammatory effects (daily use); associated with fewer heart attacks; spontaneous erections with daily use; prevents cognitive decline in older adults; shown to boost lean muscle mass; associated with lower stroke risk; helps blood flow at high altitude; possible lower dementia risk; increases cerebral flow; fewer night urinations; relieves BPH/LUTS. Ends "not medical advice."
+
+**Quoted tweet — the study claim:** "tadalafil is a cognitive enhancer." 5mg daily for 8 weeks in men with erectile dysfunction AND mild cognitive impairment: thinking score (MoCA) 18.9 → 21.8; erectile function score 7.5 → 12.9; blood flow increased in the postcentral gyrus, precuneus and brainstem. "not medical advise."
+
+**Study identified from the tweet's own screenshot (OCR):** Jin Bong Choi et al., "The Effect of Daily Low Dose Tadalafil on Cerebral Perfusion and Cognition in Patients with Erectile Dysfunction and Mild Cognitive Impairment", *Clin Psychopharmacol Neurosci*, 2019 — a small Korean open-label study in a comorbid ED+MCI population.
+
+## Why it matters
+
+Third leg of this week's cognition thread, and a different mechanism from the other two: where [[2026-11-10-limitlesstack-modafinil-thesis]] is stimulant wakefulness and [[2026-11-10-zygomatic03-pinealon-social-fluidity]] is peptide bioregulation, this one is the **vascular angle** — PDE5 inhibition → nitric oxide / blood-flow improvements claimed to compound into longevity and cognition benefits. That "cheap generic repurposed drug as daily longevity tool" framing is the pattern to recognize here.
+
+Skepticism gates: the 13-item list is carefully weasel-worded by the author himself ("linked to", "associated with", "possible") — association-level evidence for most items, not established effects of daily tadalafil in healthy people. The one concrete study (Choi 2019) is small, open-label, in ED+MCI patients (MoCA 18.9 baseline = impaired cohort) — not evidence a healthy young adult gains cognition. "$0.08/week" implies gray-market generic bulk powder sourcing; tadalafil is prescription-only, genuinely contraindicated with nitrates (hypotension), and has dosing side effects (headache, back pain). Same UAE posture as the thread's other notes: prescription-controlled, gray-market shipping risk. Reference-only, no task — RD's stance on this thread is checking, not ordering (2026-11-10T18:11Z).
+
+## Links
+
+- [[2026-11-10-zygomatic03-pinealon-social-fluidity]] — same delivery, same thread: peptide stack angle
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — same-day companion: stimulant angle
+- [[2026-11-05-driada-medical-catalog]] — tadalafil (5/20 mg) sits in the catalog's Sexual Health section: this is the one compound of the thread already in the vendor list RD saved Nov 5
