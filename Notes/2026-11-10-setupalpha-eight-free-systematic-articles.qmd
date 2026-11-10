@@ -1,0 +1,42 @@
+---
+title: "SetupAlpha — index of 8 free systematic-trading articles (5 URLs reconstructed from his Substack)"
+source: https://x.com/SetupAlpha/status/2120158254596489683
+captured: 2026-11-10
+tags: [trading, twitter, systematic-trading, backtesting, realtest, portfolio-construction, index]
+kind: both
+---
+
+**Author:** SetupAlpha (@SetupAlpha — systematic-trading writer; publishes as setup4alpha.substack.com, site setupalpha.com) · posted 2026-11-10 14:14Z · received 2026-11-10T18:00:22Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 19 likes · 1,232 views · 3 replies. The syndication API truncated the tweet at item 05 — full 8-item list recovered via fxtwitter (text_len 482). The article links live in the tweet's self-reply (not exposed to anonymous APIs); URLs below were reconstructed by title-matching the Substack posts API — every match came back `audience: everyone` (free), consistent with the tweet's "free articles" framing. Attached photo (OCR'd) is the promo equity dashboard for item 01: Turtle Growth 7M variants (5M/2M/1M/500K/200K/100K curves) vs SPY benchmark. Truncation note: syndication cut mid-list; fxtwitter text is authoritative here.
+
+## Summary
+
+The tweet: **"If you're into systematic trading, here are some free articles I wrote about it"** — an author-curated index of his 8 evergreen method pieces. "Several include RealTest code."
+
+| # | Tweet item | Located article | Access |
+|---|---|---|---|
+| 01 | I tried to break my turtle strategy 6 ways | [I tried to break my turtle max growth trading strategy 6 ways](https://setup4alpha.substack.com/p/turtle-max-growth-trading-strategy) (2026-10-18) | free — **already vaulted**: [[2026-10-21-setupalpha-trend-system-robustness-tests]] |
+| 02 | Why a 95% win rate can still lose money | [95% Win Rate Lie That Makes Traders Lose Money: Check These Metrics Instead](https://setup4alpha.substack.com/p/realtest-backtest-metrics) (2026-09-20) | free |
+| 03 | Low drawdown Nasdaq mean reversion | not located — pre-dates the 50-post index window (before 2025-12-07); link sits in the tweet's self-reply | — |
+| 04 | How to combine and allocate across strategies | [Holy Grail of Trading: How to Build a Citadel-Style Portfolio in 2026](https://setup4alpha.substack.com/p/holy-grail-of-trading-how-to-build-portfolio) (2026-03-01) | free |
+| 05 | Volatility-adjusted position sizing | not located — same as 03 | — |
+| 06 | A short strategy for bear markets | not located — same as 03 | — |
+| 07 | Which AI coder is best for RealTest | [Which AI Coder is Best for RealTest? (Codex vs Gemini vs Claude Compared)](https://setup4alpha.substack.com/p/codex-vs-gemini-vs-claude-code-trading-research) (2026-05-24) | free |
+| 08 | 60+ ways systematic traders find edges | [60+ Ways Systematic Traders Find Market Edges in 2026](https://setup4alpha.substack.com/p/60-market-edges-systematic-traders) (2026-03-15) | free |
+
+Read: this is the free tier of a freemium Substack — the free pieces are the evergreen *method* posts (robustness testing, metric hygiene, portfolio construction, edge enumeration, tooling), while the weekly backtest writeups sit behind the paywall. As a curriculum, 01→02→04 is a coherent progression: stress-test a strategy, judge it by the right metrics, then combine survivors into a portfolio.
+
+## Why it matters
+
+Our vault already runs this exact line: item 01 is the 6-robustness-tests piece we captured 2026-10-21 (cost-stress grid still an open Inbox task for our own harness), and the trend/RealTest thread — [[2026-08-30-ignis-trend-following-realtest]], [[2026-08-29-three-simple-ma-atr-systems]], [[2026-09-01-milk-man-backtest-notional-normalization]] — is where items 02 and 04 plug in directly: win-rate-vs-expectancy metrics for judging our backtests, and allocation across strategies for combining them. Item 03's topic (Nasdaq mean reversion, low drawdown) parallels [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] and [[2026-10-15-systematicpeter-mean-reversion-oos-high]]; item 01's turtle system parallels [[2026-10-06-junglerockres-turtle-hurst-gate]]. Item 07 is a tooling datapoint for the AI-coder-assisted RealTest workflow.
+
+Skepticism gates: the URL mapping is reconstructed (title-match, 5/8 — high confidence given the free/paid split lines up, but 03/05/06 remain unverified); engagement is modest (19 likes) and the tweet is self-promotional — an index, not new research; the equity dashboard in the photo is his own backtest, figures unverified; "free" status is as-of capture (Substack paywalls can change).
+
+## Links
+
+- [[2026-10-21-setupalpha-trend-system-robustness-tests]] — item 01, captured earlier from X
+- [[2026-08-30-ignis-trend-following-realtest]] — our trend-following RealTest line (items 02/04 apply)
+- [[2026-08-29-three-simple-ma-atr-systems]] — our trend systems
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — backtest hygiene precedent
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — Nasdaq mean-reversion parallel (item 03)
+- [[2026-10-15-systematicpeter-mean-reversion-oos-high]] — mean-reversion OOS hygiene parallel
+- [[2026-10-06-junglerockres-turtle-hurst-gate]] — turtle-system parallel (item 01)
