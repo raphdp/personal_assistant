@@ -1,0 +1,39 @@
+---
+title: "zygomatic03 — Pinealon social fluidity & the ADHD replacement stack (X article; full text recovered)"
+source: https://x.com/Zygomatic03/status/2119907206766407742
+captured: 2026-11-10
+tags: [health, nootropics, peptides, pinealon, adhd, twitter, long-form-article, stack]
+kind: reference
+---
+
+**Author:** Zygomatic (@Zygomatic03) · main tweet posted 2026-11-09 21:37Z · received 2026-11-10T18:32:30Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): main 105 likes · 6,928 views · 6 replies; quoted self-stack tweet 612 likes · 66,989 views; article-promo tweet 449 likes · 158,040 views. The syndication API truncated both tweet texts mid-clause — full texts recovered via fxtwitter; the linked X article "Drugs that *actually* work for ADHD & Getting Shit Done" (login-gated at x.com/i/article/2114693100878569472, created 2026-10-26) was fully recovered anonymously from fxtwitter `article.content.blocks` (19,577 chars / 154 blocks). Tweet photo is a meme graphic — no substantive text (OCR noise).
+
+## Summary
+
+The link RD sent is the Pinealon claim; the payload is a three-hop chain that ends in a full protocol article.
+
+**Main tweet — "social fluidity" on Pinealon, defined:** thinking quickly on your feet socially; responses, comments and jokes come quicker than they used to; you become "the sharp, witty member of the friend group". Less in-the-moment paralysis (explicitly "especially with autism"); exchanges you'd never have said a few months earlier. Claimed to positively reinforce anything social — cold approach easier, funnier, more confident leading conversations. Closer: "If you find yourself struggling to say what you want when you want to, Pinealon is probably the upgrade you need."
+
+**Quoted tweet — the Vyvanse-quit origin:** ran lisdexamfetamine ~8 months and loved it; after a 5-week break the January restart brought "loads of health problems and severe anhedonia" → quit and rebuilt. Claims the replacement gets "90% of the benefit of vyvanse with maybe 10% of the downside": Bromantane (dopamine production, "core of ADHD issue"), Pinealon (cognitive sharpening, neuroprotective, social fluidity), Epitalon (aging, sleep quality, rewinds ADHD circadian problems), Armodafinil (situational tool for heavy work days), Mexidol (gentle focus + warmth), Semax & Selank (working memory + anxiety, near-daily pairing). "The way of the biohacker."
+
+**The article — the actual protocol:**
+- **Stimulant history:** methylphenidate = chest heaviness, stopped at 3-4 weeks (ECG/bloods clean); Elvanse = honeymoon phase, then post-break restart toxicity (red flushing spots, chest discomfort, bluish skin, visible accelerated ageing) and a 6-week withdrawal anhedonia ("zero desire to live") — the motivator for the whole stack.
+- **Modafinil/Armodafinil:** CYP3A4 variation dictates responder status — "you really need to try both". Author: modafinil does almost nothing for him; 125mg armodafinil (half dose) → 4-6h "fiery, intense focus" + all-day alertness, used only on heavy days. Same SJS / choline-headache / drug-interaction cautions as the limitlesstack manual (incl. hormonal contraceptives).
+- **Bromantane:** Soviet-era actoprotector; upregulates natural dopamine production over weeks — "highly logical fit for ADHD". Effects: more vibrant colours (his dopamine sign), better task initiation, physical endurance (WADA-banned), modest drive. Ran 50mg/day (never higher), 6-8 week courses, zero side effects. Risks: Russian-only evidence, insomnia, headaches at 200mg+.
+- **Pinealon (the link's subject):** Khavinson pineal peptide; feels like "having the bolts in your brain tightened"; rated the **best individual social-fluidity enhancer on the list**; cleaner/faster thought and recall, task initiation, creativity, deeper sleep with vivid memorable dreams. Dosed 1.4mg — Khavinson-style low dosing (Western research-chemical vendors dose far higher with "limited and non-exponential benefit"); cycled 10-30 days with equal-or-longer breaks; benefits "somewhat persisted" two months after the first cycle; highly synergistic with Epitalon. Risks: bioregulator class "severely understudied, even by Russian standards" — almost all evidence is Khavinson's own in vitro and rodent work; long-term effects unknown.
+- **Epitalon:** Khavinson pineal peptide; the only thing that improved his severely inverted sleep (4/5/6am → 1/2am); proposed (not felt) telomerase activation for ageing. 285mcg, next cycle 3mg several hours before bed.
+- **Semax & Selank (run as a pair):** modest anxiolysis without sedation + reduced racing thoughts (Selank); subtle social fluidity, focus, working memory, mood (Semax); BDNF claims. 285mcg each, near-daily. Known risk: Selank hair shedding / hairline.
+- **Mexidol (emoxypine succinate):** B6-structurally-similar antioxidant, cerebral blood flow, "soft" lock-in, warmth, light anxiolysis; 125mg near-daily. Potentiates benzos/sedatives; contraindicated in liver/kidney dysfunction.
+- **His "all-out social fluidity stack":** Pinealon + Epitalon + Semax + Selank + Progesterone = "things were near perfect"; adding Mexidol on top made it over-stimulating — his own example of one compound tipping a stack over.
+- **Sources section:** region-by-region vendor links (USA/UK/EU/AU) carrying his personal 10% code "ZYGO" — affiliate-adjacent. Article ends "Not medical advice."
+
+## Why it matters
+
+Third capture in RD's active cognition thread (Driada vendor catalog Nov 5 → limitlesstack modafinil manual this morning → this). It is the **fullest statement of the anti-stimulant position**: where [[2026-11-10-limitlesstack-modafinil-thesis]] is the modafinil deep-dive, this is the whole non-stimulant replacement thesis plus the Vyvanse-quit story behind it. Compounds overlap the earlier notes directly — armodafinil is a headline in both articles, Bromantane is an optional add-on there and a core pillar here, and the SJS + choline + timing cautions are identical.
+
+Skepticism gates: everything above is **n=1 self-report** by a stack influencer whose article ends in a vendor list carrying his own discount code — the monetization pattern we flag on sight. The Russian-pharma evidence base (Bromantane, Mexidol, Semax/Selank) is Russian-only; the Khavinson peptides (Pinealon, Epitalon) are understudied even by Russian standards — mostly the inventor's own in vitro/rodent work, long-term unknown, and the neuroprotective/social-fluidity claims carry no citations. The anhedonia origin story is plausible (amphetamine withdrawal anhedonia is documented) but single-source. Same UAE posture as this morning's note: these ship from gray-market vendors, modafinil/armodafinil are prescription-controlled in the UAE and the customs-seizure caution stands. RD confirmed today he is checking, not ordering ("don't want to order just check if it's that", 2026-11-10T18:11Z) — reference-only, no task filed.
+
+## Links
+
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — same-day companion: the modafinil/armodafinil manual (overlapping compounds and cautions)
+- [[2026-11-05-driada-medical-catalog]] — the vendor catalog RD saved Nov 5; where this thread started
