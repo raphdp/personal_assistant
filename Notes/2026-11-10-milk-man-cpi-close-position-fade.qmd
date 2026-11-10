@@ -1,0 +1,42 @@
+---
+title: "The Milk Man — CPI-day close-position fade (2025→ 81% WR, PF 3.9; 2022–24 coin-flip) + a dated call: fade the Nov 10 print"
+source: https://x.com/MrMilkTrading/status/2119962443191361763
+captured: 2026-11-10
+tags: [trading, twitter, spx, spy, cpi, macro-event, mean-reversion, overnight-hold, milk-man, backtest, forward-test]
+kind: both
+---
+
+**Author:** The Milk Man (@MrMilkTrading; options/futures trader, Texas; milkmantrades.com) · posted 2026-11-10 01:16Z · received 2026-11-10T07:22:10Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 95 likes, 2 replies, 26,756 views. Quotes @naksterz's CPI-reversal observation (218 likes, 34,920 views). Photo = the full backtest card (OCR'd below).
+
+## Summary
+
+Formalizing @naksterz's observation that every CPI print since June has reversed the prior day's close, Milk Man states a mechanical rule and publishes the stats card for it:
+
+**The rule (SPY CPI-day fade):** if the prior day closes in the **top half** of its range → **short at that close, cover at the CPI-day close**; **bottom half** → go long. It is pure close-position mean reversion, timed to the CPI release.
+
+**The card's numbers (OCR of the chart):**
+- **2025 → today** (each CPI release since Jan 2025): **17 of 21 wins (81%), avg +47 bp, PF 3.9** — the headline stat in the tweet.
+- **2022–2024: 17 of 36 (47%)** — a literal coin flip. Non-CPI days over the same span: 48%, avg +2 bp (i.e. no edge off-CPI).
+- Win rate by year (stacked Rule right / Rule wrong bars): 2022 (n=12), 2023 (n=12), 2024 (n=12), 2025 (n=11), 2026 (n=10); annotations include a **−182 bp** losing event and a **+158 bp** winner; "tweet window Jun–Oct 2026" marked on the chart.
+- Data provenance printed on the card: SPY daily bars (Polygon), CPI dates from the BLS schedule, **57 releases Jan 2022 – Oct 2026**; non-CPI baseline 49%.
+- **The dated call:** "Nov 9 close sits at 0.81 of its range, so the rule says fade into the Nov 10 print." The tweet closes with "Will it work?" — a falsifiable, timestamped forward test resolving at the next session's close.
+
+**The quoted observation (@naksterz):** the red bar is every CPI print since June; "they have pumped or dumped it 100% of the time since June" — close at highs → lower next day, close at lows → higher next day; every print reversed the prior day's close, small or big.
+
+## Why it matters
+
+- **This is the Milk Man forward-test pattern compressed to one day.** Same author discipline as [[2026-11-09-milk-man-po10-extreme-full-receipts]] and [[2026-10-01-milk-man-options-algo-forward-test]]: publish the rule, the sample, the baseline, and a dated prediction before the event. Tomorrow's CPI close resolves it — the cheapest forward test in the vault.
+- **The card is honest about where the edge lives:** 2022–24 at 47% means the 81% is a 2025-regime phenomenon, not a structural law. The non-CPI control (48%, +2 bp) does the important work — it shows the effect, where it exists, is CPI-specific rather than generic overnight mean reversion.
+- **Replicable in an afternoon:** daily SPY bars + the BLS calendar reproduce every number on the card (no package shipped this time, but nothing hidden either — Polygon/BLS provenance printed on the chart). Meets the low bar of [[2026-08-29-milk-man-replication-metrics]] for checkability.
+
+## Skepticism gates
+
+21-event headline sample riding on a 2025/26 tape that has been unusually calm into macro events — the by-year bars show the "edge" is really "2025→"; treat 81% as regime-conditional until more CPI cycles land. Overnight hold into CPI carries gap risk the avg masks: a −182 bp loser is printed on the card, and high-WR mean reversion with avg win ≈ avg loss (PF 3.9 at 17/4 implies w/l ≈ 0.92) dies fast when one gap exceeds several wins. @naksterz's "100% since June" base observation is itself only ~5 prints. The rule direction also has a mundane alternative story: strong-into-print markets sell the fact (and vice versa) — if that's all it is, the pattern should degrade as it becomes widely quoted (this tweet is itself distribution). Self-reported stats, no code drop; the one-day resolution limits how much damage belief can do.
+
+## Links
+
+- [[2026-11-09-milk-man-po10-extreme-full-receipts]] — yesterday's full-receipts page; same falsifiable-receipts posture, bigger engine.
+- [[2026-10-01-milk-man-options-algo-forward-test]] — his forward-test governance pattern; this tweet is the one-event version.
+- [[2026-11-08-milk-man-spx-put-credit-spread-strategy]] — same week's SPX structure capture from this author.
+- [[2026-08-29-milk-man-replication-metrics]] — the replication standard; this card's Polygon+BLS provenance clears it.
+- [[2026-09-01-milk-man-backtest-notional-normalization]] — his cost-realism standard; bp-per-event framing here sidesteps it cleanly.
