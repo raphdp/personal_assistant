@@ -1,0 +1,44 @@
+---
+title: "ZenomTrader — War Room pivot: 900+ strategy source code to members, 60+ uncorrelated DARWINs, the Darwinex Tribe"
+source: https://x.com/ZenomTrader/status/2120118708186054682
+captured: 2026-11-10
+tags: [trading, twitter, darwinex, strategy-replication, substack, backtesting, community, uncorrelated, sharpe]
+kind: both
+---
+
+**Author:** ZenomTrader (@ZenomTrader) · posted 2026-11-10 11:37Z · received 2026-11-10T17:44:40Z (WhatsApp via RDP-30, routed by CoS) · 63 likes · 3,362 views · 4 replies (via fxtwitter; syndication nulls likes/reposts and truncated the text mid-t.co). Text recovered FULL via fxtwitter. All three content images OCR-recovered (preserved at `rdp_media/2120118708186054682/`). Fourth installment of the series: harvest ([[2026-11-04-zenomtrader-substack-alpha-replication]]) → verified-only split ([[2026-11-05-zenomtrader-verified-author-sharpe-split]]) → costs-in ([[2026-11-09-zenomtrader-verified-only-costs-sharpe]]) → this, the commercialization.
+
+## Summary
+
+The pivot from research to product: he will **share the source code of 900+ strategies with his War Room** (paid community), built on the Substack Alpha research tracked in this series. The goal: **60+ uncorrelated DARWINs** run by/for members, forming the **Darwinex Tribe with the highest AuM**.
+
+The economics pitch — "this isn't your average prop firm": on Darwinex **you make money when your members reach Gold** (provider-tier economics), and contributors of uncorrelated alpha sources get rewarded. He's considering additional rewards for the highest-ranked members: "a meritocracy where performance, research, and contributions are rewarded… This is how you build the best trading community in the world."
+
+The three photos are the research receipts — six classic institutional strategies, each shown twice: the paper's version vs a **Darwinex-implementable version** (his color code: amber = author's own data, green = what you could trade on Darwinex, grey dashed = SPY for scale; "our offline numbers", not QuantConnect-checked, "not one is a portfolio number"):
+
+| Strategy | Paper's version (costs as labeled) | Darwinex version | Read |
+|---|---|---|---|
+| AQR 12-mo trend | futures, after costs, Sharpe 1.20 (author 1.17), maxDD 24%, 15.2%/yr | 100 ETFs L/S: 0.32, 36%, ~3.3%/yr | collapses in ETF form, but zero SPY link |
+| Winton slow trend | futures, before costs, 0.93 (author 0.81), 22%, ~9.9%/yr | 100 ETFs L/S: 0.45, 14%, 2.9%/yr | less than half |
+| Research Affiliates fast+slow | futures, before costs, 0.61 (author 0.80), 17%, 3.8%/yr | 100 ETFs long-only: 0.66, 14%, 4.9%/yr | holds; "no better than plain 12-mo trend, only smoother" |
+| ReSolve top-5 momentum | author's 10 ETFs: 1.19 (author claims 1.6), 24%, 10.8%/yr | 100 ETFs long-only: 0.65, 27%, 6.5%/yr | weaker than paper says, halved on Darwinex |
+| AQR risk parity | 4 asset classes (US ETFs): 0.96 (author 0.61), 17%, 5.8%/yr | SPY+TLT: 0.79, 30%, 7.5%/yr | "a calm core holding, not an edge: 0.54 corr to SPY" |
+| Man Group delayed rebalance | plain 60/40 monthly: 0.83, 31%, 8.7%/yr | Man's rule on SPY+TLT: 0.84 (author 0.96), 28%, 8.3%/yr | "the two lines sit on top of each other — the rule changes almost nothing" |
+
+(SPY benchmark 0.55–0.66 Sharpe / 55% maxDD across the differing panel windows. OCR-approximate; source images preserved.)
+
+## Why it matters
+
+- The series arc completes: replication infrastructure → verification gates → community/product. The photos answer "why Darwinex": every strategy is already measured in Darwinex-implementable form, and the survivors worth owning are the ones with **low SPY correlation** — exactly the raw material a 60-DARWIN uncorrelated tribe needs.
+- The panel pattern is honest and useful: **trend strategies keep their diversification but lose 40–70% of Sharpe in Darwinex ETF form; balanced/risk-parity shapes hold Sharpe but are 0.54-correlated "calm cores, not edges."** The scarce commodity is *uncorrelated AND implementable* — a tighter filter than the tweet's marketing admits.
+- Incentive alignment is real but circular: the leader earns when members reach Gold, so recruitment is monetized — standard community-operator economics dressed as meritocracy. Nothing wrong, but read the "900 strategies" as the fleet whose **median in-sample Sharpe was ~0.9 costs-in before the robustness gate was ever shown** (still unshown as of [[2026-11-09-zenomtrader-verified-only-costs-sharpe]]).
+- **Skepticism gates:** 60 "uncorrelated" DARWINs mined from one corpus is a multiple-testing machine — the DSR/PBO haircut from [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] applies to the fleet, not each row. "900+ strategies" is a fleet count, not a quality count. The Gold-reward claim wasn't quantified (rates, tiers). Offline numbers, author-labeled, no third-party verification — same receipts gap this series always had, in contrast to [[2026-11-09-milk-man-po10-extreme-full-receipts]].
+- Actionable in one narrow sense: the 900-strategy code drop is members-only and imminent — join-or-not is a time-boxed decision, filed to Inbox.
+
+## Links
+
+- [[2026-11-09-zenomtrader-verified-only-costs-sharpe]]
+- [[2026-11-05-zenomtrader-verified-author-sharpe-split]]
+- [[2026-11-04-zenomtrader-substack-alpha-replication]]
+- [[2026-11-09-milk-man-po10-extreme-full-receipts]]
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]
