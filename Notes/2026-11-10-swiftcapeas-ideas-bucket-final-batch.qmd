@@ -1,0 +1,44 @@
+---
+title: "SwiftCap EAs — ideas-bucket results, final batch: ORB + NQ Key Levels pass, 7 named failures with kill reasons"
+source: https://x.com/swiftcapeas/status/2119559483336859893
+captured: 2026-11-10
+tags: [trading, strategies, backtesting, out-of-sample, robustness, nasdaq, nq, orb, key-levels, twitter-portfolio, failure-analysis]
+kind: reference
+---
+
+**Author:** @swiftcapeas (Hassan | SwiftCap EAs) · posted 2026-11-08 22:35Z · received 2026-11-10T08:13:48Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 28 likes, 2 replies, 1,870 views. Quotes his own ideas-bucket kickoff tweet (2117309978809930125). Photo = equity/balance curve of one of the failures (OCR'd below).
+
+## Summary
+
+The closing entry of the ideas-bucket saga: **"Finished testing every idea in the bucket. Here's how the last 9 went."** This tweet supplies what yesterday's summary couldn't — the named failures and the specific reason each died.
+
+**Passed ✅ (2 of 9):**
+- **ORB (opening range breakout) on NQ** — held up in both out-of-sample periods and on real tick data.
+- **NQ Key Levels** (idea from @dmartin_trading) — "passed every single test. Cleanest result of the whole bucket."
+
+**Failed ❌ (7 of 9), with kill reasons:**
+- **Market Open Trend** — profitable, but a handful of trend days made all the money (concentration).
+- **Trend Pullback** — same problem: top 10 trades carried everything.
+- **CISD** — no market passed; the one near-miss on NQ fell apart on a second data feed.
+- **Inside Bar** — USDJPY and gold looked great 2018–22, then went flat as soon as they hit new data (regime decay).
+- **SuperTrend** — Bitcoin M15 passed almost everything, then lost money 2023 onwards (classic OOS break).
+- **SMC multi-timeframe** — barely trades, loses across the board when it does.
+- **RTM grid** — tested twice, once with looser entries: "Looser just meant losing faster."
+
+**Photo (equity curve, reconstructed by OCR):** a declining balance/equity line from 2018.01 through 2026.08 — deposits marked, equity bleeding down through stepped levels (~178k → ~101k range visible). This is one of the failures' equity curves, not the portfolio's — the portfolio curve (ending ~$309k) was in yesterday's card.
+
+## Why it matters
+
+- **The unnamed-failures gap closes.** Yesterday's note flagged "11 failures unnamed, funnel self-reported" as a skepticism gate — this tweet names 7 of them with precise kill reasons, and the two passes reconcile exactly with the published survivor list (ORB NQ, NQ Key Levels). The funnel is now auditable end-to-end.
+- **A taxonomy of strategy death.** The 7 kills map cleanly onto the vault's robustness checklist: concentration risk (2), data-feed fragility (1), regime decay (2), low-frequency noise (1), parameter insensitivity to loss (1). "Looser just meant losing faster" is the RTM grid entry for the failure taxonomy.
+- **Receipt culture with named credit.** He credits @dmartin_trading for the cleanest result — and the vault already holds an open task (Tasks/Inbox.md, D. Martin robustness-calibration pull, 2026-10-31) to pull D. Martin's robustness-calibration post; the key-levels pass is a second data point that the source is worth the pull.
+
+## Skepticism gates
+
+Still self-reported: per-strategy equity curves, pass thresholds, and the test pipeline itself are unpublished — the OCR'd declining curve is presumably a failure, but the tweet doesn't label which strategy it belongs to (inferred from context; yesterday's portfolio card carried the positive curve). "Real tick data" robustness for ORB is claimed, not shown. The bucket's earlier batches (first 6 of 15) were covered yesterday; this tweet covers only the last 9 — the two pass lists are consistent (4 survivors total across all batches, these 2 among them), but the full 15→4 ledger lives across multiple tweets, not one artifact. Modest engagement again (28 likes / 1.9k views).
+
+## Links
+
+- [[2026-11-09-swiftcapeas-x-ideas-bucket-portfolio]] — the bucket summary (15 → 4, portfolio card); this tweet is its closing batch.
+- [[2026-09-04-systematicpeter-why-publish-research]] — the publish-failures norm this thread follows.
+- [[2026-08-29-milk-man-replication-metrics]] — the receipts standard the funnel should eventually meet.
