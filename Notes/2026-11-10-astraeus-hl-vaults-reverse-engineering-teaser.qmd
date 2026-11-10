@@ -1,0 +1,31 @@
+---
+title: "Astraeus (@AstraeusCap) — teaser: reverse-engineering Hyperliquid vaults with >2 Sharpe; \"will democratize that info soon as well\" — third drop in the author's publishing pipeline"
+source: https://x.com/AstraeusCap/status/2119929716773667253
+captured: 2026-11-10
+tags: [trading, twitter, crypto, quant, hyperliquid, vaults, sharpe, reverse-engineering, teaser, astraeus]
+kind: reference
+---
+
+**Author:** Astraeus (@AstraeusCap; "average crayon eater | I build and run mev bots and trade systematic crypto strategies", author of [[2026-11-08-astraeus-crypto-barra-factor-model]] and [[2026-11-09-astraeus-new-listing-short-teaser]]) · posted 2026-11-09T23:06:45Z · received 2026-11-10T13:37:34Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 35 likes, 4 replies, 2,124 views. Full text (117 chars, complete — no media, no quote, no article object).
+
+## Summary
+
+One-line teaser: **"Spent the day reverse engineering some HL vaults with >2 sharpe. This is fun, will democratize that info soon as well."**
+
+- **HL = Hyperliquid; the target is vaults running >2 Sharpe.** Hyperliquid vault performance is public on-chain, but the *strategies inside* are opaque — reverse-engineering here means inferring what the top risk-adjusted vaults actually do from their observable positions, returns and drawdown patterns.
+- **"Democratize as well"** — the "as well" points back at the Barra factor-model article already published as a full X write-up. This is the third item in a deliberate release pipeline: factor model (published) → new-listing short study (teased) → HL vault teardown (teased here).
+- No methodology, no charts, no data in the tweet itself — pure signal that the write-up exists and is coming.
+
+## Why it matters
+
+- **The vault now tracks this author's research program in near-real-time.** Three captures in three days ([[2026-11-08-astraeus-crypto-barra-factor-model]], [[2026-11-09-astraeus-new-listing-short-teaser]], this note) — and the sequencing is legible: tease with data, publish the method, disclose the costs. When this teardown drops it will presumably land as an X article, recoverable through the same fxtwitter article lane that got the full 5.8k-char factor-model write-up.
+- **Vault reverse-engineering is a different genre from the prior two drops — it's forensic, not statistical.** The factor model decomposed *returns*; the listings study event-studied *cohorts*; this infers *live positioning* of actual money pools. If the method is published, it becomes a reusable template for auditing any on-chain vault/manager claim (Sharpe provenance, hidden leverage, crowding) — directly useful diligence tooling for the trading-adjacent threads in this vault.
+- **Skepticism gates:** teaser with zero payload — "reverse engineering" is unverifiable until released; inferring strategy from public positions/returns can identify *exposure* but not *code or intent*, and the >2 Sharpe filter selects survivor vaults by construction; "democratize" is edge-eroding by definition — whatever those vaults do stops working roughly when everyone learns it (the same crowding caveat as the listings short); 35 likes on 2.1k views is the author's niche-research audience, consistent with the prior two captures. No author site exists (bounded probe, 2026-11-09) — X article is the expected release lane.
+- **For the user:** nothing actionable yet — watch for the release. When it drops, capture it as the sequel to the factor-model note; if it includes a reusable vault-audit method, that graduates to reference-plus-task.
+
+## Links
+
+- [[2026-11-08-astraeus-crypto-barra-factor-model]] — same author, the published write-up the "as well" points back to; expect this teardown in the same format.
+- [[2026-11-09-astraeus-new-listing-short-teaser]] — the other teased write-up still pending; together they define the author's release queue.
+- [[2026-08-29-milk-man-replication-metrics]] — replication/forensic discipline, the same species as inferring a vault's strategy from observables.
+- [[2026-11-07-avi-eisen-alpha-capture-program]] — how real programs disclose performance; the benchmark a democratized vault teardown should be read against.
