@@ -1,0 +1,29 @@
+---
+title: "Lasse (@lassejlv) — 7-hour /untangle-codebase run on a Rust workspace: 393-file, +37.8k/−35.3k refactor PR, 'better not only for me but also my agents' — endorsement of Maze's open-source detangling skill"
+source: https://x.com/lassejlv/status/2119841174165049515
+captured: 2026-11-10
+tags: [coding, twitter, claude-code, ai-agents, refactoring, skills, code-quality, mazeincoding]
+kind: reference
+---
+
+**Author:** Lasse (@lassejlv; Rust dev — the receipt PR touches crates/, an MCP host, desktop app + wasm viewer) · posted 2026-11-09T17:14:55Z · received 2026-11-10T13:44:01Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 57 likes, 2 replies, 4,695 views. Full text (197 chars; the trailing t.co is the tweet's own photo). Quote of Maze (@mazeincoding)'s intro tweet (posted 2026-11-05T16:24:32Z; 7,787 likes, 148 replies, 537,725 views; payload is a video demo, not reconstructed at capture).
+
+## Summary
+
+- **The skill:** `/untangle-codebase` — an open-source skill (slash command) for Claude Code by @mazeincoding, introduced as the fix for "messy code": leaky abstractions, copy-paste duplication, temporary workarounds, useless wrappers.
+- **The endorsement (this tweet):** ran it for **7 hours** on his own codebase — "It made my codebase so much better and more easy to navigate in. **Not only for me but also my agents.** Please run this skill !! (but make sure you got some tokens 😅". The token caveat is the honest cost disclosure: a full run is expensive.
+- **The receipt (photo, recovered by OCR):** a GitHub PR titled **untangle** — 2 commits on main, **+37,825/−35,336 across 393 files changed**, checks green, "Ready to merge". PR description: move the host-independent editor into a new `arego-editor` crate (`crates/editor`) that both the desktop app and the browser viewer in `design-wasm` build on; move the dither code into a `design-dither` crate; split the app's MCP host into `app/src/mcp/` (tool registry, routing, call handling, per-area tool modules), removing `mcp_host.rs`, `mcp_tools.rs`, `mcp_documents.rs`.
+- **So the demonstrated output is architecture-level modularization** — extracting shared crates and re-fencing an MCP host — on a real Rust workspace, not lint-tier cleanup.
+
+## Why it matters
+
+- **"Better for my agents" is the load-bearing claim.** The beneficiary named first is the *model* working in the repo: navigable structure, single sources of truth, no wrapper maze — cheaper context, fewer wrong-file edits. Agent-built sprawl is exactly the failure mode the vault already tracks on the prompt side ([[2026-09-17-agrawal-agent-simplification-prompts]]); this claims a tool-side reversal at scale, with a diff receipt.
+- **The economics are stated, which is rare:** 7 hours of skill runtime = real token spend. The ROI case only closes on long-lived, agent-worked repos — throwaway or human-only codebases won't pay it back.
+- **Skepticism gates:** n=1 endorsement; the PR is the author's own, "checks green / ready to merge" is the tool suite passing, not human review of a 393-file diff (a change this size needs real eyes before merge); no repo link in either tweet; at capture the skill is **not** in mazeincoding's public GitHub (only blender/Cap/hex) and a GitHub name-search surfaces only an unrelated older skill (Mrsavage92/codebase-untangler, May 2026 — same species, different author); the 537k-view intro tweet's video demo was not reconstructed. Source of the skill = unlocated at capture.
+- **For the user:** directly relevant to the agent-worked repos under their own tooling. Candidate to run on a git-backed repo where a large, revertible refactor is safe — after locating the actual source (likely a skills registry or Maze's follow-up) and pricing the token budget first.
+
+## Links
+
+- [[2026-09-17-agrawal-agent-simplification-prompts]] — prompt-side attack on the same agent-code-sprawl problem; this skill is the tool-side complement.
+- [[2026-08-30-cyclomatic-complexity-skill]] — prior code-quality skill capture; same "skill as standing enforcement" pattern, smaller blast radius.
+- [[2026-10-01-mikeysee-claude-md-what-i-need]] — navigation/context cost for agents in a messy repo, the constraint /untangle-codebase claims to relax at the source.
