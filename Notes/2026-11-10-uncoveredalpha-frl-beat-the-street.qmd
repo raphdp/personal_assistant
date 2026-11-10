@@ -1,0 +1,35 @@
+---
+title: "uncovered_alpha on Fundamental Research Labs' 'Beat the Street' — AI agents beat the Street consensus on 158/212 live EPS forecasts, but the real edge is where they disagree"
+source: https://x.com/uncovered_alpha/status/2119877383670923690
+captured: 2026-11-10
+tags: [ai-agents, twitter, uncovered_alpha, equity-research, earnings-forecasts, eps, street-consensus, beat-bias, fundamentalresearchlabs, streetbench, agentic-investing, quant, skepticism]
+kind: reference
+---
+
+**Author:** uncovered_alpha (@uncovered_alpha, uncoveredalpha) — commentary account on markets/AI research. Posted 2026-11-09 19:38Z; received 2026-11-10 07:39Z (WhatsApp via RDP-30, routed by CoS). Engagement: 63 likes, 5 replies, 13,294 views at capture. Quotes Robert Yang (@GuangyuRobert), co-author of the underlying piece.
+
+## Summary
+
+**The underlying study** — Fundamental Research Labs (Misha Boyko & Robert Yang, published 2026-11-09): *"Can AI forecast earnings better than Wall Street?"* (fundamentalresearchlabs.com/research/introducing-beat-the-street). Shortcut agents forecast normalized diluted EPS for **212 companies live, before each reported Q3 2026 earnings** (Sep 28 – Nov 6), using only public information. Results:
+
+- **Agents closer than the Street on 158 of 212.** Median forecast error: 8.1% Street vs 6.2% agent. But the authors are upfront: consensus systematically runs low (84% of S&P 500 beat in Q3 2026 vs 77% 10-yr avg), so a **flat +4.75% raise on every Street number matches the headline win rate** (6.0% median error, chosen in hindsight).
+- **The edge shows in big disagreements.** On the 27 live forecasts where the agent moved >5% (or 10%) from the Street, it was closer **85% of the time** — and only 4 of 23 non-bias reasons were the beat-history pattern a flat raise exploits. The rest were company-specific: monthly releases, below-operating-profit items, reasons to doubt the Street number.
+- **Case studies:** *Progressive* — publishes its combined ratio monthly (unusual); the agent modeled July/Aug from actuals, forecast September CR at 90.0 (reported: exactly 90.0), EPS $4.57 vs Street $4.35 vs actual $4.60. *Pebblebrook Hotel Trust* — the Chamberlain sale took back preferred shares at a 23% discount to face; not profit under accounting rules but accretive to common EPS. Opus worked out the logic (forecast 16.4¢ vs Luna's 9.6¢ vs actual 17¢); Luna saw the headline but never opened the article.
+- **Model quality scales accuracy:** Opus 5.5 ~17% smaller error than GPT-6 Luna (~40x cheaper per token); Opus agents read 12 pages / cite 15 sources / build 1,640-formula models vs Luna's 9 / 7 / 950. Harness matters too: Shortcut (financial) beats Codex (coding) on the same LLM.
+- **Agreement signal:** two capable models independently forecasting *below* the Street are usually right (Opus closer on 24/30 when Sol agreed-below vs 10/23 when it didn't) — something a shared upward bias cannot produce.
+- **Methods hygiene:** live runs saved pre-report and posted in full at beatthestreet.live; backtest (StreetBench, 150 small caps, Q2) used Exa Snapshot to read only pages stored before each report; scores only reports after every model's training cutoff; heuristic rules chosen in hindsight (favoring the rules, not the agent). StreetBench cases + scoring on GitHub.
+
+**uncovered_alpha's take:** first reaction = beat bias, and the authors concede as much on the headline. The interesting part is the big strays: the reasons were "fairly unglamorous" — Boeing's already-published deliveries, Progressive's monthly combined ratio, peer read-across. "None of it was hidden, it just hadn't been joined up." An agent doesn't have an analyst's holding-capacity limit. His extrapolations: the market becomes "one big interconnected brain" — having the information stops being the advantage; what matters is **how well you map it** (which connections matter) plus the things that never make a filing (what management said in the room, what customers are really doing). If consensus starts reflecting everything public, headline beats may matter less than what actually changed. His hardest question: the apprenticeship problem — analysts built judgment by doing exactly the model work now being automated; unclear what replaces it.
+
+## Why it matters
+
+- First serious *live* evidence (not backtest-only) that frontier agents can understand company finance well enough to know when consensus is wrong — with the disaggregated analyses (big moves, agreement-on-miss) designed precisely to rule out the cheap heuristic explanation. Prior record was weak: the GPT-4 financial-analysis claim (Kim/Muhn/Nikolaev 2024) was withdrawn, and EPSBench's best agent only matched consensus. Concurrent Samaya work (replayed Q2 for 456 large caps) points the same way.
+- Directly relevant to the agentic-investing thesis already in the vault: it is the empirical counterpart to Smallwood's production equity-research-agent stack — the "own your data / auditability / model the business" claims now have a benchmark behind them.
+- The "edge = joining up scattered public information" framing is portable: the same argument applies to any research workflow where a human's context window is the bottleneck.
+
+**Skepticism gates:** (1) headline win rate is beat-bias territory and the authors say so — only the disagreement and agreement analyses carry the "understanding" claim; (2) the model-vs-model comparison (Fig 2) is backtest-only, and Opus 5.5's more recent training data "may contribute" to its lead (authors' own caveat); (3) forecasting EPS ≠ making money — the authors state this explicitly; reaction-to-beat is a different game; (4) live test is 6 weeks, one quarter, one macro regime; StreetBench company-level forecasts still private. uncovered_alpha's own cautions (backtest strongest test, apprenticeship unresolved) are sound.
+
+## Links
+
+- [[2026-11-09-smallwood-agent-research-foundation]] — production equity-research agents; this study is the benchmark evidence for that stack
+- [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] — adjacent lane: LLM-assisted systematic market research
