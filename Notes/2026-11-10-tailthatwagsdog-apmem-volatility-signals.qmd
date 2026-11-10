@@ -1,0 +1,34 @@
+---
+title: "Tail That Wags The Dog — APMEM volatility-forecast signals (NYU V-Lab methodology, live Netlify dashboard, LONG SPY call for Nov 10)"
+source: https://x.com/TailThatWagsDog/status/2120008462914515284
+captured: 2026-11-10
+tags: [trading, twitter, spy, volatility, apmem, mem, nyu-vlab, engle, signal-sigma, long-short, forecasting, dashboard]
+kind: reference
+---
+
+**Author:** The Tail That Wags The Dog (@TailThatWagsDog; markets/vol commentary account) · posted 2026-11-10 04:19Z · received 2026-11-10T08:05:43Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 32 likes, 1 reply, 3,551 views. Photo = the signal dashboard card (OCR'd below); interactive version live at marvelous-meringue-47da32.netlify.app.
+
+## Summary
+
+The tweet presents the **APMEM\* Signal System** — SPY long/short signals driven by a volatility forecast — and gives its call for Tuesday, November 10, 2026: **LONG SPY**.
+
+- **The engine:** APEM/MEM-class volatility forecasting "straight out of the NYU Lab handbook." The dashboard confirms the citation: Engle, R.F. (2002), *New Frontiers for ARCH Models*, J. Applied Econometrics 17: 425–446 — NYU Stern V-Lab. APMEM = Asymmetric Power Multiplicative Error Model.
+- **The signal construction (from the full fxtwitter text):** a "bottom watch" and "top watch" that are **hybrid/coincident signals** — the APMEM volatility forecast must agree with Signal Sigma's bullish/bearish options conditions for a long or short to fire.
+- **The dashboard (rendered + OCR):** title "APMEM\* Signal System — SPY Volatility Regime Long & Short Signals", "Volatility prediction for Tuesday, November 10th, 2026", verdict **LONG SPY**. Performance stats on the card: **1 Day 21.83%, 1 Week 19.57%, 1 Month 15.34%** (ranges selectable to 3 Mo / YTD / 1 / 2 / 3 Yr; trailing chart axes 500–800). Data credit: "Options Pro data, Signal Sigma." Footer: nextSignals.com, "AI-Human Hybrid Modeling," credits Claude Opus 5.5 (Anthropic).
+- **Claimed track record:** the author states these volatility forecasts (SPX/QQQ/SPY variants) "have shown high performance in OOS testing and personal use for the past 3 years." Strategy details "posted repeatedly in the past" per the tweet's own note.
+
+## Why it matters
+
+- **A rare fully-specified signal lineage:** most signal tweets hide the engine; this one names the exact academic model (Engle 2002 APMEM, the V-Lab workhorse for realized-vol forecasting), the data source (Signal Sigma / Options Pro), and ships a live interactive dashboard with the current call. Everything is checkable against the published MEM literature.
+- **Twin of this morning's dated call:** [[2026-11-10-milk-man-cpi-close-position-fade]] is the same-day event-driven SPY call; this one is the model-driven SPY call for the same session (both resolve at today's close — two independent methods, same underlying, natural cross-check).
+- **Connects to the vault's volatility stack:** same family as [[2026-11-09-kashin-vix-vix3m-evrp-strategies]] and [[2026-11-09-quantifiedstrategies-vix-futures-article]] — another angle on "volatility as the signal input rather than the instrument."
+
+## Skepticism gates
+
+Self-reported returns with no stated methodology for the performance stats (unknown whether 21.83% 1D is model-return, signal-hit-rate, or a cherry-picked window; no drawdown, no baseline comparison, no cost model). "High performance in OOS testing for 3 years" is a claim, not a receipt — no backtest package, code drop, or trade log is linked (contrast the Milk Man receipt culture). The hybrid gating (APMEM × Signal Sigma conditions) is described but not specified — coincident indicators can be fit to the same history, so OOS discipline is unverifiable from outside. AI-assisted build ("Claude Opus 5.5" credit) is novel transparency but says nothing about out-of-sample validity. 32 likes / 3.5k views = low distribution today; today's LONG call is the first independently checkable data point.
+
+## Links
+
+- [[2026-11-10-milk-man-cpi-close-position-fade]] — same-day, same-underlying dated call (event-driven); natural cross-check.
+- [[2026-11-09-kashin-vix-vix3m-evrp-strategies]] — volatility-regime signals from VIX/VIX3M structure; same "regime as input" idea.
+
