@@ -1,0 +1,35 @@
+---
+title: "Alex Komoroske (@komorama) — 'Bits and Bobs' weekly reflections, 11/9/26 week: infinite software, the Software Reformation, trust as earned expectation, AI spandrels — endorsed by @internetraj as 'higher signal to noise ratio than almost anything I subscribe to'"
+source: https://x.com/internetraj/status/2119982333193572560
+captured: 2026-11-10
+tags: [agents, software, ai, strategy, trust, paradigm-shift, weekly-reflections, google-doc]
+kind: reference
+---
+
+**Author:** Raj (@internetraj) · posted 2026-11-10T02:35:50Z · received 2026-11-10T14:23:20Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 986 likes, 7 replies, 68,933 views. Quote of Alex Komoroske (@komorama — ex-Chrome platform; https://komoroske.com/bits-and-bobs)'s publish tweet (2026-11-10T00:01:09Z; 666 likes, 81,188 views). Payload = the **Bits and Bobs** running Google Doc of weekly reflections; the 11/9/26 week recovered in full via the anonymous `mobilebasic` lane (8.0k chars; the multi-tab doc's t.0 tab holds the current week) and cross-validated against OCR of the tweet's photo (screenshot of the same section — full match).
+
+## Summary
+
+- **The endorsement:** "This dude just posts weekly updates in a gigantic running google doc and it has a higher signal to noise ratio than almost anything I subscribe to." Komoroske's own preamble: weekly notes → abduct insights, deliberately **caricatured "just a tad more absolute than might be justified"** — provocation as method, "none of which are held too tightly."
+- **Infinite papercuts / absorb or abstain:** apps distributed as infinite micro-silos; today software says take it or leave it, on its terms — but "the idea of using someone else's shitty software on their turf is insane now. Just make your own!" Previously there was no choice.
+- **The Software Reformation:** before, "only a small, empowered caste of clergy could talk to the god of software; now anyone can." Agents lack their own agency — "they do what we said, not what we meant."
+- **Trust as earned expectation:** trust is scarce, attached to attestation of identity; "trust is the earned expectations of future actions of an identity." High-trust societies are more innovative; investing in the commons only makes sense in them ("why would you do that if it doesn't directly benefit you?").
+- **Silos vs features:** siloed software must contain a complete world — be a product, carry a business model, own its data and aesthetics. The wish: features that "safely fit into the nooks and crannies of our digital lives" without handing over your digital soul. **Coasian Floor** applies to individuals too — projects below your own bang-for-buck line never get built; small companies (and now individuals) have lower floors.
+- **AI spandrels:** many current AI uses are gap-fillers that will be obviated by AI-native solutions; Instinct/Muse-style personal assistants are "a step more useful than chatbots" but not the pinnacle of agentic software. New technical paradigms are rare but total.
+- **Having to believe to see it** (Veritasium): if your mental model has no room for paradigm shifts you won't see the evidence; at a paradigm's end "epicycles pile up" — the app model is past its breaking point and we keep accreting absurdities on it.
+- **Arm's length software:** our phones are adversarial, hijacking attention; we must hold software at arm's length, meeting it where it is — so it can't fit into the nooks and crannies. We're missing a class of **social vibecoding**; infinite software + inherently social existence should explode social computing.
+- **Edge of criticality / token economics:** 1000x value from agents = "burning just the tokens you need" — only surprise deserves tokens, the unsurprising runs at high leverage as mechanistic software. Academic-budget version: fixed budget, hire a postdoc or spend it on tokens — "labor is being displaced by capital, now for knowledge work."
+- **Stray gems:** LLMs have only superficial theory of mind (they "yadda yadda over the most juicy human stuff"); LLMs as **spellcheck** — run any thought through an adversarial reviewer for details so humans review the high-level bones; coordination-by-talking barely worked at human speed and collapses at agent speed → "drowning in slop"; the digital home as "the last piece of software you need" (IKEA-effect ownership; renters vs owners in our digital lives — "owners are less likely to burn things down"); pointer to his Tim O'Reilly chat writeup (*Resonant Computing and Common Fabric*).
+
+## Why it matters
+
+- **The frame is a coherent counter-position to the app-silo model** — agent-era software as features in nooks and crannies rather than products in walled worlds. The vault already collects the concrete precursors: agent-built components ([[2026-10-19-flohoeller-agent-tree-component]]) and skills as small standing software ([[2026-11-10-lassejlv-untangle-codebase-skill]] — "better not only for me but also my agents").
+- **"Coasian Floor for individuals" is the personal-company thesis stated as economics:** agent labor lowers the floor of what's worth building for oneself — micro-tools that were never viable become viable. That is precisely the bet the user's own agent orgs make ([[2026-10-25-mardehaym-seven-steps-agentic-org]]).
+- **Two directly usable heuristics:** (1) LLM-as-spellcheck — adversarial review catches detail errors so human review focuses on the high-level bones; (2) spend tokens only on surprise, keep the routine mechanistic — matches how the racing/relay pipelines already economize.
+- **Skepticism gates:** the author self-labels the whole doc as deliberate caricature — read as facets of proto-insights, not assertions; endorsement is n=1 taste (though ~986 likes on a "read this doc" post is a strong ratio); capture covers the **current week's tab only**, not the full running archive — the doc's history and the O'Reilly writeup were not read; stats from fxtwitter at capture.
+
+## Links
+
+- [[2026-11-10-lassejlv-untangle-codebase-skill]] — the agent-era, "better for my agents" tooling the Software Reformation predicts.
+- [[2026-10-19-flohoeller-agent-tree-component]] — agent-native components: "features in the nooks and crannies" made concrete.
+- [[2026-10-25-mardehaym-seven-steps-agentic-org]] — org-side version of the same sea change; Komoroske argues software itself is due the discontinuity.
