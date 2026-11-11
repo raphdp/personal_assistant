@@ -1,0 +1,58 @@
+---
+title: "Astraeus (@AstraeusCap) — full teardown of a live 1.9-Sharpe Hyperliquid vault: public-fills reverse engineering recovers a dip-absorption ladder (adds to -9.85%, doubling sizes, TP +0.56%), systemized to 2.39 Sharpe after fees and falsified against random-direction prices"
+source: https://x.com/AstraeusCap/status/2120324641956790311
+captured: 2026-11-11
+tags: [trading, twitter, crypto, quant, hyperliquid, vaults, reverse-engineering, dip-absorption, short-volatility, short-gamma, martingale, ladder, time-stop, sharpe, risk-premia, astraeus]
+kind: both
+---
+
+**Author:** Astraeus (@AstraeusCap; "average crayon eater | I build and run mev bots and trade systematic crypto strategies", author of [[2026-11-08-astraeus-crypto-barra-factor-model]] and [[2026-11-09-astraeus-new-listing-short-teaser]]; this is the drop promised in [[2026-11-10-astraeus-hl-vaults-reverse-engineering-teaser]]) · posted 2026-11-11T01:16:03Z · received 2026-11-11T06:43:46Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 348 likes, 25 replies, 20,048 views — his biggest drop of the four captures so far. Full X article ("I reverse engineered a 1.9 Sharpe Hyperliquid vault. Here's how it works, and how to trade it", 13.3k chars / 97 blocks) recovered complete via the fxtwitter article lane.
+
+## Summary
+
+He saw a live Hyperliquid vault advertising a 3-month rolling Sharpe of 5.7 (1.9 realized over its live window) and, since all HL trade data is public, pulled the vault's ~11,000 fills and grouped them by the strategy tag each order ID carries (first buy / ladder add / take profit / trim). What emerged is a short-volatility dip-absorption bot, plus a full systemization and stress-test of it.
+
+**Rules recovered from the fills:**
+
+- **Cycle:** price drops → the vault bids ~0.14% under price; further falls → buy more at fixed levels; any bounce → sell everything at once for a small profit.
+- **Ladder:** adds at −2.25 / −3.54 / −5.04 / −7 / −9.85% below first fill, sized 0.98 / 1.86 / 3.61 / 6.94 / 13.2× the first buy (same for every asset). Doubling sizes drags average entry down aggressively — at −7% price the average entry is −5.3%, so a ~2.5% bounce puts the whole position in profit.
+- **Entry (approximate, least certain):** price ≥0.6% under its 15h EMA and ≥0.85% under its 10h high.
+- **Exit:** sell nearly everything at +0.56% over average entry (+0.65% when deep); 93% of sells close the whole position.
+- **Sizing:** first buy = 0.364% of equity on every coin; open losses don't shrink size; leverage flat, peaked at 0.95×.
+- **Not recovered:** universe selection (it changed over time, notably after the June crash) and exact entry/exit rules — he deliberately did not hyper-optimize, testing broad MA/drawdown combinations instead.
+
+**Reproduction accuracy:** 85% of exits within 30 min of the vault's; 98% of ladders within one level of its depth; PnL-by-coin correlation 0.94.
+
+**The June gap:** during the strategy's worst month the manager intervened manually — rescue buys totaling 31% of vault equity, manual cuts of stuck positions, a week at reduced size, a month trading only top-5-by-mcap. Counterfactual: had the vault stayed mechanical, June would have scored Sharpe 2.6 (+9.6%, −2.0% max DD) vs the realized 1.9 — the manual saves didn't actually save anything.
+
+**Why it pays:** sharp dips in large coins are usually forced (liquidations, stops, price-insensitive market orders) and overshoot; the strategy absorbs that flow and gets paid the overshoot premium. 2023 evidence: median +11.3 bp an hour after a sharp dip vs +0.3 bp for a random minute (mean << median — sometimes it just keeps dipping). It is explicitly selling crash premium / short gamma, like selling puts. The premium is decaying: 2025–26 median bounce is down to +3–5 bp and still shrinking. It underperforms in uptrends and misses most trends.
+
+**Systemization:** top-10 coins by mcap (prev-day ranked, no lookahead) + the vault's ladder and take-profit + ONE added loss rule. Backtested on Binance 1-minute data from 2023:
+
+- **Universe effect confirms the risk-premia story:** top 5 → 2.75 Sharpe after fees, top 10 → 2.49, top 30 → 1.71, ranks 51–100 → 0.48. Big coins' dips are forced selling that deep books absorb; small coins' dips are structural.
+- **Return shape:** profitable in 9 of 10 BTC-move buckets; all losses sit in the worst decile of BTC days — on average only days when BTC falls >2.5% lose money. Short gamma.
+- **Loss rule:** price stops are deeply negative (all worse than no stop, 1.62 Sharpe) — a stop closes the position exactly when the liquidity provision you're paid for begins. Portfolio exposure caps also fail. What works: a **5-day time stop** (close any open ladder after 5 days regardless of price; fires ~10×/yr) lifting Sharpe 1.6 → 2.4 — his systematization of the manager's manual June cuts.
+- **Headline result:** 2.39 Sharpe after fees, −7.3% max DD at vault sizing, 2023–Oct 2026. By year: 7.4, 3.9, 1.5, 1.4 — the premium collapsing in real time. Over the vault's live window his mechanical version does 1.42 (1.03 strict) vs the vault's 1.88 — almost all of the gap is June, where his time stop sold BTC/BNB a day before the bounce while the manager bought the bottom with 31% of equity; ex-June his version wins 4.8 vs 3.3.
+- **Costs/latency:** first buy modeled as taker (1.5 bp slip + 4.3 bp fee), adds/TP as resting maker; entering 3 minutes late drops Sharpe 2.39 → 2.08, 5 min → 1.90 — the edge absorbs forced flow, so it is latency-sensitive.
+
+**Overfit checks (the best part):** 39 exit variants all land 2.21–2.46; entry variants 2.09–3.25 with the reverse-engineered rule on the median, not a tail; random-minute entry with the same ladder still averages 2.13 (33 seeds) — the trigger helps but most of the edge lives in the ladder + exit. Killer falsification: rebuilding prices with every 1-minute move's direction randomized (sizes/clustering preserved) kills the bounce — top-10 averages −0.2 Sharpe (0.06 with real drift added back), never >0.6 in 16 tries. So the edge is a real market effect, not a latent martingale artifact that hasn't blown up yet — corroborated by it not working on small coins.
+
+**Smoothing:** long BTC hurts (0.3 corr, both lose on the same days; a 0.25× leg cuts 2.39 → 1.94); a pre-emptive short-BTC hedge fails (ladder exposure only exists after a dip); a simple 30d trend sleeve (long BTC above its 30d-ago price, short below) adds ~0.1 Sharpe at similar drawdown.
+
+## Why it matters
+
+- **The reusable asset is the audit method, not the strategy.** Public fills + order-tag grouping + replication-metrics scoring (exit timing %, ladder-depth %, PnL correlation) is a template for auditing ANY on-chain vault or manager claim — Sharpe provenance, hidden leverage, crowding — exactly the forensic kin of [[2026-08-29-milk-man-replication-metrics]] and the disclosure bar set by [[2026-11-07-avi-eisen-alpha-capture-program]]. The randomized-direction falsification is a genuinely clean answer to "is this just a martingale that hasn't blown up?" and transfers to any ladder/martingale-flavored claim.
+- **The teaser promise was kept, closing the loop.** Fourth Astraeus capture in four days; the pipeline (factor model → listings teaser → vault teardown) is fully legible now, and the [[2026-11-09-astraeus-new-listing-short-teaser]] write-up is the one still pending.
+- **The strategy itself is a decaying, crash-short premium.** By-year Sharpe 7.4 → 1.4 is the author's own arithmetic of crowding; the author is open that it arbitrages toward zero. Anyone trading it is picking up thinning bps with short-gamma crash exposure and a latency requirement — the exact profile [[2026-11-09-zenomtrader-verified-only-costs-sharpe]] warns about, and the mirror of the forced-flow exploitation in [[2026-11-10-milk-man-cpi-close-position-fade]].
+- **Skepticism gates:** single anonymous author, self-reported backtest on Binance 1m data as a proxy for HL execution (venue, funding, and ADL differences unmodeled); the vault was selected for its headline Sharpe (survivorship by construction); the 5-day time stop is his invention, chosen from 39 variants — flat grid, but still one fitted choice; the 18-coin hindsight run (4.3 Sharpe) is flagged by the author himself; engagement (348 likes / 20k views in ~5h) is an order above his prior drops, which accelerates the very crowding decay he documents.
+- **For the user:** filed as reference-plus-task per the teaser note's criterion — the reusable vault-audit method shipped. Inbox task: decide whether anything here is worth acting on given the decay/latency/crash-profile caveats.
+
+## Links
+
+- [[2026-11-10-astraeus-hl-vaults-reverse-engineering-teaser]] — yesterday's teaser; this is the promised drop ("As promised…").
+- [[2026-11-08-astraeus-crypto-barra-factor-model]] — same author, prior full write-up; same article lane recovered it.
+- [[2026-11-09-astraeus-new-listing-short-teaser]] — the remaining teased write-up in his pipeline.
+- [[2026-08-29-milk-man-replication-metrics]] — replication discipline; how to score a mechanical reproduction against the original.
+- [[2026-11-07-avi-eisen-alpha-capture-program]] — the disclosure standard a democratized teardown implicitly competes with.
+- [[2026-11-09-zenomtrader-verified-only-costs-sharpe]] — costs-in verified Sharpe and decay skepticism, the right lens for the by-year collapse.
+- [[2026-11-10-milk-man-cpi-close-position-fade]] — the same species from the other side: exploiting forced flows at scheduled events.
