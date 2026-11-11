@@ -1,0 +1,48 @@
+---
+title: "PropQuantX (@PropQuantX) — NQ gap-up open long on 20-min bars: buy 2 pts over the first-45-min range high while above the 80 EMA, 1-ATR fixed stop/target — $288,817 net over 361 trades since Jan 2018 (60.9% WR, 1.43 PF, costs-in); code 'free in my discord'"
+source: https://x.com/PropQuantX/status/2120248693655736472
+captured: 2026-11-11
+tags: [trading, twitter, nq, nasdaq, futures, intraday, gap-up, opening-range-breakout, orb, 80ema, atr, backtest, discord-gated, strategy-capture, propquantx]
+kind: both
+---
+
+**Author:** PropQuantX (@PropQuantX; anonymous quant account, no bio/site recovered at capture — first capture from this handle) · posted 2026-11-10T20:14:15Z · received 2026-11-11T08:36:56Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 23 likes, 3 replies, 1,411 views — small; the syndication API nulled likes/views, fxtwitter recovered them. One attached photo: the full backtest stats card (equity curve + metric grid), recovered by WinRT OCR; tweet text was truncated at the syndication layer and recovered complete via fxtwitter (693 chars).
+
+## Summary
+
+A fully-specified mechanical **NQ intraday long** system, self-reported backtest Jan 2018 → Nov 2026, strategy named **"Breasthook_20min_NQ"** on the stats card (OCR-read). Every entry rule is in the tweet text — nothing is image-gated:
+
+- **Instrument/bars:** NQ futures, 20-minute bars. **Long only.**
+- **Day filter:** the session must OPEN above yesterday's RTH high (gap-up open). No gap-up open → no trade that day.
+- **Setup:** mark the first 45 minutes' range (initial balance). Entry = a 20-min bar CLOSE 2 points above that range high, while price is above the 80 EMA.
+- **Exits:** fixed stop and fixed target, both 1 ATR. "That's the entry" — no trailing, no discretion.
+
+**The numbers** (stats card via OCR, cross-validated against tweet text where they overlap):
+
+- Net **$288,817** over **361 trades** since January 2018, net of **$2.18/side commissions + 2 ticks slippage per fill** (tweet: "commissions and slippage in").
+- **Profit factor 1.43 · win rate 60.9%** (tweet rounds to 61%) · Sharpe **1.03** · Sortino 1.53 · return 577.6% · Calmar **0.59**.
+- **Max drawdown −$48,663 (−41.2%)** — the return/Calmar pair says the curve earned its money through a deep hole.
+- **Avg win $4,374.50 vs avg loss −$4,777.11** — payoff ratio <1; expectancy $800.05/trade. Sanity check: 0.609 × 4,374.50 − 0.391 × 4,777.11 = $796 ≈ $800 ✓ — the card is internally consistent, not pasted-together.
+- Streaks: 9 consecutive wins max, 7 consecutive losses max.
+- Consistency: **62% green weeks** (avg $1,250, worst −$18,952), **68% green months** (avg $2,860, worst −$29,452); best week ~$13.6k, best month $17,243 (a $43,980 figure also sits on the card — likely best-month or a period aggregate; OCR layout ambiguous, unverified).
+- ~361 trades over ~8.9 years ≈ **40 trades/year** — consistent with the gap-up-day filter doing real work (few qualifying days, not all trigger).
+
+**Author's own framing, unusually honest:** "avg loss is $4,777 vs $4,374 for the avg win, so **it lives off that win rate**"; "runs all the way to November 2026 and **you can see this year giving some back**"; and "**grab the code and see for yourself**" — code is "free in my discord" (join-gated).
+
+## Why it matters
+
+- **The rarest capture class: a fully-specified NQ system in plain text.** The only prior mechanical-NQ capture in the vault ([[2026-09-27-milk-man-nq-scalping-algo-v0]]) locked its logic in a screenshot and an NT8 dependency. This one's five rules are complete in the tweet itself — filter, range, trigger buffer, regime gate, ATR exits — so it can be re-backtested without joining anything. The Discord "free code" is a funnel, not a dependency.
+- **Gap-conditioned index trading is an established vault lineage, and this is the continuation side of it.** [[2026-11-02-0xarchive-btc-sp500-gap-fade]] captures the gap-FADE school (bet the gap closes); this is the gap-CONTINUATION school (gap up, buy the breakout of the opening range). Same conditioning event, opposite sign — the pair brackets the question "do NQ gap-ups extend or fill?", and both notes' caveats (regime dependence, sparse samples) rhyme.
+- **The risk profile is a high-win-rate grinder with a fat left tail, and the author says so.** Payoff <1 + 60.9% WR + −41.2% max DD on a 1.03 Sharpe: this is not a smooth compounder, it's a win-rate-dependent system whose worst stretch halved the account. "This year giving some back" is an author-admitted 2026 decay — the same by-year decay signature flagged in [[2026-11-09-zenomtrader-verified-only-costs-sharpe]] and the Astraeus teardown, and the exact regime-sensitivity the Milk Man pre-flagged on his own NQ v0.
+- **Costs are modeled, which sets it above most card-tweets** — $2.18/side + 2 ticks slippage is the costs-in discipline of the ZenomTrader school, not the gross-PF card style. But one cost the card can't model: ~1 trade every 6 trading days means position sizing per trade is necessarily large relative to equity to produce a $288k net — the −41.2% DD is the tell.
+- **Skepticism gates:** anonymous author, zero prior captures, self-reported backtest with no OOS/walk-forward split disclosed; stats recovered by OCR from an image (headline numbers cross-validate against the text, peripheral ones — Sortino, streaks, monthly bests — are single-source OCR); 361 trades is a thin sample for a 5-parameter system; Discord funnel (the card is the ad); 2026 giveback is author-confirmed; engagement (23 likes / 1.4k views) means essentially nobody has scrutinized it — no crowding, but also no due diligence by proxy. Interesting, not believed until re-run.
+- **For the user:** filed as reference-plus-task. The replication is cheap (rules are complete, NQ daily/20-min data is on hand) — the task is to re-backtest before treating the card as evidence, per [[2026-08-29-milk-man-replication-metrics]].
+
+## Links
+
+- [[2026-09-27-milk-man-nq-scalping-algo-v0]] — the vault's other mechanical NQ capture (image-gated, NT8-dependent); this one is plain-text and stack-free.
+- [[2026-10-01-algojan-nq-monday-short]] — NQ day-conditional trading from the other side (short, day-of-week gate).
+- [[2026-11-02-0xarchive-btc-sp500-gap-fade]] — the gap-fade counterpart to this gap-continuation system.
+- [[2026-08-29-milk-man-replication-metrics]] — the independent-replication bar this self-reported card has to clear.
+- [[2026-11-09-zenomtrader-verified-only-costs-sharpe]] — costs-in skepticism and by-year decay, the right lens for "this year giving some back".
+- [[2026-10-15-systematicpeter-mean-reversion-oos-high]] — OOS/decay discipline for a thin-sample backtest.
