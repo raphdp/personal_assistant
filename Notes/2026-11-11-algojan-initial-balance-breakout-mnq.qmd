@@ -1,0 +1,28 @@
+---
+title: "Jan / Algo Trader (@algojan) — initial-balance breakout automated on Roboquant: +133.4% on MNQ 5m (~19 mo, 154 trades, PF 1.58, 55.8% WR) — breakout leg only, 17 parameters"
+source: https://x.com/algojan/status/2120453779443310995
+captured: 2026-11-11
+tags: [trading, twitter, nq-futures, mnq, breakout, initial-balance, volume-profile, backtest, roboquant, skepticism, algojan]
+kind: reference
+---
+
+**Author:** Jan — Algo Trader (@algojan) · posted 2026-11-11 09:49Z · received 2026-11-11T15:09:59Z (WhatsApp via RDP-30, routed by CoS). Stats at capture (fxtwitter): 7 likes · 3 replies · 1,137 views. Syndication text truncated mid-word; full text recovered via fxtwitter. One photo attached — OCR'd: the Roboquant results dashboard (params below). "See first comment for free strategy access" — self-reply, not fetchable anonymously at capture.
+
+## Summary
+
+Jan automated **@fabervaaleeng's "initial balance" strategy** on Roboquant and backtested the **breakout leg only** on MNQ 5m. Stated rules of the full strategy: (1) mark the high/low of the first 30 min of New York; (2) breakout with volume = direction; (3) enter on the pullback into the volume profile once sellers get absorbed. He automated just the breakout part.
+
+Dashboard (OCR, cross-checked against tweet text): period **25 Sep 2024 → 15 Apr 2026 (~19 months)**, $100k capital, commissions included (≈ −$3.0k). **Net +133.4% · 154 trades · win rate 55.8% · PF 1.58 · max DD −12.3%** · largest win +$8,047.50 · largest loss −$6,372.00 · win/loss streaks 7/5 · **17 parameters**, 1 config. Per-trade average ≈ +$866 (154 × $866 ≈ +$133k ✓); avg loss ≈ −$3,409 (OCR label alignment approximate — two-column dashboard).
+
+## Why it matters
+
+- **Second @algojan backtest in the vault — a useful contrast.** [[2026-10-01-algojan-nq-monday-short]] was a 22.6%-WR fat-tail seasonal (+573%, PF 2.96) where the return rode a handful of Monday crashes. This one is a conventional breakout profile (55.8% WR, PF 1.58, DD −12.3%) — an ordinary, more plausible shape, same instrument family.
+- **Joins today's NQ open-auction cluster:** [[2026-11-11-propquantx-nq-gap-up-breakout]] (gap-up opening-range breakout, captured same day) and [[2026-10-26-onlybreakouts-market-mapping-time-grid]] — three independent takes on "the first hour of NY defines the day." Good material for a future synthesis note on opening-range edges.
+- **Skepticism gates:** (1) **17 parameters vs 154 trades** — ~9 trades per knob is a wide curve-fit surface; no out-of-sample or walk-forward split disclosed, and the ~19-month window is one regime (mostly a bull tape for NQ). (2) **The backtest is not the strategy** — the pullback-into-volume-profile + seller-absorption entry (arguably the actual edge in the original) was NOT automated; +133.4% is a simplified proxy of fabervaaleeng's system. (3) "Free strategy access" parked in a first-comment self-reply — unfetchable anonymously; treat the dashboard numbers as the only verifiable artifact. (4) Commission included and streak stats disclosed — better hygiene than the usual genre; credit where due.
+- Not a replication candidate until OOS/walk-forward shown — capture as a data point in the opening-range edge cluster.
+
+## Links
+
+- [[2026-10-01-algojan-nq-monday-short]] — same author, prior NQ backtest (Monday-short seasonal; the fat-tail contrast case).
+- [[2026-11-11-propquantx-nq-gap-up-breakout]] — same-day NQ gap-up opening-range breakout capture.
+- [[2026-10-26-onlybreakouts-market-mapping-time-grid]] — time-grid market mapping; opening-auction structure.
