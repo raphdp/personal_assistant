@@ -1,0 +1,43 @@
+---
+title: "doctormorphh — the noots & stims menu: 13 compounds, one disclaimer"
+source: https://x.com/doctormorphh/status/2120412414105489662
+captured: 2026-11-11
+tags: [health, nootropics, stims, cognition, twitter, listicle]
+kind: reference
+---
+
+**Author:** doctormorphh ("Morph") · posted 2026-11-11T07:04:49Z · received 2026-11-11T07:30:52Z (WhatsApp via RDP-30, routed by CoS) · engagement at capture (fxtwitter): 5 likes · 343 views · 1 reply · syndication text truncated mid-list; fxtwitter full text is 736 chars ending on the author's own disclaimer — complete · attached photo is a novelty pun: four periodic-table tiles spelling G-E-N-I-U-S (Ge/Ni/U/S with real atomic data), vision-verified, zero informational content.
+
+## Summary
+
+"You can just take noots and stims and be smarter than everyone." — an enumeration tweet mapping the claim-space of cognition pharmacology, one compound per claimed axis (labels are the author's, uncited):
+
+| Compound | Author's claimed effect |
+|---|---|
+| Modafinil | focus + wakefulness |
+| Bromantane | "guilt free dopamine" |
+| Dihexa | "insane memory + recovery" |
+| Intranasal insulin | flow state + recovery |
+| Tropisetron | focus + memory |
+| Cerebrolysin | "instant recovery" |
+| Agmatine sulfate | brain reset + blood flow |
+| Vyvanse | "unmatched drive + focus" |
+| Zatolmilast | "photographic memory" |
+| Guanfacine | calm focus + working memory |
+| DMT analogues | "child-like plasticity" |
+| ISRIB | memory + recovery |
+| Paraxanthine | "caffeine +++" |
+
+The tweet closes on its own hedge: "This isn't medical advice or a list of things you should randomly take. It's to show you just how many different aspects of cognition modern pharmacology can influence."
+
+## Why it matters
+
+Third data point in RD's active nootropics thread, and the widest-angle one: [[2026-11-10-limitlesstack-modafinil-thesis]] is the deep protocol (modafinil is compound #1 here too, and bromantane recurs in its stack), [[2026-11-10-zygomatic03-pinealon-social-fluidity]] covers the peptide lane, [[2026-11-05-driada-medical-catalog]] is the vendor catalog. Read this one as a checklist of the axes vendors and stack-builders compete on (wakefulness, dopamine tone, memory consolidation, plasticity, recovery) — not as advice.
+
+Skepticism gates: zero citations; 5 likes at capture — this is not a vetted consensus piece; the effect labels are marketing shorthand, not measured outcomes. Dihexa, ISRIB and zatolmilast are research-stage with little or no human cognition data; cerebrolysin is an injectable porcine brain extract; Vyvanse is a prescription amphetamine; "DMT analogues" and others on the list are controlled or prescription-only. In the UAE specifically, modafinil is controlled and most of this list would not be importable — the CoS guidance RD received on this thread 2026-11-10 stands. Reference-only: no task filed, matching RD's stated posture (checking, not ordering).
+
+## Links
+
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — the modafinil protocol note (overlap: modafinil, bromantane)
+- [[2026-11-10-zygomatic03-pinealon-social-fluidity]] — peptide/cognition stack from the same cluster
+- [[2026-11-05-driada-medical-catalog]] — vendor catalog, same thread
