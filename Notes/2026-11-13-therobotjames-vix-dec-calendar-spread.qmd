@@ -1,0 +1,36 @@
+---
+title: "Robot James (@therobotjames) — 'An idiotic 100% win rate trade in VIX futures spreads': December VX contracts trade rich when their 30-day forward window holds only 19 trading sessions — short vx/z ~60 days out, hold to settlement (+$147k, active-day Sharpe 2.93 card)"
+source: https://x.com/therobotjames/status/2121225416312779201
+captured: 2026-11-13
+tags: [trading, twitter, vix, vx-futures, calendar-spreads, seasonality, trading-calendar, soq, settlement, short-vol, microstructure, therobotjames]
+kind: both
+---
+
+**Author:** Robot James (@therobotjames; writes the "rj's trading for dickheads" Substack, robotjames.substack.com — first capture from this handle) · posted 2026-11-13T12:55:24Z · received 2026-11-13T14:26Z (WhatsApp via RDP-30, routed by CoS — backlog sweep RDP-1381). Engagement at capture (fxtwitter): 488 likes, 17 replies, 28,843 views. One attached photo (backtest stats card, WinRT-OCR'd); the tweet is only the hook — full mechanics recovered from the author's own free Substack post (19k chars, fetched via the posts API).
+
+## Summary
+
+The edge, from the Substack: **VIX prices a 30-calendar-day expectation, but realized wiggle needs trading sessions — and December VX contracts whose forward window contains only 19 trading sessions systematically trade rich, because "vix traders can't count days."**
+
+Mechanics:
+
+- A monthly VX future cash-settles (SOQ/VRO) exactly 30 calendar days before the following month's standard SPX settlement — it is a bet on forward-starting 30-day variance *after* its own settlement, not on the settlement month.
+- Most forward windows hold 20–22 trading days. But when all three Dec/Jan holidays (Christmas, New Year's Day, MLK) are observed on weekdays, the December contract's window holds only **19 sessions** — e.g. vx/z3 (Dec 2023), and vx/z0 (Dec 2010: 20). Eight qualifying contracts historically. (Extreme case: Dec 2006, 18 sessions after Ford's day of mourning.)
+- Fewer sessions → less time to move → lower expected variance → the contract settles lower on average than its pre-settlement price implies. Aggregating every contract's daily premium to final settlement: the 19-session z-contracts (orange line) show "significantly more decay" than average — i.e. they trade rich and bleed toward a lower SOQ.
+- **The simple (free) trade: when there are 3 weekday Dec/Jan holidays, sell vx/z ~60 days before final settlement, hold to settlement. "Every historical trade would have been a winner."**
+- **The robust (paid-gated) version:** futures spreads + options to isolate the "z is expensive" effect, cut short-vol exposure, and hedge "volmageddon style blow-ups" — claimed ~Sharpe 3 when in the market, with a trade calendar supplied "all the way out to 2040."
+
+**Stats card (OCR, single-source):** "Idiotic VIX trade — VX futures spreads · Total +$147,259 · Active-day P&L Sharpe 2.93 · Max drawdown −$9,326."
+
+## Why it matters
+
+- **A complete free-side spec of a calendar-microstructure edge — the vault's first.** The two prior VIX captures price the term structure ([[2026-11-09-kashin-vix-vix3m-evrp-strategies]]) or rule-following futures blends ([[2026-11-09-quantifiedstrategies-vix-futures-article]]); this one's edge is *counting trading days inside a fixed calendar-day window* — an audit method that transfers to any contract whose underlying is time-denominated (variance, rates over event calendars).
+- **The author's own honesty is the best part:** "it's not a lot of observations" (8 contracts); the simple version "is mostly a short volatility bet with a bit more wiggle room"; "there were no serious vol blowups in the historical sample — these would kill the short vx/z position... and eventually, one will"; and the publication-risk joke: trade calendar good "until it stops working cos, err, i just wrote about it."
+- **Skepticism gates:** 100% win rate = small-n artifact (≤8 occurrences of the setup, ever); short-vol left tail explicitly unhedged in the free version; the Sharpe-2.93 card is OCR'd, self-reported, and ambiguous about which version it scores; the article is a paid-funnel (robust construction + 2040 calendar + 30%-off pitch sit behind the subscription); Dec 2026 is *not* a setup year (window 16 Dec–15 Jan contains only two weekday holidays — MLK falls outside), so no live trigger is imminent.
+- **Actionable:** task filed — identify the next qualifying December contract (all three holidays on weekdays in-window) and diarize the ~60-day pre-settlement short entry; decide simple short vs. paid spread construction before then.
+
+## Links
+
+- [[2026-11-09-kashin-vix-vix3m-evrp-strategies]] — VIX term-structure edge from the eVRP side.
+- [[2026-11-09-quantifiedstrategies-vix-futures-article]] — rule-based VIX futures strategies, same family.
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — the small-n / multiple-testing lens this 8-occurrence edge must survive.
