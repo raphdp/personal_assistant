@@ -1,0 +1,31 @@
+---
+title: "Economist 1843 (Soumaya Keynes) — What's the best age gap in a relationship? The 'half your age plus seven' rule vs the actual evidence: divorce rates, earnings, life expectancy"
+source: https://www.economist.com/1843/2017/06/26/whats-the-best-age-gap-in-a-relationship
+captured: 2026-11-13
+tags: [dating, relationships, age-gap, science, economist, 1843, divorce, longevity, okcupid, reference-study]
+kind: reference
+---
+
+**Author:** Soumaya Keynes, 1843 magazine (The Economist's lifestyle sibling) · published 2017-06-26, 4-min read · received 2026-11-12T15:41Z (WhatsApp via RDP-30, routed by CoS — backlog sweep RDP-1381, captured 2026-11-13). The live URL is now a paywall shell; full text recovered from a Wayback capture of the old 1843 template (Dec 2020 snapshot).
+
+## Summary
+
+A breezy evidence review of the "half their age plus seven" folk rule (fine for 22+18, not OK for 38+23, and a 50-year-old may venture to 86 — the permissible gap widens with age), tested against what data exists:
+
+- **Stated preferences (OKCupid, Christian Rudder):** women seek men roughly their own age or 1–2 years older, at every age; men prefer early-twenties women regardless of their own age, and the gap they *want* widens as they age. Women prefer a small constant gap; men chase a larger one the older they get.
+- **Small-gap conveniences:** shared cultural references, synchronized bus passes and joint birthday parties — and an economists' hypothesis that smaller gaps might narrow the gender earnings gap (older-husband + earnings-rise-with-age → pressure on the mother to drop out). But a Danish twin-sisters study found women who married older men earned no differently, on average, than women who married near-age peers.
+- **Divorce:** the Atlantic's 2014 claim — a 5-year gap makes a couple ~18% more likely to divorce than same-year matches. Keynes's caveat: association, not causation — the kind of person who opts into a large-gap marriage may be the divorce-prone element, not the gap. Britain's ONS found no strong age-gap/divorce link in England & Wales, except women over 30 who were **more than ten years older** than their spouse (more divorce-prone).
+- **Longevity (Sven Drefahl, Stockholm Univ., Danish 50+):** men with younger wives outlive men with same-age wives; the older the wife, the worse the man's survival, controlling education and wealth. For **women the sign flips**: the bigger the gap in *either* direction, the worse her survival. Causality caveat again — healthy men may both attract younger mates and live long (selection, not protection). Drefahl's read: women rely less on a partner's support, so a younger spouse's energy buys them less (and stress, more).
+- **Verdict:** "What evidence there is vindicates the choices of OKCupid's users — women should pick men close in age, men should look for younger women." A true economist would want random assignment, which couples kindly refuse to provide.
+
+## Why it matters
+
+- **The evidence-side complement to a tactics-heavy Dating/ shelf.** The vault's dating captures are nearly all field-craft ([[2026-11-02-recenello-start-in-the-middle]], [[2026-11-13-daysofgame-coffee-shop-game]]); this is the rare piece asking what the *outcome* data says about pairings — preferences, durability, even mortality.
+- **The honest-null pattern is the takeaway.** Every causal-sounding claim in the piece (gap → divorce, younger wife → longevity) arrives with its selection-effect disclaimer attached. That is exactly the skepticism discipline the trading side of the vault applies to backtests — same disease (confounded inference), different domain.
+- **Skepticism gates:** 2017 light-magazine synthesis, not new research; every study cited is observational; the Atlantic's 18% figure is a single poll-based study; Rudder's data is *stated preference* on one dating site (a decade old now), not behavior; Drefahl's survival results are Danish-register correlations. Useful as a map of the literature, not as proof of anything.
+- Filed reference-only: no action item — background for the user's own dating judgments.
+
+## Links
+
+- [[2026-11-13-caudillonuclear-basic-competencies-awe]] — same-batch field-side view: how attraction actually screens (poorly), per one practitioner.
+- [[2026-11-06-simppolice-what-are-we-reply]] — the Dating/ shelf this rounds out.
