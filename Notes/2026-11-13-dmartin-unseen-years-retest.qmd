@@ -1,0 +1,35 @@
+---
+title: "D. Martin (@dmartin_trading) — Unseen-years retest: index strategies built on 2018+ data re-run on 2013–2017 DAX/Nasdaq/Nikkei intraday — all profitable, two better; 'the market has changed' objection dies"
+source: https://x.com/dmartin_trading/status/2121241676588941776
+captured: 2026-11-13
+tags: [trading, twitter, backtesting, out-of-sample, oos, unseen-data, robustness, overfitting, dax, nasdaq, nikkei, futures, intraday, dmartin]
+kind: both
+---
+
+**Author:** D. Martin (@dmartin_trading; systematic futures trader, 4th vault capture — see Links) · posted 2026-11-13T14:00:01Z · received 2026-11-13T14:30Z (WhatsApp via RDP-30, routed by CoS — backlog sweep RDP-1381). Engagement at capture (fxtwitter): 47 likes, 8 replies, 3,523 views. Self-quotes his own Nov 11 data request (FDAX/NIY/NQ M1 OHLC unadjusted from 2008 — "is there a good samaritan..."). One attached photo: monthly-returns heatmap, unseen years solid vs backtest years dashed, recovered by WinRT OCR.
+
+## Summary
+
+The receipt for the data request: he got access to intraday data from **2013** on DAX, Nasdaq and Nikkei (asked from 2008, received from 2013), and retested every index strategy — developed with both in-sample and out-of-sample splits on **2018+** data — on those five unseen years:
+
+- **All strategies profitable on 2013–2017; two performed better than on their development years.**
+- His two conclusions: (1) "my strategies were not overfitted"; (2) the notion that "the market has changed so much that what works in recent years won't work on much older data" is "clearly false."
+- Advice to CFD traders: get futures data and run the same test — "good reassurance."
+
+**The chart (OCR):** "% of account at INDICES weights, after costs" — yearly totals, unseen years first: **2013 +17.6 · 2014 +3.3 · 2015 +21.3 · 2016 +11.5 · 2017 +9.6** (unseen), then the 2018+ backtest years **+10.7 · +13.1 · +25.3 · +12.7 · +20.6 · +16.0 · +15.2** (12 of 13 yearly figures OCR-recovered; one dropped by OCR, mapping inferred from ordering — treat peripheral cells as approximate). The unseen five compound ≈ +63% after costs — no losing year, 2014 nearly flat.
+
+## Why it matters
+
+- **The cleanest possible OOS demonstration: data the modeler never touched, fetched by a third party, before the strategies existed in final form.** That is a stronger test than walk-forward on the same era ([[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]) — and it's the exact protocol the PropQuantX task ([[2026-11-11-propquantx-nq-gap-up-breakout]]) should emulate: re-run on pre-development-window data, not just later data.
+- **Fourth entry in the vault's best-documented author arc:** hypothesis-first design → deflated Sharpe skepticism → calibrated robustness checks → and now the receipts. The arc itself is the template for how to earn belief in a backtest; this note is the payoff installment.
+- **The "market has changed" objection taking damage matters for the whole vault:** several captured strategies lean on regime-change caveats to explain decay; five clean unseen years across three index markets is evidence that well-built intraday systems can survive eras — though one trader's portfolio is one sample.
+- **Skepticism gates:** self-reported numbers from an OCR'd heatmap (single source, one year's total missing from OCR); "all strategies profitable" invites survivorship questions (were failures retired before this claim?); 2013–2017 is one bull-ish, low-rate regime — no 2008-style stress in the unseen window; the strategy *set* was still selected with knowledge of post-2018 behavior, so the unseen years test overfitting, not regime-omniscience.
+- **Actionable:** task filed — mirror the unseen-years protocol on vault strategies (pull pre-development-window intraday data, re-run) before extending belief to any of them.
+
+## Links
+
+- [[2026-10-01-dmartin-hypothesis-first]] — the arc, part 1.
+- [[2026-10-24-dmartin-deflated-sharpe-ratio]] — the arc, part 2 (skepticism).
+- [[2026-10-31-dmartin-calibrating-robustness-checks]] — the arc, part 3 (robustness).
+- [[2026-11-11-propquantx-nq-gap-up-breakout]] — the re-backtest task this protocol should upgrade.
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — the overfitting-validation framework this passes in the field.
