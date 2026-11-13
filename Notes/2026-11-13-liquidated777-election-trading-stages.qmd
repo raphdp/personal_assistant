@@ -1,0 +1,30 @@
+---
+title: "Liquidated Degen (@liquidated777) — 3 stages of election trading: pre-candidacy chaos, poll-tracking middle, momentum endgame; the edge lives in stages 1 and 3"
+source: https://x.com/liquidated777/status/2121044076720197650
+captured: 2026-11-13
+tags: [trading, twitter, election-markets, prediction-markets, polls, momentum, regime-map, liquidated777]
+kind: reference
+---
+
+**Author:** Liquidated Degen (@liquidated777; anonymous election/prediction-market commentary account — first capture from this handle) · posted 2026-11-13T00:54:49Z · received 2026-11-13T10:41Z (WhatsApp via RDP-30, routed by CoS — backlog sweep RDP-1381). Engagement at capture (fxtwitter): 24 likes, 1 reply, 1,070 views — tiny; syndication API had truncated the final lines, complete text (425 chars) recovered via fxtwitter.
+
+## Summary
+
+A three-stage regime map for trading election markets:
+
+1. **Pre-candidacy:** polls are not very useful — the field has too many options, so headline poll numbers fragment across candidates.
+2. **Post-candidacy:** participants basically trade the polls plus models, "with minor adjustments based on their own biases" — the market becomes a poll-tracker.
+3. **Last days before the election:** momentum matters more than polls, because polls are trailing indicators.
+
+His coda: "models are only half the story — it takes a special kind of skill to identify high potential in the 1st and 3rd stages." I.e. the edges are at the ambiguous beginning (polls uninformative → mispricing) and the fast end (polls stale → momentum), not in the crowded middle where everyone reads the same numbers.
+
+## Why it matters
+
+- **A clean lifecycle model of when mechanistic poll-following fails** — stage 2 is where poll-model traders are maximally crowded and edge is thinnest; stages 1 and 3 are information-processing gaps (too many options / lagging indicators). That framing transfers to any market with a dominant public data feed: edge concentrates where the feed is least binding.
+- **Connects to the vault's election-research line** ([[2026-10-01-kober-gopfan-research]]) — the GOP-fan research there is stage-1-style work (candidate-field structure); this note supplies the timing dimension the earlier capture lacked.
+- **Skepticism gates:** 24-like account, no data, no worked example, "special kind of skill" is unfalsifiable; stage boundaries are undefined (when exactly does stage 3 start?); election markets' fee/liquidity structure can eat small edges. Framework, not strategy — nothing here is tradeable without the stage clocks he doesn't give.
+- Reference-only: filed as a lens for the next election cycle.
+
+## Links
+
+- [[2026-10-01-kober-gopfan-research]] — prior election-market research capture (stage-1 material).
