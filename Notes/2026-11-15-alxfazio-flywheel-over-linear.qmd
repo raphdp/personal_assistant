@@ -1,0 +1,30 @@
+---
+title: "Alex Fazio (@alxfazio) — 'been using linear to find my way through swe decisions and problems, but damn, this is so much better': Flywheel (Paradigma) — decisions/problems as a directed graph with CLI+MCP; author is a Paradigma employee dogfooding"
+source: https://x.com/alxfazio/status/2121654589720342969
+captured: 2026-11-15
+tags: [ai-agents, twitter, tools, flywheel, paradigma, research-infrastructure, decision-making, cli-agents, mcp, linear, knowledge-graphs, agent-orchestration, alxfazio]
+kind: both
+---
+
+**Author:** Alex Fazio (@alxfazio; CLI-agents content creator, github.com/alexfazio; joined Paradigma.inc March 2026 — bio "code & clankers @paradigmainc"; ~14k followers) · posted 2026-11-14T17:20:47Z · received 2026-11-15T05:06Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 519 likes, 12 replies, 68,354 views. Full text (101 chars, complete): "been using linear to find my way through swe decisions and problems, but damn, this is so much better". One attached photo: Flywheel graph screenshot, text recovered by WinRT OCR; the tweet's t.co resolves to the photo itself (no external article).
+
+## Summary
+
+- **The claim:** Linear — his tool for working through software-engineering decisions and problems — is beaten by "this". No criteria are given; the screenshot is the argument.
+- **The screenshot (OCR):** a Flywheel graph titled **"Artifacts for CLI agents"** — 36 nodes, 1 root, sortable by Updated, shareable ("Share graph", "Copy link"). Sidebar sections: Research, Experiments, Method, Trajectory, Problems. The mapped tree: "Problem: artifacts" branching into **Decision 1** (the day-one…), **Decision 2** (the Traject…), **Decision 3** (a Problems…), **Scope** (who is it for…), **Agent side** (how does an agent…), **Authoring**, **Display** (where and with…), **Runtime** (what may an…), **Feedback**. Sibling heads visible: "Claude artifacts: feedback / sharing / permissions / tool… / source…", "Capability map: Claude…". A filter readout shows **"135 heads without status"**.
+- **What Flywheel is:** Paradigma's product (Rome; @paradigmainc; flywheel.paradigma.inc) — "the infrastructure for autonomous research". Docs: research work is a **directed graph** — nodes are work units, branches are divergent paths, and merged outcomes "preserve a reviewable record of decisions and evidence". Operable by agents via **CLI + MCP** (runs in Codex, Claude Code "and everything else" — Fazio announced the CLI himself, Apr 2026), plus a Web UI, public shareable graphs, Campaigns, and a timeline view. Community framing: "git, but for science".
+
+## Why it matters
+
+- **The structural bet:** Linear flattens an investigation into a list of statuses; a graph keeps the branch structure AND attaches each decision to the evidence that produced it. For multi-branch work (strategy retests, reskin rollouts, agent experiments) that is the difference between a to-do list and an audit trail — the same reason this vault keeps the D. Martin arc as linked notes rather than tickets ([[2026-11-13-dmartin-unseen-years-retest]]).
+- **MCP-native means agents read and write the decision graph, not just humans** — work-orchestration adjacency with [[2026-11-08-brian-armstrong-agent-org-queue]] and with structured agent planning [[2026-09-06-phelps-agentic-planning-loop]]; the graph UI itself echoes [[2026-10-19-flohoeller-agent-tree-component]], and "curated context CLI agents actually consume" is the same problem [[2026-10-18-copyconstruct-claude-md-curated-corpus]] attacks from the prompt side.
+- **Skepticism gates:** the author joined Paradigma in March 2026 — this is employee dogfooding + evangelism, not a neutral Linear comparison; "better" is asserted, never defined; the screenshot shows one well-formed graph (survivorship — nobody screenshots their messy one); his own sidebar reads "135 heads without status", i.e. the status-discipline problem Linear exists to solve shows up here too; 519 likes measure audience overlap, not tool quality.
+- **Actionable:** task filed — a cheap spike (free tier, CLI/MCP from Claude Code) mapping one live multi-branch item as a 5–10 node graph, judged against the flat-list + vault-note workflow.
+
+## Links
+
+- [[2026-11-13-dmartin-unseen-years-retest]] — the decisions-plus-evidence arc the graph model formalizes.
+- [[2026-11-08-brian-armstrong-agent-org-queue]] — agent work orchestration: queue vs graph.
+- [[2026-09-06-phelps-agentic-planning-loop]] — structured planning loops this tool externalizes into UI.
+- [[2026-10-19-flohoeller-agent-tree-component]] — visualizing agent work as trees/graphs.
+- [[2026-10-18-copyconstruct-claude-md-curated-corpus]] — curated agent context, the prompt-side sibling.
