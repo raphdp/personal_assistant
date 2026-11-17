@@ -1,0 +1,37 @@
+---
+title: "ZenomTrader — the scarcity close: War Room goes exclusive high-ticket, no new entries"
+source: https://x.com/ZenomTrader/status/2122642526213431672
+captured: 2026-11-17
+tags: [trading, twitter, darwinex, strategy-replication, substack, backtesting, community, sharpe, pricing]
+kind: reference
+---
+
+**Author:** ZenomTrader (@ZenomTrader) · posted 2026-11-17 10:46Z · received 2026-11-17T21:36:47Z (WhatsApp via RDP-30, routed by CoS) · 42 likes · 5,538 views · 4 replies (via fxtwitter; syndication truncated the text on its trailing t.co — which resolves to the tweet's own photo/1, no external link; full 557-char text recovered via fxtwitter). All four content images OCR-recovered (preserved at `rdp_media/2122642526213431672/`). Fifth installment of the series: replication ([[2026-11-04-zenomtrader-substack-alpha-replication]]) → verified-only split ([[2026-11-05-zenomtrader-verified-author-sharpe-split]]) → costs-in ([[2026-11-09-zenomtrader-verified-only-costs-sharpe]]) → commercialization ([[2026-11-10-zenomtrader-war-room-darwinex-tribe]]) → this, the scarcity close.
+
+## Summary
+
+The monetization arc's next beat: "My Substack alpha experiment has reached another level." Claims: some strategies carry **Sharpe above 1.0 on their own**, with **backtests going all the way back to 1980**; **over 400 strategies shared in just the past few days**, "and these represent only 1% of everything I've shared so far." Then the pivot: low-ticket pricing can no longer be maintained — "Protecting the alpha is becoming the new priority." **"The War Room will become an exclusive, high-ticket channel, with no new entries for future members."**
+
+The four photos are four more equity curves, each annotated "PYTHON TEST, not a Darwinex run. No CFD swap in it. Costs as in that test":
+
+| Chart | Sharpe | Axis window | What it shows (by OCR) |
+|---|---|---|---|
+| p1 | 1.12 | 1988–2012 | no strategy label recovered — annotation only |
+| p2 | 0.96 | 2004–2024 | "market: CME ZF 5-year daily, long window" (5-year US Treasury note futures) |
+| p3 | 0.71 | 2000–2020 | "Reproduction: S&P 500 futures minus 10-year Treasury note futures, the paper's exact weights, daily, before costs (Carv…)" — a Carver-style paper replication |
+| p4 | 0.93 | 2000–2024 | "CME/ICE futures + SPY + Darwinex forex, four parts (SPY, commodity futures value+momentum, currency carry, futures tren…" — a four-part multi-asset portfolio |
+
+## Why it matters
+
+- The series arc completes into pricing discipline: free Substack firehose (400+ strategies "in the past few days") as top-of-funnel → War Room converts to high-ticket → door closes. This is the classic creator-economics sequence, executed on top of the research corpus this series has tracked.
+- What's new for the standing decision: a **claimed deadline**. The 11-10 join-or-not task (Tasks/Inbox.md) was "decide ahead of the 900-strategy code drop" — this tweet says the drop's home goes exclusive "with no new entries for future members." If joining was ever live, the window now carries a marketing-imposed cap (amended onto the existing task, no new task filed).
+- The four charts quietly reconfirm the series' own numbers: labeled Sharpe range 0.71–1.12, median ~0.95 — the same "~0.9 costs-in fleet" picture from the 11-10 note. The best chart (1.12) is the only one with no OCR-recoverable strategy label; the only chart admitting "before costs" (p3) is also the weakest (0.71).
+- Skepticism gates: the receipts gap is unchanged — author-run Python tests, offline numbers, author-labeled, no third-party verification (contrast [[2026-11-09-milk-man-po10-extreme-full-receipts]]). "Only 1% of everything I've shared" is unfalsifiable marketing arithmetic; "backtests to 1980" spans four decades of regime change but stays in-sample; and "no new entries" is a textbook urgency close — treat the deadline as marketing pressure until the door observably shuts.
+
+## Links
+
+- [[2026-11-10-zenomtrader-war-room-darwinex-tribe]] — the commercialization announcement this tweet escalates
+- [[2026-11-09-zenomtrader-verified-only-costs-sharpe]] — the costs-in numbers behind the "~0.9 fleet" read
+- [[2026-11-05-zenomtrader-verified-author-sharpe-split]]
+- [[2026-11-04-zenomtrader-substack-alpha-replication]]
+- [[2026-11-09-milk-man-po10-extreme-full-receipts]] — the contrast case: full third-party receipts

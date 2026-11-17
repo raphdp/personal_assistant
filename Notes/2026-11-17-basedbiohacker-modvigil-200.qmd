@@ -1,0 +1,26 @@
+---
+title: "BasedBiohacker — modvigil-200 (HAB Pharma modafinil) endorsement with 40% affiliate discount"
+source: https://x.com/BasedBiohacker/status/2122738431075709021
+captured: 2026-11-17
+tags: [health, nootropics, modafinil, modvigil, twitter, affiliate, biohacking]
+kind: reference
+---
+
+**Author:** BasedBiohacker (@BasedBiohacker) · posted 2026-11-17 17:07Z · received 2026-11-17T21:37:07Z (WhatsApp via RDP-30, routed by CoS) · 99 likes · 8,414 views · 11 replies (via fxtwitter; syndication truncated the text on its trailing t.co — which resolves to the tweet's own photo/1; full 341-char text recovered via fxtwitter). Both photos OCR'd: product packaging shots — blister strip, "Modafinil IP 20[0 mg]", HAB Pharma registration label, expiry DEC-202x (preserved at `rdp_media/2122642526213431672/`, p5–p6).
+
+## Summary
+
+An affiliate endorsement of a specific modafinil generic: **modvigil-200 by HAB Pharma**. His case: cheap; consistent ("never fails me"); high quality; "vetted manufacturer (in biz since 1989)" — the packaging OCR corroborates the HAB Pharma branding. "And i got them to give me a 40% discount. linked in comments" — the discount link sits in his replies (affiliate code), not in the tweet itself. Flavor: "it's a straight fucking shooter of 200 mg pure focus and performance, like a breath of fresh air after suffocating — i fucking love it."
+
+## Why it matters
+
+- This is the **"which brand, where from" layer** of RD's modafinil thread: the limitlesstack manual ([[2026-11-10-limitlesstack-modafinil-thesis]]) was the thesis (mechanism, dosing, cycling, SJS risk); this tweet names a concrete generic (modvigil-200 / HAB Pharma) plus a vendor-discount lane — the same shape as the Driada catalog entry that started the thread.
+- The strongest fact in the tweet is the manufacturer vintage: HAB Pharma is a long-standing Indian generics house, and modvigil is its established modafinil brand — the "consistent, vetted manufacturer" claim is at least about a real company, not a phantom lab. Everything else is affiliate framing.
+- Skepticism gates: the "negotiated" 40% discount is monetization — the reply-buried affiliate link is the point of the tweet, and it was not captured (anonymous lanes don't expose replies; an affiliate URL isn't vaulted as a recommendation regardless). Packaging photos are marketing shots, not assay results; "never fails me" is n=1. UAE posture unchanged from the 11-10 CoS guidance: modafinil is prescription-controlled and gray-market imports carry customs-seizure risk. Reference-only, no task — RD's stance on this thread remains checking, not ordering.
+
+## Links
+
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — the modafinil manual this brand pick plugs into
+- [[2026-11-11-doctormorphh-noots-stims-cognition-menu]] — the noots/stims menu in the same thread
+- [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] — today's daily-stack manifest, same lane
+- [[2026-11-05-driada-medical-catalog]] — the vendor catalog where the thread started
