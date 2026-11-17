@@ -1,0 +1,56 @@
+---
+title: "The System Theory (@SystemTheoryHQ) — run 9-10 systems per portfolio, not one: 3 long-only upside-bias breakouts (crypto/metals/indices) + 3 two-sided intraday breakouts (FX/indices/metals) + 3 mean-reversion/timing systems (indices MR, FX MR, indices seasonality) — combined curve 2018-2026: 2,843 trades, $304.2k net, PF 1.60, -4.4% max DD (self-reported, OCR) — 'you don't need a perfect strategy, you need a portfolio' to fit prop-firm drawdown rules; Discord funnel"
+source: https://x.com/SystemTheoryHQ/status/2122340917038215470
+captured: 2026-11-17
+tags: [trading, twitter, portfolio-of-systems, diversification, breakout, mean-reversion, seasonality, crypto, metals, indices, fx, intraday, prop-firm, equity-curve, discord-gated, self-reported, systemtheoryhq]
+kind: reference
+---
+
+**Author:** The System Theory (@SystemTheoryHQ; anonymous systems-trading account, no bio/site recovered at capture — first capture from this handle) · posted 2026-11-16T14:48Z · received 2026-11-17T07:34Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 28 likes, 5 replies, 2,039 views — small; reposts not exposed. One attached photo: the combined equity-curve dashboard card, recovered by WinRT OCR; tweet text complete via fxtwitter (1,778 chars — the syndication API had cut it ~330 chars mid-list, ending on the photo's t.co).
+
+## Summary
+
+The claim: he doesn't trade one strategy — he runs **9-10 systems per portfolio** on his prop-firm accounts, and shows the combined equity curve. The fleet, in three groups:
+
+**Upside-bias systems (breakout, long only)**
+1. Crypto breakout — capture the long-term upside bias of crypto.
+2. Metals breakout — capture the upside bias of metals.
+3. Indices breakout — capture the upside bias of indices.
+
+**Intraday systems (breakout, long AND short)**
+4. FX intraday breakout — catch volatility expansion in FX, both directions.
+5. Indices intraday breakout — catch fast moves up or down, "including the days the long systems struggle."
+6. Metals intraday breakout — catch volatility bursts in metals.
+
+**Mean reversion and timing systems**
+7. Mean reversion on indices — "buy panic. Makes money when the breakout systems are stuck in chop."
+8. Mean reversion on FX — fade stretched moves when the market is ranging.
+9. Seasonality on indices — "a calendar edge that shares the risk with mean reversion."
+
+His thesis, verbatim: "The point isn't that each system is amazing. Some of them are boring. Some lose for months. The point is that they don't all lose at the same time." Different markets, different timeframes, different logic, long and short — "when one system is in drawdown, another is carrying the account." The prop-firm punchline: "you don't need a perfect strategy, you need a portfolio" — built to fit inside prop-firm drawdown rules. "Pass prop firms with rules, not LUCK."
+
+**The numbers (OCR off the dashboard card):** 2,843 trades; x-axis years 2018 → 2026 (~8.9 years); net P&L **$304.2k**; profit factor **1.60**; max drawdown **-4.4%**; max stagnation **108 days** ("the most calendar days you went along the bottom near a new equity high" — the card has a shade-the-flat-spell toggle). The card also has Long-Only/Short-Only direction toggles. Layout ambiguity, unverified: a 46.8% figure beside the net P&L (total return or win rate — unclear), and dollar figures $404.6k / $328.1k / $251k near the drawdown row that don't obviously reconcile with -4.4%; treat those as single-source OCR noise.
+
+**The funnel:** a prop-firm tag row (@FTMO_com, @the5erstrading, @fintokei, @MyFundedFutures, @MyForexFunds, @TradingLucid) and "I teach you how to build exactly this, step by step, inside my Discord. Free to join. Link in my bio."
+
+## Why it matters
+
+- **The portfolio-level counterpoint to the vault's single-system captures.** [[2026-11-11-propquantx-nq-gap-up-breakout]] is one fully-specified NQ system with a -41.2% max drawdown; this capture is the other half of the argument — you don't fix that hole with a better system, you fix it by combining sleeves that don't draw down together. His indices mean-reversion exists *explicitly* to earn when the breakout sleeve chops — the same breakout/MR complementarity that runs through [[2026-10-15-systematicpeter-mean-reversion-oos-high]].
+- **The vault already holds the map he's describing.** [[2026-10-26-onlybreakouts-market-mapping-time-grid]] captures the markets-times-timeframes grid; this tweet is that grid populated with 9 cells plus a combined curve. The seasonality sleeve is the same separately-shaped calendar edge as [[2026-11-13-therobotjames-vix-dec-calendar-spread]] — his "shares the risk with mean reversion" phrasing concedes calendar edges correlate with fade edges, not trend edges.
+- **Skepticism gates:**
+  - Self-reported dashboard, not a verified track record — no Myfxbook/prop-firm transparency link, no per-system equity curves, no OOS/walk-forward split. A -4.4% max DD over ~9 years across 9 systems is achievable with genuine diversification but is also exactly the number a funnel card would show.
+  - No per-system stats at all: "some lose for months" — which ones, how much, for how long? The aggregate hides everything that matters.
+  - Thin trade count for the fleet described: 2,843 trades / 9 systems / ~8.9 years ≈ 35 trades per system-year — very low for three *intraday* breakout systems; either the triggers are extremely selective or the curve is not the full fleet all the time.
+  - The tag row includes @MyForexFunds — a prop firm shut down after CFTC action in 2023 — so the tag list reads as recycled affiliate boilerplate rather than a live, vetted endorsement set.
+  - Monetization is the Discord ("free to join" is the funnel open); the equity-curve card is the ad. 28 likes / 2k views means nobody has scrutinized it — no due diligence by proxy.
+  - Verdict: interesting as a **structural template**, not believed as a track record; the bar stays [[2026-08-29-milk-man-replication-metrics]] and the verified-vs-self-reported lens of [[2026-11-09-zenomtrader-verified-only-costs-sharpe]].
+- **For the user:** reference only, no task. The durable takeaway is the sleeve structure — long-bias breakout / two-sided intraday / MR + calendar — as the shape of a drawdown-budgeted portfolio; any adoption decision belongs to the trading desk (separate company), not to this vault.
+
+## Links
+
+- [[2026-11-11-propquantx-nq-gap-up-breakout]] — the single-system counterpoint; this note is why you'd wrap such systems in a portfolio.
+- [[2026-10-26-onlybreakouts-market-mapping-time-grid]] — the market x timeframe grid this 9-system fleet populates.
+- [[2026-10-15-systematicpeter-mean-reversion-oos-high]] — mean reversion as the chop-cover for breakouts, with OOS discipline.
+- [[2026-11-13-therobotjames-vix-dec-calendar-spread]] — calendar/seasonality as a separately-shaped edge.
+- [[2026-08-29-milk-man-replication-metrics]] — the independent-replication bar self-reported curves have to clear.
+- [[2026-11-09-zenomtrader-verified-only-costs-sharpe]] — verified-vs-self-reported track-record discipline.
