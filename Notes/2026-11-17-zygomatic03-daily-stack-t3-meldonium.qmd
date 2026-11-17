@@ -1,0 +1,43 @@
+---
+title: "zygomatic03 — the daily biohacker stack: T3, meldonium & the morning manifest (photo-documented)"
+source: https://x.com/Zygomatic03/status/2122313279724818769
+captured: 2026-11-17
+tags: [health, biohacking, nootropics, stack, t3, meldonium, peptides, twitter]
+kind: reference
+---
+
+**Author:** Zygomatic (@Zygomatic03) · posted 2026-11-16 12:58Z · received 2026-11-17T07:02:50Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 268 likes · 17,907 views · 18 replies. The syndication API truncated the text after "Whole food Vitamin C" (its trailing t.co resolves to the tweet's own photo/1 — no external link); full 549-char text recovered via fxtwitter. Both photos OCR'd: photo 1 is the physical stack on his table, photo 2 his sleep-tracker screenshot.
+
+## Summary
+
+The morning-manifest post from the author of the Pinealon/ADHD-replacement article — his sign-off "The way of the biohacker" recurs. Anecdote first: first-ever L-Theanine dose the night before → "slept like I had been hit by a truck. Thankfully I'm unemployed and have nowhere to be!" Backed by photo 2, his tracker readout: 8h 19m in bed, 97% sleep efficiency, REM 1h 36m, deep 2h 11m, in bed 02:48 → out of bed 11:07. Then the daily stack, verbatim from the full text:
+
+- **T3** (photo 1 shows Cynomel 25 mcg — pharmaceutical liothyronine)
+- **Bromantane**
+- **Whole food Vitamin C**
+- **Glucosamine** (Cytoplan glucosamine HCl)
+- **BPC-157 & KPV** (gray-market gut-healing / injury-repair peptides)
+- **L-Tyrosine** ("Extra Strength" bottle in the photo)
+- **B complex** (Raw Vitamin B-Complex with folate + riboflavin)
+- **Choline & Inositol** (Codeage, 100 veg caps)
+- **Meldonium** (Grindeks — the original Latvian brand, by OCR)
+- **Tadalafil**
+- **Urolithin A & CoQ10**
+
+Closer: "Work will be getting crushed, and the spin bike will hate to see me coming for some zone two later. Time to change the world again!"
+
+Photo 1's OCR (Cynomel, Tyrosine, Cytoplan glucosamine, Grindeks meldonium, B-complex, Codeage choline/inositol) confirms the list is a literal table photo, not aspiration — the bottles match the text one for one.
+
+## Why it matters
+
+Sixth capture in RD's active biohacking/cognition thread and the second from this exact author. Where the Nov-10 note was his protocol *article*, this is the daily *manifest* — what actually goes down each morning. It threads the earlier notes directly: Bromantane is the "core pillar" of his ADHD-replacement thesis ([[2026-11-10-zygomatic03-pinealon-social-fluidity]]); daily tadalafil is the exact play argued in [[2026-11-10-hoostethics-low-dose-tadalafil]]; meldonium sits in the same Russian/Latvian pharma family as his Bromantane and Mexidol picks; and the Driada catalog ([[2026-11-05-driada-medical-catalog]]) is the vendor lane several of these ship through. New to the thread here: T3, meldonium, BPC-157/KPV, urolithin A + CoQ10, tyrosine, choline/inositol, glucosamine.
+
+Skepticism gates: n=1 self-report by a stack influencer whose article carries his own vendor discount code (flagged in the prior note). **T3 (Cynomel) without documented hypothyroidism is the sharpest risk in the list** — exogenous thyroid suppresses TSH and carries muscle-loss, bone-density and arrhythmia risks, and nothing in his public output shows bloodwork justifying it. Meldonium is WADA-banned (same actoprotector-family flag as Bromantane) with Russian-only evidence; BPC-157/KPV are research peptides with no human trials. The sleep screenshot is a single night that cannot isolate L-Theanine from the rest of the stack (and a 02:48 bedtime / 11:07 rise confounds the "good morning" framing). UAE posture unchanged from the earlier notes: several of these are prescription-controlled or customs-risky, and RD's stated stance on 11-10 was checking, not ordering — reference-only, no task filed.
+
+## Links
+
+- [[2026-11-10-zygomatic03-pinealon-social-fluidity]] — same author, a week earlier: the full ADHD-replacement protocol article (Pinealon, Epitalon, Semax/Selank)
+- [[2026-11-10-hoostethics-low-dose-tadalafil]] — the daily-tadalafil-as-longevity/cognition argument he is running
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — the modafinil/armodafinil manual with the overlapping cautions
+- [[2026-11-11-doctormorphh-noots-stims-cognition-menu]] — the noots/stims cognition menu in the same thread
+- [[2026-11-05-driada-medical-catalog]] — the vendor catalog where this thread started
