@@ -1,0 +1,25 @@
+---
+title: "johannmarkov — small-capacity edges: small bankrolls hold the structural advantage, not the consolation prize"
+source: https://x.com/JohannMarkov/status/2123083049210368075
+captured: 2026-11-18
+tags: [trading, twitter, bankroll, capacity, betting, strategy-selection, self-reported-returns, sharpe]
+kind: reference
+---
+
+**Author:** Johann Markov (@JohannMarkov) · posted 2026-11-18 15:56Z · received 2026-11-18T18:56Z (WhatsApp via RDP-30, routed by CoS) · 14 replies · 114 likes · 9,382 views. Self-quote follow-up: the quoted tweet (his own, id 2119439265738489914) made the thesis — "low-capacity edges, often completely outside of stocks, generate absurd rates of return; if you have a small bankroll, look there instead of trying to outprice Jane Street on NVDA over the next 30 minutes" — and this tweet supplies a receipts-shaped datapoint. Tweet text completed via fxtwitter (syndication copy truncated mid-sentence; fxt full text 358 chars). No media, no methodology attached.
+
+## Summary
+
+His 10-day experiment, "for fun": a few small-capacity edges run in parallel, each returning **+23–70% on capital individually**, blending to **+53% across 344 trades / bets**, with **individual strategy Sharpes of 4.5–6.6 and ~10 blended**. The punchline is bankroll-relative: capacity doesn't move the needle for him, but a small account should **stop trying to out-predict Jane Street on NVDA earnings** — the games crowded with institutional flow are structurally negative-edge for retail size, while capacity-constrained niches are games institutions rationally cannot play.
+
+## Why it matters
+
+- **The structural argument is sound and keepable:** an edge worth 50% per fortnight on $5k is worth nothing to a $5B book — so large firms abandon those niches, which is exactly why the edges persist. Small size is a *competitive advantage* in capacity-limited lanes and a disadvantage in deep, crowded ones. Strategy selection should be conditioned on bankroll size, not just on edge quality. This is the same lane the vault already tracks outside equities: [[2026-09-01-polymarket-copytrading-filter-thesis]] and [[2026-09-04-xmayeth-soccer-exact-score-bundle]] are both explicitly capacity-limited markets.
+- **Skepticism gates — hard:** all numbers are self-reported over a 10-day window with no receipts, no market list, no methodology; "trades / bets" quietly mixes domains. A 4.5–6.6 individual Sharpe (~10 blended) measured over ten days is a multiple-selection short-window statistic — inflated by construction per the deflated-Sharpe logic in [[2026-10-24-dmartin-deflated-sharpe-ratio]]; and "ran a few edges for fun, here are the results" carries obvious survivorship (you tweet the experiment that worked). Treat the numbers as anecdote illustrating the thesis, not as evidence for the returns.
+- **Consistent with the vault's self-reported-Sharpe skepticism thread:** [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] and [[2026-11-05-zenomtrader-verified-author-sharpe-split]] — extraordinary self-reported Sharpes from unverified accounts stay filed as thesis + unverified datapoint, never as reference numbers.
+- **Actionable angle (not taken):** none filed — reference-only. The tweet names no specific markets or methods, so there is nothing concrete to chase; if the 344-trade breakdown or market list ever surfaces, that would upgrade it.
+
+## Links
+
+- Capacity-limited, outside-equities lane: [[2026-09-01-polymarket-copytrading-filter-thesis]] · [[2026-09-04-xmayeth-soccer-exact-score-bundle]]
+- Self-reported-Sharpe skepticism: [[2026-10-24-dmartin-deflated-sharpe-ratio]] · [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] · [[2026-11-05-zenomtrader-verified-author-sharpe-split]]
