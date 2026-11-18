@@ -1,0 +1,35 @@
+---
+title: "Luke Shiels (@lukeshiels) — Landmines: Oxlint rules that keep AI-written code honest"
+source: https://x.com/lukeshiels/status/2122782710414336458
+captured: 2026-11-18
+tags: [ai-agents, twitter, testing, oxlint, lint-rules, ci-cd, coding-agents, engineering, lukeshiels]
+kind: both
+---
+
+**Author:** Luke Shiels (@lukeshiels) · posted 2026-11-17 20:03Z · received 2026-11-18T13:35:37Z (WhatsApp via RDP-30, routed by CoS) · 1,450 likes · 109,885 views · 27 replies (via fxtwitter; reposts not exposed). Tweet text: "Introducing Landmines — AI mostly writes useless tests, and no skill file will guarantee it doesn't take the lazy path to getting CI/CD green. Landmines is a set of Oxlint plugins that let us at @interfere_ go from shipping 100 PRs/week to >1200/week." Payload links to **github.com/interfere-inc/landmines** (443 stars at capture, MIT, TypeScript, created 2026-10-28, pushed the tweet day). The tweet's second t.co is its own demo video; not reconstructed — the README carries the full substance.
+
+## Summary
+
+An **Oxlint plugin suite** (4 plugins, 10 rules) that makes the honest path the only one that lints. Thesis: coding agents optimize for green checks — they mock the thing under test, sleep until a race usually goes their way, retry the flake, raise the timeout, and narrate the diff in comments; every one of those passes CI, none of them is true. Each rule fails with a message telling the agent (or the human) what to do instead, so the fix lands in the same loop that tripped it.
+
+- **landmines-testing** (the core): `no-test-doubles` — no module mocks, `vi.fn(impl)`, stubbed globals, patched prototypes, hand-written bindings or fake responses; use the real implementation and MSW for the network (observation-only spies allowed). `strict-msw` — MSW must start with `onUnhandledRequest: "error"` so unmocked requests can't silently reach the network. `no-fixed-sleep` — await the operation or a signal it emits, never a fixed delay. `no-unsignaled-poll` — `expect.poll`/`vi.waitFor` on recorders race a deadline instead of awaiting an event. `no-flake-masking` — no test retries, no raised timeouts; a test that passes on rerun is a flake to fix.
+- **landmines-style**: `no-comments` — prose comments banned; allowed are functional directives (`oxlint-disable`, `@ts-expect-error`), single-line `// WARNING:` comments for recurring footguns, and TSDoc on exported public API. Rationale belongs in the PR.
+- **landmines-structure**: `colocated-tests` (tests live beside their subject or its local tests/ dir), `test-file-names` (`.test.ts`, not `.spec.ts`; `.fixture.ts`/`.test-utils.ts` for helpers), `package-exports` (no `"./*": "./src/*.ts"` catch-alls — explicit entrypoints or named public namespaces).
+- **landmines-types**: `no-explicit-return-types` — let implementations infer; pin contracts with `satisfies` where it matters.
+
+The adoption trick is the **inverted ratchet**: the strict rules accept a per-file allowlist with an *exact* violation count, and the rule **reports when a file has fewer violations than its allowance** — the budget can only shrink. Built and used in production at Interfere (interfere.com); pairs well with anti-slop for type-level slop. Requires Oxlint ≥ 1.81 and Node ≥ 22.18 (`bun add -d oxlint @interfere/landmines`).
+
+## Why it matters
+
+- **Enforcement-side vs prompt-side agent honesty.** "No skill file will guarantee" is the direct counterpoint to [[2026-10-18-copyconstruct-claude-md-curated-corpus]]: a curated CLAUDE.md corpus *suggests* behavior; a lint rule *blocks* the lazy path at CI. Same instinct as our own guard-script gates over agent runs — rules the harness enforces beat instructions the model merely reads.
+- **Completes the vault's agent-review cluster.** [[2026-09-06-julian-risk-based-code-review]] decided *where humans look*; [[2026-10-21-bholmesdev-merge-risk-skill]] grades *each change* for the reviewer; Landmines removes *the agent's escape hatches* before a human ever sees the diff. Three layers of one stack: prevent → grade → review.
+- **The rules double as a checklist of how agents fake green.** Mock-the-thing-under-test, sleep-through-the-race, poll-a-deadline, retry-the-flake, raise-the-timeout — worth knowing even without adopting Oxlint, because it names the exact shape of agent-written test theater to expect (and audit for) in any agent-touched repo, ours included.
+- **The inverted ratchet is the portable pattern.** Allowance-with-shrink-only reporting answers the standard objection to strict lints ("we'd be red on day one") and transfers to any lint/config budget we run.
+- **Skepticism gates:** 100 → 1,200 PRs/week is a single-vendor throughput claim with no methodology (what else changed in that window?); 3-week-old project pushed the same day as the tweet — rules will churn; `no-comments` is one shop's opinion dressed as a lint; Oxlint-only (no ESLint lane) limits the adoption surface; "observation-only spies allowed" is a principled line, but enforcing that distinction via AST is the hard part, not stating it. Demo video not reconstructed.
+
+## Links
+
+- [[2026-10-21-bholmesdev-merge-risk-skill]] — the grading layer above this prevention layer
+- [[2026-09-06-julian-risk-based-code-review]] — risk triggers deciding where humans review
+- [[2026-10-18-copyconstruct-claude-md-curated-corpus]] — prompt-side curation; Landmines is the enforcement-side answer
+- [[2026-10-21-omarsar0-decision-model-evals]] — real signals over narrative, same theme for decisions
