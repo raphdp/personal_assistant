@@ -1,0 +1,31 @@
+---
+title: "Kova (@kovainvest) — Google AI Ultra (20TB) 12-month $0 trial via tokenized Play link"
+source: https://x.com/kovainvest/status/2122841978320875565
+captured: 2026-11-18
+tags: [google, gemini, ai-ultra, youtube-premium, free-trial, subscription, deal, twitter, kovainvest]
+kind: both
+---
+
+**Author:** Kova (@kovainvest) · posted 2026-11-17 23:59Z · received 2026-11-18T13:29:17Z (WhatsApp via RDP-30, routed by CoS) · 4,751 likes · 1,060,347 views · 180 replies (via fxtwitter; likes/views null on syndication, reposts not exposed). Tweet text: "Google AI ultra for 12 month. Thanks me later" — plus the link and a screenshot of the Play purchase sheet (OCR'd; preserved at `rdp_media/2122841978320875565/`).
+
+## Summary
+
+A working-link share, not a claim: the t.co resolves to a **`tokenized.play.google.com/eacquire/multiline` deep link** — Google's own embedded-acquisition flow for Google One, generated off `one.google.com/plans`. The embedded SKUs (`g1.play.20tb`, `g1.youtube_premium_individual_add_on`) and the screenshot agree on the payload:
+
+- **Google AI Ultra (20 TB)** — 12-month trial, regular $139.99/mo — **$0.00**
+- **YouTube Premium Individual add-on** — 1-month trial, regular $10.99/mo — **$0.00**
+
+Same account, same "thank me later" framing as his Sep 17 X-article share.
+
+## Why it matters
+
+- **The math, if it applies:** 12 × $139.99 = **$1,679.88 waived** — AI Ultra is the top Google One tier (20 TB + highest Gemini limits + YouTube Premium bundled once paid), so this is the full stack free for a year.
+- **It is Google's own domain, not a phish.** The link lands in the Play subscription-acquisition flow; the screenshot is the genuine purchase sheet. The risk here is billing, not credential theft.
+- **Catch 1 — eligibility:** tokenized eacquire links carry entitlement signatures from the *generating* account's offer. Clicking from a non-targeted account typically returns "offer not available" — with 1.06M views and 180 replies, results are split. A UAE-registered Google account may simply not qualify.
+- **Catch 2 — auto-renew:** a $0 trial converts to **$139.99/mo at month 13** unless cancelled, and claiming requires a payment method on file. The whole value of this capture is the trial *plus* a cancellation reminder before renewal — claiming without the reminder is how "free" becomes $1,680/yr.
+- **Catch 3 — ToS gray zone:** third-party-shared offer links work only insofar as Google's own flow accepts the account; nothing to bypass, but no complaint lane if it vanishes mid-trial.
+- Skepticism gate: "Thanks me later" + screenshot is engagement-bait framing; the link is the entire payload, and there is nothing to verify beyond what Google's sheet shows at claim time.
+
+## Links
+
+- [[2026-09-17-kovainvest-x-article-share]] — same author, identical "thank me later" teaser pattern (that one gated, this one open)
