@@ -1,0 +1,34 @@
+---
+title: "Unaligned — uncensored GLM-5.3 that 'gives straight answers'"
+source: https://x.com/unalignedapp/status/2119191093262635335
+captured: 2026-11-19
+tags: [ai, llm, uncensored-ai, glm, api, product-marketing]
+kind: reference
+---
+
+**Author**: @Unalignedapp (Unaligned) — service bio: "Chat and API for open-source AI models (DeepSeek, GLM, Kimi). Pay per token." (~6K followers). Posted 2026-11-07T22:11Z; received 2026-11-19T15:48Z (WhatsApp via RDP-30, flash intake → Librarian). Engagement at capture: 215 likes, 1.28M views (fxtwitter); replies/reposts not exposed.
+
+## Summary
+
+Tweet (verbatim, complete per fxtwitter — 91 chars):
+
+> Tired of AI that says "I can't help with that"?
+>
+> Unaligned GLM-5.3 gives straight answers.
+
+Pure product one-liner: Unaligned sells access to an "unaligned" (refusal-removed) build of GLM-5.3, positioned against mainstream assistants' refusals. The tweet carries no link, no benchmark, no demo — the pitch is the entire payload.
+
+## Why it matters
+
+- **The product category is real and growing.** GLM-5.3 is Z.ai's open-weights model (MIT licence), so third parties freely publish "abliterated" variants: refusal-direction weight orthogonalization (no adapter, no runtime filter), e.g. dealignai's FP8 build (MMLU 87.3 vs base 86.7 — capability within noise) and OrcaRouter's (HarmBench refusals 0.933 → 0.180). Multiple providers now serve such variants at ~$0.15/$0.50 per 1M tokens (Experiential Labs, Secret Chat AI, OrcaRouter, others surveyed by Franz Geffck, Nov 2026). Unaligned is the consumer/chat+API face of the same trend for DeepSeek/GLM/Kimi.
+- **Relevance to the stack here:** pay-per-token open-model chat + API is exactly the lane this household runs on (local/API LLM agents). If refusal behavior ever blocks a legitimate workflow, abliterated open-weight variants are the fallback that doesn't require changing model class.
+
+Skepticism gates:
+- "Straight answers" is marketing, not measurement — the tweet offers no eval. Abliteration removes refusals, it does not improve reasoning; one provider's own card admits "refusal is reduced, not removed."
+- "Unaligned" ≠ anything goes: every listed provider keeps a hard floor (CSAM, terrorism, real threats) and the serving provider can still refuse under its own rules.
+- Third-party weight edits are unaudited artifacts; privacy/retention claims across this market are self-attested and unaudited (some providers don't even publish an entity). Vet before sending anything sensitive.
+- Unaligned itself (the app in the tweet) published no method details at capture — which weights, which ablation scope, what retention: unknown from the tweet alone.
+
+## Links
+
+- None yet — first uncensored-LLM capture in the vault.
