@@ -1,0 +1,39 @@
+---
+title: "Jan / Algo Trader (@algojan) — Trend Day Pullback on MNQ 5m: VWAP-side trend + pullback continuation (+57.8%, PF 1.67, 46.7% WR, 229 trades, 12 mo), passed a 50K Topstep eval — free & open-source on Roboquant"
+source: https://x.com/algojan/status/2123352898671358016
+captured: 2026-11-19
+tags: [trading, twitter, nq-futures, mnq, vwap, pullback, intraday, topstep, prop-eval, backtest, roboquant, open-source, skepticism, algojan]
+kind: both
+---
+
+**Author:** Jan — Algo Trader (@algojan) · posted 2026-11-19 09:49Z · received 2026-11-19T12:50:10Z (WhatsApp via RDP-30, flash intake). Stats at capture (fxtwitter): 24 likes · 3 replies · 2,050 views. One photo attached — OCR'd (results dashboard below). Unlike the 11-11 capture, the "details below" access hook resolved publicly: the strategy is listed free and **open-source** on the Roboquant marketplace as **[Trend Day Pullback (MNQ 5m)](https://roboquant.dev/t/d196c274-57a2-4f2d-9f31-63fa68cfa963)** (89 downloads, 29 likes at capture) — full rules recovered from the listing, not just the tweet.
+
+## Summary
+
+A trend-day pullback strategy for MNQ 5m, "built around the risk rules of a 50K futures evaluation account." The tweet claims it **just passed a 50K Topstep account**; the OCR shows a **"+$3,408.50 Net from Topstep fills"** line with the equity curve running 49,792 → 53,201 — consistent with clearing a $3,000 profit target on a 50K eval. Rules (from the listing):
+
+- **Trend read from 10:30 NY:** every bar, judge session trend by which side of the session VWAP price is on and where price sits in the day's range.
+- **Entry:** wait for a pullback toward VWAP, enter on the continuation candle in the trend direction; longs and shorts both allowed.
+- **Exit:** stop = 1× the 5-minute ATR; target = 2R. One trade per day; no new entries after 12:30; flat by 15:50.
+- **Risk layer:** fixed dollar risk per trade (default $400 net of costs, size from stop distance with a contract cap); daily loss stop $800; daily profit cap $1,000; per-day trade/loss limits; skips holidays and early closes.
+- **Everything is a parameter** (trend time, VWAP-or-EMA reference + tolerance, ATR-or-swing stop, target multiple, risk, caps, session times); long/short separately switchable. Open source with attribution.
+
+## Dashboard (OCR, cross-checked vs listing)
+
+Period **Nov 2025 → Nov 2026** (listing: 2025-11 – 2026-11). **Net +$28,875.75 = +57.75% · 229 trades · 46.7% WR · PF 1.67 · max DD −3.7% · Sharpe 3.70 · Sortino 5.57 · Calmar 15.34 · expectancy +$126.10/trade** · avg win +$671.29 / avg loss −$352.07 (ratio 1.91 ≈ the 2R target net of costs) · largest win +$769.34 / largest loss −$703.96 · streaks 7W/5L · commissions −$1,293 included. Tweet numbers (+57.8%, 3.7%, 1.67, 46.7%, 229) match the dashboard and listing exactly. Internal math checks: 229 × $126.10 ≈ +$28.9k ✓; 0.467 × $671.29 − 0.533 × $352.07 ≈ +$126 ✓; expectancy ≈ 0.32R per $400 risked (gross 2R-model EV ≈ 0.40R — plausible gap for slippage/fees).
+
+## Why it matters
+
+- **Third @algojan backtest in the vault — and the cleanest:** [[2026-10-01-algojan-nq-monday-short]] was a 22.6%-WR fat-tail seasonal; [[2026-11-11-algojan-initial-balance-breakout-mnq]] a 17-parameter breakout proxy (+133.4%, DD −12.3%). This one has few, principled rules, a DD a third of the 11-11 run, a live-eval receipt (the Topstep leg), published code, and default-settings disclosure — genre-best hygiene.
+- **Joins the NQ session-structure cluster:** [[2026-11-11-propquantx-nq-gap-up-breakout]], [[2026-10-26-onlybreakouts-market-mapping-time-grid]], and the 11-11 algojan note — four independent takes on "the first hours of NY define the day." VWAP-side + range-position is another entry in that synthesis.
+- **Skepticism gates:** (1) **12 months = one regime** (a mostly directional NQ tape); no out-of-sample or walk-forward split disclosed anywhere — the standard gate from [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] applies. (2) **"Every value is a parameter"** — the showcase is one config; the parameter surface is wide even if defaults look sane. (3) **Two ledgers in one image:** +$28,876 is the 12-mo backtest, +$3,408.50 is the Topstep-fills leg — the "passed" claim rests on the smaller number, and eval-pass ≠ live-profitable. (4) Sharpe/Sortino/Calmar are dashboard-relative (aggregation basis unstated). (5) In its favor: commissions included, streaks disclosed, worst loss < 2× average (no hidden martingale), and one-trade-per-day caps overfitting surface.
+- **Actionable → Inbox:** the code is free and public; the cheap next step is reading it and re-running the backtest split OOS before any paper-test.
+
+## Links
+
+- [[2026-11-11-algojan-initial-balance-breakout-mnq]] — same author, same platform/instrument, the 17-parameter contrast case.
+- [[2026-10-01-algojan-nq-monday-short]] — same author, prior NQ backtest (fat-tail seasonal).
+- [[2026-11-11-propquantx-nq-gap-up-breakout]] — same-day-capture NQ gap-up opening-range breakout.
+- [[2026-10-26-onlybreakouts-market-mapping-time-grid]] — time-grid market mapping; opening-auction structure.
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — the OOS/walk-forward skepticism standard applied above.
+- Listing: https://roboquant.dev/t/d196c274-57a2-4f2d-9f31-63fa68cfa963
