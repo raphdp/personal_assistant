@@ -1,0 +1,35 @@
+---
+title: "Dr. Nevercope — lasting longer in bed tier list (meme pharmacology ranking)"
+source: https://x.com/doctornevercope/status/2123330712032186841
+captured: 2026-11-19
+tags: [health, sexual-health, tier-list, meme, dapoxetine, ssri, snri, tadalafil, pramipexole, maoi, mesterolone, testosterone, twitter, biohacking]
+kind: reference
+---
+
+**Author:** Dr. Nevercope (@doctornevercope) · posted 2026-11-19 08:21Z · received 2026-11-19T12:31:57Z (WhatsApp via RDP-30 flash intake, child issue RDP-1487, routed to Librarian). Engagement at capture (fxtwitter): 336 likes · 80,934 views · 3 replies (reposts not exposed). Text complete ("lasting longer in bed tier list", 31 chars) — the content is the photo: a 5-row tier grid, no F tier, recovered by OCR + vision pass (both lanes agreed, placements unambiguous); image preserved at `rdp_media/2123330712032186841/photo1.jpg`. Quotes his own prior "dickmaxxing tier list" (64 likes · 82.9k views) — recurring series format, same-day context only.
+
+## Summary
+
+The tier list, exactly as placed (13 items, all identified; one item OCR missed, vision caught: methylene blue):
+
+| Tier | Items (as labeled in the image) |
+|---|---|
+| S | Pristiq 50 mg (desvenlafaxine, ER) · Pramipexole 0.5 mg ("Pimapexole 0.5") |
+| A | Dapoxetine HCl 30 mg (Extralast, Lupin) · Luvox 50 mg (fluvoxamine maleate, Abbott) |
+| B | Full-spectrum Kanna tablets 50 mg (Nootropics Depot, 3% mesembrine) · Methylene Blue 15 mg (Rx vial) · Parnate 10 mg (tranylcypromine) |
+| C | Cordyceps 250 mg (ND 10:1) · Provironum 25 mg (mesterolone) · Dura 5 (tadalafil 5 mg) · Testosterone propionate 100 mg/ml (Wells Pharmacy) |
+| D | Magnesium glycinate (Solgar) · Adderall XR 30 mg (Shire) |
+
+Reading of the ranking logic: S = the "increase drive but blunt the finish" combo (SNRI off-label delayed ejaculation + D2 agonist libido). A = serotonergic delay (fluvoxamine; dapoxetine is the one drug actually licensed for PE in many countries). B = a grab bag where two of three are MAO-A inhibitors (Parnate, methylene blue). C = erection-quality/androgen lane (tadalafil, mesterolone, testosterone) + cordyceps. D = the two items with the safest profiles (magnesium) and the "wrong tool" pick (stimulants).
+
+## Why it matters
+
+- Worth keeping strictly as a **map of the meme-pharmacology space** around stamina/PE — it names every drug class the manosphere tier-accounts circulate (SNRI, D2 agonist, SSRI, dapoxetine, MAOI, PDE5i, androgens) in one image. The one evidence-based, on-label item (dapoxetine) sits below the meme picks — typical of the format.
+- **Skepticism gates, hard:** (1) meme ranking, zero evidence cited, author is an engagement-bait tier-list account (not a clinician — the handle is the joke). (2) **The image is not a stack and must not be read as one**: B-tier Parnate (tranylcypromine) and methylene blue are MAO-A inhibitors — combined with ANY serotonergic elsewhere in the same image (Pristiq, Luvox, dapoxetine) that's the classic serotonin-serotonin-serotonin syndrome / hypertensive-crisis contraindication. The tier placement actively buries this. (3) Prescription-only and/or controlled throughout (Adderall, testosterone, pramipexole, MAOIs); pramipexole carries impulse-control and sleep-attack liabilities; androgens suppress the HPG axis. (4) Bottom-tier magnesium glycinate is the only item with a benign profile — the format rewards drama, not safety.
+- UAE posture: all Rx items prescription-controlled; the androgen entries (testosterone propionate, mesterolone) are the same gray-market vendor lane as the Driada catalog capture. Reference-only, no task — same checking-not-ordering posture as the rest of this thread.
+
+## Links
+
+- [[2026-11-10-hoostethics-low-dose-tadalafil]] — the other tadalafil capture (daily 5 mg longevity/cognition angle; C-tier here)
+- [[2026-11-05-driada-medical-catalog]] — gray-market lane for the androgen entries
+- [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] — the broader gray-market biohacker-stack thread posture this account memes about
