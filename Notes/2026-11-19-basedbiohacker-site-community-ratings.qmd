@@ -1,0 +1,33 @@
+---
+title: "BasedBiohacker — basedbiohacker.com goes live: community rating system for compounds & vendors (110+ profiles, Biohacker AI)"
+source: https://x.com/BasedBiohacker/status/2123221750221766947
+captured: 2026-11-19
+tags: [health, biohacking, nootropics, community-ratings, vendor-sourcing, bromantane, gray-market, twitter]
+kind: reference
+---
+
+**Author:** BasedBiohacker (@BasedBiohacker) · posted 2026-11-19 01:08Z · received 2026-11-19T12:32:20Z (WhatsApp via RDP-30 flash intake, routed to Librarian). Engagement at capture (fxtwitter): 78 likes · 5,280 views · 2 replies. Full 615-char text recovered via fxtwitter (trailing t.co resolved to the tweet's own photo, not an article). One photo: the community score-card UI (OCR'd, preserved at `rdp_media/HXcxcgbWYAAHyPL.jpg`). Quotes his own same-day launch tweet (2123165908088549650): "basedbiohacker.com IS FINALLY LIVE … the biohacking and enhancement resource i always wanted — 100% FREE … browse 110+ compounds … create an account to explore Biohacker AI — challenge the AI with any nagging research questions."
+
+## Summary
+
+The pitch: "ever tried bromantane? modafinil? semax? cerebrolysin? tadalafil? where'd you get it, and how'd it go? … ever wanted to know what other people actually thought of a compound or vendor — not an ad, not a sponsored review, just real data?" That's the new **community rating system** on basedbiohacker.com: log your experience on any compound page, watch the community average build over time, and "use it when you're deciding what to try or where to buy next."
+
+The photo shows the score card on the bromantane page: overall rating 1–10 (poor→excellent), did-you-notice-benefit / side-effects / would-use-again toggles, a source picker (self-reported source breakdown already names **Kimera Chems** and **Real Peptides**), location field, Cloudflare Turnstile bot check, one response per account, "scores show after 5 ratings" — bromantane sat at **4 responses** at capture.
+
+Site verified live (SPA, curl): "Evidence-aware compound research, peptide guides, practical stacks, and sourcing tools." The linked bromantane profile carries a real mechanistic writeup — Soviet-1980s actoprotector, upregulates tyrosine hydroxylase (rate-limiting enzyme for dopamine synthesis), weak dopamine reuptake inhibition, "calm, smooth energy without the stimulant edge."
+
+## Why it matters
+
+- **The real idea worth keeping:** crowdsourced compound→vendor→outcome data is genuinely scarce. Reddit anecdotes rot and nothing aggregates them. If this reaches critical mass it becomes a real check on the gray-market peptide/chem vendor space — Kimera Chems and Real Peptides are exactly the vendor class the vault thread already watches.
+- **Cold-start reality:** the flagship example had 4 ratings with scores hidden until 5. The dataset is empty today; value depends entirely on adoption. A tweet with 78 likes does not seed n=1000.
+- **Conflict-of-interest gate:** the author came into the vault through affiliate-flavored product tweets ([[2026-11-17-basedbiohacker-modvigil-200]]), and the site itself sells "sourcing tools" — the rating system grades the very vendors the site steers toward. "Not an ad, not a sponsored review" is the claim; the incentive to seed positive vendor ratings is structural. Treat averages as weak signal until provenance is visible.
+- **Privacy gate:** contributing requires an account, stores answers "with your account ID," and asks location — pseudonymous health-adjacent data on a gray-market-adjacent site. Browsing is fine; contributing adds exposure for no user need (UAE posture unchanged).
+- Cross-checks: bromantane context sits in the Zygomatic thread ([[2026-11-10-zygomatic03-pinealon-social-fluidity]]); modafinil in [[2026-11-10-limitlesstack-modafinil-thesis]]; yesterday's mexidol swap pitch from this same author ([[2026-11-19-basedbiohacker-mexidol-social-lubricant]]) is exactly the kind of claim this rating system would let the crowd test.
+
+## Links
+
+- [[2026-11-19-basedbiohacker-mexidol-social-lubricant]] — same author, previous day; the claim format this platform hosts
+- [[2026-11-17-basedbiohacker-modvigil-200]] — same author's affiliate pattern; the COI to weigh
+- [[2026-11-10-zygomatic03-pinealon-social-fluidity]] — bromantane + Russian-pharma thread context
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — modafinil, second compound named in the pitch
+- [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] — the gray-market sourcing lane the source-breakdown feature watches
