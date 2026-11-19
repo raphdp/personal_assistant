@@ -1,0 +1,43 @@
+---
+title: "bowtiedphys — baking soda for HIIT: the trial numbers and the reddit n=1 that 'proved' them"
+source: https://x.com/BowTiedPhys/status/2123108654597697792
+captured: 2026-11-19
+tags: [health, fitness, biohacking, sodium-bicarbonate, baking-soda, hiit, endurance, cycling, twitter]
+kind: reference
+---
+
+**Author:** BowTiedPhys (@BowTiedPhys) · posted 2026-11-18 17:38Z · received 2026-11-19T06:42:34Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 14,014 likes · 1,045,448 views · 140 replies. Self-quote: his own 2026-11-10 15:02Z tweet (2,335 likes · 998,279 views · 55 replies) — "Baking soda unlocked 24 additional sec of Zone 5 time & raised oxygen uptake 60 mL/min during sprints / Cost-efficient HIIT elixir" (full 129 chars via fxtwitter). Main text complete at 13 chars ("He was right."); its t.co resolves to the tweet's own photo/1, no external link. The photo OCRs to a Reddit post by u/thelegendof_guh ("This feels like steroids - wtf").
+
+## Summary
+
+Two-tweet arc, eight days apart. The Nov-10 tweet states the claim with two precise numbers. The Nov-18 follow-up is just "He was right." attached to a screenshot of a Reddit user's n=1 — u/thelegendof_guh read the research on baking soda + endurance, then dosed: ½ tsp in sparkling water before bed, ½ tsp with grapefruit juice pre-workout (plus banana bread and jam), and did 1 hour of hill sprints with "genuinely no rest" — sprint 50 m, walk down, repeat for an HOUR. "Literally zero muscular fatigue in my legs, and very little in my breath… someone in the park came up to me in awe… This feels like steroids - wtf." He plans to repeat it before soccer games.
+
+Both tweet numbers trace to a real 2026 randomized double-blind crossover trial — *European Journal of Sport Science*, DOI 10.1002/ejsc.70253 (PMID 42757668): 24 well-trained cyclists (VO2max 72±5 / 57±6 mL/min/kg), sodium bicarbonate ~0.26 g/kg or placebo 2 h pre-session, five 5-min HIT bouts (3×40 s maximal efforts, 60 s recoveries) plus four 30-s Wingates:
+
+- "24 additional sec of Zone 5 time" = **+23.7 ± 52.6 s time above 90% VO2max** during HIT (p = 0.012)
+- "raised oxygen uptake 60 mL/min" = **+60.1 ± 124.7 mL/min VO2** during HIT (p = 0.006)
+- HIT power output +2.0% (MD 8.1 W, p = 0.045); Wingate PO +2.0% (MD 11.6 W, p = 0.002)
+- Blood bicarbonate/pH/lactate all up (p < 0.001); cycling economy and fractional utilization unchanged; **no increase in GI symptoms or perceived exertion**
+
+Mechanism (long-established sports science): bicarbonate is an extracellular buffer; high-intensity work is limited by H+ accumulation, so loading it delays acidosis and extends time held near VO2max. Whether acute session gains compound into long-term adaptation is explicitly unproven in the trial's own conclusion.
+
+## Why it matters
+
+This is the cheap, legal, grocery-store end of the biohacking/performance thread in the vault — the same thread that also contains T3, meldonium and gray-market peptides ([[2026-11-17-zygomatic03-daily-stack-t3-meldonium]]). Against those, baking soda is the one item with double-blind crossover RCT support, a known mechanism, and a cents-per-dose cost. The Reddit anecdote is marketing, but the underlying trial is real.
+
+Skepticism gates, in order of sharpness:
+
+1. **Dose mismatch, ~10×.** The trial used ~0.26 g/kg 2 h pre-session (≈20+ g for an adult). The Reddit user took ~½ tsp twice (≈3–6 g total), split across the previous evening and pre-workout — nowhere near the studied protocol. His "zero fatigue" experience is either a hyper-response or expectation/placebo; it is not what the trial tested. (A companion 2026 trial, Springer s00421-026-06448-7, found 0.3–0.4 g/kg needed, with divided 0.4 g/kg dosing the best benefit/tolerance balance.)
+2. **Huge individual variability.** +23.7 s ± 52.6 s means many non- or negative responders; the group mean is not a promise.
+3. **n=1 self-report, expectation-loaded.** "This feels like steroids - wtf" from someone who read the papers first and already believed — classic placebo setup, no blinding, single session.
+4. **GI distress is the classic limiting side** of bicarb loading (why the literature fusses over dosing patterns) — absent in this trial's protocol but the most likely failure mode of a home attempt at real doses.
+5. **Chronic daily use ≠ studied use.** Trial protocol is acute, pre-session. Daily bedtime dosing adds a persistent sodium load — blood-pressure/kidney territory for regular use.
+
+Reference-only, no task filed — consistent with the thread's checking-not-ordering posture. If RD ever wants to try it before a match, the evidence-based protocol is ~0.25–0.3 g/kg with fluid, 90–120 min pre-effort, tested first in training (GI risk), not the Reddit split-dose.
+
+## Links
+
+- [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] — the gray-market end of the same performance-interventions thread (T3, meldonium, peptides)
+- [[2026-11-10-zygomatic03-pinealon-social-fluidity]] — the protocol article that started the biohacking thread
+- [[2026-11-10-hoostethics-low-dose-tadalafil]] — daily-tadalafil performance argument, same thread
+- [[2026-11-11-doctormorphh-noots-stims-cognition-menu]] — the noots/stims menu; baking soda is the HIIT counterpart's evidence floor
