@@ -1,0 +1,26 @@
+---
+title: "HybridElitePrep — baking-soda vindication QT: 'they called me a fraud 3-4 years ago'"
+source: https://x.com/HybridElitePrep/status/2123152717115969705
+captured: 2026-11-19
+tags: [health, fitness, biohacking, sodium-bicarbonate, baking-soda, twitter, vindication]
+kind: reference
+---
+
+**Author:** HybridElitePrep (@HybridElitePrep, "Hybrid Athlete || Elite Performance") · posted 2026-11-18 20:33Z · received 2026-11-19T08:03:44Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 557 likes · 45,844 views · 9 replies. Quote-tweets BowTiedPhys's "He was right." (2123108654597697792) — captured earlier today as [[2026-11-19-bowtiedphys-baking-soda-hiit]]. Full 263-char text recovered via fxtwitter; no media.
+
+## Summary
+
+The vindication layer on top of this morning's baking-soda capture. HybridElitePrep quote-tweets the BowTiedPhys trial-numbers tweet to claim priors: "Remember when the whole internet called me a 'fraud' when I promoted baking soda as a natural 'PED' 3-4 years ago?" — adding that bicarbonate "has been in use by actual athletes for decades" and closing with a philosophy line: "You don't need to buy half the powders you own sometimes you have the tools in your grocery list."
+
+## Why it matters
+
+- This is the **social-proof arc** of the thread: the actual evidence (2026 EJSS crossover trial, +23.7 s above 90% VO2max, +60.1 mL/min VO2, ~0.26 g/kg dosing) already lives in the BowTiedPhys note — this tweet adds zero new data, only "I said it first" framing and the grocery-store-over-powders ethos.
+- The ethos is the reusable bit: before buying the next tub, check the kitchen. Same cheap-and-legal end of the performance thread as [[2026-11-19-bowtiedphys-baking-soda-hiit]] — against the gray-market end ([[2026-11-17-zygomatic03-daily-stack-t3-meldonium]]).
+- Skepticism gates: (1) the "I promoted it 3-4 years ago and got called a fraud" origin story is unverifiable and engagement-bait-shaped; (2) "athletes used it for decades" is true in the sports-science literature (bicarbonate loading is classic ergogenic-aid research) but cuts both ways — that literature is also where the GI-distress and 0.3+ g/kg dosing caveats live; (3) grocery-pinche doses (the Reddit n=1's ~3-6 g) are ~10× below the studied protocol, so "tools in your grocery list" oversells what a kitchen dose delivers.
+
+Reference-only, no task — the trial-numbers note already carries the evidence-based protocol if RD ever wants it.
+
+## Links
+
+- [[2026-11-19-bowtiedphys-baking-soda-hiit]] — the quoted tweet's full capture: trial numbers, Reddit n=1, dosing caveats
+- [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] — the gray-market end of the same performance-interventions thread

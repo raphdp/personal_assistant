@@ -1,0 +1,26 @@
+---
+title: "BasedBiohacker — mexidol as the social lubricant: swap pregabalin/phenibut (and alcohol) for emoxypine"
+source: https://x.com/BasedBiohacker/status/2123069718940840302
+captured: 2026-11-19
+tags: [health, nootropics, mexidol, emoxypine, pregabalin, phenibut, social-lubricant, russian-pharma, twitter, biohacking]
+kind: reference
+---
+
+**Author:** BasedBiohacker (@BasedBiohacker) · posted 2026-11-18 15:04Z · received 2026-11-19T08:05:41Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 299 likes · 17,922 views · 13 replies. Full 741-char text recovered via fxtwitter (syndication's inline t.co was just entity expansion — text complete). Two photos: (1) OCRs to a Russian pharmacy box — **Mexiprim 125 mg film-coated tablets, 30 ct, ethylmethylhydroxipyridine succinate, antioxidant, STADA** (preserved at `rdp_media/2123069718940840302/ph1.jpg`); (2) is the office-meltdown meme (calm selfie guy, thumbs up, two colleagues shouting) — humor layer, no content (vision-checked; OCR empty).
+
+## Summary
+
+A swap pitch: "99% of people taking pregabalin and phenibut as a 'social lubricant' would be better off ditching it for mexidol — hell even those who feel they need alcohol to perform in social situations." Claimed mechanism stack for mexidol (emoxypine succinate): reduces social friction, improves mood/confidence; BBB-crossing antioxidant; protects neurons under stress, hypoxia, stimulant use; stabilizes cell membranes → improved glutamate/GABA ratio; anxiolytic without sedation ("no retard sedation"); mitochondrial support (more ATP); used in Russia for stroke recovery, TBI, cognitive decline; reduces oxidative brain fog; enhances memory consolidation. Closer: "pairs fucking wonderfully with stims if you get a bit jittery." The photo box (Mexiprim 125 mg) matches the dose lane Zygomatic ran.
+
+## Why it matters
+
+- The **real idea worth keeping** is the harm-reduction frame: pregabalin and phenibut are dependence-liability GABAergics (phenibut notoriously so), and alcohol is alcohol — proposing a non-sedating antioxidant instead is directionally sane *for people not already dependent*.
+- Cross-checks inside the vault: Zygomatic's ADHD-replacement article ([[2026-11-10-zygomatic03-pinealon-social-fluidity]]) already profiles mexidol at 125 mg near-daily — "soft lock-in, warmth, light anxiolysis" — and carries the two cautions this tweet omits: it **potentiates benzos/sedatives**, and it's contraindicated in liver/kidney dysfunction. His article also found mexidol can tip an already-full social stack into over-stimulation.
+- Skepticism gates, in order: (1) **the swap is dangerous for regular users** — phenibut and pregabalin withdrawal are medically serious (seizures, rebound anxiety); anyone actually on them daily needs a taper, not a substitution tweet. The "99% better off" line is unfounded — no head-to-head vs pregabalin for social anxiety exists. (2) **Evidence base is Russian-pharma**: emoxypine's human data is mostly Soviet/Russian stroke/TBI literature; Western RCT support is thin. (3) The bullet stack is mechanism-marketing — every claim is plausible-from-animal-or-Russian-studies, none is established at the "social lubricant" claim level. (4) Same affiliate-flavored author as the modvigil-200 endorsement ([[2026-11-17-basedbiohacker-modvigil-200]]) — product-photo tweets are his format.
+- UAE posture unchanged: mexidol/Mexiprim is not a UAE-registered pharmacy item as far as captured — same gray-import lane and cautions as the rest of the thread ([[2026-11-17-zygomatic03-daily-stack-t3-meldonium]]). Reference-only, no task — thread posture stays checking, not ordering.
+
+## Links
+
+- [[2026-11-10-zygomatic03-pinealon-social-fluidity]] — the mexidol profile (125 mg, effects, potentiates-sedatives + liver/kidney cautions) this tweet plugs into
+- [[2026-11-17-basedbiohacker-modvigil-200]] — same author, same product-photo format, affiliate framing
+- [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] — the gray-market Russian-pharma lane of the thread

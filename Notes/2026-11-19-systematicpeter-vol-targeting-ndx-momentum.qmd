@@ -1,0 +1,24 @@
+---
+title: "SystematicPeter — volatility targeting in the NDX momentum rotation: running a third of allocated capital into this pullback"
+source: https://x.com/SystematicPeter/status/2123075759510331714
+captured: 2026-11-19
+tags: [trading, twitter, momentum, nasdaq-100, volatility-targeting, position-sizing, live-positions]
+kind: reference
+---
+
+**Author:** Peter - Cracking Markets (@SystematicPeter) · posted 2026-11-18 15:28Z · received 2026-11-19T08:16:57Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 33 likes · 3,772 views · 1 reply. Full 371-char text complete via fxtwitter. No photos.
+
+## Summary
+
+A live-regime observation on his Nasdaq-100 momentum rotation: "These are the times I'm glad I use volatility targeting." With vol elevated, the strategy is currently deploying **about a third of the capital set aside for it** — so pullback losses are proportionally smaller than the strategy's raw signal would imply. The honest cost stated up front: gains were smaller on the way up, too. He tracks the strategy's current open positions publicly at `crackingmarkets.com/ndx-momentum/`.
+
+## Why it matters
+
+- This is the exposure-management half of the momentum-rotation story that the same morning's BolsaCartera backtest pitch ([[2026-11-19-bolsaycartera-ndx-momentum-350-backtests]]) omits entirely: the return stream is `signal × position size`, and the size dial (vol targeting) is what converts a binary backtest equity curve into something survivable. His 1/3-capital-in-high-vol state is the mechanism working as designed — 2022-style drawdown compression in exchange for giving up upside.
+- Consistent with his documented publishing ethos — full rules, code, and now a live-positions page ([[2026-09-04-systematicpeter-why-publish-research]]) — the opposite posture of profile-link funnels.
+- Skepticism gate: one tweet, no numbers — the claim is checkable against his public positions page, which is exactly what the filed Inbox task does.
+
+## Links
+
+- [[2026-11-19-bolsaycartera-ndx-momentum-350-backtests]] — the same strategy family without the sizing dial (and without transparency)
+- [[2026-09-04-systematicpeter-why-publish-research]] — his why-I-publish stance, the track record behind this account's credibility

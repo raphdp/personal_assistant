@@ -1,0 +1,32 @@
+---
+title: "macro_synergy (Sueppel) — RISVIX: a rough instantaneous squared VIX model for term structure & VIX option pricing (arXiv 2611.07120)"
+source: https://x.com/macro_synergy/status/2122953955403825232
+captured: 2026-11-19
+tags: [research, trading, volatility, vix, term-structure, option-pricing, rough-volatility, fractional-memory, arxiv, twitter]
+kind: both
+---
+
+**Author:** Ralph Sueppel (@macro_synergy) · posted 2026-11-18 07:24Z · received 2026-11-19T08:17:26Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 95 likes · 5,258 views · 3 replies. Full 241-char text complete via fxtwitter; the tweet's t.co resolves to **arXiv 2611.07120** — title and full abstract pulled via the arXiv API at capture. Tweet photo is a paper figure (not OCR'd — the abstract carries the content).
+
+## Summary
+
+Sueppel (macro-research aggregator) signals a new quantitative-finance working paper: *"A Rough Instantaneous Squared VIX Model for Term Structure and Option Pricing."* The paper's proposal, from the abstract:
+
+- **RISVIX**: introduces **fractional memory** (roughness) into the conventional Markovian squared-VIX framework — the "rough volatility" idea applied directly to the instantaneous squared VIX, rather than only to the spot variance.
+- **Term structure with memory**: explicit representation of the VIX term structure governed by **Mittag-Leffler decay** (the fractional-memory generalization of exponential mean reversion).
+- **Pricing**: semi-closed-form VIX option formula via an affine **Fourier-Laplace transform**.
+- **Two-step calibration**: estimate memory parameter, mean reversion, and date-specific initial states from VIX **term-structure indices first**, then calibrate remaining distributional parameters to **VIX option prices**.
+- **Results** (daily VIX term-structure indices + VIX option quotes, Jan 2018 – Jun 2025): beats the Markovian benchmark on term-structure fit — larger gains in **elevated-volatility periods** and for the curve's **slope and curvature**; out-of-sample option pricing improves with **MSE −13.06% / MAE −6.33%**, largest at **shorter maturities and high-VIX states**. Also improves on recent-literature benchmarks to varying degrees.
+
+## Why it matters
+
+- Directly adjacent to the desk's VIX thread ([[2026-11-13-therobotjames-vix-dec-calendar-spread]], the EVRP work in [[2026-11-09-kashin-vix-vix3m-evrp-strategies]]): any desk view that leans on VIX term-structure shape (contango/backwardation trades, calendar spreads, EVRP) benefits if the model used to represent the curve captures memory — this paper claims the standard Markovian curve model systematically misses most exactly when it matters (high-vol states, short maturities).
+- The two-step calibration is the practically load-bearing idea: term-structure data is free and dense, option quotes are the expensive/noisy layer — estimating the memory/mean-reversion/initial-state block from the curve first, then fitting distributional params to options, is a reusable pattern even without adopting the full model.
+- Skepticism gates: (1) it is a working paper (v1, Nov 2026) — no peer review, no replication yet; (2) fit gains on 2018–2025 include the 2020/2022 vol spikes, so "larger gains in elevated-volatility periods" may be one or two episodes driving the average; (3) in-sample fit ≠ tradable edge — the paper improves *models*, not strategies.
+
+Task filed: pull the full paper and assess whether the fractional-memory term-structure representation changes anything about the desk's VIX calendar/EVRP views.
+
+## Links
+
+- [[2026-11-13-therobotjames-vix-dec-calendar-spread]] — the desk's live VIX calendar-spread angle this paper's term-structure model would inform
+- [[2026-11-09-kashin-vix-vix3m-evrp-strategies]] — VIX/VIX3M term-structure strategies already in the vault

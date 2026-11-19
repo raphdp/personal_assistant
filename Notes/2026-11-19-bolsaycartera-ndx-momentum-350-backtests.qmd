@@ -1,0 +1,24 @@
+---
+title: "Bolsa&Cartera — 350 backtests on a Nasdaq-100 momentum system: 37% ann since 2003, no negative year"
+source: https://x.com/BolsayCartera/status/2123110576562094209
+captured: 2026-11-19
+tags: [trading, twitter, momentum, nasdaq-100, backtest, spanish, clenow, statistics]
+kind: reference
+---
+
+**Author:** Bolsa&Cartera (@BolsayCartera) · posted 2026-11-18 17:46Z · received 2026-11-19T08:16:47Z (WhatsApp via RDP-30, routed by CoS). Engagement at capture (fxtwitter): 39 likes · 2,666 views · 3 replies. Full 272-char Spanish text complete via fxtwitter. Two photos OCR'd (preserved at `rdp_media/2123110576562094209/`): (1) equity-curve stats panel — CAGR ≈ 37.17%, vol ≈ 22.12%, Sharpe ≈ 1.68, Sortino ≈ 2.84, MAR ≈ 1.57, UPI ≈ 7.20, window ≈ 2005–2025; (2) drawdowns-from-highs chart labeled "Con reinversión" comparing SP500 / INT / a Clenow-style Momentum series, 2004–2028 axis.
+
+## Summary
+
+Spanish-language systems account pitching its Nasdaq-100 momentum rotation: "350+ backtests to improve my Nasdaq 100 momentum system (testing, not over-optimizing 😅)". Headline stats: 37% annual since 2003 in backtest vs 9.5% for the S&P 500; max drawdown −23.6% vs −56.8%; not a single negative year in 24. The system link is deliberately not in the tweet — "Enlace en mi perfil" (link in my profile), the classic funnel pattern.
+
+## Why it matters
+
+- Same strategy family as Peter's NDX momentum rotation captured the same morning ([[2026-11-19-systematicpeter-vol-targeting-ndx-momentum]]) — but with the opposite transparency posture: Peter posts live positions; this account posts backtest stats and routes you to a profile link.
+- Skepticism gates, in order: (1) **37% ann / 24y / zero negative years from public-index momentum would be elite-fund territory** — sustained ~27pp/yr over an index with 9.5% CAGR is the signature shape of overfitting or look-ahead (NDX membership survivorship — the index adds winners retroactively to the index's performance but a live strategy can't hold future winners), not of a free lunch. (2) "350 backtests (not over-optimizing 😅)" — the smiley is doing honest work; 350 evaluations of a rule family on one 24y sample is exactly the multiple-testing regime that manufactures great backtests. (3) The photo stats confirm consistency between claim and chart (CAGR 37.17% OCR-matches the 37%), so the numbers aren't typos — they're the claim. (4) Funnel: rules/course presumably monetized behind the profile link, uncaptured.
+- The genuinely useful artifact in the pair is Peter's live-positions page — see the Inbox task comparing the two.
+
+## Links
+
+- [[2026-11-19-systematicpeter-vol-targeting-ndx-momentum]] — same family, live transparency, vol targeting as the exposure dial
+- [[2026-09-04-systematicpeter-why-publish-research]] — the publishing-with-rules-and-code ethos this account is the counter-example of
