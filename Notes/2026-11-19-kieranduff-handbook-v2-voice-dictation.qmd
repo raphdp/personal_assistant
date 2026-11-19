@@ -1,0 +1,33 @@
+---
+title: "Kieran Duff (@kieran__duff) — plans a voice-dictated 2nd edition of his free systematic trading handbook ('perhaps a 2027 job'); quotes the 24-chapter original — 'The Beginner's Guide to Systematic Trading' — live free at kieranduff.com/handbook"
+source: https://x.com/kieran__duff/status/2122968009056624775
+captured: 2026-11-19
+tags: [trading, twitter, systematic-trading, handbook, education, darwinex, mt5, mql5, position-sizing, overfitting, execution, kieran-duff]
+kind: both
+---
+
+**Author:** Kieran Duff (@kieran__duff) — Systematic PM & Head of UK Growth at Darwinex · posted 2026-11-18 08:19Z · received 2026-11-19T12:55:16Z (WhatsApp via RDP-30, flash intake). Stats at capture (fxtwitter): 36 likes · 1 reply · 2,902 views. No media on the tweet itself; it quotes his own handbook-launch tweet (status 2066862883292451110, posted ~2026-06-16, 557 likes · 20 replies · 124,395 views) whose cover image was OCR'd.
+
+## Summary
+
+The tweet: re-reading his own handbook, two observations — (1) it's "by far the best place for a brand new systematic trader to start" and worth an occasional review; (2) he wants to write **a second edition, updated** — but instead of writing and "getting Claude to tidy it up", he'll **voice-dictate the whole thing**, publishing the full "raw" version the same way he does his Substack articles. "Perhaps a 2027 job..."
+
+The quoted launch tweet (Jun 16) is where the substance sits: the handbook went live free on his website — **24 chapters, start to finish: what an edge actually is, building in MT5, backtesting without fooling yourself, the overfitting trap, position sizing and the maths of ruin, then going live and managing capacity.** Plus a free resources page carrying **the MQL5 order-splitting code he runs live in XAQP** ("cuts market impact and lifts a strategy's capacity ceiling"). Written as "the thing I wish someone had handed me when I switched from discretionary to systematic."
+
+Cover OCR: "THE HANDBOOK ENTRIES LIVE TODAY — FREE TO READ, NO GATE — 24 CHAPTERS — SYSTEMATIC TRADING · SIZING · FILTERS — START TO FINISH … kieranduff.com/handbook". Verified live at capture: https://kieranduff.com/handbook (page title "The Beginner's Guide to Systematic Trading"; overfitting, position sizing, maths-of-ruin and order-splitting sections all present on the page).
+
+## Why it matters
+
+- **The author is already two-deep in the vault.** The Gotobi JPY "Claude funnel" strategy — his clue, independently confirmed by a third party on all JPY pairs — is [[2026-10-12-systematicedge-gotobi-jpy-claude-strategy]]; his blog is one of the **7 verified authors** the zenomtrader live experiment tests in [[2026-11-09-zenomtrader-verified-only-costs-sharpe]]. This capture rounds that author file out with his curriculum artifact.
+- **The chapter arc is the exact curriculum the vault's skepticism notes keep demanding.** Edge-first, "backtesting without fooling yourself", the overfitting trap, position sizing/maths of ruin, then capacity — a single free synthesis of the validation standard in [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] aimed at beginners, by a PM who runs the money (Darwinex; the Darwinex-tribe connection also runs through [[2026-11-10-zenomtrader-war-room-darwinex]]).
+- **The production artifact is the rare part:** the MQL5 order-splitting execution code he runs live. Execution/market-impact code (capacity lifting) shows up far less in captures than strategy code — that free-resources page is the piece worth pulling regardless of the book.
+- **The v2 news is a process signal, not a release:** voice-dictation → "raw" output mirrors his Substack style; "2027" means there is nothing to wait for — v1 is the current artifact and free.
+- **Skepticism gates:** "by far the best place to start" is a self-assessment of his own product on re-read, not a third-party review; no independent evaluation of the handbook is captured; chapter quality unverified until actually read (page liveness ≠ content depth); and this tweet is a modest author's note (36 likes) riding the reach of the June launch (124k views) — the handbook itself is the signal, the v2 plan is calendar noise.
+
+## Links
+
+- [[2026-10-12-systematicedge-gotobi-jpy-claude-strategy]] — same author: the Gotobi JPY Claude-funnel strategy, third-party confirmed.
+- [[2026-11-09-zenomtrader-verified-only-costs-sharpe]] — Duff's blog among the 7 verified in the live costs/Sharpe experiment.
+- [[2026-11-10-zenomtrader-war-room-darwinex]] — the Darwinex connection (Duff: Head of UK Growth at Darwinex).
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — the OOS/walk-forward standard the handbook's backtesting/overfitting chapters promise to teach.
+- Handbook: https://kieranduff.com/handbook
