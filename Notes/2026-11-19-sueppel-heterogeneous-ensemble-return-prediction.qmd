@@ -1,0 +1,34 @@
+---
+title: "macro_synergy (Sueppel) — Diversification Across Predictors: heterogeneous ensemble learning for cross-sectional return prediction (arXiv 2611.12389)"
+source: https://x.com/macro_synergy/status/2123319112109638100
+captured: 2026-11-19
+tags: [research, trading, machine-learning, ensemble, cross-sectional, equity, factor-models, alpha158, bagging, bias-variance, arxiv, twitter]
+kind: both
+---
+
+**Author:** Ralph Sueppel (@macro_synergy) · posted 2026-11-19 07:35Z · received 2026-11-19T12:31:33Z (WhatsApp via RDP-30, routed by flash intake → RDP-1486). Engagement at capture (fxtwitter): 35 likes · 2,024 views · 2 replies. Syndication text truncated mid-sentence; full 337-char text via fxtwitter with the link spelled out — **arXiv 2611.12389**, title + full abstract pulled via the arXiv API at capture. Tweet photo is the paper's pipeline figure (OCR'd: raw feature space with feature/time dimensions → Stage A bootstrap sampling → linear regression / neural network / penalized-regression specialists → Stage B prediction collection → Stage C equal-weighted average + protection filter). The "[Equity]" bracket in the tweet is Sueppel's editorial insertion; the paper title has no bracket.
+
+## Summary
+
+Sueppel signals a new quantitative-finance working paper: *"Diversification Across Predictors: Heterogeneous Ensemble Learning for Cross-Sectional Return Prediction."* From the abstract:
+
+- **Problem**: cross-sectional stock-return prediction — extremely low signal-to-noise, high-dimensional factor spaces, non-stationary predictor effectiveness. Failure modes are complementary: neural networks overfit noise (high variance) while linear models underfit nonlinear structure (high bias).
+- **Proposal**: extend the financial principle of **diversification to the predictor level** — a bagging procedure combining linear and nonlinear predictors, so each model functions as a distinct specialist whose prediction errors exhibit **low cross-covariance**, enabling error cancellation upon aggregation.
+- **Theory**: formalized via **bias-variance-covariance decomposition**, establishing an exact mathematical correspondence between portfolio diversification and predictor aggregation.
+- **Results** (CSI300 daily-frequency **Alpha158** factor datasets): **Rank IC improvement >13%** over standalone neural networks; surpasses tree-based state-of-the-art methods (XGBoost, Double Ensemble) on both predictive-accuracy and portfolio-based evaluation metrics.
+
+## Why it matters
+
+- Second Sueppel-arXiv capture today ([[2026-11-19-sueppel-risvix-rough-squared-vix]]) — he is the vault's densest single macro/quant-research channel ([[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]]).
+- The bias-variance-covariance framing is the transferable piece: "diversify across predictors the way you diversify across assets" gives a principled basis for running prediction threads as an equal-weighted committee of deliberately different specialists instead of picking a single winner model.
+- Connects to the vault's ML-prediction verification thread: [[2026-11-18-quantbeckman-allocflow-reward-deploy-mismatch]] (train/deploy regime mismatch — this paper's "protection filter" stage is exactly the deployment-regime guard that thread demands) and [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] (single-model ML claims).
+- Skepticism gates: (1) working paper v1, Nov 2026 — no peer review, no replication; (2) single market (CSI300, China) and one factor set (Alpha158) — cross-sectional ensemble gains often shrink out-of-region; (3) ">13% Rank IC over standalone neural networks" partly measures how badly the standalone NN overfit, not absolute PnL quality — the paper claims portfolio metrics too, but the abstract gives no Sharpe/turnover numbers; (4) equal weighting + protection filter is deliberately simple — no transaction-cost or turnover treatment visible in the abstract.
+
+Task filed: pull the full paper, verify the >13% Rank IC claim and the XGBoost/Double-Ensemble comparison, and judge whether "diversify across predictors" is worth adopting as a desk principle.
+
+## Links
+
+- [[2026-11-19-sueppel-risvix-rough-squared-vix]] — same-day Sueppel capture, same arXiv lane
+- [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] — prior Sueppel ranking/aggregation capture
+- [[2026-11-18-quantbeckman-allocflow-reward-deploy-mismatch]] — the ML-paper verification standard this task follows
+- [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] — ML prediction skepticism gates
