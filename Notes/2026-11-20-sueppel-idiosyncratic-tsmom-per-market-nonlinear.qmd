@@ -1,0 +1,35 @@
+---
+title: "macro_synergy (Sueppel) — Idiosyncratic Market Effects in Global Time Series Momentum: per-market nonlinear TSMom models (arXiv 2611.15646)"
+source: https://x.com/macro_synergy/status/2123675460068573560
+captured: 2026-11-20
+tags: [research, trading, time-series-momentum, machine-learning, nonlinear-models, statistical-learning, market-heterogeneity, arxiv, twitter]
+kind: both
+---
+
+**Author:** Ralph Sueppel (@macro_synergy) · posted 2026-11-20 07:11Z · received 2026-11-20T12:10:10Z (WhatsApp via RDP-30, routed by flash intake → RDP-1505). Engagement at capture (fxtwitter): 53 likes · 3,853 views · 6 replies. Syndication text truncated on the t.co; full 411-char text via fxtwitter with the link spelled out — **arXiv 2611.15646v1**, title + full abstract pulled via the arXiv API at capture (authors Andrew Butler, Maciej Zawadzki, Adam Butler; published 2026-11-11). Tweet photo OCR: the paper's out-of-sample figure — panel (a) net OOS total return, curves Linear vs Global Nonlinear vs Market Nonlinear over roughly 2008–2018.
+
+## Summary
+
+Sueppel signals a new quant working paper by quoting the first two sentences of its abstract. From the arXiv abstract:
+
+- **Background**: time series momentum (TSMom) — a market's recent historical average return positively predicts its future returns. Recent statistical-learning work augments the traditional linear definition with a more descriptive *global* nonlinear factor model (the paper positions itself as extending the Moskowitz nonlinear-TSMom line).
+- **Claim**: models fit at the individual-market level exhibit response curves *distinct* from the global factor model — the nonlinearity itself is market-specific (idiosyncratic), not one shared global shape.
+- **Framework**: each feature-market pair gets to express its own prediction behaviour instead of being forced through a single global response surface.
+- **Results**: despite substantially smaller per-market sample sizes, fitting nonlinear models to individual markets is "a robust and often overlooked modelling approach that can result in a marginal improvement in out-of-sample performance" — note the authors' own hedge word is *marginal*.
+
+## Why it matters
+
+- Third Sueppel arXiv paper capture in two days (two on 11-19 plus this) — he remains the vault's densest quant-research channel ([[2026-11-19-sueppel-heterogeneous-ensemble-return-prediction]], [[2026-11-19-sueppel-risvix-rough-squared-vix]]).
+- Transferable piece: the **local-vs-global modelling trade-off**. Pooling markets buys sample size but averages away market-specific response curves; this paper argues the idiosyncratic component is real and robust enough to keep. The desk equivalent is asking which markets deserve their own calibrated response curve rather than one shared fit.
+- Direct TSMom relevance — same family as the momentum-in-practice thread ([[2026-11-19-systematicpeter-vol-targeting-ndx-momentum]]).
+- Skepticism gates: (1) v1 working paper, Nov 2026 — no peer review, no replication; (2) "marginal improvement" is the authors' own wording — the honest read is the edge is thin, not a free lunch; (3) per-market fits multiply parameters and create a multiple-testing surface across many feature-market pairs — small samples plus flexible nonlinearity is the classic overfit recipe; (4) the abstract is silent on transaction costs, turnover, and which market universe the OOS comparison uses.
+
+Task filed: pull the full paper, size the marginal gain, and check the cost/multiple-testing treatment.
+
+## Links
+
+- [[2026-11-19-sueppel-heterogeneous-ensemble-return-prediction]] — same-lane Sueppel arXiv capture (statistical learning for return prediction)
+- [[2026-11-19-sueppel-risvix-rough-squared-vix]] — the other 11-19 Sueppel arXiv capture
+- [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] — prior Sueppel ranking/aggregation capture
+- [[2026-11-19-systematicpeter-vol-targeting-ndx-momentum]] — TSMom deployed in practice
+- [[2026-11-18-quantbeckman-allocflow-reward-deploy-mismatch]] — the ML-paper verification standard this task follows
