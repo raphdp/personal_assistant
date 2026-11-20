@@ -1,0 +1,37 @@
+---
+title: "limitlesstack — daily low-dose tadalafil as the 'vascular maintenance' longevity protocol (Kloner 2024 44% mortality claim)"
+source: https://x.com/limitlesstack/status/2123476703292821802
+captured: 2026-11-20
+tags: [health, longevity, tadalafil, pde5, cardiovascular, twitter]
+kind: reference
+---
+
+**Author:** @limitlesstack · main tweet posted 2026-11-19 18:01Z · received 2026-11-20T12:09:55Z (WhatsApp via RDP-30, flash-intake capture). Engagement at capture (fxtwitter): main 1,054 likes · 119,316 views · 24 replies (reposts not exposed); quoted article-tweet 559 likes · 3.44M views. Main tweet's t.co resolves to its own photo; the quoted tweet is the author's X long-form article — full 5.5k chars recovered via fxtwitter article blocks. Photo 1 OCR-empty (graphic); photo 2 is the study screenshot (below).
+
+## Summary
+
+**Main tweet — the hook:** "longevity doctors prescribe Cialis to 30 year olds with perfect dicks. because it was never about the dick:" — 8 bullets: improves blood flow to brain and testicles; lowers estrogen and raises free testosterone; lowered all-cause mortality by 44% in men with ED; lowers cardiovascular event risk; improves endothelial function ("the first thing to fail in heart disease"); reduces inflammation; lasts 36 hours. Punchline: "Vitamin C-ialis."
+
+**Quoted long-form article — "take cialis every day"** (X article, created 2026-03-19, modified 2026-05-16; the November tweet is a re-promotion hook for it):
+
+- **Mechanism:** PDE5 breaks down cGMP (the vasodilation signal); tadalafil blocks PDE5 → systemic vasodilation — lungs, heart, brain, muscles, kidneys. 36-hour duration → daily 2.5–5 mg keeps plasma levels stable; "the longevity community's most used compound."
+- **Cardiovascular:** FDA-approved for pulmonary arterial hypertension; claims improved endothelial function (earliest detectable CVD sign), reduced arterial stiffness, studied in HFpEF, reduced cardiac fibrosis in animal models.
+- **Cognitive:** "any compound that meaningfully improves cerebral perfusion is a cognitive enhancer by definition" — user-reported clarity/focus/mood gains; studied for vascular dementia ("promising enough that it's being actively investigated"). Explicitly not a stimulant mechanism.
+- **Athletic:** altitude performance, recovery, glucose uptake, VO2 max — "some evidence" for most.
+- **Longevity framing:** endothelium (~7 trillion cells, 60,000 miles of vasculature) as the strongest predictor of lifespan/healthspan → "daily low-dose tadalafil is essentially a vascular maintenance protocol."
+- **Protocol:** 2.5–5 mg daily, same timing; food-neutral; avoid grapefruit (CYP3A4 inhibition spikes levels). Contraindications: absolute — nitrates (dangerous hypotension); caution — low baseline BP, CYP3A4-interacting antifungals/HIV meds, recent stroke/MI.
+- Ends with vendor links (US/EU/UK/AU tadalafil — affiliate-style "vendors I use myself") and "not medical advice."
+
+**Study identified from the tweet's own screenshot (OCR):** Kloner RA, Stanek E, Desai K, Crowe CL, Ball KP, Haynes A, Rosen RC — "The association of tadalafil exposure with lower rates of major adverse cardiovascular events and mortality in a general population of men with erectile dysfunction", *Clinical Cardiology* 2024, doi:10.1002/clc.24234, PMC10878497. Retrospective observational cohort (US commercial insurance claims, men with ED): tadalafil-exposed n=8,156 vs PDE5i-unexposed n=21,012. All-cause death 44% lower (HR 0.56, 95% CI 0.43–0.74, p<.001) — the tweet's headline number; MACE HR 0.81 (0.70–0.94, p=.007); CV-related death HR 0.55; heart failure HR 0.69; MI HR 0.83 and stroke HR 0.85 not significant.
+
+## Why it matters
+
+Second tadalafil capture in 10 days and the full-model version of it: where [[2026-11-10-hoostethics-low-dose-tadalafil]] carried the cognition leg (Choi 2019 — cerebral perfusion + MoCA gains in ED+MCI patients), this one adds the cardiovascular/mortality leg (Kloner 2024) and the author's complete daily protocol. Same author as [[2026-11-10-limitlesstack-modafinil-thesis]] — his pattern is visible here: long-form protocol article (March) periodically re-hooked with a stat-forward tweet (November, 3.4M views on the article tweet). The "cheap generic repurposed drug as daily longevity tool" framing is the pattern to recognize.
+
+Skepticism gates: Kloner 2024 is an observational claims-database study in ED patients (not healthy 30-year-olds) — HR 0.56 is association-level and exposed to healthy-user bias (men prescribed tadalafil are likely more care-engaged); MI and stroke, the hardest endpoints, did not reach significance. The tweet's testicle/testosterone/estrogen bullets are not in Kloner or sourced anywhere in the article. The cognition claims are user reports plus early-stage vascular-dementia research. The article monetizes the protocol via vendor links — commercial interest in the framing. Prescription-controlled in the UAE, genuinely contraindicated with nitrates; same posture as the prior note: RD's stance on this thread is checking, not ordering (2026-11-10). Reference-only, no task.
+
+## Links
+
+- [[2026-11-10-hoostethics-low-dose-tadalafil]] — same compound, cognition angle (Choi 2019), 10 days earlier
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — same author: stimulant-angle protocol piece
+- [[2026-11-05-driada-medical-catalog]] — tadalafil (5/20 mg) sits in the saved vendor catalog
