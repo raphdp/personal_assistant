@@ -1,0 +1,32 @@
+---
+title: "philogy (@real_philogy) — prediction: in 12 months a large gap opens between system programmers who learned FV + Lean and those who didn't, because proofs unleash agents"
+source: https://x.com/real_philogy/status/2124093632911474926
+captured: 2026-11-21
+tags: [programming, agents, formal-verification, lean, theorem-proving, agentic-coding, verification, prediction, twitter]
+kind: reference
+---
+
+**Author:** philogy (@real_philogy) · posted 2026-11-21 10:52Z · received 2026-11-21T21:46:55Z (WhatsApp via RDP-30, routed by flash intake → RDP-1548). Engagement at capture (fxtwitter): 504 likes · 20,946 views · 19 replies. No media, no quoted tweet; text recovered complete (fxtwitter full text identical to syndication — no truncation markers). First @real_philogy capture in the vault.
+
+## Summary
+
+Verbatim:
+
+> I predict in 12 months there will already be a large gap between system programmer's who learned FV and Lean and start using it and those who didn't.
+>
+> The things you'll be able to unleash your agents to do with proofs that you can't without will be enormous
+
+[sic on "programmer's".] FV = formal verification; Lean = Lean 4, the proof assistant. The claim: machine-checkable proofs change what you can safely delegate to coding agents. An agent whose deliverable carries a proof (or typechecks against a formal spec) needs no human reviewer to be trusted — the checker is the referee. Programmers who can write and read those specs become leverage multipliers on agent output; those who can't stay capped at human-review bandwidth.
+
+## Why it matters
+
+- The verification ladder for agent-written code runs tests → property tests → machine-checked proofs, each tier buying more agent autonomy per unit of trust. This tweet argues the top tier is about to matter commercially, not just in seL4/CompCert niches.
+- Direct relative of the desk's determinism-first doctrine (max code, min LLM): proofs are the extreme end of checker-over-judgment — the only review that scales without humans in the loop.
+- Connects the vault's agent-trust thread: [[2026-10-21-bholmesdev-merge-risk-skill]] grades agent changes on a verification category before you trust them; [[2026-10-13-dearlordylord-specs-as-state-machine]] replaces prose specs with executable, machine-checkable ones; [[2026-09-17-agrawal-agent-simplification-prompts]] is the hygiene layer underneath. philogy's tweet adds the ceiling: formal proofs as the endgame of trusting agent output.
+- Skepticism gates: (1) pure prediction, no data — formal-methods adoption has been "12 months away" for a decade (seL4, CompCert: multi-year expert efforts). (2) Tool choice is arguable: Lean is mathematics-first; verified software today mostly ships from F*, Coq, Isabelle, Dafny, Verus-class ecosystems — though Lean 4's ergonomics and momentum are real. (3) The population is narrow ("system programmers"); any gap opens first in verification-priced niches (kernels, compilers, crypto, safety-critical). (4) The underlying trend is real regardless of timeline: as agents write more code, review becomes the bottleneck, and machine-checkable specs are the only reviewer that scales with them. (5) 504 likes / 20.9k views is opinion-leader signal, not evidence.
+
+## Links
+
+- [[2026-10-21-bholmesdev-merge-risk-skill]] — trusting agent changes via a verification-graded risk gate
+- [[2026-10-13-dearlordylord-specs-as-state-machine]] — executable state-machine specs instead of prose
+- [[2026-09-17-agrawal-agent-simplification-prompts]] — agent output hygiene layer
