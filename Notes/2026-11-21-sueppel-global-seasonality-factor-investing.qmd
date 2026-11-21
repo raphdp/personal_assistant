@@ -1,0 +1,35 @@
+---
+title: "macro_synergy (Sueppel) — Global Seasonality Factor Investing: five seasonality anomalies, slow beats fast net of costs (arXiv 2611.15657)"
+source: https://x.com/macro_synergy/status/2124054205799481560
+captured: 2026-11-21
+tags: [research, trading, seasonality, factor-investing, statistical-learning, nonlinear-models, transaction-costs, futures, arxiv, twitter]
+kind: both
+---
+
+**Author:** Ralph Sueppel (@macro_synergy) · posted 2026-11-21 08:16Z · received 2026-11-21T21:42:37Z (WhatsApp via RDP-30, routed by flash intake → RDP-1546). Engagement at capture (fxtwitter): 105 likes · 9,163 views · 3 replies. Tweet quotes the paper's abstract opening; link spelled out via fxtwitter — **arXiv 2611.15657v1**, title + full abstract pulled via the arXiv API at capture (authors Andrew Butler, Adam Butler, Maciej Zawadzki; published 2026-11-11 — same team and same submission day as the idiosyncratic-TSMom paper 2611.15646 captured yesterday). Tweet photo OCR: the paper's Figure 8 — gross OOS total return and Sharpe ratio for models fit with the day-of-quarter seasonality factor, OOS period January 1995 through June 2026.
+
+## Summary
+
+Sueppel signals a new quant working paper by quoting the first sentences of its abstract. From the arXiv abstract:
+
+- **Background**: seasonality as a factor predicting risk-adjusted returns across global futures markets. The authors document **five seasonality anomalies** that, in aggregate, are pervasive across bond, commodity and equity markets.
+- **Independence claim**: each seasonality factor produces excess returns "not reasonably explained by established global time series carry, momentum and skewness factors" — a genuinely new axis, not a repackaging.
+- **Method**: same machinery as the sibling TSMom paper — recent statistical-learning innovations, nonlinear seasonality models fit at the individual market level, each feature-market pair expressing its own seasonal prediction pattern.
+- **Core result (cost asymmetry)**: walk-forward OOS testing shows **fast** seasonal patterns (day-of-week, day-of-month) produce strong gross performance but extremely high turnover → **negative net** of transaction costs. **Slow** patterns (day-of-quarter, day-of-half-year, day-of-year) produce positive gross performance and — with the exception of day-of-quarter — **positive net** performance.
+- **Portfolio claim**: an equal-weight ensemble of seasonality models delivers an OOS Sharpe competitive with and **uncorrelated to** established global TS factor portfolios; adding seasonality to a global factor portfolio raises OOS Sharpe by **~30%** over the full evaluation period.
+
+## Why it matters
+
+- Fourth Sueppel arXiv capture in three days and a direct sibling of yesterday's ([[2026-11-20-sueppel-idiosyncratic-tsmom-per-market-nonlinear]]): same Butler/Zawadzki team, arXiv IDs eleven apart, both dated 2026-11-11, same per-market nonlinear statistical-learning frame — applied to seasonality instead of momentum. The team is publishing a research program, not one-off papers.
+- Transferable piece: **signal viability is governed by pattern speed, not gross Sharpe**. Fast cycles die to turnover costs; slow cycles survive. The desk equivalent is ranking candidate signals by turnover-adjusted (net) expectancy before spending compute on them — gross backtests flatter exactly the signals that trade most.
+- The diversification claim (uncorrelated to carry/momentum/skewness, ~30% blend Sharpe uplift) is the actionable headline IF it survives a full read.
+- Skepticism gates: (1) v1 working paper, Nov 2026 — no peer review, no replication; (2) the tweet's "..." elision quietly drops two unfavorable clauses — fast patterns are net-negative, and day-of-quarter is the slow-pattern exception that fails net — while the tweet's own photo (Figure 8) is the day-of-quarter model, the one slow pattern that does not clear costs; (3) the ~30% Sharpe increase is over the full evaluation period and the abstract does not state whether the blended result is net of the seasonality legs' costs; (4) five factors x per-market nonlinear fits is a wide multiple-testing surface; (5) sibling papers from one team share the machinery — consistent, but correlated evidence, not independent replication.
+
+Task filed: pull the full paper, read the net-of-cost table (which slow patterns actually survive), check whether the 30% blend Sharpe is net, and size the ensemble turnover.
+
+## Links
+
+- [[2026-11-20-sueppel-idiosyncratic-tsmom-per-market-nonlinear]] — sibling paper, same team/method, previous day
+- [[2026-11-19-sueppel-heterogeneous-ensemble-return-prediction]] — same-lane Sueppel arXiv capture (ensemble of predictors)
+- [[2026-11-19-sueppel-risvix-rough-squared-vix]] — the other 11-19 Sueppel arXiv capture
+- [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] — prior Sueppel ranking/aggregation capture
