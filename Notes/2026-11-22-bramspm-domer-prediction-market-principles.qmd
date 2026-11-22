@@ -1,0 +1,39 @@
+---
+title: "bramsPM — Domer's prediction-market principles: research as the edge, adversary analysis, edge-proportional sizing (summary card from 60 Minutes / China Talk / Odds on Open interviews)"
+source: https://x.com/bramsPM/status/2124352332830064822
+captured: 2026-11-22
+tags: [prediction-markets, polymarket, trading-process, trading-psychology, position-sizing, risk-management, twitter]
+kind: reference
+---
+
+**Author:** brams PM (@bramsPM) · posted 2026-11-22T04:00:39Z · received 2026-11-22T07:56:11Z (WhatsApp via RDP-30, routed by flash intake → RDP-1566). Engagement at capture (fxtwitter): 127 likes · 9,848 views · 7 replies (reposts not exposed). Media: 2 photos — the content is a two-card text summary ("Domer on how to make money on prediction markets", card 2 marked 2/2), recovered complete by WinRT OCR; the inline t.co resolves to the tweet's own photo/1 (no external link). Quotes @nursexxl's "Cupsey on how to make money on memecoins" — same engagement-bait template chain, context only, not captured.
+
+## Summary
+
+Who Domer is (external grounding, 60 Minutes Dec 2025 / CBS): pseudonymous ex-professional-poker-player turned full-time Polymarket bettor; $400M+ wagered, ~$3M profit in the profiled year; headline wins: Pope Leo XIV (Cardinal Prevost at 250:1 → $100K) and JD Vance as Trump's running mate at 2% ($4K → ~$250K). The tweet card claims "$5M+ combined PnL" and says it is based on his interviews (60 Minutes, China Talk, Odds on Open, 2025–2026).
+
+The cards distill his method (OCR'd, lightly reorganized):
+
+1. **Research is the edge.** "Success comes down to whether you can research faster, better, and more accurately than your competitors." No secret model — he digs further than most bother to, learns a new domain quickly when a market comes up, and only bets views he's actually researched ("I don't think of myself as a gambler").
+2. **Read how the market gets decided.** Most bet the headline; he looks at who actually makes the call — the rules, the people involved, how long it usually takes. Deadlines move all the time ("don't treat a date in the news as a sure thing"). For rare events, go back and look at what happened last time.
+3. **Be fast, then check.** "If you take more than three seconds to react, you're glacially slow." Best prices come early, before most people have worked it out — but once in, take a second look and make sure the move makes sense. "Every day I'm kind of going into battle."
+4. **Know who you're trading against.** Someone is always on the other side and "they love their position for a reason" — find out why; if you can't figure it out, assume they know something you don't. Some traders are informed; a lot are fans or headline-reactors. If their reason turns out weak, he's happy to add more.
+5. **Don't trade on feelings.** People panic on bad news and sell way too low ("there has to be a low point at some point"). Fans bet on who they want to win, pushing prices off — he'll bet against a big favourite if his research says the market has it wrong ("you have to leave those opinions at the door, which is very hard to do").
+6. **Bet more when you're sure — size to the edge.** "You should increase your bet relative to your edge." Unsure → small, even when the price looks way off. Stays small in markets where one person or an insider can decide the result. No single bet should ever be able to wipe him out.
+7. **When a trade goes against you:** don't double down just to be right, don't dump in a panic — stop, figure out what changed, talk to other traders. If the other side really seems to know something: hold, don't add. If they seem wrong: add.
+8. **Watch your own head.** Make the case for the other side (what would have to happen for them to win). Be careful when everyone around you agrees — "that's how he's lost big before." Most common mistake he sees: being "averse to taking losses" — "you're being tricked by your brain."
+9. **Stick to the numbers.** Once a price reaches what you think it's worth, start selling; "you don't want to fall in love with your positions." Have rules for big events before they happen, and actually follow them. After every loss, work out what went wrong and what to change.
+10. **Look after yourself.** Constant news and PnL-checking gets addictive — he plans breaks and sets limits before needing them. Variance is real: "you can be the best poker player in the world and have a whole month where you're losing money." "You have to really be humble."
+
+## Why it matters
+
+- **A process checklist from one of Polymarket's biggest winners, adjacent to the user's own trading interests.** Most of the value is discipline, not alpha: adversary analysis, edge-proportional sizing, pre-committed event rules, loss-aversion countermeasures — patterns that transfer to any probabilistic betting/trading, same family as the capacity and risk-sizing notes below.
+- **Template recognition:** "X on how to make money on Y" is an engagement-bait quote-chain format — this tweet quotes @nursexxl's twin ("Cupsey on how to make money on memecoins"). The payload is a third-party re-summary of public interviews, not proprietary edge; future links in such chains can be pre-classified as distilled-interview content.
+- **Skepticism gates:** (1) The card is a fan-account summary, not Domer's own writing — selection/paraphrase risk; quotes are as-OCR'd from images. (2) PnL figures unverified and vary by source/window (tweet: "$5M+ combined"; 60 Minutes: ~$3M in the profiled year; a trending piece: $2.45M net). (3) Survivorship bias: n=1 winner self-narrating in hindsight-curated interviews. (4) The card itself carries "Not financial advice."
+
+## Links
+
+- [[2026-10-01-kober-gopfan-research]] — how another top Polymarket trader actually does research (screenshots); the research-process companion to this.
+- [[2026-11-18-johannmarkov-small-capacity-edges]] — who holds the structural advantage at what bankroll size; complements "size to your edge".
+- [[2026-10-24-evansemet-diminishing-returns-from-risk]] — why wider position limits buy almost nothing; the risk-sizing math behind "no single bet wipes you out".
+- [[2026-09-18-caronpolymarket-share-app-fee-savings]] — the execution-cost angle of the same Polymarket ecosystem.
