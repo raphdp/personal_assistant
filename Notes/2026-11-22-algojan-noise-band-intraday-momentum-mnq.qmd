@@ -1,0 +1,45 @@
+---
+title: "Jan / Algo Trader (@algojan) — Noise-Band Intraday Momentum on MNQ 5m (+1,384% net over 5y tick data, Sharpe 2.09, PF 1.78, 986 trades, 82.5% prop-sim pass) — free/open-source Roboquant listing implementing Chuk (2026) / Zarattini et al. (2024)"
+source: https://x.com/algojan/status/2124063819702112695
+captured: 2026-11-22
+tags: [trading, twitter, nq-futures, mnq, noise-band, intraday, momentum, vwap, trailing-stop, backtest, prop-eval, roboquant, open-source, skepticism, replication-failure, algojan]
+kind: both
+---
+
+**Author:** Jan — Algo Trader (@algojan) · posted 2026-11-21 08:54Z · received 2026-11-22T13:25:07Z (WhatsApp via RDP-30, routed by CoS flash intake). Stats at capture (fxtwitter): 82 likes · 6 replies · 9,777 views. One photo attached — OCR'd (results dashboard below). The "See first comment for access 👇" hook resolved publicly without the self-reply: the strategy is listed free on the Roboquant marketplace as **[Noise-Band Intraday Momentum — MNQ](https://roboquant.dev/t/2fee19c8-c3e1-4019-93d4-a260b01f7c8a)** (22 copies, v2 of 17 Nov 2026) — full rules recovered from the listing, not reconstructed from tweet + photo.
+
+## Summary
+
+Fourth @algojan backtest in the vault, and the first grounded in published research rather than hand-crafted rules: the listing explicitly follows **Chuk (2026)**, "Noise-band Intraday Momentum in Nasdaq-100 Futures" (SSRN 7609644), itself an adaptation of **Zarattini, Aziz & Barbon (2024)** "Beat the Market" — the same lineage as several TradingView "noise band" scripts now circulating. Rules (from the listing):
+
+- **Noise band:** each session, the band around the open = the average absolute move from the open at each minute of the day over the prior 60 sessions — volatility-scaled, carried across contract rolls.
+- **Entry:** the first 30-minute check between 10:00–15:30 ET where price closes above the upper band **and** above VWAP (long), or below the lower band and below VWAP (short). One position per session; fills on the next tick after the signal bar closes.
+- **Exit:** default mode = a 6-point trailing stop armed immediately, ratcheting tick by tick, with an optional $900 max-loss stop. Alternative modes: the paper's band/VWAP trailing stop, or a fixed ATR stop + take-profit (1×ATR / 2×ATR). Flat at 15:55 ET.
+- **Sizing:** fixed contracts, default **50**, with a broker-delay setting to model fill latency and optional skip dates. Listing recommends a $10,000 minimum account.
+- The headline 82.5% is a **1,000-run prop-firm simulation** on the backtest: 825 passed (82.5%), 174 rule-breached (17.4%), 1 timed out (0.1%).
+
+## Dashboard (OCR, cross-checked vs listing)
+
+Period **30 Oct 2021 → 30 Oct 2026** (5 years, tick fills). **Net +$138,429 = +1,384.3% · 986 trades (~0.79/session) · 46.0% WR · PF 1.78 · Sharpe 2.09 · Sortino 5.57 · Calmar 3.90 · CAGR +71.58% · max DD −18.4% · expectancy +$140.39/trade** · avg win +$693.74 / avg loss −$331.82 (ratio 2.09) · largest win +$4,814 / largest loss −$1,086 · commissions −$60,146 included in net. Tweet = OCR = listing on every shared number (+1,384%, 986, 2.09, 1.78, 18.4%, 82.5%). Internal math checks: 986 × $140.39 ≈ $138.4k ✓; 0.46 × 693.74 − 0.54 × 331.82 = $139.94 ✓; commissions ≈ $61/round-turn ≈ 50 MNQ contracts at ~$0.61/side — consistent with the 50-contract default; +1,384% on a ~$10k base matches the stated minimum. The listing also discloses a humbler "typical backtest profile" (~200 trades, ~48% WR, PF ~1.1, Sharpe ~0.94, ~53% net return at 41% max DD) alongside the showcase.
+
+## Why it matters
+
+- **The rule family joins the NQ session-structure cluster:** time-of-day noise around the open is the same object [[2026-10-26-onlybreakouts-market-mapping-time-grid]] maps and [[2026-11-11-propquantx-nq-gap-up-breakout]] trades — a third independent lens on "the first hours of NY define the day".
+- **Skepticism gates — heavier than usual, and mostly external to the author:**
+  1. **The underlying rule failed an independent out-of-sample test.** Chris Bailey ([cbailey.uk](https://cbailey.uk/trading/noise-area-intraday-momentum/), 13 Oct 2026) tested the Zarattini noise-area rule across 54 pre-registered settings each on MNQ/MES/MYM/M2K (2019–2024 development): all 54 MNQ and all 54 MES settings profitable, family-wise p = 0.005 — then on 20 months of unseen data it **lost money (−0.051R/trade on MES, 284 trades) and did worse than a long-only control (+0.003R)**. Notably, algojan's equity curve climbs straight through 2025–2026 — the same window where Bailey's MES validation failed. Same family, different instrument/config, opposite verdict: exactly the OOS question to answer before believing either.
+  2. **The source paper is far more hedged than the showcase.** Chuk (2026): executable rule ≈ +$10.26/day on **one** MNQ, daily Sharpe **1.14** (vs 2.09 at 50 contracts), one index point of stop-fill slippage removes **22% of the edge**, all intervals in-sample, no live contract traded.
+  3. **Leverage does the heavy lifting.** 50 fixed contracts vs the paper's 1-contract sizing; the 18.4% DD / Calmar 3.90 / +1,384% are products of that. Commissions are 30% of gross and included — good hygiene — but the 1,000-run prop sim inherits the backtest's assumptions; it is not a live pass (contrast the Topstep-fills leg in the 11-19 capture).
+  4. In its favor: published lineage, open code, defaults disclosed, commissions and fill-latency modeled, worst loss < 2× average (no hidden martingale), one-position-per-session caps the overfitting surface.
+- **Actionable → Inbox:** code is free and public; the cheap next step is reading it and re-running the backtest split OOS, with Bailey's failed replication and Chuk's degradation table as the benchmarks to beat.
+
+## Links
+
+- [[2026-11-19-algojan-vwap-pullback-topstep-mnq]] — same author/platform/instrument; the live-eval-receipt contrast case.
+- [[2026-11-11-algojan-initial-balance-breakout-mnq]] — same author; hand-built 17-parameter breakout.
+- [[2026-10-01-algojan-nq-monday-short]] — same author; fat-tail seasonal.
+- [[2026-11-11-propquantx-nq-gap-up-breakout]] — NQ opening-structure cluster.
+- [[2026-10-26-onlybreakouts-market-mapping-time-grid]] — time-of-day market mapping; same structural object.
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — the OOS/walk-forward standard applied above.
+- Listing: https://roboquant.dev/t/2fee19c8-c3e1-4019-93d4-a260b01f7c8a
+- Source paper: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7609644 (Chuk 2026)
+- Failed replication: https://cbailey.uk/trading/noise-area-intraday-momentum/ (Bailey, Oct 2026)
