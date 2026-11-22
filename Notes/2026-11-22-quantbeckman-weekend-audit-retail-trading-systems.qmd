@@ -1,0 +1,29 @@
+---
+title: "quantbeckman — weekend audit of shared trading systems: 99% garbage, survivors are the un-overfit few"
+source: https://x.com/quantbeckman/status/2124478684014756265
+captured: 2026-11-22
+tags: [trading, twitter, strategy-evaluation, overfitting, backtesting, retail-trading, validation, skepticism]
+kind: reference
+---
+
+**Author:** Quant Beckman (@quantbeckman) · posted 2026-11-22 12:22Z · received 2026-11-22T13:48Z (WhatsApp via RDP-30, flash intake) · 2 replies · 12 likes · 973 views (stats at capture, small early reach). Weekend meta-review of the trading systems people share online and on social media, quoting his own prior-day "Automate your portfolios" ASCII-art post. Tweet text completed via fxtwitter (the syndication copy truncated mid-bullet on a t.co); the attached photo is a bare, unlabeled equity curve — vision-read (it carries no text at all, which is why OCR came back empty): near-linear compounding ascent from about a quarter of the way in, one clear mid-trend drawdown at ~three-quarters, ends slightly below its peak; no axes, scale, stats, or platform marks. Preserved under `rdp_media/qb_2124478684/`.
+
+## Summary
+
+He spent the weekend digging through and evaluating the trading systems people share online. Verdict, in his own bullets:
+
+- **99% are shit, and their PnL is even worse.**
+- **Only ~0.01% look research-based** — and even those "were probably rationalized after the fact": the research narrative is fitted to the system, not the other way around.
+- **The rest come from data mining and parameter optimization** — and the parameter-optimized ones rely on technical indicators and "show clear signs of overfitting."
+- **A couple of decent, stable systems exist** — the photo's smooth equity curve is his exhibit for "this one" — but they now need "a second round of tests to make sure there's no hidden shit lurking underneath."
+
+## Why it matters
+
+- This is the taxonomy behind every individual critique in his chain: the AllocFlow reward/deploy mismatch ([[2026-11-18-quantbeckman-allocflow-reward-deploy-mismatch]]) and the sentiment-paper Sharpe skepticism ([[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]]). His three failure buckets — post-hoc rationalization, data mining, parameter-optimized overfitting — map one-to-one onto the vault's validation cluster (DSR/PBO, walk-forward: [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]).
+- The keepable method is his last line, not his ratios: a clean equity curve is stage-one screening, not evidence — the hidden-shit hunt (out-of-sample, frictions, regime splits) is stage two before trusting any shared system. Same bar the group-relative ensemble work is held to ([[2026-11-02-margincall4-bos-intraday-l-s-qqq-variants]]).
+- **Skepticism gates:** 973 views / 12 likes is tiny early reach (no bookmark signal); "99%" and "0.01%" are rhetoric, not measurements — no denominator is stated anywhere; the exhibit curve has no axes or stats, so "decent and stable" is unverifiable from the capture; and an unnamed system praised in passing is exactly the kind of claim that dies on contact with its own prescribed second-round test. Watch his feed for the follow-up results rather than treating the curve as the verdict.
+
+## Links
+
+- Prior chain: [[2026-11-18-quantbeckman-allocflow-reward-deploy-mismatch]] · [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]]
+- Validation thread: [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] · [[2026-11-02-margincall4-bos-intraday-l-s-qqq-variants]]
