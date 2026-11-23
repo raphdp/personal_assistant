@@ -40,11 +40,11 @@ Footer legal posture: "Products are intended for use under the supervision of a 
 
 - None yet — first vendor/health capture in the vault. (No fitness/PED notes exist to cross-link; Sport/ holds training logs only.)
 
-## Ordering (researched 2026-11-23, CoS — user asked for the France/UAE ordering link)
+## Ordering (researched 2026-11-23, CoS — reference note, see provenance line)
 
 - driadamedical.com is **catalog-only** — ordering runs through the "Official Premium Reseller" storefront **driadashop.eu** (mirror: driadashop.to). OpenCart store, EUR prices.
 - Modafinil SKU: **Modus 100mg** — €21, in stock (the only Driada modafinil product found).
 - **France: ships.** €27 flat, 5–21 business days. The delivery list is **EU-only** (17 countries).
 - **UAE: no lane.** No UAE shipping exists from this vendor — their delivery-policy page states they ship only to "countries with lenient customs controls" and have stopped serving risky ones.
 - **Scam clones** (per the vendor-side fake list on driadashop.eu): driadamedical.shop (top Google hit), driada-shop.com, driada-medical.com, driadastore.com, driadamedical.it, shopdriada.eu / shopdriada.to, unique-pharma.com. driadamedical.co unverified either way. Use driadashop.eu / driadashop.to only; verify any pack code at driadamedical.com/verify (count must read 1).
-- Context: ask answered via WA 2026-11-23 with the standing risk flags (modafinil Rx-only in FR; controlled import in UAE — Nov-10 CoS stance).
+- Context / provenance: researched 2026-11-23 after CoS MISREAD a WhatsApp ask ("link for france or uae ordering" - actually about the Travis Scott x GTA VI drop, answered separately via RDP-1597) as a Driada ordering ask. The facts below were sent to the user via WA 2026-11-23 13:32Z unsolicited, with the standing risk flags (modafinil Rx-only in FR; controlled import in UAE - Nov-10 CoS stance). Kept as reference for the Nov-10 modafinil thread; no order was ever requested.
