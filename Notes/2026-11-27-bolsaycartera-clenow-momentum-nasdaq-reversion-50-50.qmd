@@ -1,0 +1,60 @@
+---
+title: "Bolsa&Cartera — pair the Clenow/Momentum system with a Nasdaq weekly-reversion system, 50/50 annual rebalance (backtest from 2003): 28.7% ann vs 9.2% SP500, claimed max DD -14% vs -57%, no negative year, leg correlation 0.13 — equity + drawdown charts pixel-measured"
+source: https://x.com/bolsaycartera/status/2125307860607479908
+captured: 2026-11-27
+tags: [trading, twitter, portfolio-of-systems, momentum, mean-reversion, nasdaq, clenow, backtest, diversification, rebalancing, drawdown, spanish, bolsaycartera, self-reported, pixel-measured]
+kind: reference
+---
+
+**Author:** Bolsa&Cartera (@BolsayCartera) · posted 2026-11-24T19:17:34Z · received 2026-11-25T03:57:29Z (WhatsApp via RDP-30, flash-intake child RDP-1626; the original intake run died in the Z.AI weekly-cap outage, record RDP-1624, and the CoS redispatched the link on 2026-11-27 — captured two days late). Second capture from this author ([[2026-11-19-bolsaycartera-ndx-momentum-350-backtests]]). Engagement at capture (fxtwitter): 69 likes · 7,615 views · 3 replies; reposts not exposed. Full 264-char Spanish text complete via fxtwitter (`display_text_range [0,264]`); the trailing t.co resolves to the tweet's own `photo/1`, not an external link. Two content photos (990x550 and 990x418), preserved at `rdp_media/2125307860607479908/` with the pixel scans (`pixel_scan_equity.txt`, `pixel_scan_drawdown.txt`): (1) log equity curve "Con reinversión: 30.000 € en 2002 (escala logarítmica)" with four series; (2) drawdown chart "Caídas desde el máximo, con reinversión" with two series. Both were OCR'd (WinRT) and then measured pixel-by-pixel against their own gridlines rather than eyeballed — a first-pass vision read of the drawdown chart was wrong by ~15pp, which is why the numbers below carry a method note.
+
+## Summary
+
+Spanish-language systems account, verbatim: "¿Y si el mejor sistema no fuera uno, sino dos que no se parecen en nada?" — what if the best system is not one but two that look nothing alike? The pair:
+
+- **INT Clenow/Momentum** — the Nasdaq-100 momentum rotation this account pitched on 11-19 (standalone: 37% ann, max DD -23.6%, see the prior note).
+- **Nasdaq Reversion Semanal** (chart legend: "v1") — a weekly Nasdaq mean-reversion system, first appearance in the vault.
+
+Combined **50/50 with annual rebalancing**, backtest from 2003. Headline numbers in the tweet: **28.7% annual** (S&P 500: 9.2%); **max drawdown -14%** (S&P 500: -57%); **not a single negative year**; **correlation between the two legs: 0.13**.
+
+**Equity chart, pixel-measured** (log axis calibrated on the 100.000 / 1.000.000 / 10.000.000 gridlines, one decade = 120.5 px; x-axis calibrated on the 2004-2028 ticks, one year = 30.75 px; last data column ≈ Nov 2026). All four lines start at €30,000 in 2002. Terminal values and the CAGR each implies from €30k since 2003:
+
+| Series | Terminal value (read) | Implied CAGR since 2003 | Tweet's claim |
+|---|---|---|---|
+| SP500 (blue dashed) | ≈ €0.26M | ≈ 9.4%/yr | 9.2% |
+| Nasdaq Reversion Semanal v1 (teal) | ≈ €1.8M | ≈ 18.7%/yr | not stated |
+| Los dos, 50/50 con reequilibrio anual (black) | ≈ €12.6M | ≈ 28.8%/yr | 28.7% |
+| INT Clenow/Momentum (purple) | ≈ €58M (peak ≈ €61M in mid-2026) | ≈ 37.4%/yr | 37.17% standalone on 11-19 |
+
+The chart reproduces the headline stats to within reading error — the numbers are not typos, they are the claim. Shape (by eye on the log curve): the reversion leg has long flat stretches (roughly 2010-2013 and 2017-2020) that the momentum leg carries through; the 50/50 curve is the smoothest of the four and ends at about 22% of the momentum leg's terminal value.
+
+**Drawdown chart, pixel-measured** (axis calibrated on the 0% / -10% / ... / -50% gridlines, 5.16 px per 1pp; SP500 dashed blue, the 50/50 as a gray fill from the 0% baseline):
+
+- SP500: deepest **-57.0%** at ≈ March 2009 — matches the -57% headline exactly (the axis calibration is validated by this).
+- The 50/50: repeated shallow drawdowns of **≈ -7% to -10%** — late 2008 ≈ -8%, 2010 ≈ -8%, early 2016 ≈ -8.5%, late 2020 ≈ -10% (a 1-2 px spike), late 2023 ≈ -9%, 2026 ≈ -7.6%. The deepest reading anywhere is **≈ -10%**; the fill never visibly reaches -14% and touches the -10% gridline only on single-column spikes.
+
+**The one number that does not reconcile:** the tweet's "Caída máx. -14%" is deeper than anything its own drawdown chart shows for the 50/50 (≤ -10%). Not explained at capture — either the stat is computed on a finer grid than the chart plots (daily closes vs plotted frequency) or the stat and the chart come from different runs. Noted because it is the only headline that the chart does not corroborate; the direction (headline more conservative than chart) is the opposite of the usual hype pattern.
+
+## Why it matters
+
+- **The direct sequel to the 11-19 capture, and the same funnel.** There, the momentum system alone: 37% ann, -23.6% max DD, 350 backtests, "link in my profile". Here, the same leg paired with a weekly reversion sleeve: CAGR gives up ~8pp, the drawdown claim improves from -23.6% to -14%. That trade is the entire pitch — and it is the portfolio-of-systems thesis ([[2026-11-17-systemtheoryhq-portfolio-of-systems]]) executed with exactly two sleeves: trend/momentum to capture persistent moves, mean reversion to be paid when trend chops. The 0.13 leg correlation is the whole argument; everything else follows from it.
+- **The vault already holds both sleeves as separate, better-documented systems.** The Clenow trend core with rules and an ETF implementation is [[2026-10-24-concretum-clenow-trend-model-etfs]]; a public-rules Nasdaq mean-reversion sleeve is [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] (IBS/RSI-style Nasdaq reversion also in [[2026-08-30-quantified-strategies-rsi-adx-ibs]]). This tweet adds nothing about *how* either leg is built — the contribution is the pairing and the correlation number.
+- **Skepticism gates, in order:**
+  1. **No rules for either leg.** "Nasdaq Reversion Semanal v1" has no entry, exit, universe, sizing or signal definition anywhere in the tweet or its photos; the momentum leg is the same profile-link funnel as on 11-19. Nothing is replicable from the capture.
+  2. **Both legs are Nasdaq-centric, so 0.13 correlation of returns is not 0.13 correlation of tail exposure.** Momentum is long NDX names in uptrends; weekly reversion buys NDX dips. In 2008-09 both should hurt together — yet the chart shows the 50/50 at only ≈ -8% while the momentum leg alone carried a -23.6% max DD (11-19 panel). For the blend to be that shallow, the reversion leg must have been *up* through the momentum leg's worst stretch — which is exactly where NDX-membership survivorship and dip-buying look-ahead manufacture backtests. The honest test is per-leg drawdowns with dates, which the account does not show.
+  3. **The -14% headline vs the ≤ -10% chart** (above) — a small but real inconsistency in a two-chart tweet.
+  4. **"Not a single negative year" over 24 years** for a two-sleeve Nasdaq book is the same elite-fund-territory shape flagged on 11-19; the multiple-testing surface (350 backtests on the momentum leg alone) is unchanged, and the weekly-reversion leg's own search space is undisclosed.
+  5. 69 likes / 7.6k views — nobody has scrutinised it; no independent replication exists.
+- **Verdict:** the *structure* (momentum + weekly reversion, fixed-weight annual rebalance) is sound and already in the vault from better sources; the *numbers* are self-reported and unverified — the bar stays [[2026-08-29-milk-man-replication-metrics]].
+- **For the user:** reference only, no new task. The existing 11-19 Inbox task ("check BolsaCartera's profile link for published rules/track record") is the follow-up vehicle; if that is ever picked up, add two questions to it — the reversion leg's rules, and per-leg drawdowns with dates to explain the -14%-vs-chart gap. Any adoption decision belongs to the trading desk (separate company), not to this vault.
+
+## Links
+
+- [[2026-11-19-bolsaycartera-ndx-momentum-350-backtests]] — same account, the momentum leg standalone (37% ann, -23.6% DD, 350 backtests) plus the funnel pattern
+- [[2026-11-17-systemtheoryhq-portfolio-of-systems]] — the portfolio-of-systems thesis; this pair is its two-sleeve instance
+- [[2026-10-24-concretum-clenow-trend-model-etfs]] — the Clenow trend core with documented rules and an ETF implementation
+- [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]] — a public-rules Nasdaq mean-reversion sleeve, with capital-exposure framing
+- [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — IBS/RSI-style Nasdaq reversion with rules
+- [[2026-10-15-systematicpeter-mean-reversion-oos-high]] — OOS discipline for mean-reversion claims
+- [[2026-11-19-systematicpeter-vol-targeting-ndx-momentum]] — vol targeting as the exposure dial on NDX momentum
+- [[2026-08-29-milk-man-replication-metrics]] — the independent-replication bar self-reported curves have to clear
