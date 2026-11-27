@@ -1,0 +1,70 @@
+---
+title: "Federico M. Glancszpigel — Portfolio Optimization in Statistical Arbitrage: 19 sizing methods vs equal weight on two stat-arb books (1/N gross Sharpe 0.84, none beat it, costs decide the ranking)"
+source: https://x.com/macro_synergy/status/2125492936011907558
+captured: 2026-11-27
+tags: [research, trading, statistical-arbitrage, portfolio-optimization, equal-weighting, transaction-costs, deflated-sharpe, hierarchical-risk-parity, machine-learning, twitter, medium]
+kind: both
+---
+
+**Author:** Ralph Sueppel (@macro_synergy) · posted 2026-11-25 07:33Z · received 2026-11-25T08:46:38Z (WhatsApp via RDP-30, flash intake → RDP-1628; captured 2026-11-27 after the original intake wake died in the model-provider outage). Engagement at capture (fxtwitter): 180 likes · 14,454 views · 6 replies. The tweet quotes the opening of the linked piece and adds nothing else — the substance is the article: **"Portfolio Optimization in Statistical Arbitrage: A Deep Dive"** by Federico M. Glancszpigel (Medium, 13 Nov 2026, 16 min read), full text pulled at capture (~23k chars, 9 figures/tables as images — numbers below are from the article's prose, the figures themselves were not OCR'd). Author's code: a published notebook in `fedeglan/quant-finance-notebooks` on GitHub.
+
+## Summary
+
+**The question.** Stat-arb research spends heavily on the step between signal and trade — shrinkage estimators, hierarchical clustering, tail-risk solvers, learned weights. The study runs **19 sizing methods on the same two stat-arb books** (US large caps, Jan 2014 – Nov 2026) with identical signals, costs and a 10% volatility target, and measures return, factor neutrality, use of the risk budget, and what is left after costs. Framing: Guijarro-Ordonez/Pelger/Zanotti split stat-arb into three jobs (build similar-asset portfolios, extract a mean-reversion signal, allocate capital); most of the last decade's research targets the third. The counterpoint is DeMiguel/Garlappi/Uppal (2009): 14 optimizers vs naive 1/N in long-only allocation, none beat it out of sample.
+
+**Setup.** 209 stocks (today's S&P 500 members with history since 2011), GICS sectors, strictly walk-forward (signal from close t, return t→t+1).
+
+- **Pairs book** (textbook): monthly, up to 40 same-sector cointegrated pairs, entry at 1.5σ, exit at 0.25σ, ~15 positions open. **Dead on purpose**: −0.09 bps per position per day (t = −0.26) after 2014 — kept as a placebo for noise-fitting.
+- **PCA-residual book** (Avellaneda & Lee 2010): 15 principal components define factors, each stock's residual fit as mean-reverting, position opens at ±1.25 s-score, ~72 positions open. **Alive**: +1.2 bps per position per day (t = 4.4).
+
+**The 19 methods, six families.** Naive (1/N, inverse volatility, signal-strength weighting) · classical risk-based (equal risk contribution, maximum diversification, Ledoit-Wolf minimum variance) · return-based (max Sharpe on the fitted mean-reversion speed, half Kelly, factor-neutral max Sharpe) · modern covariance/hierarchical (nonlinear-shrinkage minimum variance, RMT-denoised minimum variance, Hierarchical Risk Parity, HERC, Nested Clustered Optimization) · tail risk (minimum CVaR 95%) · machine learning (meta-labeling via gradient-boosted classifier; random forest and elastic net → max Sharpe; an end-to-end neural net trained straight to Sharpe-maximizing weights). Covariance = trailing 126 days; weights recomputed on position-set change or every 5 days; ML retrained each January on an expanding window with purged labels. Costs charged on stock-level turnover plus 30 bps/yr to borrow the short side.
+
+**Result (PCA-residual book, gross of trading costs).** **1/N: Sharpe 0.84 (95% bootstrap interval 0.28–1.41). None of the 18 others beat it.** Romano-Wolf stepdown across 18 comparisons: no method significantly better than 1/N; closest to significantly *worse* is nonlinear-shrinkage minimum variance at 0.34 (adjusted p = 0.05). The ranking is close to monotone in how much each method trusts its estimates:
+
+| Family / method | Gross Sharpe |
+|---|---|
+| Naive: 1/N, inverse vol, signal weight | 0.79 – **0.84** |
+| ERC, max diversification, HERC, the three return-based methods | 0.69 – 0.72 |
+| HRP | 0.64 |
+| Minimum variance (Ledoit-Wolf / denoised / nonlinear shrinkage) | 0.53 / 0.40 / 0.34 |
+| Four learned allocations | 0.48 – 0.53 |
+| Minimum CVaR | 0.38 |
+
+Pairs book (noise floor): −0.41 to +0.38, every interval crosses zero; "winner" meta-labeling bets so small it ran at 2% vol at the leverage cap.
+
+**The honest headline check.** 38 configurations across both books → the Sharpe the best of them would reach by luck is **0.90** (deflated Sharpe ratio, Bailey & López de Prado). 1/N's 0.84 sits *below* that hurdle (DSR probability 0.41). The signal is real (t = 4.4 is measured before any sizing); the claim "1/N is the best sizing rule" is **not proven** — what the data show is that nothing beat it. And the lead is a **2014–2019 result**: naive methods 1.01–1.08 then, vs −0.11 to 0.50 for min-variance/min-CVaR; in 2020–2026 the gross edge shrank and 13 of 19 methods bunched at 0.53–0.65 (1/N at 0.64, minimum CVaR leading at 0.78).
+
+**Why the sophisticated methods lose.**
+
+1. **The expected-return input carries no information.** The mean-reversion fit predicts 28 bps/position/day on average; realized is 1.2 bps; correlation between predicted and realized across positions **0.001**; decile sort of predicted return gives a flat realized line. Max Sharpe, half Kelly and the factor-neutral version all optimize against that input — half Kelly sat at its 5x cap every single day.
+2. **Too little data for what the optimizer asks.** 72 positions, 126 days → under two observations per position; minimum variance piles into whatever the sample makes look safest. Realized/forecast vol: 1/N close to 1 under all three estimators; nonlinear-shrinkage min-variance runs 25% hot under the sample covariance, min-CVaR 28% hot — Michaud's error maximization. Shrinkage fixes the *forecast* (ratio 0.98 under Ledoit-Wolf) but not the *portfolio*: still the worst performer, holding the equivalent of 41 equal positions out of 72.
+3. **Optimized weights move every day.** Annual one-way stock-level turnover at the 10% target: 1/N **408x**; covariance optimizers 476–755x; neural net 897x; minimum CVaR **1,027x**.
+4. **ML had little to learn.** Elastic net shrinks every coefficient to zero in 11 of 13 years (PCA book) and all 13 (pairs) — a constant forecast; the neural net learned to concentrate (12 effective positions of 72).
+
+**Factor neutrality.** Six equity factors explain 0.4–3.8% of daily variance on the PCA book; 1/N market beta 0.05 (t = 2.0). The factor-neutral constraint drives ex-ante exposure to 0.04 (vs 0.33 for 1/N) but realizes 0.08 vs 0.11 — it mostly removed estimation noise; two *unconstrained* methods ended more neutral (min-CVaR 0.06, nonlinear-shrinkage min-var 0.07), both with the weakest returns.
+
+**Risk budget.** At a common 10% target everything converges: max drawdowns −17% to −25%, 95% daily expected shortfall 1.44–1.54% for every method. The vol-targeting overlay itself cost Sharpe in all 38 cases (0.02–0.26; 1/N 0.92 without → 0.84 with) — unlike Moreira & Muir's equity-factor result, for short-lived reversion trades the overlay added turnover and lag and did not pay.
+
+**Costs decide the ranking.** Break-even one-way cost per unit of stock turnover: **1/N 2.2 bps**, inverse vol ~2.0, signal weight 1.9, every optimizer ≤1.6, minimum CVaR 0.4. At 2 bps, 1/N keeps Sharpe 0.07 and every other method is negative; at 5 bps every method loses (best −1.08). One pointer: meta-labeling turns over only 50x/yr (an eighth of 1/N) because it trades only when confident — break-even 1.4 bps but climbs from 13th to 5th at 2 bps, the largest move in the table.
+
+**Author's own limitations.** Survivorship bias (today's S&P 500 — delisted names missing, a reversion book would have bought some on the way down; hits the level more than the ranking, gross Sharpes probably too high). Linear cost model with no market impact; PCA hedges are eigenportfolios across all 209 stocks where a live desk would use sector ETFs/futures, so turnover is probably overstated and break-evens conservative. Methods simplified (small MLP, not the convolutional transformer; Ward instead of KMeans in NCO; hyperparameters never tuned); numerically fragile (rounding prices at the 13th significant digit moved nonlinear-shrinkage min-var Sharpe by 0.02). Pairs entry rule widened once *after* seeing data. **No method is cost-aware** — a cost penalty or no-trade band is the obvious fix and was not tested. One market, one period, and a lead that faded.
+
+**Implications for a live book (author's five).** (1) Test the expected-return input at the position level before any optimizer sees it. (2) Make 1/N or inverse-vol the benchmark; demand a challenger beat it with a multiple-testing correction (Romano-Wolf across methods, deflated Sharpe across configurations). (3) Put turnover in the objective. (4) Check factor neutrality with realized regressions, not ex-ante betas. (5) Spend the research time on the signal: moving from pairs to PCA-residual took 1/N's gross Sharpe from −0.29 to 0.84 — a gap of **1.13**, wider than the full range the 19 sizing methods cover on either book.
+
+## Why it matters
+
+- **Same lesson as the recent Sueppel lane, from the sizing side.** [[2026-11-21-sueppel-global-seasonality-factor-investing]]: fast seasonal patterns die to turnover, slow ones survive. Here: the harder a sizing method optimizes, the more it trades, and costs turn a gross lead into a net loss. Two independent studies, one rule — **turnover-adjusted expectancy is the first filter, gross Sharpe is the bait.**
+- **The vault's validation stack applied honestly.** The author computes the deflated Sharpe ratio ([[2026-10-24-dmartin-deflated-sharpe-ratio]]) and *reports that his headline fails it* (0.84 vs 0.90 hurdle, DSR prob 0.41), Romano-Wolf across 18 comparisons, stationary block bootstrap, purged annual retraining, walk-forward — the same discipline [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] argues for. Note the asymmetry worth copying: the *signal* is validated at position level (t = 4.4) before any sizing choice, so the sizing null is a clean null.
+- **Signal choice dwarfs sizing choice.** 1.13 Sharpe from swapping the signal vs ≤0.50 across 19 allocators. Research hours are better spent on the signal and on the expected-return input's decile plot than on a fancier optimizer.
+- **Cheap, transferable diagnostics:** (a) decile plot of predicted vs realized position return — if flat, every return-based optimizer is optimizing noise; (b) realized/forecast vol ratio per method — the methods that look safest ex ante are the ones that get surprised; (c) break-even cost per unit of turnover as the ranking metric, not gross Sharpe.
+- **Skepticism gates:** (1) single-author Medium post, not peer-reviewed, no replication; results rest on one notebook run the author himself calls numerically fragile. (2) Survivorship-biased universe — levels inflated (ranking less so). (3) "1/N wins" overstates: DSR prob 0.41, lead concentrated in 2014–2019, bunched field since. The defensible claim is "nothing beat 1/N, and costs punish complexity". (4) Sophisticated methods run at reduced fidelity (MLP, Ward clustering, fixed hyperparameters) — a stronger implementation is untested here. (5) One universe (209 US large caps), daily rebalance, linear costs — external validity to other universes unknown. (6) The live edge is thin: 1.2 bps/position/day gross on a 72-name book with 30 bps/yr borrow.
+
+Task filed: pull the published notebook, reproduce Table 1 / Figure 5, and test the author's own untested fix (cost-aware / no-trade-band objective) — see Tasks/Inbox.md.
+
+## Links
+
+- [[2026-11-21-sueppel-global-seasonality-factor-investing]] — same lane, previous day's Sueppel capture: cost asymmetry (fast vs slow seasonality) mirrors gross-vs-net here
+- [[2026-11-20-sueppel-idiosyncratic-tsmom-per-market-nonlinear]] — same-lane Sueppel arXiv capture (per-market nonlinear TSMom)
+- [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] — prior Sueppel capture (ranking/aggregation for rotation)
+- [[2026-10-24-dmartin-deflated-sharpe-ratio]] — the deflated Sharpe ratio explainer; used here as the hurdle the headline fails
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — walk-forward + DSR/PBO validation pattern this study follows
