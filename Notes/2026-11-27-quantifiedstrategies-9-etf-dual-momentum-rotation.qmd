@@ -1,0 +1,58 @@
+---
+title: "QuantifiedStrategies: 9-ETF momentum rotation (active dual momentum variant) — 10.4% CAGR, 15% max DD (headline says 13%), 306 trades, 87% exposure; universe captured, trading rules paywalled"
+source: https://x.com/quantifiedstrat/status/2125231714712879492
+captured: 2026-11-27
+tags: [trading, twitter, momentum, dual-momentum, etf-rotation, tactical-asset-allocation, backtest, strategy, quantifiedstrategies, paywalled, self-reported, needs-followup]
+kind: both
+---
+
+**Author:** QuantifiedStrategies.com (@QuantifiedStrat) · posted 2026-11-24T14:15:00Z · received 2026-11-25T09:40:55Z (WhatsApp via RDP-30, flash-intake child RDP-1629; the original intake run and the CoS redispatch both died `adapter_failed` in the Z.AI weekly-cap outage, record RDP-1624, and the CoS captured it as the recovery owner on 2026-11-27 — two days late). Third capture from this account ([[2026-08-30-quantified-strategies-rsi-adx-ibs]], [[2026-11-09-quantifiedstrategies-vix-futures-article]]). Engagement at capture (fxtwitter): 32 likes · 5,468 views · 2 replies; reposts not exposed. Text: 1,845 chars recovered complete via fxtwitter (the syndication copy truncates at the trailing t.co, which resolves to the tweet's own page, not an external link; `display_text_range` not exposed, so completeness rests on the text reading to a natural end). One content photo (817x491, preserved at `rdp_media/2125231714712879492/photo1.jpg`): the equity curve "Portfolio Equity = 645943.5", OCR'd (WinRT) with the axis read by a vision pass for classification only — every number below is a printed number, not a pixel reading.
+
+## Summary
+
+Promo tweet for their paid Substack article "The 9-ETF Momentum Strategy: 10% Annual Returns With a 13% Drawdown" (quantifiedstrategies.substack.com/p/the-9-etf-momentum-strategy-10-annual, posted 2026-11-24T10:33Z, `audience: only_paid`). The free preview, recovered through the public posts API, carries everything up to the "## Trading Rules" heading and stops at "We used the following trading rules:" — the rules themselves are paywalled. The account's own site (bot-walled on the two earlier captures) did not answer from this host at capture time and neither URL has a Wayback snapshot.
+
+**The strategy:** "a variation of an active dual momentum strategy" rotating across SPY (S&P 500), QQQ (Nasdaq-100), EFA (international developed), EEM (emerging markets), GLD (gold), USO (crude oil), IEF (7-10y Treasuries), SHY (1-3y Treasuries), UUP (US dollar), DBC (commodities). Their framing, verbatim: "the strategy's returns are largely driven by equity momentum, while bonds, gold, and currencies provide defensive diversification." Ten tickers are listed under a "9-ETF" name — the likeliest reading is that SHY is the standing defensive leg rather than a ranked candidate (classic dual-momentum construction), but that is inference; the rules would settle it.
+
+**Performance (verbatim from the article preview):**
+
+| Metric | Value |
+|---|---|
+| No. of trades | 306 |
+| Average gain per trade | 3% |
+| Average winning trade | 8.9% |
+| Average losing trade | 4.1% |
+| Average #days per trade | 60 |
+| Win ratio | 54% |
+| Profit factor | 3 |
+| Annual returns (CAGR) | 10.4% |
+| Exposure / time in the market | 87% |
+| "Risk-adjusted return" | 11.9% (CAGR divided by time spent in the market (.87)) |
+| Max drawdown | 15% |
+
+Plus the one honest sentence in the piece: "The strategy is sensitive to both the ETF universe and lookback periods (please see the trading rules at the bottom)."
+
+**Equity chart (printed values):** y-axis 100,000 to 700,000; x-axis ticks 2010 to 2026 at two-year steps; a single black line starting just above the 100,000 gridline a little left of the 2010 tick and ending at a labelled 645,944. 100,000 to 645,944 over ~18.5 years is a 10.6% CAGR (10.3% over 19 years; only 8.1% if the start were 2003) — so the chart corroborates the 10.4% headline if and only if the backtest starts around 2007-2008, which is also what "we don't have the database to backtest during the bear markets of the 2000s" implies. Shape by eye only: an early dip near the start (2008-09), the deepest mid-chart trough around 2014-15 toward the 150k band, a sharp V at the 2020 tick, a 2022 pullback to roughly the 330-350k band, then the run to 646k. No trough depth is printed, so the 15% max drawdown is not verifiable from the chart.
+
+## Why it matters
+
+- **The vault already holds the replicable cousin.** ETF rotation / dual momentum is an established thread here: [[2026-09-09-p123-five-etf-rotation]] is a fully-specified five-ETF rotation (SPY/QQQ/IEF/BND/GLD — four of this universe's ten tickers) with its filter and ranking metric; [[2026-10-24-concretum-clenow-trend-model-etfs]] is a trend core with an ETF implementation; [[2026-11-20-sueppel-idiosyncratic-tsmom-per-market-nonlinear]] is the time-series-momentum research layer. What this capture adds is the multi-asset variant (equities + bonds + gold + oil + dollar + commodities) and the defensive-leg thesis — with no rules attached.
+- **"Sensitive to lookback periods" is not boilerplate — the account showed it two days earlier.** Its 2026-11-22 post (not sent by the user, not captured; read from a search snippet of a tweet mirror, single-sourced) ran the same SPY/TLT/EEM universe through four rotation designs: 1-month relative strength 9.5% ann / 44% max DD, 3-month relative strength 11.5% / 32%, Faber-style trend allocation 8.7% / 15%, SPY+GLD sleeves with an IEF fallback 9.2% / 18%. The drawdown claim moved 12pp on one parameter. Any number in today's post should be read with that spread in mind.
+- **Skepticism gates, in order:**
+  1. **No rules.** Lookback, rebalance frequency, number of concurrent holdings, the absolute-momentum filter, the cash leg and cost assumptions are all behind the paywall. Nothing is replicable from the capture — the third gated capture from this account in three months (Aug 30 bot wall, Nov 9 bot wall, Nov 27 paywall).
+  2. **The headline does not agree with itself.** Title says 13% drawdown, the performance table says 15%. "9-ETF" names ten tickers. The stated profit factor of 3 does not follow from the stated win rate and win/loss sizes: 0.54 x 8.9 / (0.46 x 4.1) = 2.55, and PF 3 at a 54% win rate would need a 2.56 win/loss ratio against the reported 2.17. The "risk-adjusted return 11.9%" is simply CAGR divided by exposure — no volatility or drawdown enters it; on the usual frame the strategy is 10.4% CAGR against 15% max DD, a 0.69 ratio (0.80 if the 13% figure is the true one).
+  3. **The low drawdown is partly a sample artifact, by their own admission.** The backtest skips the 2000-02 bear market because "we don't have the database" — the worst stretch for equities since the 1930s is absent, and the first dip on the curve only arrives in 2008-09.
+  4. **Trade count implies roughly three concurrent positions:** 306 trades over ~18.5 years at 60 days each is ~2.7 positions held at once — so this is a ranked top-N rotation, not a single-holding switcher. Inferred from the printed numbers, not stated.
+  5. **Self-reported, 32 likes / 5.5k views, no independent replication** — the bar stays [[2026-08-29-milk-man-replication-metrics]].
+- **Verdict:** the *family* (dual momentum across a multi-asset ETF universe with a defensive leg) is well documented in the literature and the vault holds a fully-specified rotation cousin; this *instance* is an un-replicable promo for a paid post whose own numbers carry three small inconsistencies. Reference, plus a read-later task for the rules — the same handling as the two earlier QuantifiedStrategies captures.
+- **For the user:** reference + read-later. Any adoption decision belongs to the trading desk (separate company), not to this vault.
+
+## Links
+
+- [[2026-08-30-quantified-strategies-rsi-adx-ibs]] — same account, first capture, bot-walled site, same read-later handling
+- [[2026-11-09-quantifiedstrategies-vix-futures-article]] — same account, second capture, bot-walled again
+- [[2026-09-09-p123-five-etf-rotation]] — fully-specified five-ETF rotation (SPY/QQQ/IEF/BND/GLD): the replicable cousin of this universe
+- [[2026-10-24-concretum-clenow-trend-model-etfs]] — trend core with an ETF implementation
+- [[2026-11-20-sueppel-idiosyncratic-tsmom-per-market-nonlinear]] — time-series momentum across markets, with OOS gates
+- [[2026-11-27-bolsaycartera-clenow-momentum-nasdaq-reversion-50-50]] — same-day capture, same genre, same headline-vs-evidence caveat
+- [[2026-08-29-milk-man-replication-metrics]] — the independent-replication bar self-reported curves have to clear

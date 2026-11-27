@@ -1,0 +1,48 @@
+---
+title: "Peter (@SystematicPeter) — how his team uses LLMs in day-to-day trading research: a visual explorer app wired to the backtester's own API, the LLM writes the hypothesis before each run and the summary + setup screenshots after, so the research 'second brain' writes itself"
+source: https://x.com/SystematicPeter/status/2125250345400259001
+captured: 2026-11-27
+tags: [trading, twitter, llm, research-workflow, hypothesis-first, research-log, second-brain, backtesting, options, vol-arb, term-structure, implied-volatility, systematicpeter, methodology]
+kind: both
+---
+
+**Author:** Peter - Cracking Markets (@SystematicPeter) · posted 2026-11-24 15:29Z · received 2026-11-25T09:42:00Z (WhatsApp via RDP-30 flash intake, routed by CoS; captured two days late — the original intake wake died in the 2026-11-25 Z.AI outage, RDP-1624, and CoS redispatched it as RDP-1631). Eighth capture from this author ([[2026-08-29-three-simple-ma-atr-systems]], [[2026-09-04-systematicpeter-why-publish-research]], [[2026-09-16-systematicpeter-15pct-exposure-nasdaq-mean-reversion]], [[2026-10-01-systematicpeter-breakout-equity-high]], [[2026-10-15-systematicpeter-mean-reversion-oos-high]], [[2026-11-05-systematicpeter-intraday-russell-mean-reversion]], [[2026-11-19-systematicpeter-vol-targeting-ndx-momentum]]) and the first about his shop's *process* rather than a published strategy. Stats at capture (fxtwitter, ~3 days after posting): 66 likes, 5,967 views, 4 replies; reposts not exposed. 1 attached photo (2048x1230 screenshot of one research-log entry; text read by WinRT OCR with word bounding boxes on a 2x upscale). The syndication API cut the text at the trailing t.co (which resolves to the tweet's own photo) — full 1,151-char text recovered via fxtwitter.
+
+## Summary
+
+A process post: how Peter's team settled on using LLMs in day-to-day trading research — three pieces plus the payoff.
+
+- **1 — An internal app to explore ideas visually.** "If something catches our attention in a book, a post, an interview or our own trading, we build a view for it." For their current vol-arb research the app studies skew, term structure and how implied volatility behaves around specific events; any U.S. ticker in their database, any day, drill down to a specific minute.
+- **2 — The backtester is connected to the app's API.** "When a setup looks interesting on screen, we can test it on exactly the same data." What you eyeballed is what you test — no explorer/backtester data mismatch.
+- **3 — The LLM is the scribe around each backtest.** Before a run it helps write down the hypothesis; after the run it automatically summarizes the results and adds screenshots of the setup from the app. "The page shown is one entry in what's become our team's 'second brain.'"
+- **The payoff (his words):** "It's easy to get lost in research. This way the book gets written as we go. Months later, someone who didn't run the original backtest can read the results, reopen the same setup in our app and pick up where we left off."
+
+**What the screenshot shows — one entry, "Vol-arb research brain" (OCR read; the near/later numbers were placed by word position, not reading order, and match the constant-maturity tables):**
+
+- **Header — "What it looks like in our app":** "One real trigger: SMH, Thursday 2024-04-04. The screen fired at 15:20. The order filled at 15:25. It is the trigger behind the typical trade of the financed call."
+- **Two term-structure panels** (y = 50Δ IV of each listed expiry, x = days to expiry on a log scale; each blue dot is one listed expiry, the orange line is the constant-maturity curve): (1) **a normal day, 2024-03-28** — "near expiry cheaper than the later one - the curve slopes up": near Apr 5 · 8 days · **24.0%** vs later Apr 19 · 22 days · **26.8%**; (2) **the trigger day, 2024-04-04** — "near expiry jumped above the later one - the left end lifted": near Apr 12 · 8 days · **32.1%** vs later May 17 · 43 days · **30.5%**.
+- **Constant-maturity table** ("linear in σ²T between the two bracketing expiries; before the front expiry, filled with its IV when it is within about 1.5x the maturity — hollow, italic"). 2026-03-28: 7d 24.0 · 14d 25.7 · 30d 27.7 · 60d 29.0 · 90d 29.8 · 180d 29.9 · 365d 29.8. 2026-04-04: 7d 32.4 · 14d 31.6 · 30d 30.9 · 60d 31.8 · 90d 30.5 · 180d 30.2 · 365d 30.3. On the trigger day the whole front of the curve sat above the back — the mirror image of the normal day.
+- **Reopenability in practice — "Where to find it":** their option-analytics app (private LAN address in the screenshot), sidebar Ticker SMH, date panel, Term structure (50Δ IV); "Open the trigger day in the app. Change the date to 2024-03-28 for the left picture."
+- **The entry's sections, visible in the sidebar:** Graph View; Table of Contents; **What can fool it**; **Where it was tested**; **Against random entry times**; **What we learned**; Backlinks; **Exits** (Close everything on the near expiry day / Close on the near expiry day / Hold to expiry — every option settles at its payoff / Keep the bought call to its own expiry). App navigation: All runs, Exits, Projects, Reference, Structures, Tests, Timings.
+- **Not in the tweet:** the vol-arb strategy's rules, the backtest results, how the LLM is prompted or checked. The "financed call" trade is named, not explained.
+
+## Why it matters
+
+- **The LLM is cast as the scribe, not the strategist.** It does the two things researchers skip — writing the hypothesis down *before* the run and the summary *after* — while the human picks the view and the setup. No claim that the LLM finds alpha. The before-run write-up is a pre-registration mechanic: [[2026-10-01-dmartin-hypothesis-first]] states the principle ("no economic mechanism, no build"); Peter's workflow makes it a by-product of running the test at all.
+- **"Exactly the same data" closes the explorer/backtester gap** — the chart you saw is the chart you tested, so the note's screenshot and the backtest input cannot silently diverge. And the one-eye-catching-day risk is addressed inside the entry itself: an "Against random entry times" section sits beside "Where it was tested" (presumably the trigger compared with random entries; the content isn't shown).
+- **The research log is a by-product, not a chore.** "The book gets written as we go" plus reopenable setups is institutional memory that outlives the person who ran the test — the team-scale version of what this vault does for one reader, and the strongest argument in the vault so far for hypothesis/summary blocks being generated at test time rather than reconstructed later.
+- **What the entry template adds to a replication note:** "What can fool it" (failure modes named before the result), "Where it was tested" (sample and benchmark), "What we learned", "Backlinks", "Exits". Cheap to trial on the next replication note — filed as an Inbox task.
+- **Skepticism gates:** (1) a process post — zero performance evidence, no backtest numbers, no sample; (2) a hypothesis drafted *after* you have already seen the chart is still post-hoc — the pre-registration value depends on the entry being written before the run and not edited after, and immutability is not mentioned; (3) the auto-summary is written from the same backtest it reports — an LLM summarizer will flatter a result unless the template forces the negative sections ("What can fool it"); (4) one trigger day is shown, the random-entry comparison is only named; (5) it rests on an in-house minute-level options analytics app with a backtester on the same API — not reproducible as-is for a one-person shop; the transferable part is the pattern, not the tooling.
+- **Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-10-01-dmartin-hypothesis-first]] — the principle; this workflow is the mechanism that enforces it (the hypothesis gets written down before the run).
+- [[2026-10-31-dmartin-calibrating-robustness-checks]] — what belongs *inside* the pre-run block: which robustness checks will be run before a result is believed.
+- [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] — the other LLM-in-research note in the vault: LLM as signal source (treated skeptically) vs LLM as research scribe here.
+- [[2026-10-12-systematicedge-gotobi-jpy-claude-strategy]] — a mechanism-gated test with a stated hypothesis (Gotobi-day fixing flows): the kind of test that fits this entry format.
+- [[2026-09-20-cutnpaste-stupid-stuff-fast-iterate]] — the iterate-fast ethos; the research log is what keeps fast iterations from getting lost.
+- [[2026-11-19-systematicpeter-vol-targeting-ndx-momentum]] — same author, latest prior capture; a strategy note, unlike this process note.
+- [[2026-11-05-systematicpeter-intraday-russell-mean-reversion]] — same author.
+- [[2026-09-04-systematicpeter-why-publish-research]] — same author, same open-research ethos: publishable, reopenable work.
+- [[2026-11-13-therobotjames-vix-dec-calendar-spread]] — nearest term-structure trade in the vault (near vs later expiry richness), different instrument.
