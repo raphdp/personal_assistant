@@ -1,0 +1,45 @@
+---
+title: "Rusty Bill (@Rusty_Bill) → Nate Silver — 'How to become a better forecaster': 8 lessons for anyone building sports prediction models (think in probabilities, check calibration, update on evidence, start simple, question suspicious patterns, use independent perspectives, learn from repeated feedback, respect uncertainty; two-slide infographic paraphrase, 2026-11-24)"
+source: https://x.com/Rusty_Bill/status/2125229552263962989
+captured: 2026-11-27
+tags: [forecasting, calibration, probabilities, sports-betting, sportsbook, methodology, out-of-sample, overfitting, research-log, nate-silver, fivethirtyeight, twitter, paraphrase, infographic, ocr, rustybill]
+kind: reference
+---
+
+**Author:** Rusty Bill (@Rusty_Bill) · posted 2026-11-24T14:06:24Z · received 2026-11-25T12:42:56Z (WhatsApp via RDP-30 flash-intake child RDP-1634; the original intake run died `adapter_failed` during the Z.AI weekly-cap outage, record RDP-1624 — the CoS redispatched the link on 2026-11-27 and the Librarian captured it the same day, two days late). First capture from this author. Engagement at capture (fxtwitter, ~3 days after posting): 394 likes · 38,473 views · 5 replies; reposts not exposed. The 60-char text is only a caption — "Nate Silver on how to build better sports prediction models." — and its trailing t.co resolves to the tweet's own `photo/1`, not an article. The payload is a **two-slide infographic carousel** (1200×1500 each): slide 1 = lessons 1–4, slide 2 = lessons 5–8 plus a source footer. Both slides were read by WinRT OCR (clean, no gaps); the set is complete and numbered. The five replies were not read — the carousel is self-contained. First Nate Silver / forecasting-craft capture in the vault.
+
+## Summary
+
+**What it is:** an eight-point checklist, headed "Nate Silver on how to become a better forecaster — 8 lessons for anyone building sports prediction models". Each lesson has three parts: a one-line principle, a one-to-two-sentence explanation, and a **"For your model:"** line that translates the principle into a modelling practice. Footer, verbatim: "Lessons paraphrased from Nate Silver's writings and interviews, including *Why I Started FiveThirtyEight*, HBR IdeaCast, and Freakonomics. 'For your model' guidance is our own practical application."
+
+The eight lessons (headings verbatim; bodies close-paraphrased from the OCR):
+
+1. **Think in probabilities, not certainties.** Forecasts describe a range of possible outcomes, not a guaranteed result. *For your model:* output win probabilities instead of just picks, and compare them with sportsbook prices.
+2. **Check calibration.** If you forecast 60% repeatedly, roughly 6 in 10 comparable outcomes should happen over time. *For your model:* group saved predictions into probability ranges and compare forecasts with actual win rates.
+3. **Update when the evidence changes.** A forecast should change when credible new information arrives, such as injuries or lineup changes. *For your model:* save timestamped pregame projections and update them when important inputs change.
+4. **Start simple; add complexity carefully.** Silver described starting with a weighted polling average before building a more complicated forecasting model. *For your model:* test against a simple baseline before adding new features; keep only improvements that hold up on unseen data.
+5. **Question suspicious patterns.** Data mining can uncover convincing-looking patterns that do not persist. *For your model:* test new variables on games that were not used to develop or tune the model.
+6. **Use independent perspectives.** Comparing approaches can expose blind spots, especially when the sources are genuinely independent. *For your model:* benchmark your forecasts against other models and the market, and investigate large disagreements.
+7. **Learn from repeated feedback.** Forecasting improves when predictions are made often enough to compare them with observable outcomes. *For your model:* score every frozen prediction, including losses, and examine performance over time.
+8. **Respect uncertainty and limitations.** Forecasts depend on assumptions, noisy data and researcher choices. Even strong predictions can be wrong. *For your model:* stress-test fragile assumptions and communicate uncertainty rather than guaranteed picks.
+
+## Why it matters
+
+- **Forecasting hygiene is backtest hygiene with probabilities in place of returns.** Lesson 5 is out-of-sample validation under another name — the same discipline the vault's validation standard rests on ([[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]; which checks actually catch overfitting per [[2026-10-31-dmartin-calibrating-robustness-checks]]). Lesson 4 is baseline-first: a weighted polling average is the "simple model to beat", kept only if the gain survives unseen data.
+- **Lessons 3 + 7 are the research-log habit.** Timestamped pregame projections written *before* the outcome (3) are what make "score every frozen prediction, including losses" (7) possible at all — without the frozen record, only the memorable calls get scored. That is the hypothesis-before-run / summary-after pattern of [[2026-11-27-systematicpeter-llm-research-workflow-second-brain]], moved from backtests to forecasts.
+- **Lesson 2 is calibration stated as a test.** Bin predictions by stated probability, compare with realised frequency. Same check [[2026-10-21-omarsar0-decision-model-evals]] applies to LLM judges ("scores are not probabilities until you check calibration"; Platt scaling as the fix), and the one [[2026-11-27-enjeeneer-mantic-scout-forecasting-agent]] illustrates from the other side: in Mantic's simulation an overconfident forecast beats a calibrated one 60% of the time on single questions yet loses 1.16 nats on average — the reason lesson 7 says score *every* prediction, not the wins.
+- **Lessons 1 + 6 make the sportsbook the reference point.** The model's output is a probability; "edge" means disagreement with the price, and lesson 6 says large disagreements are to be *investigated*, not banked. The market is treated as a benchmark to explain, not a foil.
+- **Skepticism gates:** (1) **a paraphrase of a paraphrase** — the carousel is the author's summary of Silver's ideas from talks and interviews; nothing is quoted, the three named sources are not linked, and no line here can be checked against Silver's own words from this capture; (2) the "For your model" lines are the author's application, not Silver's — the footer says so; (3) **nothing is quantified** — no evidence offered that following the eight lessons improves any model's results; it is craft advice; (4) sports-betting vocabulary (sportsbook prices, injuries, lineups), but the lessons themselves are domain-agnostic; (5) the five replies were not read.
+- **Librarian's reading:** the one lesson that cannot be shortcut is 7 — it needs the log from lesson 3 to exist first. Everything else is standard model hygiene that most forecasters would endorse and fewer practise.
+
+**Isolation note (CoS convention):** personal second-brain knowledge capture only; nothing routed to the trading company.
+
+## Links
+
+- [[2026-11-27-enjeeneer-mantic-scout-forecasting-agent]] — log score and the overconfidence-vs-calibration simulation; the quantitative counterpart to lesson 2.
+- [[2026-10-21-omarsar0-decision-model-evals]] — calibration checks and Platt scaling for decision models.
+- [[2026-11-27-systematicpeter-llm-research-workflow-second-brain]] — hypothesis-before-run, summary-after; the research-log habit lessons 3 and 7 ask for.
+- [[2026-10-31-dmartin-calibrating-robustness-checks]] — which out-of-sample checks carry the load (lesson 5).
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — the vault's DSR / PBO / walk-forward standard behind lesson 5.
+
+Source: https://x.com/Rusty_Bill/status/2125229552263962989 (two-slide infographic, OCR'd 2026-11-27). Underlying sources named in the carousel and not fetched: Nate Silver, "Why I Started FiveThirtyEight"; HBR IdeaCast interview; Freakonomics interview.
