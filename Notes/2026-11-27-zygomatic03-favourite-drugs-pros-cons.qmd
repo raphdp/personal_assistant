@@ -1,0 +1,41 @@
+---
+title: "zygomatic03 — pros and cons of my favourite drugs: armodafinil, bromantane, cyproheptadine, tadalafil, T3 (the honest-downsides recap)"
+source: https://x.com/Zygomatic03/status/2124933628132245733
+captured: 2026-11-27
+tags: [health, biohacking, nootropics, stack, armodafinil, bromantane, cyproheptadine, tadalafil, t3, twitter, listicle]
+kind: reference
+---
+
+**Author:** Zygomatic (@Zygomatic03) · posted 2026-11-23 18:30Z · received 2026-11-24T17:16:22Z (WhatsApp via RDP-30; the original intake wake died in the 11-24 adapter outage, CoS redispatched it 2026-11-27 as child RDP-1625). Engagement at capture (fxtwitter): 91 likes · 5,610 views · 3 replies (reposts not exposed). Syndication truncated the text at "comedown can have you tweaking if"; full 1,173-char text recovered via fxtwitter — complete, it ends on the author's own sign-off. No photo, no media, no article of its own: it quotes his own launch tweet for the article already captured in full on [[2026-11-10-zygomatic03-pinealon-social-fluidity]] ("Take the cognitionpill, anon", posted 2026-10-26 18:05Z — the same minute the article went live; 566 likes · 241,483 views at capture).
+
+## Summary
+
+A compact pros/cons listicle — "The experiences of the biohacker" — naming the five compounds he actually rates, each with its downside in his own words. It is the first time he publishes the cons per drug rather than a protocol or a manifest:
+
+| Drug | His pros | His cons |
+|---|---|---|
+| **Armodafinil** | "fiery and intense focus, closest single pill to a limitless pill (long way off though)"; "stacks beautifully with others" | too intense to run daily; unintentional weight loss; comedown "can have you tweaking if stacked too hard" |
+| **Bromantane** | "colours become more vibrant as dopamine increases"; physical resilience; better task initiation and completion | best results come from cycling; "not always easy to find a reputable source" |
+| **Cyproheptadine** | makes you sleep well; "more interest in working" | tolerance builds too quick to use regularly; grogginess; "makes you eat like a horse" |
+| **Tadalafil** | "legendary boners"; wide-scope health benefits; cheap and accessible | (a joke, nothing substantive) "your girlfriend won't be able to walk, will beg you for sex constantly" |
+| **T3** | "life changer for overall wellbeing and energy"; enhanced creativity and social fluidity | "can seriously mess with your health if you're not careful or educated"; "life has to get worse for a while in order to come off it" |
+
+Closer: "Would you try any of these?" — engagement bait, no new link, no doses.
+
+## Why it matters
+
+Third capture from this author and the latest entry in RD's biohacking/cognition thread. It is the **honest-downsides companion** to the two earlier notes: [[2026-11-10-zygomatic03-pinealon-social-fluidity]] is the full protocol *article* (armodafinil, bromantane, pinealon, epitalon, semax/selank, mexidol — written as pros and risks, no cons-from-experience section), [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] is the daily *manifest* (what is on the table). This one drops the peptides and mexidol entirely, keeps only five "favourites", and states the costs unprompted. His T3 line — "can seriously mess with your health" and "life has to get worse for a while in order to come off it" — concedes exactly the risk the 11-17 note flagged (exogenous liothyronine without documented hypothyroidism suppresses TSH; muscle-loss, bone-density and arrhythmia risks; no bloodwork shown), and the "worse to come off" part reads like the dependency side of that suppression. His armodafinil cons (weight loss, comedown when stacked) match the appetite-suppression and stacking cautions in the limitlesstack manual, [[2026-11-10-limitlesstack-modafinil-thesis]].
+
+**Cyproheptadine is new to the thread as an entry** — the article only name-drops it once, as a grogginess comparison. It is a first-generation antihistamine (5-HT2 antagonist with anticholinergic activity) used clinically as an appetite stimulant and in migraine prophylaxis; the "sleep well + more interest in working + eat like a horse" triad is the sedating-antihistamine-plus-appetite profile, and "tolerance builds too quick" is the textbook pattern for that class. Tadalafil already has its evidence side in the vault ([[2026-11-10-hoostethics-low-dose-tadalafil]], [[2026-11-20-limitlesstack-tadalafil-longevity-protocol]]); his con column is a joke, not a cost.
+
+Skepticism gates: still n=1 self-report by a stack influencer whose article carries his own vendor code (flagged 11-10). "Favourite" is a vibe ranking, not an outcome ranking — no doses, no bloodwork, no sources; the bromantane "reputable source" con is the grey-market problem [[2026-11-05-driada-medical-catalog]] sits in. UAE posture unchanged from the earlier notes: armodafinil is prescription-controlled, tadalafil and T3 are prescription-only, cyproheptadine's local schedule was not verified at capture; customs-seizure risk stands for anything imported. RD's stance since 11-10 remains checking, not ordering ("don't want to order just check if it's that", 2026-11-10T18:11Z) and this link arrived bare, with no ask. **Reference-only, no task filed** — if any of these ever becomes more than a curiosity, the lane is a doctor consult with bloodwork (a thyroid panel before anything T3-related), not a vendor page.
+
+## Links
+
+- [[2026-11-10-zygomatic03-pinealon-social-fluidity]] — same author, the full ADHD-replacement protocol article this tweet re-promotes
+- [[2026-11-17-zygomatic03-daily-stack-t3-meldonium]] — same author, the daily manifest where T3, bromantane and tadalafil are on the table
+- [[2026-11-10-limitlesstack-modafinil-thesis]] — the modafinil/armodafinil manual (appetite-suppression and stacking cautions mirrored in his cons)
+- [[2026-11-10-hoostethics-low-dose-tadalafil]] — daily low-dose tadalafil as longevity/cognition, the evidence side of his "wide scope health benefits"
+- [[2026-11-20-limitlesstack-tadalafil-longevity-protocol]] — the "vascular maintenance" framing of the same play
+- [[2026-11-11-doctormorphh-noots-stims-cognition-menu]] — the wider noots/stims menu this five-item list is a subset of
+- [[2026-11-05-driada-medical-catalog]] — the grey-market vendor catalog behind the "reputable source" con
