@@ -1,0 +1,59 @@
+---
+title: "matteo (@0xmattegoat) — lead-lag via the antisymmetric part of the 2nd-order path signature: 2022 paper → 2-hour PoC → bot live on a $5k account, 4.1 Sharpe / +14% net of fees in ~6 days (Bennett–Cucuringu–Reinert 2022; Huth & Abergel 2011)"
+source: https://x.com/0xmattegoat/status/2124942032510628239
+captured: 2026-11-27
+tags: [trading, twitter, crypto, lead-lag, path-signature, rough-paths, market-microstructure, order-flow, book-imbalance, alpha-research, research-velocity, papers, skepticism, 0xmattegoat]
+kind: both
+---
+
+**Author:** matteo (@0xmattegoat) — "CEO @PragmaOracle & 0d-labs.com / see you in the orderbook" per his X bio (as mirrored on nitter instances); writes crypto-derivatives microstructure (power-perp pricing, the square-root law of price impact, Hyperliquid weekend flow). Posted 2026-11-23 19:03Z · received 2026-11-25T09:41:28Z (WhatsApp via RDP-30, routed by CoS flash intake) · captured 2026-11-27 — the original intake wake died in the Z.AI weekly-cap outage (record: RDP-1624), so the link sat two days. Stats at capture (fxtwitter): 228 likes · 9 replies · 22,684 views. One photo attached — a bare equity curve (read below). Quotes his own tweet from earlier that day (109 likes · 7 replies · 21,788 views): "It truly is the golden era of quant trading, the combo of cheaper intelligence (with AI) and the biggest firms having their models mostly open (with DEXs) makes alpha implementation so fast — it's adapt or die."
+
+## Summary
+
+An anecdote about **how fast alpha research moves now**, with lead-lag detection as the worked example:
+
+- A collaborator (@imakhercha) sends him a 2022 paper — **Bennett, Cucuringu & Reinert, "Lead-lag detection and network clustering for multivariate time series with an application to the US equity market"** (arXiv 2201.08283, Jan 2022; published in *Machine Learning*, 2022). Lead-lag itself is "old MFT territory" in his words (Huth & Abergel, 2011). What hooks the collaborator is the paper's **signature-based lead-lag metric: the antisymmetric part of the second-order path signature** — a signed-area measure that "captures the order in which signals move" instead of only how strongly they co-move.
+- He adapts it to **order flow and book imbalance**, builds a **proof of concept in 2 hours** ("that part is absolutely crazy to me"), tests it, and gets a bot trading live on a **$5k account** under the firm's basic risk layer.
+- **"A few days later: 4.1 Sharpe and +14% return, net of fees."**
+- Author's own caveat: **not (yet) something to put in production** — capacity and risk are the blockers, and the firm already has the infrastructure and the best fee tiers. The point is the pace at which trading firms can move today, and how much alpha research can be parallelized once the infrastructure exists.
+
+## The photo — pixel-traced, not much to read
+
+A bare dark-theme chart: **one white line above a dashed baseline**, six daily x-axis ticks **Nov 18 → Nov 23**, and nothing else — no title, legend, y-axis labels or stats box in the crop. WinRT OCR caught only the tick labels (and misread the last as a second "Nov 22"; an 8× crop re-read settled it as Nov 23); the vision pass was rate-limited (HTTP 429), so the curve was traced column-by-column in PIL instead:
+
+- Starts on the dashed baseline near the left edge (≈ Nov 17 evening, assuming centred ticks) and ends ≈ Nov 23 16:00 — **≈ 5.8 days**, a few hours before the tweet (if the chart runs on UTC).
+- Near-monotonic: a 136 px rise with a deepest give-back of 6.5 px (≈ 5% of the rise; ≈ 0.7% of equity if the baseline is the start and the top the +14% end point). Two shallow plateaus (≈ Nov 20 evening → Nov 21 morning, ≈ Nov 21 afternoon → late evening) and the steepest leg on the final day (≈ +3.5% of equity in nine hours, same assumption).
+- The **4.1 Sharpe / +14% figures come from the tweet text**, not the image — there is no scale to read.
+
+## What the paper actually says (read at the source, ar5iv full text)
+
+- The signature metric is **one of the paper's lead-lag metric families** (§3.1). The others are functionals of the cross-correlation function (8 variants: Pearson / Kendall / distance correlation / mutual information × ccf-lag1 or ccf-auc). §3.1.2, after Levin et al. (2016), defines it as "the difference in the cross-terms of the second level of the time series signature of the log-prices" — positive when increases in X are followed by increases in Y — with the second-order-area interpretation from Gyurkó et al. (2014) and Chevyrev & Kormilitzin (2016). Its selling point: **no lag parameter to choose**, unlike ccf-auc.
+- **Known blind spot — negative association:** it cannot tell "X leads Y with negative association" from "Y leads X with positive association". In the paper's synthetic tests it is among the best in the linear setting and "performs poorly" in the cosine (non-linear) setting for that reason.
+- **The paper's own equity application did not select it:** on 434 NYSE equities (CRSP, 2000–2019, daily log-returns) they used **ccf-auc with distance correlation, lags -5 to +5 days, Hermitian RW clustering**. The clusters were statistically significant (permutation test, p < 0.005) and fed an out-of-sample trading signal whose Sharpe was tested against zero (Opdyke, 2007).
+
+So the tweet's example is a real re-targeting: daily equity returns with week-long lags → tick-level order flow and book imbalance, where "no lag parameter" is exactly what you want.
+
+## Why it matters
+
+- **The claim is about research velocity, not the strategy.** Paper → working PoC in two hours → live bot within days is the point; the Sharpe is the illustration. That velocity rides on infrastructure that already exists (data, execution, risk layer, fee tiers), so the marginal cost of trying one more idea collapses — and the first casualty is the evidence bar for any single result.
+- **Skepticism gates:**
+  1. **Six days cannot carry a Sharpe.** With ≈ 5.8 days of data the standard error of an annualized Sharpe is ≈ 24 (iid approximation, Lo 2002), so 4.1 sits inside a 95% interval of roughly -44 to +52. And +14% over 5.8 days compounds to several thousand-fold a year — a sample, not a rate.
+  2. **The numbers do not reconcile on the usual basis.** If 4.1 were an annualized Sharpe computed from daily returns with +14% accrued over 5.8 days, the implied daily volatility would be ≈ 9–11% of equity — a path that wiggles far more than this near-monotonic curve (deepest give-back < 1%). So the figure is computed on another basis (per-trade, intraday, a different annualization) or the curve is smoothed; either way it cannot be read at face value.
+  3. **The classic version already met the spread.** Huth & Abergel (arXiv 2011; *J. Empirical Finance* 26, 2014) found HF lead-lag real on French tick data — 60% accuracy forecasting the lagger's next mid-quote move — yet "a naive strategy based on market orders cannot make any profit of this effect because of the bid/ask spread", and the effect fades at larger time scales. A $5k account at the best fee tier is precisely where that friction bites least — which is also why it does not scale ("capacity and risk").
+  4. **The metric's blind spot travels with it.** Order flow and book imbalance can be negatively associated with the move they lead; the signature metric cannot separate that case from the reverse direction. Whether the PoC handled it is not said.
+  5. **One shown success, unknown denominator.** "A recent example" — a 2-hour build time implies many attempts; how many PoCs looked like this is not reported.
+- **In its favour:** the author flags the limits himself, sells nothing, and the method has a peer-reviewed lineage (the 2022 paper) behind a phenomenon with an empirical literature going back to Lo & MacKinlay (1990). Contrast the evidentiary bar in [[2026-11-11-astraeus-hl-vault-reverse-engineering]] (months of public fills, after-fee systemization, falsified against random-direction prices) and [[2026-11-02-0xarchive-btc-sp500-gap-fade]] (195 trades back to 2022) — what a believable on-chain Sharpe looks like next to a six-day curve.
+- **Actionable → Inbox:** one read-later task — read §3.1.2 and decide whether the signature lead-lag statistic is worth testing against order flow / book imbalance, with the paper's own caveats and Huth & Abergel's spread verdict as the bar.
+
+## Links
+
+- [[2026-11-11-astraeus-hl-vault-reverse-engineering]] — the evidence standard for an on-chain Sharpe: public fills, after-fee systemization, falsification.
+- [[2026-11-02-0xarchive-btc-sp500-gap-fade]] — Hyperliquid strategy claim with a real sample (195 trades, Sharpe 2.06 after fees).
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — the DSR / PBO / walk-forward battery a six-day live number has not been put through.
+- [[2026-11-02-quantbeckman-kg-llm-sentiment-sharpe-skepticism]] — same pattern: headline Sharpe plus the author's own caveat; order-flow / microstructure lineage.
+- [[2026-09-01-polymarket-copytrading-filter-thesis]] — lead-lag is the formal object behind copy-trading (the lagger follows the leader); its "niche + small size" filter is the same capacity logic as a $5k account.
+- Paper: https://arxiv.org/abs/2201.08283 · published version (*Machine Learning*, 2022): https://doi.org/10.1007/s10994-022-06250-4
+- Huth & Abergel, "High Frequency Lead/lag Relationships — Empirical facts": https://arxiv.org/abs/1111.7103 · *Journal of Empirical Finance* 26 (2014) 41–58: https://doi.org/10.1016/j.jempfin.2014.01.003
+- Signature-method primer: Chevyrev & Kormilitzin (2016), https://arxiv.org/abs/1603.03788
+- Quoted tweet: https://x.com/0xmattegoat/status/2124879608260509712
+- Source photo + working crops: `C:/Users/Administrator/rdp_media/2124942032510628239/` (outside the vault)
