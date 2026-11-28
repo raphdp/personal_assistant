@@ -1,0 +1,62 @@
+---
+title: "macro_synergy (Sueppel) — Macro-quantamental FX carry: real carry + PPP valuation + relative macro performance, 27 currencies since 2000; macro-balanced Sharpe 1.2–1.4 vs 0.5–0.9 for plain carry (all pre-cost, proprietary JPMaQS data)"
+source: https://x.com/macro_synergy/status/2126590670064251350
+captured: 2026-11-28
+tags: [research, trading, fx-carry, currency, macro-quantamental, ppp-valuation, risk-premia, hedging, transaction-costs, twitter, macrosynergy]
+kind: both
+---
+
+**Author:** Ralph Sueppel (@macro_synergy) · posted 2026-11-28 08:15Z · received 2026-11-28T09:45:34Z (WhatsApp via RDP-30, flash intake → RDP-1644). Engagement at capture (fxtwitter): 16 likes · 1,360 views · 0 replies. The tweet quotes the opening of the linked piece — the substance is the article: **"Macro-quantamental FX carry"** (Macrosynergy research, 28 Nov 2026, posted the same morning), full text pulled at capture (~37k chars). It supersedes two earlier Macrosynergy posts ("Modified and balanced FX carry", Dec 2022; "Advanced FX carry strategies with valuation adjustment", Jan 2024). A Jupyter notebook is attached for audit/replication but requires J.P. Morgan DataQuery (JPMaQS) access. Tweet photos: four PnL charts, titles/legends OCR'd at capture — the naive PnLs for the four strategy types below, each with the three signal versions (smoothed real carry, valuation-adjusted, macro-balanced); curve values were not OCR'd, numbers below are from the article's prose.
+
+## Summary
+
+**The question.** Forward-implied FX carry is a valid signal — it condenses risk premia, monetary-policy divergence and real return differentials — but *nominal* carry is a noisy measure of all three: it conflates them with inflation differentials, ignores whether the currency is over- or undervalued, and is most exposed exactly when global markets sell off. The post "cleans" carry with two common-sense adjustments and two macroeconomic enhancements, then tests all variants across **27 developed and EM currency areas, Jan 2000 – Nov 2026**, 1-month forwards, dominant crosses (USD for most; EUR for CHF/CZK/HUF/NOK/PLN/RON/SEK; 50/50 EUR-USD basket for GBP and TRY).
+
+**Common-sense adjustments (from JPMaQS).**
+
+- *Inflation:* use **real carry** — forward-implied carry minus the differential in 1-year-ahead inflation expectations (JPMaQS estimates these point-in-time from inflation vintages + the central bank's effective long-term target; the formula assumes the target keeps some credibility, so it would not suit unanchored inflation).
+- *Hedging cost:* high-beta currencies need higher carry to be attractive. JPMaQS computes **hedged carry** = carry of the FX forward position hedged against a global directional-risk basket (equity-index futures, CDS indices, FX carry currencies), minus the basket carry times the position's beta.
+- *Smoothing:* 5-day moving median, capped at ±25% annualized.
+- *Tradability:* periods of pegs, convertibility suspensions or illiquidity are blacklisted.
+
+**Macroeconomic enhancements.**
+
+- *PPP valuation.* Overvaluation ratio = market USD value of the local currency / its PPP value. Raw ratios are persistent (many EM currencies sit 40–80% below PPP for decades), so the post subtracts each currency's **long-term expanding median** to get an *excess* overvaluation, then assumes **half of the excess closes over three years**: valuation-adjusted carry = smoothed real carry − 1/6 of excess overvaluation (annual %). High carry on an overvalued currency is weakened or flipped negative; undervalued high carry is strengthened. In recent years this turned JPY, EUR and CAD carry positive.
+- *Relative economic performance* vs the benchmark area, four categories: growth (intuitive GDP estimate + industrial production, % y/y, 3-mo average), labor (employment growth minus the unemployment gap), terms-of-trade changes (daily, commodity-based, three lookbacks), export growth. Each is z-scored across the panel (cap 3σ), averaged and renormalized.
+- *Macro-balanced carry* = average of the z-scores of valuation-adjusted real carry and the performance composite → **50% carry, 12.5% per macro factor**. The author calls this "obviously not optimized" — proof of concept, chosen for transparency and stability rather than profit. Cross-correlations between components are low (only labor vs growth ≈ 30%), and real carry is not strongly correlated with any other component. Average contributions: carry supports longs in BRL, TRY, MXN, IDR, ZAR; valuation mostly works against EM highs (ILS, CLP, PHP above median); **JPY's persistent undervaluation is the single largest contribution in the panel**; performance supports INR, IDR, TRY, PEN, PLN.
+
+**Method.** Naive PnLs: positions proportional to signal z-score (capped 2σ), monthly rebalance, end-of-month signal sets next month with 1-day slippage, scaled to 10% vol, **no compounding, no transaction costs**. Predictive power via quarterly/monthly panel regressions with the Macrosynergy panel test (period-specific random effects, adjusts for common global influences). Four strategy types: **directional** (outright, cheapest), **relative** (vs the 27-currency average, vol-targeted — more leverage, more cost), **hedged** (with the directional-risk basket), **relative hedged** (both — "highest leverage and transaction costs").
+
+**Result (Sharpe / Sortino, gross of costs, Jan 2000 – Nov 2026).**
+
+| Strategy type | Smoothed real carry | Valuation-adjusted | Macro-balanced |
+|---|---|---|---|
+| Directional | 0.5 / 0.7 | 0.6 / 0.8 | **1.2 / 1.8** (S&P corr < 20%) |
+| Relative | 0.5 / 0.8 | 0.6 / 0.9 | **1.2 / 1.8** (bench corr ≈ 0 or negative) |
+| Hedged directional | 0.8–0.9 / 1.2–1.3 | — | **1.4 / 2.2** (bench corr ≈ 0 or negative) |
+| Relative hedged | 0.9 / 1.3–1.4 | — | **1.2 / 1.9** (bench corr slightly negative) |
+
+- Predictive correlations: valuation adjustment raises them only slightly; **macro-balancing roughly doubles them** (directional and relative). Hedged signals predict hedged returns even more strongly.
+- The valuation adjustment **adds almost no performance** but **substantially reduces directional exposure** — S&P correlation of the directional strategy falls below 10%, "very close to a non-directional FX carry strategy". The Sharpe gain comes from the macro-performance overlay.
+- Macro-balancing's Sharpe stability ratio implies long-term Sharpe "almost certainly" above 0.75 (author's own metric). For the relative-hedged family the probability of a true long-term Sharpe ≥ 0.5 is near 99%.
+- Gains from macro-balancing over plain real carry: largest in **AUD, COP, NZD, KRW** (directional) and **THB, CHF, AUD** (relative); negligible in JPY and HUF; **slightly negative in IDR** (and CZK to a lesser extent on the relative side).
+- Author's summary of the hedged directional result: "prior to transaction costs, this would be one of the highest alpha generators publicly displayed by Macrosynergy research." On the relative-hedged family: the "double relative" (vs benchmark and vs basket) may be "overambitious" — conceptually valid but the indicator quality is insufficient to represent it well, and its predictive relation is lower than the directional-hedged one.
+
+## Why it matters
+
+- **Same Sueppel lane, same rule the vault already holds — costs are the decider.** [[2026-11-27-glancszpigel-stat-arb-portfolio-optimization-equal-weight-wins]]: a gross Sharpe of 0.84 became 0.07 at 2 bps; [[2026-11-21-sueppel-global-seasonality-factor-investing]]: fast signals died to turnover. Here *every* number in the table is pre-cost and uncompounded, by the post's own methodology, and the two families with the best ratios (hedged 1.4/2.2) are the ones the author says need the most leverage and turnover. The honest reading of the headline is "macro-balancing roughly doubles gross Sharpe across four strategy types"; whether it survives costs is untested in the post.
+- **The defensible finding is the risk one, not the return one.** PPP valuation adjustment cuts S&P correlation to <10% while barely moving Sharpe — that does not depend on the pre-cost outperformance claim. As a *de-risking* overlay it is the cleanest, most transferable piece here.
+- **The macro-balancing gain is plausibly diversification, not alpha.** 50/50 of two weakly correlated signals, neither strong alone (0.6 and ~0), roughly doubling Sharpe is the textbook arithmetic of combining uncorrelated return streams — consistent with the author's own "valuation adds little to performance" and "less concentrated in persistent high-/low-carry currencies". Transferable idea: *complement* a carry signal with fundamentals rather than trying to optimize its weight.
+- **Connections to the validation stack.** [[2026-10-24-dmartin-deflated-sharpe-ratio]] and [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]]: 3 signals × 4 strategy types = 12 configurations, no deflated-Sharpe or multiple-testing correction is mentioned; the consistency evidence offered is Macrosynergy's own Sharpe stability ratio and panel test. [[2026-11-20-sueppel-idiosyncratic-tsmom-per-market-nonlinear]] and [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] are the earlier Sueppel-lane captures — this one differs in kind: his firm's proprietary research on proprietary data, not a paper he is flagging.
+- **Skepticism gates:** (1) Pre-cost, uncompounded, 10%-vol-scaled naive PnLs — the headline numbers are an upper bound; hedged and relative variants cost most. (2) Proprietary data (JPMaQS) and a replication notebook gated behind a J.P. Morgan DataQuery license; the author sells the data the research is built on. (3) Author's own framing: "not optimized… proof of concept" — yet presented with performance ratios; the 50/12.5 weighting and the "half of excess overvaluation closes in 3 years" are assumptions, not estimates. (4) 12 configurations, no multiple-testing adjustment; the inflation-expectations formula assumes anchored expectations and would misfire in an unanchored regime. (5) JPY undervaluation is the single largest contributor to the balanced signal — some concentration behind the "diversified" claim. (6) Ex-post blacklisting of illiquid periods via tradability indicators is realistic but uses information a live desk has with a lag. (7) The relative-hedged family's predictive relation is *weaker* than directional-hedged, per the author — the best-looking "idiosyncratic" variant is not the best-evidenced one.
+
+Task filed: pull the notebook (or fall back to the post's tables if DataQuery is unavailable), confirm the Sharpe/Sortino grid and size net-of-cost performance — see Tasks/Inbox.md.
+
+## Links
+
+- [[2026-11-27-glancszpigel-stat-arb-portfolio-optimization-equal-weight-wins]] — previous day's capture via the same account: costs decide the ranking, gross Sharpe is the bait
+- [[2026-11-21-sueppel-global-seasonality-factor-investing]] — same lane: turnover-adjusted expectancy as the first filter
+- [[2026-11-20-sueppel-idiosyncratic-tsmom-per-market-nonlinear]] — same-lane Sueppel arXiv capture (per-market nonlinear TSMom)
+- [[2026-10-28-sueppel-regimerank-regime-aware-sector-ranking]] — prior Sueppel capture (ranking/aggregation for rotation)
+- [[2026-10-24-dmartin-deflated-sharpe-ratio]] — the multiple-testing hurdle this post does not apply to its 12 configurations
+- [[2026-10-28-margincall4-overfitting-validation-dsr-pbo-walkforward]] — walk-forward + DSR/PBO validation pattern
