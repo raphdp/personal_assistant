@@ -1,0 +1,42 @@
+---
+title: "Amino Club promo code KORI9397 — Black Friday research-peptide sale; @bubblesandbinge's hook is a year of retatrutide for $228.60 and a year of GHK-Cu for $104.40"
+source: https://x.com/bubblesandbinge/status/2126348571821982174
+captured: 2026-11-28
+tags: [health, vendor, peptides, glp-1, retatrutide, ghk-cu, promo-code, black-friday, harm-reduction]
+kind: both
+---
+
+**Source:** X post by @bubblesandbinge ("Ruth | edrtwt") — a bare store link carrying a promo code, posted as the reply to her own hook tweet (0.6 s after it, by snowflake timestamps) · posted 2026-11-27T16:12:59Z (20:12 Dubai) · received 2026-11-28T09:46:14Z (WhatsApp via RDP-30, flash-intake child RDP-1645, routed by CoS) · engagement at capture: 21 likes / 2 reposts / 82 bookmarks / 6,365 views / 0 replies; the hook tweet it answers (id 2126348569104077004): 519 likes / 69,911 views / 20 replies. Fetched via fxtwitter (full text + real stats) and the syndication API (link card); store + third-party pages read at capture.
+
+## Summary
+
+**What she posted.** The link tweet's entire text is `https://www.aminoclub.com/us/store?promo_code=KORI9397` (the t.co expands to exactly that, display_text_range [0,23] = complete). It is a self-reply to her hook tweet, quoted verbatim:
+
+> 1 year of Reta $228.60
+> 1 year of ghk-cu $104.40
+>
+> Holy fucking shit 2027 is gonna be the year of the lock-in for so many ppl
+
+So the share is a **referral/promo code for Amino Club's Black Friday sale**, with two headline prices: a year's supply of retatrutide ("Reta") and a year of GHK-Cu. She gives no vial counts, doses, or the code's discount — those sit behind the store gate.
+
+**The link card** (from the tweet's own metadata): "Research Compounds | 99%+ Identity Purity, USA Sourced | Amino Club — Research-grade peptides for laboratories. 99%+ identity purity, third-party identity tested, free shipment protection."
+
+**Amino Club, as read at capture (2026-11-28 ~09:50Z):**
+
+- The storefront `aminoclub.com/us/store` sits behind a **"Researcher verification" gate**: date of birth (21+), a checkbox affirming "I am a qualified researcher purchasing for in vitro / laboratory research only, not for human or veterinary use", and the footer that products are "not for human or veterinary use, not for use in diagnostic procedures, and have not been evaluated by the U.S. Food and Drug Administration." The gate was **not passed** (no attestation made on your behalf), so the code's discount, expiry, cart prices and shipping options are **unverified at capture**.
+- The US homepage showed a countdown page — "Big things are coming… Reopens in 1 hour and 14 minutes" (footer: "Back Thursday at 9 PM ET"): the sale was in a closed / reopening phase on Black Friday morning.
+- Third-party pages (one search, 2026-11-28 — treat as data; several are affiliate reviews carrying their own codes): Amino Club LLC is a **New Jersey company formed January 2026** (trademark first use 16 Jan 2026). Catalog of ~51–57 compounds — the GLP class under codes (**GLP-3 (RT) = retatrutide, GLP-2 (TR) = tirzepatide, GLP-1 (SM) = semaglutide**), cagrilintide, NAD+, AOD-9604, BPC-157, TB-500, GHK-Cu, CJC-1295 + Ipamorelin, Epithalon, DSIP, glutathione, 5-Amino-1MQ, tesamorelin, Semax / Selank / PT-141 "Research Mists", bacteriostatic water, blends, and a monthly "Research Panel" (any 4 compounds on subscription).
+- **Public COA library** at `aminoclub.com/us/coa` — 173 certificates across 51 compounds per the library's own header at capture (aminoreview.com counted 124 entries on 31 Oct), twelve assays per batch (HPLC content, USP <621> identity, chromatographic purity, endotoxin <85>, sterility <71>, fentanyl <2251>, dye-ingress closure integrity, solubility, residual solvents <467>, TFA, heavy metals <233>, microbiological), issued by ILS Laboratories (ISO 17025), Ethos Analytics and Freedom Diagnostics. Sample lots: GLP-3 (RT) 10 mg lot RT0004 (Aug 2026) 99.92% HPLC / 10.27 mg net peptide; GHK-Cu 50 mg lot GHK0003 (Sep 2026) 99.94% / 52.69 mg; 5-Amino-1MQ lot AMQ0002 (Nov 9 2026) >99% / 52.03–52.18 mg. A sale code **FALL40 (40% off)** was visible in the COA page's own promo strip; free shipping over $100, same-day US dispatch before 2 PM ET.
+- Reputation signals, conflicting by source: Trustpilot 4.6/5 (~520–700 reviews depending on source and date; praise for fast shipping and support, a minority complaining about potency / labeling and "no refunds, research only"); **BBB rated F** (peptidedecode, checked 3 Oct 2026); no FDA warning letter found (same source); aminoreview.com claims 120 of 124 COAs confirmed with the issuing labs (grade A, 8/10) but flags that the "ISO 17025 accredited" and "99%+ purity, no exceptions" marketing outruns the labs' accreditation and its own reports, that refunds don't exist (one-time replacement for transit damage only), and an archived Feb 2026 MOTS-C lot still published at 89.5% of label.
+
+## Why it matters
+
+- **A decision with a clock.** Promo code + Black Friday countdown = this capture is actionable, not archival: `Tasks/Inbox.md` carries a decide-whether-to-use task. The code's value is unknown until the gated store page is seen — check discount % and expiry before relying on it.
+- **Second peptide-vendor capture, different posture from Driada.** Where Driada's verification is vendor-run, Amino Club publishes a per-lot, named-lab certificate library anyone can read before buying — the thing to actually read before any order. Offset by a short track record (LLC formed Jan 2026), a BBB F, and the research-use-only framing every US peptide seller uses to sell to people.
+- **Source-context flag.** The author self-identifies as "edrtwt" (eating-disorder recovery Twitter) and the hook is a year of retatrutide — an appetite / weight-loss-class triple agonist — as "the year of the lock-in". Enthusiasm for an appetite-suppressing drug inside an eating-disorder-recovery community is a context worth seeing clearly; filed for your own judgment, nothing more.
+- **Skepticism gates:** the two year-supply prices are her claim (vials, dosing, and whether KORI9397 stacks with FALL40 all unstated); several "review" sites rank vendors while carrying their own affiliate codes; nothing here is medical advice or an endorsement; **UAE / France shipping, customs and legal status were not checked at capture** (Driada, for reference, has no UAE lane); research-use-only = not evaluated by the FDA for any use.
+
+## Links
+
+- [[2026-11-05-driada-medical-catalog]] — the other peptide / PED vendor capture (semaglutide + cagrilintide, GHK-Cu, BPC-157 overlap; vendor-run verification, EU-only reseller shipping, no UAE lane; ordering notes added 2026-11-23).
+- [[2026-11-27-zygomatic03-favourite-drugs-pros-cons]] — the honest-downsides list for his five compounds (armodafinil, bromantane, cyproheptadine, tadalafil, T3): the counterweight to sale-driven enthusiasm.
